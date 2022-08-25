@@ -13,3 +13,5 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Application\obj\D
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Application\bin\Debug\net6.0\KalaMarket.Domain.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Application\bin\Debug\net6.0\KalaMarket.Domain.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Application\obj\Debug\net6.0\KalaMarket.Application.csproj.CopyComplete
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Application\bin\Debug\net6.0\KalaMarket.Shared.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Application\bin\Debug\net6.0\KalaMarket.Shared.pdb

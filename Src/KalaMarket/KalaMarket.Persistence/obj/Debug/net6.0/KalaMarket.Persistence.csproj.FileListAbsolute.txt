@@ -17,3 +17,5 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\D
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.genruntimeconfig.cache
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\ref\KalaMarket.Persistence.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Shared.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Shared.pdb

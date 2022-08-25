@@ -1,6 +1,6 @@
 ﻿
 <!DOCTYPE html>
-<html lang="en" class="loading">
+<html lang="fa" class="loading">
 
 <!-- Mirrored from pixinvent.com/demo/convex-bootstrap-admin-dashboard-template/demo-1/grids.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Sep 2018 14:54:38 GMT -->
 <head>
@@ -10,11 +10,13 @@
 </head>
 <body data-col="2-columns" class=" 2-columns ">
     <!-- ////////////////////////////////////////////////////////////////////////////-->
-    <div class="wrapper">
+        <div class="wrapper">
+
+
         <div data-active-color="white" data-background-color="black" data-image="~/AdminTemplate/app-assets/img/sidebar-bg/01.jpg" class="app-sidebar">
             <div class="sidebar-header">
                 <div class="logo clearfix">
-                    <a href="index-2.html" class="logo-text float-right">
+                    <a href="#" class="logo-text float-right">
                         <div class="logo-img"><img src="~/AdminTemplate/app-assets/img/logo.png" alt="Convex Logo" /></div><span class="text align-middle">CONVEX</span>
                     </a><a id="sidebarToggle" href="javascript:;" class="nav-toggle d-none d-sm-none d-md-none d-lg-block"><i data-toggle="expanded" class="ft-disc toggle-icon"></i></a><a id="sidebarClose" href="javascript:;" class="nav-close d-block d-md-block d-lg-none d-xl-none"><i class="ft-circle"></i></a>
                 </div>
@@ -26,11 +28,27 @@
                             <a href="#"><i class="icon-home"></i><span data-i18n="" class="menu-title">داشبورد</span><span class="tag badge badge-pill badge-danger mt-1">2</span></a>
                         </li>
 
+
+
+                        <li class="has-sub nav-item">
+                            <a href="#"><i class="icon-users"></i><span data-i18n="" class="menu-title">مدیریت کاربران</span></a>
+                            <ul class="menu-content">
+                                <li class="active">
+                                    <a asp-page="/Admin/Users/Index" class="menu-item">لیست کاربران</a>
+                                </li>
+                                <li>
+                                    <a asp-page="/Admin/Users/Register" class="menu-item">ثبت نام کاربر جدید *</a>
+                                </li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </div>
             </div>
             <div class="sidebar-background"></div>
         </div>
+
+
         <nav class="navbar navbar-expand-lg navbar-light bg-faded">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -104,16 +122,20 @@
                 </div>
             </div>
         </nav>
+
         <div class="main-panel">
             <div class="main-content">
                 @RenderBody()
             </div>
+
             <footer class="footer footer-static footer-light">
                 <p class="clearfix text-muted text-center px-2"><span> &copy; 2018  کپی رایت <a href="https://fkazemi5236@gmail.com" id="pixinventLink" target="_blank" class="text-bold-800 primary darken-2"> fkazemi5236 </a>,همه حقوق محفوظ است </span></p>
             </footer>
-            </div>
+
+        </div>
     </div>
     <!-- ////////////////////////////////////////////////////////////////////////////-->
+
     <aside id="notification-sidebar" class="notification-sidebar d-none d-sm-none d-md-block">
         <a class="notification-sidebar-close"><i class="ft-x font-medium-3"></i></a>
         <div class="side-nav notification-sidebar-content">
@@ -313,7 +335,6 @@
                 </div>
                 <div class="row p-1">
                     <div class="col mb-3"><span style="width:50px; height:100px;" data-bg-color="black" class="bg-black d-block rounded box-shadow-2"></span></div>
-                    <div class="col mb-3"><span style="width:50px; height:100px;" data-bg-color="white" class="bg-white d-block rounded box-shadow-2"></span></div>
                     <div class="col mb-3"><span style="width:50px; height:100px;" data-bg-color="primary" class="bg-primary d-block rounded box-shadow-2"></span></div>
                     <div class="col mb-3"><span style="width:50px; height:100px;" data-bg-color="danger" class="bg-danger d-block rounded box-shadow-2"></span></div>
                 </div>

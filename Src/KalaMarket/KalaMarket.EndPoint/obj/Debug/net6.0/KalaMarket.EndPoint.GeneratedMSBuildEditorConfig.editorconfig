@@ -15,8 +15,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Admin/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUGFnZXNcSW5kZXguY3NodG1s
+[C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Admin/Shared/_AdminLayout.cshtml]
@@ -33,6 +33,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Admin/Shared/_Partials/_ScriptPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU2hhcmVkXF9QYXJ0aWFsc1xfU2NyaXB0UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Admin/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Admin/Users/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Admin/_ViewImports.cshtml]

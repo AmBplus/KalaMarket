@@ -19,3 +19,5 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\ref\KalaMarket.Infrastructure.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Infrastructure.runtimeconfig.json
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.genruntimeconfig.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Shared.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Shared.pdb

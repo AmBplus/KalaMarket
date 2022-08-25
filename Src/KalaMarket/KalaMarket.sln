@@ -37,6 +37,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Shared", "KalaMa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.UnitTest", "KalaMarket.UnitTest\KalaMarket.UnitTest.csproj", "{83B6F744-A19D-4EBF-8AF2-6F6BE3FDCD95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Resourses", "KalaMarket.Resourses\KalaMarket.Resourses.csproj", "{EDE59637-B62D-4356-A5B8-C426172567FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{83B6F744-A19D-4EBF-8AF2-6F6BE3FDCD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83B6F744-A19D-4EBF-8AF2-6F6BE3FDCD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83B6F744-A19D-4EBF-8AF2-6F6BE3FDCD95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE59637-B62D-4356-A5B8-C426172567FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE59637-B62D-4356-A5B8-C426172567FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE59637-B62D-4356-A5B8-C426172567FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE59637-B62D-4356-A5B8-C426172567FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +97,7 @@ Global
 		{526F02F1-2F5A-436A-9990-6E3D8850200A} = {948130E5-3780-489B-8210-2F212F861AD8}
 		{17E26EA8-3EEE-41E2-B22D-A682F81AB673} = {526F02F1-2F5A-436A-9990-6E3D8850200A}
 		{83B6F744-A19D-4EBF-8AF2-6F6BE3FDCD95} = {0E7AFCAC-E754-4FD4-A31A-BB80AF8B08B5}
+		{EDE59637-B62D-4356-A5B8-C426172567FA} = {526F02F1-2F5A-436A-9990-6E3D8850200A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7AE34251-A72D-4785-878A-ABCBD59A4A89}
