@@ -690,6 +690,16 @@
           "bin/placeholder/KalaMarket.Domain.dll": {}
         }
       },
+      "KalaMarket.Resourses/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/KalaMarket.Resourses.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Resourses.dll": {}
+        }
+      },
       "KalaMarket.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2675,6 +2685,11 @@
       "path": "../KalaMarket.Domain/KalaMarket.Domain.csproj",
       "msbuildProject": "../KalaMarket.Domain/KalaMarket.Domain.csproj"
     },
+    "KalaMarket.Resourses/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Resourses/KalaMarket.Resourses.csproj",
+      "msbuildProject": "../KalaMarket.Resourses/KalaMarket.Resourses.csproj"
+    },
     "KalaMarket.Shared/1.0.0": {
       "type": "project",
       "path": "../KalaMarket.Shared/KalaMarket.Shared.csproj",
@@ -2684,6 +2699,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "KalaMarket.Domain >= 1.0.0",
+      "KalaMarket.Resourses >= 1.0.0",
       "KalaMarket.Shared >= 1.0.0",
       "Mapster >= 7.3.0",
       "Microsoft.EntityFrameworkCore >= 6.0.7"
@@ -2719,6 +2735,9 @@
           "projectReferences": {
             "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Domain\\KalaMarket.Domain.csproj": {
               "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Domain\\KalaMarket.Domain.csproj"
+            },
+            "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Resourses\\KalaMarket.Resourses.csproj": {
+              "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Resourses\\KalaMarket.Resourses.csproj"
             },
             "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Shared\\KalaMarket.Shared.csproj": {
               "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Shared\\KalaMarket.Shared.csproj"

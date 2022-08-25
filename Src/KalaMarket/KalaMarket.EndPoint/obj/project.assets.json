@@ -935,6 +935,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Resourses": "1.0.0",
           "KalaMarket.Shared": "1.0.0",
           "Mapster": "7.3.0",
           "Microsoft.EntityFrameworkCore": "6.0.7"
@@ -988,6 +989,16 @@
         },
         "runtime": {
           "bin/placeholder/KalaMarket.Persistence.dll": {}
+        }
+      },
+      "KalaMarket.Resourses/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/KalaMarket.Resourses.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Resourses.dll": {}
         }
       },
       "KalaMarket.Shared/1.0.0": {
@@ -2812,6 +2823,11 @@
       "type": "project",
       "path": "../KalaMarket.Persistence/KalaMarket.Persistence.csproj",
       "msbuildProject": "../KalaMarket.Persistence/KalaMarket.Persistence.csproj"
+    },
+    "KalaMarket.Resourses/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Resourses/KalaMarket.Resourses.csproj",
+      "msbuildProject": "../KalaMarket.Resourses/KalaMarket.Resourses.csproj"
     },
     "KalaMarket.Shared/1.0.0": {
       "type": "project",
