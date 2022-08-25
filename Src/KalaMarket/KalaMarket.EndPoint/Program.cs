@@ -1,8 +1,11 @@
+using KalaMarket.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+string connection = builder.Configuration.GetConnectionString("ConnectionSql");
+builder.Services.ConfigureServices(connection);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

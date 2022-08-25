@@ -1,0 +1,12 @@
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Domain\bin\Debug\net6.0\KalaMarket.Domain.deps.json
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Domain\bin\Debug\net6.0\KalaMarket.Domain.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Domain\bin\Debug\net6.0\KalaMarket.Domain.pdb
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Domain\obj\Debug\net6.0\KalaMarket.Domain.csproj.AssemblyReference.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Domain\obj\Debug\net6.0\KalaMarket.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Domain\obj\Debug\net6.0\KalaMarket.Domain.AssemblyInfoInputs.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Domain\obj\Debug\net6.0\KalaMarket.Domain.AssemblyInfo.cs
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Domain\obj\Debug\net6.0\KalaMarket.Domain.csproj.CoreCompileInputs.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Domain\obj\Debug\net6.0\KalaMarket.Domain.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Domain\obj\Debug\net6.0\refint\KalaMarket.Domain.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Domain\obj\Debug\net6.0\KalaMarket.Domain.pdb
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Domain\obj\Debug\net6.0\ref\KalaMarket.Domain.dll

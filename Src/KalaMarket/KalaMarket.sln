@@ -17,25 +17,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F4F4E853-D291-49AD-888F-CAB42FB90AF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Application", "KalaMarket.Application\KalaMarket.Application.csproj", "{B2554A22-6F19-42CC-BBDE-A64F0262A7CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Application", "KalaMarket.Application\KalaMarket.Application.csproj", "{B2554A22-6F19-42CC-BBDE-A64F0262A7CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Domain", "KalaMarket.Domain\KalaMarket.Domain.csproj", "{FCCF1744-24E1-4C85-9938-C91D4E3CAD97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Domain", "KalaMarket.Domain\KalaMarket.Domain.csproj", "{FCCF1744-24E1-4C85-9938-C91D4E3CAD97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.EndPoint", "KalaMarket.EndPoint\KalaMarket.EndPoint.csproj", "{2B54C0D0-F307-4437-83F8-E0DE1A9BB415}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.EndPoint", "KalaMarket.EndPoint\KalaMarket.EndPoint.csproj", "{2B54C0D0-F307-4437-83F8-E0DE1A9BB415}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0E7AFCAC-E754-4FD4-A31A-BB80AF8B08B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{948130E5-3780-489B-8210-2F212F861AD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Infrasructure", "KalaMarket.Infrasructure\KalaMarket.Infrasructure.csproj", "{927CB18A-244B-4462-8404-BD0F22B8E07F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Infrastructure", "KalaMarket.Infrasructure\KalaMarket.Infrastructure.csproj", "{927CB18A-244B-4462-8404-BD0F22B8E07F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Persistence", "KalaMarket.Persistence\KalaMarket.Persistence.csproj", "{08E64B8E-9472-4701-9A02-7999B44303C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Persistence", "KalaMarket.Persistence\KalaMarket.Persistence.csproj", "{08E64B8E-9472-4701-9A02-7999B44303C1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{526F02F1-2F5A-436A-9990-6E3D8850200A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Shared", "KalaMarket.Shared\KalaMarket.Shared.csproj", "{17E26EA8-3EEE-41E2-B22D-A682F81AB673}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Shared", "KalaMarket.Shared\KalaMarket.Shared.csproj", "{17E26EA8-3EEE-41E2-B22D-A682F81AB673}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.UnitTest", "KalaMarket.UnitTest\KalaMarket.UnitTest.csproj", "{83B6F744-A19D-4EBF-8AF2-6F6BE3FDCD95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.UnitTest", "KalaMarket.UnitTest\KalaMarket.UnitTest.csproj", "{83B6F744-A19D-4EBF-8AF2-6F6BE3FDCD95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

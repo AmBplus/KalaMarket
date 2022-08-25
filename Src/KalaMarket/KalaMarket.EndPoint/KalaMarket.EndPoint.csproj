@@ -149,4 +149,15 @@
     <None Include="wwwroot\SiteTemplate\assets\js\vendor\wNumb.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KalaMarket.Infrasructure\KalaMarket.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
