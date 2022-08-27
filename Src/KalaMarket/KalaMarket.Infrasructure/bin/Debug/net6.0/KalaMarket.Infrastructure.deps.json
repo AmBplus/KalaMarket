@@ -571,6 +571,7 @@
       "KalaMarket.Application/1.0.0": {
         "dependencies": {
           "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Resourses": "1.0.0",
           "KalaMarket.Shared": "1.0.0",
           "Mapster": "7.3.0",
           "Microsoft.EntityFrameworkCore": "6.0.7"
@@ -595,6 +596,11 @@
         },
         "runtime": {
           "KalaMarket.Persistence.dll": {}
+        }
+      },
+      "KalaMarket.Resourses/1.0.0": {
+        "runtime": {
+          "KalaMarket.Resourses.dll": {}
         }
       },
       "KalaMarket.Shared/1.0.0": {
@@ -999,6 +1005,11 @@
       "sha512": ""
     },
     "KalaMarket.Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Resourses/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

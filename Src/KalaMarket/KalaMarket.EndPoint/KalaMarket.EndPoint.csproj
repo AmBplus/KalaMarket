@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <Folder Include="Pages\Admin\Shared\_Partials\" />
+    <Folder Include="Pages\Base\" />
+    <Folder Include="Pages\Shared\_Partials\SideScript\" />
     <Folder Include="wwwroot\SiteTemplate\assets\images\menu-main\card\" />
   </ItemGroup>
 

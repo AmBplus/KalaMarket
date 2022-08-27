@@ -1,5 +1,5 @@
 using KalaMarket.Application.Services.Users.Queries.GetUsers;
-using KalaMarket.EndPoint.Pages.Base;
+using KalaMarket.EndPoint.Infrastructure;
 namespace KalaMarket.EndPoint.Pages.Admin.Users
 {
     public class IndexModel : BasePageModel

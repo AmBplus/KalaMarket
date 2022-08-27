@@ -10,5 +10,11 @@ public class MapUser : IEntityTypeConfiguration<User>
     {
         builder.HasMany(x => x.UserInRoles).WithOne(x => x.User).HasForeignKey(x => x.UserId);
         builder.Property(x => x.FullName).HasMaxLength(100);
+        //builder.HasData(new User()
+        //{
+        //    FullName = "AMB",
+        //    Email = 
+        //})
     }
+
 }

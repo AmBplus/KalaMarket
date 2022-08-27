@@ -1,4 +1,4 @@
-﻿using KalaMarket.EndPoint.Pages.Base;
+﻿using KalaMarket.EndPoint.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
