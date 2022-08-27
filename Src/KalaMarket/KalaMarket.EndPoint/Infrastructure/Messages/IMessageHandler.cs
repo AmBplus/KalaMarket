@@ -18,6 +18,7 @@
 		bool AddToastWarning(string? message);
 
 		bool AddToastSuccess(string? message);
+		bool AddToastInformation(string? message);
 
 
 

@@ -46,7 +46,13 @@
 				(type: Messages.MessageType.ToastSuccess, message: message);
 		}
 
-		public bool AddMessage(Messages.MessageType type, string? message)
+        public bool AddToastInformation(string? message)
+        {
+            return AddMessage
+                (type: Messages.MessageType.ToastInformation, message: message);
+        }
+
+        public bool AddMessage(Messages.MessageType type, string? message)
 		{
 			return Messages.Utility.AddMessage
 				(tempData: TempData, type: type, message: message);

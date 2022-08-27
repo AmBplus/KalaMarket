@@ -37,15 +37,16 @@ namespace KalaMarket.EndPoint.Pages.Admin.Users
             AddToastError("error1");
             AddToastError("error2");
             AddToastError("error3");
-            AddToastWarning("Success0");
-            AddToastWarning("Success1");
-            AddToastWarning("Success2");
-            AddToastWarning("Success3");
-            AddToastWarning("Success4");
-            AddToastWarning("Success5");
-            AddToastWarning("Success6");
-            AddToastWarning("Success7");
+            AddToastSuccess("Success0");
+            AddToastSuccess("Success1");
+            AddToastSuccess("Success2");
+            AddToastSuccess("Success3");
+            AddToastInformation("سلام بر تو دوست عزیز");
+            AddToastInformation("سلام بر تو دوست عزیز1");
+            AddToastInformation("سلام بر تو دوست عزیز2");
             AddToastWarning("Warning1");
+            AddToastWarning("Warning2");
+            AddToastWarning("Warning3");
             Roles = new SelectList(RolesService.Execute().Roles, "Id", "Name");
         }
 

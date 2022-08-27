@@ -12,5 +12,6 @@
 		ToastError,
 		ToastWarning,
 		ToastSuccess,
+		ToastInformation
 	}
 }

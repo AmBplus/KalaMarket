@@ -10,9 +10,12 @@
 			Style =
 				"top-25 start-10 p-3 opacity-50";
 		}
-
-		// **********
-		public string Style { get; set; }
+        public string ToasterError = nameof(ToasterError);
+        public string ToasterWarning = nameof(ToasterWarning);
+        public string ToasterSuccess = nameof(ToasterSuccess);
+        public string ToasterInformation = nameof(ToasterInformation);
+// **********
+        public string Style { get; set; }
 		// **********
 
 		// **********
