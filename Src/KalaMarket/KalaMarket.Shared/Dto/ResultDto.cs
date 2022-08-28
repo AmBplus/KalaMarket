@@ -11,3 +11,9 @@ public class ResultDto<T>
     public string Message { get; set; }
     public T Data { get; set; }
 }
+public class ResultListMessageDto<T>
+{
+    public bool IsSuccess { get; set; }
+    public IList<string> Messages { get; set; } 
+    public T Data { get; set; }
+}

@@ -34,19 +34,33 @@ namespace KalaMarket.EndPoint.Pages.Admin.Users
 
         public void OnGet()
         {
-            AddToastError("error1");
-            AddToastError("error2");
-            AddToastError("error3");
-            AddToastSuccess("Success0");
-            AddToastSuccess("Success1");
-            AddToastSuccess("Success2");
-            AddToastSuccess("Success3");
-            AddToastInformation("سلام بر تو دوست عزیز");
-            AddToastInformation("سلام بر تو دوست عزیز1");
-            AddToastInformation("سلام بر تو دوست عزیز2");
-            AddToastWarning("Warning1");
-            AddToastWarning("Warning2");
-            AddToastWarning("Warning3");
+            //AddToastError("error1");
+            //AddToastError("error2");
+            //AddToastError("error3");
+            //AddToastSuccess("Success0");
+            //AddToastSuccess("Success1");
+            //AddToastSuccess("Success2");
+            //AddToastSuccess("Success3");
+            //AddToastInformation("سلام بر تو دوست عزیز");
+            //AddToastInformation("سلام بر تو دوست عزیز1");
+            //AddToastInformation("سلام بر تو دوست عزیز2");
+            //AddToastWarning("Warning1");
+            //AddToastWarning("Warning2");
+            //AddToastWarning("Warning3");
+
+            AddPageError("error1");
+            AddPageError("error2");
+            AddPageError("error3");
+            AddPageSuccess("Success0");
+            AddPageSuccess("Success1");
+            AddPageSuccess("Success2");
+            AddPageSuccess("Success3");
+            AddPageInformation("سلام بر تو دوست عزیز");
+            AddPageInformation("سلام بر تو دوست عزیز1");
+            AddPageInformation("سلام بر تو دوست عزیز2");
+            AddPageWarning("Warning1");
+            AddPageWarning("Warning2");
+            AddPageWarning("Warning3");
             Roles = new SelectList(RolesService.Execute().Roles, "Id", "Name");
         }
 

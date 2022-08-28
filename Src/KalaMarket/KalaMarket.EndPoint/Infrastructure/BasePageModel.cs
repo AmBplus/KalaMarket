@@ -1,4 +1,6 @@
-﻿namespace KalaMarket.EndPoint.Infrastructure
+﻿using KalaMarket.EndPoint.Infrastructure.Messages;
+
+namespace KalaMarket.EndPoint.Infrastructure
 {
 	/// <summary>
 	/// Version 3.0
@@ -28,7 +30,12 @@
 				(type: Messages.MessageType.PageSuccess, message: message);
 		}
 
-		public bool AddToastError(string? message)
+        public bool AddPageInformation(string? message)
+        {
+            return AddMessage(type: Messages.MessageType.PageInformation, message: message);
+        }
+
+        public bool AddToastError(string? message)
 		{
 			return AddMessage
 				(type: Messages.MessageType.ToastError, message: message);
@@ -67,5 +74,77 @@
 
 			return returnUrl;
 		}
-	}
+
+        public bool AddRangeToastErrors(IList<string> messages)
+        {
+            foreach (var error in messages)
+            {
+                AddToastError(error);
+            }
+            return true;
+        }
+
+        public bool AddRangeToastSuccess(IList<string> messages)
+        {
+            foreach (var message in messages)
+            {
+                AddToastSuccess(message);
+            }
+            return true;
+        }
+
+        public bool AddRangeToastWarning(IList<string> messages)
+        {
+            foreach (var message in messages)
+            {
+                AddToastWarning(message);
+            }
+            return true;
+        }
+
+        public bool AddRangeToastInformation(IList<string> messages)
+        {
+            foreach (var message in messages)
+            {
+                AddToastInformation(message);
+            }
+            return true;
+        }
+
+        public bool AddRangePageErrors(IList<string> messages)
+        {
+            foreach (var message in messages)
+            {
+                AddPageError(message);
+            }
+            return true;
+        }
+
+        public bool AddRangePageSuccess(IList<string> messages)
+        {
+            foreach (var message in messages)
+            {
+                AddPageSuccess(message);
+            }
+            return true;
+        }
+
+        public bool AddRangePageInformation(IList<string> messages)
+        {
+            foreach (var message in messages)
+            {
+                AddPageInformation(message);
+            }
+            return true;
+        }
+
+        public bool AddRangePageWarning(IList<string> messages)
+        {
+            foreach (var message in messages)
+            {
+               AddPageWarning(message);
+            }
+            return true;
+        }
+    }
 }

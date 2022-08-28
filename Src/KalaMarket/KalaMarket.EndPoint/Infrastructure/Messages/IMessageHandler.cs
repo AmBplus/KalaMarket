@@ -10,6 +10,7 @@
 		bool AddPageWarning(string? message);
 
 		bool AddPageSuccess(string? message);
+        bool AddPageInformation(string? message);
 
 
 
@@ -23,5 +24,16 @@
 
 
 		bool AddMessage(MessageType type, string? message);
-	}
+        public bool AddRangeToastErrors(IList<string> messages);
+        public bool AddRangeToastSuccess(IList<string> messages);
+        public bool AddRangeToastWarning(IList<string> messages);
+        public bool AddRangeToastInformation(IList<string> messages);
+        public bool AddRangePageErrors(IList<string> messages);
+        public bool AddRangePageSuccess(IList<string> messages);
+        public bool AddRangePageInformation(IList<string> messages);
+        public bool AddRangePageWarning(IList<string> messages);
+        
+
+
+    }
 }

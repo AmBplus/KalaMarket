@@ -1,4 +1,5 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
+using KalaMarket.Application.Validations;
 using KalaMarket.Domain.Entities.UserAgg;
 using KalaMarket.Resourses;
 using KalaMarket.Shared.Dto;
@@ -27,8 +28,24 @@ public class RegisterUserService : IRegisterUserService
     /// </summary>
     /// <param name="registerUserDto"></param>
     /// <returns></returns>
-    public ResultDto<ResultRegisterUserDto> Execute(RequestRegisterUserService registerUserDto)
+    public ResultListMessageDto<ResultRegisterUserDto> Execute(RequestRegisterUserDto registerUserDto)
     {
+        ResultListMessageDto<ResultRegisterUserDto> result = new ResultListMessageDto<ResultRegisterUserDto>();
+        IList<string> errorsList = new List<string>();
+        RegisterUserValidator userValidator = new RegisterUserValidator();
+        var resultValidate = userValidator.Validate(registerUserDto);
+        if (resultValidate.Errors.Count > 0)
+        {
+          
+            foreach (var error in resultValidate.Errors)
+            {
+                errorsList.Add(error.ErrorMessage);
+            }
+
+            result.IsSuccess = false;
+            result.Messages = errorsList;
+            return result;
+        }
         // Create User
         User user = new User()
         {
@@ -51,8 +68,8 @@ public class RegisterUserService : IRegisterUserService
         user.UserInRoles = userInRole;
         // Add User To Db
         Context.Users.Add(user);
-        ResultDto<ResultRegisterUserDto> result = new ResultDto<ResultRegisterUserDto>();
-        #region Try Save User And Return Result 
+        
+        #region Try Save User And Return Result
 
         try
         {
@@ -60,20 +77,20 @@ public class RegisterUserService : IRegisterUserService
             {
                 result.Data.UserId = user.Id;
                 result.IsSuccess = true;
-                result.Message = string.Format(Messages.RegisterSuccessMessageWithUserName, user.Email);
-                return result;
-            };
+                errorsList.Add(string.Format(Messages.RegisterSuccessMessageWithUserName, user.Email));
+
+            }
         }
         catch (Exception e)
         {
             result.Data.UserId = user.Id;
             result.IsSuccess = false;
-            result.Message = string.Format(Messages.RegisterFailedMessageWithUserNameAndReason, user.Email,e.Message);
-            return result;
+             errorsList.Add( string.Format(Messages.RegisterFailedMessageWithUserNameAndReason, user.Email, e.Message));
         }
-        result.Data.UserId = user.Id;
-        result.IsSuccess = false;
-        result.Message = string.Format(Messages.RegisterFailedMessageWithUserName, user.Email);
+        finally
+        {
+            result.Messages = errorsList;
+        }
         return result;
 
         #endregion Try Save User And Return Result 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2LW/iwRRE+Je87UgOcvqATFzXzy2aqpvesRfm63EIF0=",
+  "Hash": "9c+19O/pOHebLuMKg0QN5cV5KD5L6BuUwR+vXDjDGxM=",
   "Source": "KalaMarket.EndPoint",
   "BasePath": "_content/KalaMarket.EndPoint",
   "Mode": "Default",
@@ -5761,6 +5761,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\AdminTemplate\\app-assets\\vendors\\js\\typeahead\\typeahead.bundle.min.js"
+    },
+    {
+      "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\css\\myStyle.css",
+      "SourceId": "KalaMarket.EndPoint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\",
+      "BasePath": "_content/KalaMarket.EndPoint",
+      "RelativePath": "css/myStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\myStyle.css"
     },
     {
       "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\css\\site.css",

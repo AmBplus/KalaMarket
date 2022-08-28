@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "m3jg3b5WUj4+PFhGYIifdILfMhcp8gWX0J09ZNAMraAiW4QEMvjeMlPdnui8zBzAejgonwhbXdppKzwtw51CYA==",
+  "dgSpecHash": "D2Sx/IlbmRYBm2YrZ5PJ1rpWsbBP93+CbiuL9dYK/ptK5lxIo6Uap1Eemgnngko/2T6VWqUb/+yJBtOgoR4pXA==",
   "success": true,
   "projectFilePath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Infrasructure\\KalaMarket.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\manga\\.nuget\\packages\\fluentvalidation\\11.2.0\\fluentvalidation.11.2.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",

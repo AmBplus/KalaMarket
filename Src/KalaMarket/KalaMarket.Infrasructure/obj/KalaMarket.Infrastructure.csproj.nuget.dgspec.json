@@ -51,6 +51,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.2.0, )"
+            },
             "Mapster": {
               "target": "Package",
               "version": "[7.3.0, )"

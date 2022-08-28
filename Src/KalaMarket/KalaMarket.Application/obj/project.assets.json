@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "FluentValidation/11.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Mapster/7.3.0": {
         "type": "package",
         "dependencies": {
@@ -713,6 +726,27 @@
     }
   },
   "libraries": {
+    "FluentValidation/11.2.0": {
+      "sha512": "KV1YBM8T4plLKmShjxfmHMF6X1lDuXgyqE+t8NYNxb7jmMbPnA3u30RsuXAf2NYMv0TBCUQguI2Z6W17c/Dh1A==",
+      "type": "package",
+      "path": "fluentvalidation/11.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.2.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
     "Mapster/7.3.0": {
       "sha512": "NrCUX/rJa5PTyo6iW4AL5dZLU9PDNlYnrJOVjgdpo5OQM9EtWH2CMHnC5sSuJWC0d0b0SnmeRrIviEem6WxtuQ==",
       "type": "package",
@@ -2698,6 +2732,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "FluentValidation >= 11.2.0",
       "KalaMarket.Domain >= 1.0.0",
       "KalaMarket.Resourses >= 1.0.0",
       "KalaMarket.Shared >= 1.0.0",
@@ -2755,6 +2790,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[11.2.0, )"
+          },
           "Mapster": {
             "target": "Package",
             "version": "[7.3.0, )"

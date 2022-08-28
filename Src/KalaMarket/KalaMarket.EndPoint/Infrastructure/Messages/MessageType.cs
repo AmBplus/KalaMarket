@@ -8,6 +8,7 @@
 		PageError,
 		PageWarning,
 		PageSuccess,
+        PageInformation,
 
 		ToastError,
 		ToastWarning,

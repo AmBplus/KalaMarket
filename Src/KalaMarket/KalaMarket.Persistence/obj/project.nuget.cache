@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "E5aVvLPGW5YLE9NucxBt/SeiJF+rC0K1HTDKg1A1uvZ8zFFazRL/Tmp3fCMPMburXTPdLxi/G9/7f5OE/OiYZw==",
+  "dgSpecHash": "Eto6tXoVuEv4ZrbMB+k6MRL29uUx48y36i6MI/dXPjJtlw8jPWPCtKzRw3rCHKEKWdnRBzF+kEHtf3uQ2jo5LQ==",
   "success": true,
   "projectFilePath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Persistence\\KalaMarket.Persistence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\manga\\.nuget\\packages\\fluentvalidation\\11.2.0\\fluentvalidation.11.2.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
