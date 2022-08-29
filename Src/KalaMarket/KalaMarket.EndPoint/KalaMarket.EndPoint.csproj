@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Pages\Admin\Shared\_Partials\" />
     <Folder Include="Pages\Base\" />
     <Folder Include="Pages\Shared\_Partials\SideScript\" />

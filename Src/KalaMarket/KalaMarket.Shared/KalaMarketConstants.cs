@@ -5,8 +5,15 @@
 		static KalaMarketConstants()
 		{
 		}
+        public static class Page
+        {
+            static Page()
+            {
+            }
 
-		public static class Logger 
+            public const byte PageSize= 8;
+        }
+public static class Logger 
 		{
 			static Logger()
 			{

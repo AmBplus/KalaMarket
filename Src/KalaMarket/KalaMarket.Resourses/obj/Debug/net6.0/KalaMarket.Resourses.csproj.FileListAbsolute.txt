@@ -14,3 +14,4 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Deb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\ref\KalaMarket.Resourses.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.PropertiesName.resources
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.ErrorMessages.resources
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.ErrorFluentValidation.resources

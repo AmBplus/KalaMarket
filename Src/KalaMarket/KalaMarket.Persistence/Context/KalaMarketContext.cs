@@ -1,4 +1,5 @@
-﻿using KalaMarket.Application.Interfaces.Context;
+﻿using System.Reflection;
+using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Domain.Entities.UserAgg;
 using Microsoft.EntityFrameworkCore;
 namespace KalaMarket.Persistence.Context;
@@ -22,8 +23,9 @@ public class KalaMarketContext : DbContext , IKalaMarketContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        var assembly = typeof(KalaMarketContext).Assembly;
-        modelBuilder.ApplyConfigurationsFromAssembly(assembly);
+        //var assembly = typeof(KalaMarketContext).Assembly;
+        //modelBuilder.ApplyConfigurationsFromAssembly(assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         base.OnModelCreating(modelBuilder);
     }
 

@@ -1,4 +1,4 @@
-﻿namespace KalaMarket.Shared.Security
+﻿ namespace KalaMarket.Shared.Security
 {
 	public static class Hashing
 	{

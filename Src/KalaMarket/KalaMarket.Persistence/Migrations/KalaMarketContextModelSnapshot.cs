@@ -66,7 +66,8 @@ namespace KalaMarket.Persistence.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(900)");
 
                     b.Property<string>("FullName")
                         .IsRequired()
@@ -78,6 +79,9 @@ namespace KalaMarket.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });

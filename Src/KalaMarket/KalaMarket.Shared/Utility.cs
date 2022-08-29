@@ -1,11 +1,11 @@
 ﻿namespace KalaMarket.Shared
 {
-	public static class Utility : object
+	public static class Utility 
 	{
 		static Utility()
 		{
 		}
-
+	
 		public static System.DateTime Now
 		{
 			get
