@@ -696,6 +696,9 @@
       "KalaMarket.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Shared": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/KalaMarket.Domain.dll": {}
         },

@@ -10,4 +10,8 @@
     <Folder Include="Entities\UserAgg\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\KalaMarket.Shared\KalaMarket.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
