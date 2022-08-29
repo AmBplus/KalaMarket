@@ -117,6 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="NotFind" xml:space="preserve">
+    <value> مورد نظر پیدا نشد {0}</value>
+    <comment> </comment>
+  </data>
+  <data name="NotFindUser" xml:space="preserve">
+    <value>کاربر پیدا نشد</value>
+  </data>
+  <data name="OperationDoneSuccessfully" xml:space="preserve">
+    <value>عملیات با موفقیت انجام شد</value>
+  </data>
   <data name="RegisterFailedMessageWithUserName" xml:space="preserve">
     <value>کاربر با نام کاربری {0} در سیستم ثبت نام نشد</value>
   </data>

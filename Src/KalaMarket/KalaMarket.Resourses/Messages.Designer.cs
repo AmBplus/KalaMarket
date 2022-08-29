@@ -61,6 +61,33 @@ namespace KalaMarket.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to  مورد نظر پیدا نشد {0}.
+        /// </summary>
+        public static string NotFind {
+            get {
+                return ResourceManager.GetString("NotFind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to کاربر پیدا نشد.
+        /// </summary>
+        public static string NotFindUser {
+            get {
+                return ResourceManager.GetString("NotFindUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to عملیات با موفقیت انجام شد.
+        /// </summary>
+        public static string OperationDoneSuccessfully {
+            get {
+                return ResourceManager.GetString("OperationDoneSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to کاربر با نام کاربری {0} در سیستم ثبت نام نشد.
         /// </summary>
         public static string RegisterFailedMessageWithUserName {

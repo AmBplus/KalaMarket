@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using KalaMarket.Application.Services.Users.Commands.RegisterUser;
+using KalaMarket.Application.Services.Users.Commands.RegisterUser.Dto;
 using KalaMarket.Resourses;
 using KalaMarket.Shared;
 

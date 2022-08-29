@@ -1,4 +1,4 @@
-﻿using KalaMarket.Domain.Entities;
+﻿using KalaMarket.Domain.Entities.BaseEntities;
 
 namespace KalaMarket.Application.Services.Users.Queries.GetRole.Dto;
 

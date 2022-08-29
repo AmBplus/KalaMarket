@@ -30,9 +30,6 @@ namespace KalaMarket.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("InserTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
 
@@ -55,23 +52,23 @@ namespace KalaMarket.Persistence.Migrations
                         new
                         {
                             Id = 1L,
-                            InserTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsRemoved = false,
-                            Name = "Admin"
+                            Name = "Admin",
+                            UpdateTime = new DateTime(2022, 8, 29, 23, 34, 43, 813, DateTimeKind.Local).AddTicks(1597)
                         },
                         new
                         {
                             Id = 2L,
-                            InserTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsRemoved = false,
-                            Name = "Operator"
+                            Name = "Operator",
+                            UpdateTime = new DateTime(2022, 8, 29, 23, 34, 43, 813, DateTimeKind.Local).AddTicks(1658)
                         },
                         new
                         {
                             Id = 3L,
-                            InserTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsRemoved = false,
-                            Name = "Customer"
+                            Name = "Customer",
+                            UpdateTime = new DateTime(2022, 8, 29, 23, 34, 43, 813, DateTimeKind.Local).AddTicks(1669)
                         });
                 });
 
@@ -94,8 +91,8 @@ namespace KalaMarket.Persistence.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<DateTime>("InserTime")
-                        .HasColumnType("datetime2");
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
@@ -125,9 +122,6 @@ namespace KalaMarket.Persistence.Migrations
                         .HasColumnType("bigint");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("InserTime")
-                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");

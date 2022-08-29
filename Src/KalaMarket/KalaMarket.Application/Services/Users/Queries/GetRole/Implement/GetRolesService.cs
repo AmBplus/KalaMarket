@@ -23,7 +23,7 @@ public class GetRolesService : IGetRolesService
     #region Method
     public ResultGetRolesDto Execute()
     {
-        var roles = Context.Roles.ProjectToType<GetRoleDto>().ToList();
+        var roles = Context.Roles.Where(x=>!x.IsRemoved).ProjectToType<GetRoleDto>().ToList();
         return new ResultGetRolesDto()
         {
             Roles = roles,
