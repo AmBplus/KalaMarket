@@ -138,6 +138,9 @@
   <data name="UnValid" xml:space="preserve">
     <value> وارد شده نا معتبر مباشد {0}</value>
   </data>
+  <data name="UnValidId" xml:space="preserve">
+    <value>آیدی وارد شده نا معتبر است</value>
+  </data>
   <data name="UnValidPassword" xml:space="preserve">
     <value>رمز عبور وارد شده باید حداقل شامل فقط حروف انگلیسی کوچک یا بزرگ ، حداقل یک عدد و یک کاراکتر خاص باشد ، همچنین کاراکتر خاص نباید در ابتدای رمز عبور باشد </value>
   </data>

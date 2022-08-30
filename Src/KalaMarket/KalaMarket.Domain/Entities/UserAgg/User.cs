@@ -8,5 +8,5 @@ public class User : BaseEntity<long> , IIsActive
     public string Email { get; set; }
     public string Password { get; set; }
     public ICollection<UserInRole> UserInRoles{ get; set; }
-    public bool IsActive { get; set; }
+    public bool IsActive { get; set; } = true;
 }

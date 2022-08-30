@@ -27,18 +27,11 @@ public class UserController :ControllerBase
     [HttpDelete("{id}")]
     public IActionResult Delete(long id)
     {
-        //var result = ChangeRemoveUserService.Execute(id);
-        //if (!result.IsSuccess)
-        //{
-        //    return BadRequest(result.Message);
-        //}
-        //return Ok(result);
-
-        ResultDto result = new()
+        var result = ChangeRemoveUserService.Execute(id);
+        if (!result.IsSuccess)
         {
-            Message = "شکست",
-            IsSuccess = false
-        };
-        return BadRequest(result);
+            return BadRequest(result.Message);
+        }
+        return Ok(result);
     }
 }

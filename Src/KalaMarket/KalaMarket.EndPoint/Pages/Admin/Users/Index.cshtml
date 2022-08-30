@@ -1,11 +1,11 @@
-﻿@page
+﻿@page "{handler?}"
 @model KalaMarket.EndPoint.Pages.Admin.Users.IndexModel
 @{
 }
 @{
     ViewData["Title"] = "Index";
 }
-
+@Html.AntiForgeryToken()
 
 <div class="content-wrapper">
     <div class="container-fluid">
@@ -21,7 +21,6 @@
                         </div>
                         <div class="card-body collapse show">
                             <div class="card-block card-dashboard">
-                                <p class="card-text">داده های جداول اغلب ویژگی های پیش فرض را فعال می کنند، بنابراین همه چیزهایی که باید برای استفاده از آن با استفاده از ables خود انجام دهید، تماس با تابع ساخت است: $ (). DataTable ()؛</p>
                                 <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
                                     <div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_0_length"><label>نمایش <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> سطر</label></div></div><div class="col-sm-12 col-md-6"><div id="DataTables_Table_0_filter" class="dataTables_filter"><label>جستجو:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="DataTables_Table_0"></label></div></div></div><div class="row">
                                         <div class="col-sm-12">
@@ -42,7 +41,7 @@
                                                         <td>
                                                             <button class="btn btn-info">ویرایش</button>
                                                             <button class="btn btn-danger" onclick="Delete(@(item.Id))">حذف</button>
-                                                            <button class="btn btn-warning">غیر فعال</button>
+                                                            <button class="btn btn-warning" onclick="ChangActivation(@(item.Id))">@(item.IsActive == true ? "غیر فعال" : "فعال")</button>
                                                         </td>
                                                     </tr>
                                                 }
@@ -77,8 +76,8 @@
                 confirmButtonText: "بله",
                 cancelButtonText: "نه",
                 customClass: {
-                    cancelButton: "btn btn-success mx-2",
-                    confirmButton: "btn btn-danger mx-2",
+                    cancelButton: "btn btn-danger  mx-2",
+                    confirmButton: "btn btn-success  mx-2",
                 },
                 buttonsStyling: false,
 
@@ -88,37 +87,103 @@
                         url: `/api/Admin/User/${id}`,
                         method: "DELETE"
                     }).done(function(result) {
-                        console.log("data is" );
-                        console.log(result);
-                        console.log(result.message);
-                        console.log(result.isSuccess);
                         Swal.fire({
-                            text: "اوکی"
+                            icon: 'success',
+                            text: result.message,
+                            customClass: {
+                                confirmButton: "btn btn-info mx-2"
+                            },
+                            buttonsStyling: false
+                        }).then(() => {
+                            location.reload(true)
                         });
-                    }).fail(function (result) {
-                        console.log("data is 111" );
-                        console.log(result);
-                        console.log(result.responseJSON);
-                        console.log(result.responseJSON.message);
-                        console.log(result.responseJSON.isSuccess);
-                        console.log(result.message);
-                        console.log(result.isSuccess);
+
+                    }).fail(function(result) {
                         Swal.fire({
-                            text: "شت"
-                        });    
+                            icon: 'error',
+                            text: result.responseJSON.message,
+                            customClass: {
+                                confirmButton: "btn btn-info mx-2"
+                            },
+                            buttonsStyling: false
+                        });
                     });
-
-
-                    //Swal.fire({
-                    //    text: "اوکی"
-                    //});
                 } else {
                     Swal.fire({
-                        text: "کنسل"
+                        icon: 'info',
+                        text: "درخواست کنسل شد",
+                        customClass: {
+                            confirmButton: "btn btn-info mx-2"
+                        },
+                        buttonsStyling: false
                     });
                 }
             });
 
+        }
+
+        function ChangActivation(id) {
+            Swal.fire({
+                icon: "question",
+                html: `<h4 class="text-info">آیا میخواهید وضعیت کاربر \n را تغیر بدهید ؟</h4>`,
+                showCloseButton: true,
+                showConfirmButton: true,
+                showCancelButton: true,
+                focusConfirm: false,
+                confirmButtonText: "بله",
+                cancelButtonText: "نه",
+                customClass: {
+                    cancelButton: "btn btn-danger  mx-2",
+                    confirmButton: "btn btn-success  mx-2",
+                },
+                buttonsStyling: false,
+            }).then((res) => {
+                if (res.isConfirmed) {
+                    $.ajax({
+                        url: `Users/index/ChangeUserActivation?id=${id}`,
+                        method: "Put",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader("XSRF-TOKEN",
+                                $(`input:hidden[name="__RequestVerificationToken"]`).val());
+                        }
+                    }).done((result) => {
+                        Swal.fire({
+                            icon: "success",
+                            html: `<h4 class="text-info"> ${result.message}</h4>`,
+                            showCloseButton: true,
+                            showConfirmButton: true,
+                            focusConfirm: false,
+                            confirmButtonText: "بله",
+                            timer : 5000,
+                            customClass: {
+                                confirmButton: "btn btn-success  mx-2",
+                            },
+                            buttonsStyling: false,
+                        }).then(() => {
+                            location.reload(true);
+                        })
+                    }).fail((result) => {
+                        var message;
+                        if (result.status == 404) var message = "مشکلی بوجود آمده است";
+                        else {
+                            message = result.responseJSON.message;
+                        }
+                        Swal.fire({
+                            icon: "error",
+                            html: `<h4 class="text-info"> ${message}</h4>`,
+                            showCloseButton: true,
+                            showConfirmButton: true,
+                            focusConfirm: false,
+                            confirmButtonText: "تایید",
+                            timer : 5000,
+                            customClass: {
+                                confirmButton: "btn btn-danger  mx-2",
+                            },
+                            buttonsStyling: false,
+                        })
+                    })
+                }
+            })
         }
     </script>
 }

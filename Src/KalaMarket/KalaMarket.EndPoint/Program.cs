@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 string myCorsPolicy = "MyCors";
 builder.Services.AddControllers();
 builder.Services.AddRazorPages();
+builder.Services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
 builder.Services.Configure<ApplicationSettings>
         (builder.Configuration.GetSection(key: ApplicationSettings.KeyName))
     // AddSingleton()-> using Microsoft.Extensions.DependencyInjection;

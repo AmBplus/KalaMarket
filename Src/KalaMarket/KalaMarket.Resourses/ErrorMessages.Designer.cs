@@ -124,6 +124,15 @@ namespace KalaMarket.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to آیدی وارد شده نا معتبر است.
+        /// </summary>
+        public static string UnValidId {
+            get {
+                return ResourceManager.GetString("UnValidId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to رمز عبور وارد شده باید حداقل شامل فقط حروف انگلیسی کوچک یا بزرگ ، حداقل یک عدد و یک کاراکتر خاص باشد ، همچنین کاراکتر خاص نباید در ابتدای رمز عبور باشد .
         /// </summary>
         public static string UnValidPassword {
