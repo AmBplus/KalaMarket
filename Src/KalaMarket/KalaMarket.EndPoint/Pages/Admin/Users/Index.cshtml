@@ -27,29 +27,25 @@
                                         <div class="col-sm-12">
                                             <table class="table table-striped table-bordered zero-configuration dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                                                 <thead>
-                                                    <tr role="row">
-                                                        <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 222px;">نام</th>
-                                                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="ایمیل: activate to sort column ascending" style="width: 401px;">ایمیل</th>
-                                                    </tr>
+                                                <tr role="row">
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 222px;">نام</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="ایمیل: activate to sort column ascending" style="width: 401px;">ایمیل</th>
+                                                </tr>
                                                 </thead>
                                                 <tbody>
 
-                                                    @foreach (var item in Model.UsersInfo.Users)
-                                                    {
-                                                        <tr role="row" class="odd">
-                                                            <td class="sorting_1">@item.FullName</td>
-                                                            <td>@item.Email</td>
-                                                            <td>
-                                                                <button class="btn btn-info">ویرایش</button>
-                                                                <button class="btn btn-danger">حذف</button>
-                                                                <button class="btn btn-warning">غیر فعال</button>
-                                                            </td>
-                                                        </tr>
-                                                    }
-
-
-
-
+                                                @foreach (var item in Model.UsersInfo.Users)
+                                                {
+                                                    <tr role="row" class="odd">
+                                                        <td class="sorting_1">@item.FullName</td>
+                                                        <td>@item.Email</td>
+                                                        <td>
+                                                            <button class="btn btn-info">ویرایش</button>
+                                                            <button class="btn btn-danger" onclick="Delete(@(item.Id))">حذف</button>
+                                                            <button class="btn btn-warning">غیر فعال</button>
+                                                        </td>
+                                                    </tr>
+                                                }
                                                 </tbody>
                                                 @*<tfoot>
                                                 <tr><th rowspan="1" colspan="1">نام</th><th rowspan="1" colspan="1">ایمیل</th><th rowspan="1" colspan="1">اداره</th><th rowspan="1" colspan="1">سن</th><th rowspan="1" colspan="1">تاریخ شروع</th><th rowspan="1" colspan="1">حقوق</th></tr>
@@ -64,6 +60,65 @@
                 </div>
             </div>
         </section>
-
     </div>
 </div>
+
+@section Script
+{
+    <script>
+        function Delete(id) {
+            Swal.fire({
+                icon: 'question',
+                // icon: "success",
+                html: `<h4 class="text-danger">آیا واقعا میخواهید کاربر را  حذف کنید</h4>`,
+                showCloseButton: true,
+                showCancelButton: true,
+                focusConfirm: false,
+                confirmButtonText: "بله",
+                cancelButtonText: "نه",
+                customClass: {
+                    cancelButton: "btn btn-success mx-2",
+                    confirmButton: "btn btn-danger mx-2",
+                },
+                buttonsStyling: false,
+
+            }).then((res) => {
+                if (res.isConfirmed) {
+                    $.ajax({
+                        url: `/api/Admin/User/${id}`,
+                        method: "DELETE"
+                    }).done(function(result) {
+                        console.log("data is" );
+                        console.log(result);
+                        console.log(result.message);
+                        console.log(result.isSuccess);
+                        Swal.fire({
+                            text: "اوکی"
+                        });
+                    }).fail(function (result) {
+                        console.log("data is 111" );
+                        console.log(result);
+                        console.log(result.responseJSON);
+                        console.log(result.responseJSON.message);
+                        console.log(result.responseJSON.isSuccess);
+                        console.log(result.message);
+                        console.log(result.isSuccess);
+                        Swal.fire({
+                            text: "شت"
+                        });    
+                    });
+
+
+                    //Swal.fire({
+                    //    text: "اوکی"
+                    //});
+                } else {
+                    Swal.fire({
+                        text: "کنسل"
+                    });
+                }
+            });
+
+        }
+    </script>
+}

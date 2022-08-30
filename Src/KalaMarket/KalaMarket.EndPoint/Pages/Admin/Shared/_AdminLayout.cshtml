@@ -38,6 +38,9 @@
                                 <a asp-page="/Admin/Users/Index" class="menu-item">لیست کاربران</a>
                             </li>
                             <li>
+                                <a asp-page="/Admin/Users/RemovedUsers" class="menu-item">کاربران حذف شده</a>
+                            </li>
+                            <li>
                                 <a asp-page="/Admin/Users/Register" class="menu-item">ثبت نام کاربر جدید *</a>
                             </li>
                         </ul>
@@ -369,6 +372,7 @@
 <partial name="../Admin/Shared/_Partials/_ScriptPartial"/>
 
 @await RenderSectionAsync("Script", false)
+@await RenderSectionAsync("Modal",false);
 </body>
 <!-- Mirrored from pixinvent.com/demo/convex-bootstrap-admin-dashboard-template/demo-1/grids.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Sep 2018 14:54:38 GMT -->
 </html>

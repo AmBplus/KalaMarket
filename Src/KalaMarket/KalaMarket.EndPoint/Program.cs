@@ -5,6 +5,8 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+string myCorsPolicy = "MyCors";
+builder.Services.AddControllers();
 builder.Services.AddRazorPages();
 builder.Services.Configure<ApplicationSettings>
         (builder.Configuration.GetSection(key: ApplicationSettings.KeyName))
@@ -20,6 +22,12 @@ builder.Services.Configure<ApplicationSettings>
 
         return result;
     });
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy(myCorsPolicy,
+//        b=>b.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
+//    );
+//});
 string connection = builder.Configuration.GetConnectionString("ConnectionSql");
 builder.Services.ConfigureServices(connection);
 var app = builder.Build();
@@ -34,10 +42,17 @@ if (!app.Environment.IsDevelopment())
  
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+//app.UseCors(myCorsPolicy);
 app.UseRouting();
 
 app.UseAuthorization();
+app.MapControllerRoute(
+    name: "MyArea",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapRazorPages();
 

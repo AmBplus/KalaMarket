@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Shared", "KalaMa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.UnitTest", "KalaMarket.UnitTest\KalaMarket.UnitTest.csproj", "{83B6F744-A19D-4EBF-8AF2-6F6BE3FDCD95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Resourses", "KalaMarket.Resourses\KalaMarket.Resourses.csproj", "{EDE59637-B62D-4356-A5B8-C426172567FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Resourses", "KalaMarket.Resourses\KalaMarket.Resourses.csproj", "{EDE59637-B62D-4356-A5B8-C426172567FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
