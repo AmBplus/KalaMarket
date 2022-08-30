@@ -47,6 +47,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcUmVtb3ZlZFVzZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Admin/Users/_Partial/_ChangeActivationUserScript.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcX1BhcnRpYWxcX0NoYW5nZUFjdGl2YXRpb25Vc2VyU2NyaXB0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Admin/Users/_Partial/_DeleteUserScript.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcX1BhcnRpYWxcX0RlbGV0ZVVzZXJTY3JpcHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Admin/Users/_Partial/_EditModalPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcX1BhcnRpYWxcX0VkaXRNb2RhbFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Admin/Users/_Partial/_EditUserScript.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcX1BhcnRpYWxcX0VkaXRVc2VyU2NyaXB0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Admin/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

@@ -24,6 +24,7 @@ namespace KalaMarket.EndPoint.Pages.Admin.Users
                 Page = page,
                 SearchKey = searchKey
             });
+
         }
         [HttpPut("{id?}")]
         public IActionResult OnPutChangeUserActivation(long? id)

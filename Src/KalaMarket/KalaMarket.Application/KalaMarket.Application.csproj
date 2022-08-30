@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\Context\" />
+    <Folder Include="Services\Users\Commands\EditUser\Dto\" />
   </ItemGroup>
 
   <ItemGroup>

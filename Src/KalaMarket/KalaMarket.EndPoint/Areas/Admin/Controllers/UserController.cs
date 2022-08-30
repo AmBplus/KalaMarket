@@ -1,4 +1,6 @@
 ﻿using KalaMarket.Application.Services.Users.Commands.ChangeRemoveUser;
+using KalaMarket.Application.Services.Users.Commands.EditUser;
+using KalaMarket.Application.Services.Users.Commands.EditUser.Dto;
 using KalaMarket.Shared.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,9 +10,10 @@ namespace KalaMarket.EndPoint.Areas.Admin.Controllers;
 [Route("api/[area]/[controller]")]
 public class UserController :ControllerBase
 {
-    public UserController(IChangeRemoveUserService changeRemoveUserService)
+    public UserController(IChangeRemoveUserService changeRemoveUserService, IEditUserService editUserService)
     {
         ChangeRemoveUserService = changeRemoveUserService;
+        EditUserService = editUserService;
     }
     [HttpGet]
     public IActionResult Get()
@@ -24,6 +27,7 @@ public class UserController :ControllerBase
     }
   
     private IChangeRemoveUserService ChangeRemoveUserService { get; }
+    private IEditUserService EditUserService { get; }
     [HttpDelete("{id}")]
     public IActionResult Delete(long id)
     {
@@ -32,6 +36,14 @@ public class UserController :ControllerBase
         {
             return BadRequest(result.Message);
         }
+        return Ok(result);
+    }
+
+    [HttpPut]
+    public IActionResult Put(EditUserDto editUserDto)
+    {
+        var result = EditUserService.Execute(editUserDto);
+        if (!result.IsSuccess) return BadRequest(result);
         return Ok(result);
     }
 }

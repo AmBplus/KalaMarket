@@ -14,6 +14,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
+            
                         <div class="card-header">
                             <div class="card-title-wrap bar-success">
                                 <h4 class="card-title">لیست کاربران</h4>
@@ -22,12 +23,25 @@
                         <div class="card-body collapse show">
                             <div class="card-block card-dashboard">
                                 <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
-                                    <div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_0_length"><label>نمایش <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> سطر</label></div></div><div class="col-sm-12 col-md-6"><div id="DataTables_Table_0_filter" class="dataTables_filter"><label>جستجو:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="DataTables_Table_0"></label></div></div></div><div class="row">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="dataTables_length" id="DataTables_Table_0_length"><label>نمایش <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> سطر</label></div></div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <div id="DataTables_Table_0_filter" class="dataTables_filter">
+                                                <form method="get" class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                                    <fieldset class="form-group">
+                                                        <input type="text" class="form-control" name="searchkey">
+                                                        <button class="btn btn-success mt-2">جستجو</button>
+                                                    </fieldset>
+                                                </form>
+
+                                            </div></div></div>
+                                    <div class="row">
                                         <div class="col-sm-12">
                                             <table class="table table-striped table-bordered zero-configuration dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                                                 <thead>
                                                 <tr role="row">
-                                                    <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 222px;">نام</th>
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 222px;">نام و نام خانوادگی</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="ایمیل: activate to sort column ascending" style="width: 401px;">ایمیل</th>
                                                 </tr>
                                                 </thead>
@@ -39,7 +53,8 @@
                                                         <td class="sorting_1">@item.FullName</td>
                                                         <td>@item.Email</td>
                                                         <td>
-                                                            <button class="btn btn-info">ویرایش</button>
+                                                            <button class="btn btn-info " data-toggle="modal" data-target="#editUserModal"
+                                                                    data-id="@(item.Id)" data-fullName="@(item.FullName)" >ویرایش</button>
                                                             <button class="btn btn-danger" onclick="Delete(@(item.Id))">حذف</button>
                                                             <button class="btn btn-warning" onclick="ChangActivation(@(item.Id))">@(item.IsActive == true ? "غیر فعال" : "فعال")</button>
                                                         </td>
@@ -51,7 +66,12 @@
                                                 </tfoot>*@
                                             </table>
                                         </div>
-                                    </div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">نمایش 1 تا 10 از 57 سطرها</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">قبلی</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="6" tabindex="0" class="page-link">6</a></li><li class="paginate_button page-item next" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="7" tabindex="0" class="page-link">بعدی</a></li></ul></div></div></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-5">
+                                            <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">نمایش 1 تا 10 از 57 سطرها</div></div>
+                                        <div class="col-sm-12 col-md-7">
+                                            <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">قبلی</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="6" tabindex="0" class="page-link">6</a></li><li class="paginate_button page-item next" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="7" tabindex="0" class="page-link">بعدی</a></li></ul></div></div></div>
                                 </div>
                             </div>
                         </div>
@@ -61,129 +81,18 @@
         </section>
     </div>
 </div>
-
+@section Modal
+{
+    <partial name="_Partial/_EditModalPartial" />
+}
 @section Script
 {
+    <partial name="_Partial/_DeleteUserScript"/>
+    <partial name="_Partial/_ChangeActivationUserScript"/>
+    <partial name="_Partial/_EditUserScript"/>
     <script>
-        function Delete(id) {
-            Swal.fire({
-                icon: 'question',
-                // icon: "success",
-                html: `<h4 class="text-danger">آیا واقعا میخواهید کاربر را  حذف کنید</h4>`,
-                showCloseButton: true,
-                showCancelButton: true,
-                focusConfirm: false,
-                confirmButtonText: "بله",
-                cancelButtonText: "نه",
-                customClass: {
-                    cancelButton: "btn btn-danger  mx-2",
-                    confirmButton: "btn btn-success  mx-2",
-                },
-                buttonsStyling: false,
+      
 
-            }).then((res) => {
-                if (res.isConfirmed) {
-                    $.ajax({
-                        url: `/api/Admin/User/${id}`,
-                        method: "DELETE"
-                    }).done(function(result) {
-                        Swal.fire({
-                            icon: 'success',
-                            text: result.message,
-                            customClass: {
-                                confirmButton: "btn btn-info mx-2"
-                            },
-                            buttonsStyling: false
-                        }).then(() => {
-                            location.reload(true)
-                        });
-
-                    }).fail(function(result) {
-                        Swal.fire({
-                            icon: 'error',
-                            text: result.responseJSON.message,
-                            customClass: {
-                                confirmButton: "btn btn-info mx-2"
-                            },
-                            buttonsStyling: false
-                        });
-                    });
-                } else {
-                    Swal.fire({
-                        icon: 'info',
-                        text: "درخواست کنسل شد",
-                        customClass: {
-                            confirmButton: "btn btn-info mx-2"
-                        },
-                        buttonsStyling: false
-                    });
-                }
-            });
-
-        }
-
-        function ChangActivation(id) {
-            Swal.fire({
-                icon: "question",
-                html: `<h4 class="text-info">آیا میخواهید وضعیت کاربر \n را تغیر بدهید ؟</h4>`,
-                showCloseButton: true,
-                showConfirmButton: true,
-                showCancelButton: true,
-                focusConfirm: false,
-                confirmButtonText: "بله",
-                cancelButtonText: "نه",
-                customClass: {
-                    cancelButton: "btn btn-danger  mx-2",
-                    confirmButton: "btn btn-success  mx-2",
-                },
-                buttonsStyling: false,
-            }).then((res) => {
-                if (res.isConfirmed) {
-                    $.ajax({
-                        url: `Users/index/ChangeUserActivation?id=${id}`,
-                        method: "Put",
-                        beforeSend: function(xhr) {
-                            xhr.setRequestHeader("XSRF-TOKEN",
-                                $(`input:hidden[name="__RequestVerificationToken"]`).val());
-                        }
-                    }).done((result) => {
-                        Swal.fire({
-                            icon: "success",
-                            html: `<h4 class="text-info"> ${result.message}</h4>`,
-                            showCloseButton: true,
-                            showConfirmButton: true,
-                            focusConfirm: false,
-                            confirmButtonText: "بله",
-                            timer : 5000,
-                            customClass: {
-                                confirmButton: "btn btn-success  mx-2",
-                            },
-                            buttonsStyling: false,
-                        }).then(() => {
-                            location.reload(true);
-                        })
-                    }).fail((result) => {
-                        var message;
-                        if (result.status == 404) var message = "مشکلی بوجود آمده است";
-                        else {
-                            message = result.responseJSON.message;
-                        }
-                        Swal.fire({
-                            icon: "error",
-                            html: `<h4 class="text-info"> ${message}</h4>`,
-                            showCloseButton: true,
-                            showConfirmButton: true,
-                            focusConfirm: false,
-                            confirmButtonText: "تایید",
-                            timer : 5000,
-                            customClass: {
-                                confirmButton: "btn btn-danger  mx-2",
-                            },
-                            buttonsStyling: false,
-                        })
-                    })
-                }
-            })
-        }
+        
     </script>
 }

@@ -164,4 +164,12 @@
     <ProjectReference Include="..\KalaMarket.Infrasructure\KalaMarket.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Admin\Users\_Partial\_ChangeActivationUserScript.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Admin\Users\_Partial\_ChangeActivationUserScript.cshtml" />
+  </ItemGroup>
+
 </Project>
