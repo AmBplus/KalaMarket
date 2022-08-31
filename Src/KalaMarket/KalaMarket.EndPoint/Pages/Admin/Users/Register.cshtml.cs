@@ -2,7 +2,7 @@
 using KalaMarket.Application.Services.Users.Queries.GetRole.Interface;
 using KalaMarket.Application.Services.Users.Queries.GetUsers;
 using KalaMarket.EndPoint.Infrastructure;
-using KalaMarket.EndPoint.Models.Admin;
+using KalaMarket.EndPoint.Models.Account.Admin;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -26,7 +26,7 @@ namespace KalaMarket.EndPoint.Pages.Admin.Users
         public IRegisterUserService RegisterUser { get; }
         public IGetRolesService RolesService{ get; }
         [BindProperty]
-        public RegisterViewModel Register { get; set; }
+        public RegisterAdminViewModel RegisterAdmin { get; set; }
         public SelectList Roles { get; set; }
         #endregion Properties_Fields
 

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AcceptLaw" xml:space="preserve">
+    <value>امکان ثبت نام بدون قبول قوانین امکان ندارد لطفا تیک آن را بزنید</value>
+  </data>
   <data name="EmailType" xml:space="preserve">
     <value>لطفا ایمیل معتبر وارد نمایید</value>
   </data>

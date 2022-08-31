@@ -1,8 +1,8 @@
 ﻿namespace KalaMarket.Shared;
 
-public class UserRoles
+public enum UserRoles : long
 {
-    public const string Admin = nameof(Admin);
-    public const string Operator = nameof(Operator);
-    public const string Customer = nameof(Customer);
+     Admin ,
+     Operator,
+     Customer
 }

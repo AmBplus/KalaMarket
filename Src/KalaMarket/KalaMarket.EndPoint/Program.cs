@@ -45,7 +45,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 //app.UseCors(myCorsPolicy);
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllerRoute(
     name: "MyArea",

@@ -12,6 +12,7 @@ using KalaMarket.Application.Services.Users.Queries.GetRole.Implement;
 using KalaMarket.Application.Services.Users.Commands.RegisterUser.Interfaces;
 using KalaMarket.Application.Services.Users.Commands.ChangeRemoveUser;
 using KalaMarket.Application.Services.Users.Commands.EditUser;
+using KalaMarket.Application.Services.Users.Queries.GetRole;
 
 namespace KalaMarket.Infrastructure;
 
@@ -27,6 +28,7 @@ public static class ServiceBootStrapper
         services.AddScoped<IRegisterUserService, RegisterUserService>();
         services.AddScoped<IGetRemovedUsersService, GetRemovedUsersService>();
         services.AddScoped<IGetRolesService, GetRolesService>();
+        services.AddScoped<IGetRoleService, GetRoleService>();
         services.AddScoped<IChangeActivationUserService, ChangeActivationUserService>();
         services.AddScoped<IChangeRemoveRoleService, ChangeRemoveRoleService>();
         services.AddScoped<IChangeRemoveUserService, ChangeRemoveUserService>();

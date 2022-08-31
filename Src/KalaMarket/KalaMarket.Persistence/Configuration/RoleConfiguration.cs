@@ -11,8 +11,8 @@ public class RoleConfiguration : IEntityTypeConfiguration<Role>
     {
         builder.HasMany(x => x.UserInRoles).WithOne(x => x.Role).HasForeignKey(x => x.RoleId);
         builder.Property(x => x.Name).HasMaxLength(100);
-        builder.HasData(new Role() { Id = 1, Name = UserRoles.Admin });
-        builder.HasData(new Role() { Id = 2, Name = UserRoles.Operator });
-        builder.HasData(new Role() { Id = 3, Name = UserRoles.Customer });
+        builder.HasData(new Role() { Id = 1, Name = UserRoles.Admin.ToString() });
+        builder.HasData(new Role() { Id = 2, Name = UserRoles.Operator.ToString() });
+        builder.HasData(new Role() { Id = 3, Name = UserRoles.Customer.ToString() });
     }
 }

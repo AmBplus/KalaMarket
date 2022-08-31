@@ -61,6 +61,15 @@ namespace KalaMarket.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to امکان ثبت نام بدون قبول قوانین امکان ندارد لطفا تیک آن را بزنید.
+        /// </summary>
+        public static string AcceptLaw {
+            get {
+                return ResourceManager.GetString("AcceptLaw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to لطفا ایمیل معتبر وارد نمایید.
         /// </summary>
         public static string EmailType {
