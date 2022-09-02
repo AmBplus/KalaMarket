@@ -23,7 +23,7 @@ public class EditUserService : IEditUserService
             return result;
         }
 
-        user.FullName = editUser.FullName;
+        user.Update(editUser.FullName);
         try
         {
             Context.SaveChanges();

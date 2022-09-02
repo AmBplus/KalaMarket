@@ -1,10 +1,14 @@
-﻿using KalaMarket.Application.Interfaces.Context;
+﻿using FluentValidation.Results;
+using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Services.Users.Commands.RegisterUser.Dto;
 using KalaMarket.Application.Services.Users.Commands.RegisterUser.Interfaces;
 using KalaMarket.Application.Validations;
+using KalaMarket.Application.Validations.Utility;
 using KalaMarket.Domain.Entities.UserAgg;
 using KalaMarket.Resourses;
 using KalaMarket.Shared.Dto;
+using KalaMarket.Shared.Security;
+using Mapster;
 
 namespace KalaMarket.Application.Services.Users.Commands.RegisterUser.Implement;
 
@@ -30,56 +34,30 @@ public class RegisterUserService : IRegisterUserService
     /// </summary>
     /// <param name="registerUserDto"></param>
     /// <returns></returns>
-    public ResultListMessageDto<ResultRegisterUserDto> Execute(RequestRegisterUserDto registerUserDto)
+    public ResultDto<ResultRegisterUserDto> Execute(RequestRegisterUserDto registerUserDto)
     {
-        ResultListMessageDto<ResultRegisterUserDto> result = new ResultListMessageDto<ResultRegisterUserDto>();
-        IList<string> errorsList = new List<string>();
-        RegisterUserValidator userValidator = new RegisterUserValidator();
-        var resultValidate = userValidator.Validate(registerUserDto);
-        if (resultValidate.Errors.Count > 0)
-        {
+        ResultDto<ResultRegisterUserDto> result = new (new ResultRegisterUserDto());
 
-            foreach (var error in resultValidate.Errors)
-            {
-                errorsList.Add(error.ErrorMessage);
-            }
-
-            result.IsSuccess = false;
-            result.Messages = errorsList;
-            return result;
-        }
+        //*******
+        if (ValidateRequestRegisterDto(registerUserDto, result)) return result;
+        //******
+        if (CheckEmailExits(registerUserDto.Email, result)) return result;
         // Create User
-        User user = new User()
-        {
-            FullName = registerUserDto.FullName,
-            Email = registerUserDto.Email,
-        };
-        List<UserInRole> userInRole = new List<UserInRole>();
-        // Add Role To New User
-        foreach (var role in registerUserDto.Roles)
-        {
-            var roles = Context.Roles.Find(role.Id);
-            userInRole.Add(new UserInRole()
-            {
-                User = user,
-                RoleId = roles.Id,
-                Role = roles,
-                UserId = user.Id
-            });
-        }
-        user.UserInRoles = userInRole;
-        // Add User To Db
+        var user = CreateUser(registerUserDto);
+        //******
+        AddUserInRole(user, registerUserDto.RoleId);
+        //******
         Context.Users.Add(user);
-
         #region Try Save User And Return Result
 
         try
         {
             if (Convert.ToBoolean(Context.SaveChanges()))
             {
+                
                 result.Data.UserId = user.Id;
                 result.IsSuccess = true;
-                errorsList.Add(string.Format(Messages.RegisterSuccessMessageWithUserName, user.Email));
+                result.Message =(string.Format(Messages.RegisterSuccessMessageWithUserName, user.Email));
 
             }
         }
@@ -87,16 +65,61 @@ public class RegisterUserService : IRegisterUserService
         {
             result.Data.UserId = user.Id;
             result.IsSuccess = false;
-            errorsList.Add(string.Format(Messages.RegisterFailedMessageWithUserNameAndReason, user.Email, e.Message));
-        }
-        finally
-        {
-            result.Messages = errorsList;
-        }
+            result.Message = string.Format(Messages.RegisterFailedMessageWithUserName,registerUserDto.Email);
+        } 
         return result;
 
         #endregion Try Save User And Return Result 
     }
 
+    private User CreateUser(RequestRegisterUserDto registerUserDto)
+    {
+        return  new User(fullName:registerUserDto.FullName,email:registerUserDto.Email,password:registerUserDto.Password);
+    }
+
+    private bool ValidateRequestRegisterDto(RequestRegisterUserDto registerUserDto, ResultDto<ResultRegisterUserDto> result)
+    {
+        RegisterUserValidator userValidator = new RegisterUserValidator();
+        var resultValidate = userValidator.Validate(registerUserDto);
+      
+        if (resultValidate.Errors.Count > 0)
+        {
+         
+            result.IsSuccess = false;
+            result.Message = resultValidate.Errors.ErrosToString();
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool CheckEmailExits(string email, ResultDto<ResultRegisterUserDto> result)
+    {
+        var emailExitsInDb = Context.Users.FirstOrDefault(x => x.Email.ToLower() == email.ToLower());
+        if (emailExitsInDb != null)
+        {
+            result.Message = ErrorMessages.EmailExists;
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool AddUserInRole(User user, long roleId)
+    {
+        var roles = Context.Roles.Find(roleId);
+        UserInRole userInRole = new UserInRole()
+        {
+            User = user,
+            RoleId = roles.Id,
+            Role = roles,
+            UserId = user.Id
+        };
+        // Add Role To New User
+        user.UserInRoles.Add(userInRole);
+        return true;
+    }
+
     #endregion
+
 }

@@ -70,6 +70,15 @@ namespace KalaMarket.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ایمیل وارد شده از قبل ثبت شده است از فراموشی رمز استفاده کنید.
+        /// </summary>
+        public static string EmailExists {
+            get {
+                return ResourceManager.GetString("EmailExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to لطفا ایمیل معتبر وارد نمایید.
         /// </summary>
         public static string EmailType {
@@ -147,6 +156,15 @@ namespace KalaMarket.Resourses {
         public static string UnValidPassword {
             get {
                 return ResourceManager.GetString("UnValidPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to رمز عبور یا ایمیل شما اشتباه است.
+        /// </summary>
+        public static string WrongEmailOrPassword {
+            get {
+                return ResourceManager.GetString("WrongEmailOrPassword", resourceCulture);
             }
         }
     }

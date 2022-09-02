@@ -33,5 +33,6 @@ public static class ServiceBootStrapper
         services.AddScoped<IChangeRemoveRoleService, ChangeRemoveRoleService>();
         services.AddScoped<IChangeRemoveUserService, ChangeRemoveUserService>();
         services.AddScoped<IEditUserService, EditUserService>();
+        services.AddScoped<IGetUserWithRolesService, GetUserWithRolesService>();
     }
 }

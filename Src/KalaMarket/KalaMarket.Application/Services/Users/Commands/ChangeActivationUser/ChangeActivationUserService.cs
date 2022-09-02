@@ -35,7 +35,8 @@ public class ChangeActivationUserService : IChangeActivationUserService
             resultDto.Message = Messages.NotFindUser;
             return resultDto;
         }
-        user.IsActive = !user.IsActive;
+
+        user.ChangeActivation();
         try
         {
             Context.SaveChanges();

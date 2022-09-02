@@ -6,7 +6,7 @@
 		{
 		}
 
-		public static string GetSha256(string text)
+		public static string GetSha256(this string text)
 		{
 			var inputBytes =
 				System.Text.Encoding.UTF8.GetBytes(s: text);

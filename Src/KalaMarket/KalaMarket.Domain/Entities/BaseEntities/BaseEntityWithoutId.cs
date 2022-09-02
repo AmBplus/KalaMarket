@@ -9,8 +9,20 @@ public class BaseEntityWithoutId
         UpdateTime = InserTime = Utility.Now;
     }
     public DateTime InserTime { get; }
-    public DateTime? UpdateTime { get; set; }
-    public bool IsRemoved { get; set; } = false;
-    public DateTime? RemoveTime { get; set; }
+    public DateTime? UpdateTime { get;private set; }
+    public bool IsRemoved { get;private set; } = false;
+    public DateTime? RemoveTime { get;private set; }
 
+    public bool UpdateTimes()
+    {
+        UpdateTime = Utility.Now;
+        return true;
+    }
+
+    public bool ChangeIsRemoved()
+    {
+        IsRemoved = !IsRemoved;
+        RemoveTime = Utility.Now;
+        return true;
+    }
 }

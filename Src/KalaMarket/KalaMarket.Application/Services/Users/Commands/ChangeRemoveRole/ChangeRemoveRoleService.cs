@@ -26,7 +26,7 @@ public class ChangeRemoveRoleService : IChangeRemoveRoleService
             return resultDto;
         }
 
-        role.IsRemoved = !role.IsRemoved;
+        role.ChangeIsRemoved();
         try
         {
            

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nTHiuvMa4GY0NOhPWrs1pT20NecExSwi9texyGIBEyRck8TyHJMZ6/yqfTuxR5ce5N4qcOEpiC/RDqUKt2anFQ==",
+  "dgSpecHash": "5Up2UNGPYYqN+9NJnxB0lutyAhGZkki+jC+JFhIvSiRjWvB4smEGbHl8hY1Q0iq2BRRsXkfbk8RFJmnA/zE7MA==",
   "success": true,
   "projectFilePath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\KalaMarket.EndPoint.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\manga\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
+    "C:\\Users\\manga\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\6.0.8\\microsoft.aspnetcore.authentication.google.6.0.8.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.8\\microsoft.aspnetcore.mvc.razor.extensions.6.0.8.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\6.0.8\\microsoft.aspnetcore.mvc.razor.runtimecompilation.6.0.8.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.8\\microsoft.aspnetcore.razor.language.6.0.8.nupkg.sha512",

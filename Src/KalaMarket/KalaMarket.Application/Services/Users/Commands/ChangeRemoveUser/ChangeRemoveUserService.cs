@@ -25,7 +25,7 @@ public class ChangeRemoveUserService : IChangeRemoveUserService
             resultDto.Message = Messages.NotFindUser;
             return resultDto;
         }
-        user.IsRemoved = !user.IsRemoved;
+        user.ChangeIsRemoved();
         try
         {
             Context.SaveChanges();

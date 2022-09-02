@@ -123,6 +123,9 @@
   <data name="FullName" xml:space="preserve">
     <value>نام و نام خانوادگی</value>
   </data>
+  <data name="IsRemeberMe" xml:space="preserve">
+    <value>مرا بخاطر بیاور</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>نام</value>
   </data>

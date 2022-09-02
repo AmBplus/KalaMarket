@@ -10,6 +10,7 @@
     <Folder Include="Interfaces\Context\" />
     <Folder Include="Services\Users\Commands\EditUser\Dto\" />
     <Folder Include="Services\Users\Queries\GetRole\" />
+    <Folder Include="Validations\Utility\" />
   </ItemGroup>
 
   <ItemGroup>

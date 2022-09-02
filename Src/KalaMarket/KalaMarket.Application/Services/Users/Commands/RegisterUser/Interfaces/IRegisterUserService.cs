@@ -5,5 +5,5 @@ namespace KalaMarket.Application.Services.Users.Commands.RegisterUser.Interfaces
 
 public interface IRegisterUserService
 {
-    ResultListMessageDto<ResultRegisterUserDto> Execute(RequestRegisterUserDto registerUserDto);
+    ResultDto<ResultRegisterUserDto> Execute(RequestRegisterUserDto registerUserDto);
 }

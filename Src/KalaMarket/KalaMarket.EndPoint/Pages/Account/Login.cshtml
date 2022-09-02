@@ -17,7 +17,7 @@
     <partial name="_Partial/_LoginStylePartial"/>
 </head>
 <body>
-
+<partial name="_Partials/_DisplayToastMessages"/>
     <!-- login----------------------------------->
     <div class="container">
         <div class="row">
@@ -39,26 +39,29 @@
                                 </div>
                                 <div class="Login-to-account mt-4">
                                     <div class="account-box-content">
+                                        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
                                         <h4>ورود به حساب کاربری</h4>
-                                        <form class="form-account text-right">
+                                        <form class="form-account text-right" method="Post">
                                             <div class="form-account-title">
-                                                <label for="email-phone">ایمیل  </label>
-                                                <input type="text" class="number-email-input" id="Email" name="email-account">
+                                                <label asp-for="LoginViewModel.Email">ایمیل</label>
+                                                <input asp-for="LoginViewModel.Email" class="number-email-input">
+                                                <span asp-validation-for="LoginViewModel.Email" class="text-danger"></span>
                                             </div>
                                             <div class="form-account-title">
-                                                <label for="password">رمز عبور</label>
+                                                <label asp-for="LoginViewModel.Password">رمز عبور</label>
                                                 <a href="#" class="account-link-password">رمز خود را فراموش کرده ام</a>
-                                                <input type="password" class="password-input" id="Password">
+                                                <input asp-for="LoginViewModel.Password" class="password-input">
+                                                <span asp-validation-for="LoginViewModel.Password" class="text-danger"></span>
                                             </div>
                                             <div class="form-auth-row">
-                                                <label for="#" class="ui-checkbox mt-1">
-                                                    <input type="checkbox" value="1" name="login" id="remember">
+                                                <label asp-for="LoginViewModel.IsRemeberMe" class=" ui-checkbox mt-1">
+                                                    <input asp-for="LoginViewModel.IsRemeberMe">
                                                     <span class="ui-checkbox-check"></span>
                                                 </label>
-                                                <label for="remember" class="remember-me mr-0">مرا به خاطر بسپار</label>
+                                                <label asp-for="LoginViewModel.IsRemeberMe" class="remember-me mr-0">مرا به خاطر بسپار</label>
                                             </div>
                                             <div class="form-row-account">
-                                                <a onclick="Login()" class="btn btn-primary btn-login">ورود به فروشگاه باگتو  </a>
+                                                <button type="submit" class="btn btn-primary btn-login">ثبت نام در فروشگاه کالامارکت</button>
                                             </div>
                                         </form>
                                     </div>
@@ -79,56 +82,6 @@
     </div>
 <!-- scroll_Progress------------------------->
 <partial name="_Partial/_LoginScriptPartial"/>
-<script>
-    function Login() {
-        var Email = $("#Email").val();
-        var Password = $("#Password").val();
-        var postData = {
-            'Email': Email,
-            'Password': Password,
-        };
-        $.ajax({
-            contentType: 'application/x-www-form-urlencoded',
-            dataType: 'json',
-            type: "POST",
-            url: "Signin",
-            data: postData,
-            success: function (data) {
-                if (data.isSuccess == true) {
-                    swal.fire(
-                        'موفق!',
-                        data.message,
-                        'success'
-                    ).then(function (isConfirm) {
-                        window.location.replace("/");
-                    });
-                }
-                else {
+<partial name="Shared/_ValidationScriptsPartial"/>
 
-                    swal.fire(
-                        'هشدار!',
-                        data.message,
-                        'warning'
-                    );
-                }
-            },
-            error: function (request, status, error) {
-                swal.fire(
-                    'هشدار!',
-                    request.responseText,
-                    'warning'
-                );
-            }
-        });
-    }
-</script>
 </body>
-
-
-@*
-<link href="~/Sweetalert2/sweetalert2.min.css" rel="stylesheet" />
-<script src="~/Sweetalert2/sweetalert2.min.js"></script>*@
-
-
-
-</html>

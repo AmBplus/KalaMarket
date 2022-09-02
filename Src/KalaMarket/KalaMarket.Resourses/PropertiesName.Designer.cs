@@ -79,6 +79,15 @@ namespace KalaMarket.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to مرا بخاطر بیاور.
+        /// </summary>
+        public static string IsRemeberMe {
+            get {
+                return ResourceManager.GetString("IsRemeberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to نام.
         /// </summary>
         public static string Name {

@@ -120,6 +120,9 @@
   <data name="AcceptLaw" xml:space="preserve">
     <value>امکان ثبت نام بدون قبول قوانین امکان ندارد لطفا تیک آن را بزنید</value>
   </data>
+  <data name="EmailExists" xml:space="preserve">
+    <value>ایمیل وارد شده از قبل ثبت شده است از فراموشی رمز استفاده کنید</value>
+  </data>
   <data name="EmailType" xml:space="preserve">
     <value>لطفا ایمیل معتبر وارد نمایید</value>
   </data>
@@ -146,5 +149,8 @@
   </data>
   <data name="UnValidPassword" xml:space="preserve">
     <value>رمز عبور وارد شده باید حداقل شامل فقط حروف انگلیسی کوچک یا بزرگ ، حداقل یک عدد و یک کاراکتر خاص باشد ، همچنین کاراکتر خاص نباید در ابتدای رمز عبور باشد </value>
+  </data>
+  <data name="WrongEmailOrPassword" xml:space="preserve">
+    <value>رمز عبور یا ایمیل شما اشتباه است</value>
   </data>
 </root>

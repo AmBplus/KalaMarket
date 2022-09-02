@@ -16,7 +16,7 @@
    <partial name="_Partial/_RegisterStylePartial"/>
 </head>
 <body>
-
+<partial name="_Partials/_DisplayToastMessages"/>
     <!-- login----------------------------------->
     <div class="container">
         <div class="row">
@@ -37,6 +37,7 @@
                                   </a>
                                 </div>
                                 <div class="Login-to-account mt-4">
+                                    <div class="alert alert-danger m-3" asp-validation-summary="ModelOnly"></div>
                                     <div class="account-box-content">
                                         <h4>ثبت نام </h4>
                                         <form id="RegisterForm" method="post" class="form-account text-right">
@@ -48,8 +49,8 @@
 
 
                                             <div class="form-account-title">
-                                                <label asp-for="RegisterUser.Email">ایمیل  </label>
-                                                <input asp-for="RegisterUser.Email"  class="number-email-input">
+                                                <label asp-for="RegisterUser.Email">ایمیل </label>
+                                                <input asp-for="RegisterUser.Email" class="number-email-input">
                                                 <span class="text-danger" asp-validation-for="RegisterUser.Email"></span>
                                             </div>
                                             <div class="form-account-title">
@@ -59,22 +60,22 @@
                                             </div>
                                             <div class="form-account-title">
                                                 <label asp-for="RegisterUser.RePassword">تکرار رمز عبور</label>
-                                                <input asp-for="RegisterUser.RePassword"  class="password-input">
+                                                <input asp-for="RegisterUser.RePassword" class="password-input">
                                                 <span class="text-danger" asp-validation-for="RegisterUser.RePassword"></span>
                                             </div>
                                             <div class="form-auth-row">
                                                 <label asp-for="RegisterUser.IsAcceptLaw" class="ui-checkbox mt-1">
-                                                    <input asp-for="RegisterUser.IsAcceptLaw" >
+                                                    <input asp-for="RegisterUser.IsAcceptLaw">
                                                     <span class="ui-checkbox-check"></span>
                                                 </label>
                                                 <label asp-for="RegisterUser.IsAcceptLaw" class="remember-me mr-0"><a href="#">حریم خصوصی</a> و <a href="#">شرایط قوانین </a>استفاده از سرویس های سایت دیجی‌اسمارت را مطالعه نموده و با کلیه موارد آن موافقم.</label>
-                                                <span class="text-danger" asp-validation-for="RegisterUser.IsAcceptLaw" ></span><br/>
+                                                <span class="text-danger" asp-validation-for="RegisterUser.IsAcceptLaw"></span><br/>
                                                 <span class="text-danger lawAccept"></span>
-                                                </div>
+                                            </div>
                                             <div class="form-row-account">
                                                 <button type="submit" class="btn btn-primary btn-register">ثبت نام در فروشگاه کالامارکت</button>
                                             </div>
-                                            <input asp-for="RegisterUser.RoleId" hidden />
+                                            <input asp-for="RegisterUser.RoleId" hidden/>
                                         </form>
                                     </div>
                                 </div>

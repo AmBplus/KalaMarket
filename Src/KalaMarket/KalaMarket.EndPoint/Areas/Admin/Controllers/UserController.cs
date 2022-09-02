@@ -15,16 +15,7 @@ public class UserController :ControllerBase
         ChangeRemoveUserService = changeRemoveUserService;
         EditUserService = editUserService;
     }
-    [HttpGet]
-    public IActionResult Get()
-    {
-        ResultDto result = new()
-        {
-            Message = "سلام",
-            IsSuccess = true
-        };
-        return Ok(result);
-    }
+
   
     private IChangeRemoveUserService ChangeRemoveUserService { get; }
     private IEditUserService EditUserService { get; }
