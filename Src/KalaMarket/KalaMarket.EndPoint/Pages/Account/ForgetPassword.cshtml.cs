@@ -5,8 +5,9 @@ namespace KalaMarket.EndPoint.Pages.Account
 {
     public class ForgetPasswordModel : PageModel
     {
-        public void OnGet()
+        public RedirectToPageResult OnGet()
         {
+            return RedirectToPage("/");
         }
     }
 }

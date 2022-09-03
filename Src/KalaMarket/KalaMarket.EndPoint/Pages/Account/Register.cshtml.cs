@@ -8,21 +8,33 @@ using KalaMarket.Shared;
 using Mapster;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using Utility = KalaMarket.EndPoint.Infrastructure.Security.Utility;
 
 namespace KalaMarket.EndPoint.Pages.Account
 {
     public class RegisterModel : BasePageModel
     {
+        #region Constructor
+
         public RegisterModel(IGetRoleService roleService , IRegisterUserService registerUserService)
         {
             RoleService = roleService;
             RegisterUserService = registerUserService;
         }
 
+        #endregion /Constructor
+
+        #region Properties
+
         private IGetRoleService RoleService { get; }
         private IRegisterUserService RegisterUserService { get; }
         [BindProperty]
-        public RegisterCustomerViewModel RegisterUser { get; set; } 
+        public RegisterCustomerViewModel RegisterUser { get; set; }
+
+        #endregion /Properties
+
+        #region Methods
+
         public void OnGet()
         {
             var roleId =RoleService.Execute(UserRoles.Customer.ToString());
@@ -59,7 +71,7 @@ namespace KalaMarket.EndPoint.Pages.Account
         {
             if (User != null || User.Identity != null || User.Identity.IsAuthenticated ||  User.Identities.Count() > 0)
             {
-                await HttpContext.SignOutAsync(Infrastructure.Security.Utility.AuthenticationScheme);
+                await HttpContext.SignOutAsync(Utility.AuthenticationScheme);
             }
             var claims = new List<Claim>()
             {
@@ -67,16 +79,18 @@ namespace KalaMarket.EndPoint.Pages.Account
                 new(ClaimTypes.Name, registerUser.Email),
                 new(ClaimTypes.Role, UserRoles.Customer.ToString())
             };
-            var claimIdentity = new ClaimsIdentity(claims, Infrastructure.Security.Utility.AuthenticationScheme);
+            var claimIdentity = new ClaimsIdentity(claims, Utility.AuthenticationScheme);
             var authProperties = new AuthenticationProperties()
             {
                 AllowRefresh = true,
                 IsPersistent = false,
-                IssuedUtc = Utility.Now,
+                IssuedUtc = KalaMarket.Shared.Utility.Now,
             };
-            await HttpContext.SignInAsync(Infrastructure.Security.Utility.AuthenticationScheme,
+            await HttpContext.SignInAsync(Utility.AuthenticationScheme,
                 new ClaimsPrincipal(claimIdentity), authProperties);
             
         }
+
+        #endregion /Methods
     }
 }
