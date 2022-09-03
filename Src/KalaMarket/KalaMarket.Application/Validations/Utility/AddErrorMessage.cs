@@ -5,7 +5,7 @@ namespace KalaMarket.Application.Validations.Utility;
 
 public static class FluentValidationErrors
 {
-    public static string ErrosToString(this List<ValidationFailure> resultValidateErrors)
+    public static string ToStringError(this List<ValidationFailure> resultValidateErrors)
     {
         StringBuilder stringBuilder = new StringBuilder();
         foreach (var error in resultValidateErrors)

@@ -29,16 +29,15 @@ public class Category : BaseEntity<long>
     #endregion
 
     #region Methods
-
     public bool SetParrentCategory(Category parrentCategory)
     {
         ParentCategory = parrentCategory;
         return true;
     }
-
     public bool UpdateCategory(string name)
     {
         Name = name;
+        base.UpdateTimes();
         return true;
     }
     public bool UpdateCategory(string name , long parentCategoryId ,Category parentCategory )
@@ -46,9 +45,8 @@ public class Category : BaseEntity<long>
         Name = name;
         ParentCategory = parentCategory;
         ParentCategoryId = parentCategoryId;
+        base.UpdateTimes();
         return true;
     }
-    
-
     #endregion
 }

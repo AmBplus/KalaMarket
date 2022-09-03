@@ -2,7 +2,7 @@
 using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Services.Users.Commands.RegisterUser.Dto;
 using KalaMarket.Application.Services.Users.Commands.RegisterUser.Interfaces;
-using KalaMarket.Application.Validations;
+using KalaMarket.Application.Validations.User;
 using KalaMarket.Application.Validations.Utility;
 using KalaMarket.Domain.Entities.UserAgg;
 using KalaMarket.Resourses;
@@ -86,7 +86,7 @@ public class RegisterUserService : IRegisterUserService
         {
          
             result.IsSuccess = false;
-            result.Message = resultValidate.Errors.ErrosToString();
+            result.Message = resultValidate.Errors.ToStringError();
             return true;
         }
 

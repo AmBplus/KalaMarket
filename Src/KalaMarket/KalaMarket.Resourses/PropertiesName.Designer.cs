@@ -61,6 +61,15 @@ namespace KalaMarket.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to کتگوری.
+        /// </summary>
+        public static string Category {
+            get {
+                return ResourceManager.GetString("Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ایمیل.
         /// </summary>
         public static string Email {

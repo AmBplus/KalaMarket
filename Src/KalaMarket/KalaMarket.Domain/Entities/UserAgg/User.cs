@@ -1,4 +1,5 @@
 ﻿using KalaMarket.Domain.Entities.BaseEntities;
+using KalaMarket.Shared;
 using KalaMarket.Shared.Security;
 
 namespace KalaMarket.Domain.Entities.UserAgg;
@@ -21,6 +22,7 @@ public class User : BaseEntity<long> , IIsActive
     public bool Update(string fullName)
     {
         FullName = fullName;
+        base.UpdateTimes();
         return true;
     }
     public bool ChangeActivation()

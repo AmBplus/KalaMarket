@@ -88,6 +88,15 @@ namespace KalaMarket.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to  {0} خواسته شده پیدا نشد.
+        /// </summary>
+        public static string NotFind {
+            get {
+                return ResourceManager.GetString("NotFind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to فیلد های رمز عبور یکسان نمیباشد.
         /// </summary>
         public static string NotSamePassword {

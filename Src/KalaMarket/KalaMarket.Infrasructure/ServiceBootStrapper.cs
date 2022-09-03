@@ -1,4 +1,7 @@
-﻿using KalaMarket.Application.Interfaces.Context;
+﻿#region Using
+
+using KalaMarket.Application.Interfaces.Context;
+using KalaMarket.Application.Services.Category.FacadePattern.Facade;
 using KalaMarket.Application.Services.Users.Commands.ChangeActivationUser;
 using KalaMarket.Application.Services.Users.Commands.ChangeRemoveRole;
 using KalaMarket.Application.Services.Users.Commands.RegisterUser.Implement;
@@ -15,6 +18,8 @@ using KalaMarket.Application.Services.Users.Commands.EditUser;
 using KalaMarket.Application.Services.Users.FacadePattern;
 using KalaMarket.Application.Services.Users.FecadePattern;
 using KalaMarket.Application.Services.Users.Queries.GetRole;
+
+#endregion
 
 namespace KalaMarket.Infrastructure;
 
@@ -44,9 +49,14 @@ public static class ServiceBootStrapper
 
         #endregion /UserServices
 
-        #region UserFacade
+        #region User Facade Service
         services.AddScoped<IUserFacadeService, UserFacadeService>();
-        #endregion /UserFacade
+        #endregion /User Facade Service
 
+        #region Category Facade Service
+
+        services.AddScoped<ICategoryFacade, CategoryFacade>();
+
+        #endregion /Category Facade Service
     }
 }
