@@ -8,6 +8,9 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\Context\" />
+    <Folder Include="Services\Product\Commands\AddNewCategory\" />
+    <Folder Include="Services\Product\FecadePattern\" />
+    <Folder Include="Services\Product\Queries\" />
     <Folder Include="Services\Users\Commands\EditUser\Dto\" />
     <Folder Include="Services\Users\Queries\GetRole\" />
     <Folder Include="Validations\Utility\" />

@@ -12,6 +12,8 @@ using KalaMarket.Application.Services.Users.Queries.GetRole.Implement;
 using KalaMarket.Application.Services.Users.Commands.RegisterUser.Interfaces;
 using KalaMarket.Application.Services.Users.Commands.ChangeRemoveUser;
 using KalaMarket.Application.Services.Users.Commands.EditUser;
+using KalaMarket.Application.Services.Users.FacadePattern;
+using KalaMarket.Application.Services.Users.FecadePattern;
 using KalaMarket.Application.Services.Users.Queries.GetRole;
 
 namespace KalaMarket.Infrastructure;
@@ -20,10 +22,15 @@ public static class ServiceBootStrapper
 {
     public static void ConfigureServices(this IServiceCollection services , string connection )
     {
+        #region DbService
         services.AddDbContext<IKalaMarketContext, KalaMarketContext>(option =>
         {
             option.UseSqlServer(connection);
         });
+        #endregion /DbService
+
+        #region UserServices
+
         services.AddScoped<IGetUsersService, GetUsersService>();
         services.AddScoped<IRegisterUserService, RegisterUserService>();
         services.AddScoped<IGetRemovedUsersService, GetRemovedUsersService>();
@@ -34,5 +41,12 @@ public static class ServiceBootStrapper
         services.AddScoped<IChangeRemoveUserService, ChangeRemoveUserService>();
         services.AddScoped<IEditUserService, EditUserService>();
         services.AddScoped<IGetUserWithRolesService, GetUserWithRolesService>();
+
+        #endregion /UserServices
+
+        #region UserFacade
+        services.AddScoped<IUserFacadeService, UserFacadeService>();
+        #endregion /UserFacade
+
     }
 }

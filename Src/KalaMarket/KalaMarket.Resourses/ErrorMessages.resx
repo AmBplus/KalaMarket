@@ -132,6 +132,9 @@
   <data name="OutofMinMax" xml:space="preserve">
     <value>فیلد {0} باید بین {2} و {1} حرف باشد</value>
   </data>
+  <data name="ProblemOccurred" xml:space="preserve">
+    <value>مشکلی پیش آمده است</value>
+  </data>
   <data name="Required" xml:space="preserve">
     <value>این فیلد الزامی میباشد</value>
   </data>

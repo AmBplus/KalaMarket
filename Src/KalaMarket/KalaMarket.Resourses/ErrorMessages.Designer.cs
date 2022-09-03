@@ -106,6 +106,15 @@ namespace KalaMarket.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to مشکلی پیش آمده است.
+        /// </summary>
+        public static string ProblemOccurred {
+            get {
+                return ResourceManager.GetString("ProblemOccurred", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to این فیلد الزامی میباشد.
         /// </summary>
         public static string Required {

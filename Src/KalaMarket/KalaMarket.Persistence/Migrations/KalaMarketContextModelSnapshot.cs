@@ -22,6 +22,37 @@ namespace KalaMarket.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("KalaMarket.Domain.Entities.CategoryAgg.Category", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("ParentCategoryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("RemoveTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentCategoryId");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("KalaMarket.Domain.Entities.UserAgg.Role", b =>
                 {
                     b.Property<long>("Id")
@@ -54,21 +85,21 @@ namespace KalaMarket.Persistence.Migrations
                             Id = 1L,
                             IsRemoved = false,
                             Name = "Admin",
-                            UpdateTime = new DateTime(2022, 8, 31, 16, 4, 2, 55, DateTimeKind.Local).AddTicks(1460)
+                            UpdateTime = new DateTime(2022, 9, 3, 15, 30, 46, 916, DateTimeKind.Local).AddTicks(5895)
                         },
                         new
                         {
                             Id = 2L,
                             IsRemoved = false,
                             Name = "Operator",
-                            UpdateTime = new DateTime(2022, 8, 31, 16, 4, 2, 55, DateTimeKind.Local).AddTicks(1542)
+                            UpdateTime = new DateTime(2022, 9, 3, 15, 30, 46, 916, DateTimeKind.Local).AddTicks(6011)
                         },
                         new
                         {
                             Id = 3L,
                             IsRemoved = false,
                             Name = "Customer",
-                            UpdateTime = new DateTime(2022, 8, 31, 16, 4, 2, 55, DateTimeKind.Local).AddTicks(1556)
+                            UpdateTime = new DateTime(2022, 9, 3, 15, 30, 46, 916, DateTimeKind.Local).AddTicks(6046)
                         });
                 });
 
@@ -147,6 +178,15 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("UserInRoles");
                 });
 
+            modelBuilder.Entity("KalaMarket.Domain.Entities.CategoryAgg.Category", b =>
+                {
+                    b.HasOne("KalaMarket.Domain.Entities.CategoryAgg.Category", "ParentCategory")
+                        .WithMany("SubCategories")
+                        .HasForeignKey("ParentCategoryId");
+
+                    b.Navigation("ParentCategory");
+                });
+
             modelBuilder.Entity("KalaMarket.Domain.Entities.UserAgg.UserInRole", b =>
                 {
                     b.HasOne("KalaMarket.Domain.Entities.UserAgg.Role", "Role")
@@ -164,6 +204,11 @@ namespace KalaMarket.Persistence.Migrations
                     b.Navigation("Role");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("KalaMarket.Domain.Entities.CategoryAgg.Category", b =>
+                {
+                    b.Navigation("SubCategories");
                 });
 
             modelBuilder.Entity("KalaMarket.Domain.Entities.UserAgg.Role", b =>
