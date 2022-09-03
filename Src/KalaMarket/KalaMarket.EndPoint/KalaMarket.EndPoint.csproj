@@ -4,10 +4,15 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>a7594d04-8334-41b6-aebf-8025cdce82af</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Infrastructure\TagHelpers\" />
+    <Folder Include="Models\Account\Customer\" />
     <Folder Include="Pages\Admin\Shared\_Partials\" />
+    <Folder Include="Pages\Shared\_Partials\SideScript\" />
     <Folder Include="wwwroot\SiteTemplate\assets\images\menu-main\card\" />
   </ItemGroup>
 
@@ -147,6 +152,33 @@
     <None Include="wwwroot\SiteTemplate\assets\js\vendor\ResizeSensor.min.js" />
     <None Include="wwwroot\SiteTemplate\assets\js\vendor\theia-sticky-sidebar.min.js" />
     <None Include="wwwroot\SiteTemplate\assets\js\vendor\wNumb.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KalaMarket.Infrasructure\KalaMarket.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Admin\Users\_Partial\_ChangeActivationUserScript.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Account\_Partial\_RegisterScriptPartial.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Users\_Partial\_ChangeActivationUserScript.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Account\_Partial\_RegisterScriptPartial.cshtml" />
   </ItemGroup>
 
 </Project>

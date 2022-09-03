@@ -1,4 +1,6 @@
-﻿namespace KalaMarket.Domain.Entities.UserAgg;
+﻿using KalaMarket.Domain.Entities.BaseEntities;
+
+namespace KalaMarket.Domain.Entities.UserAgg;
 
 public class UserInRole :BaseEntity<long>
 {

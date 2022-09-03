@@ -1,0 +1,95 @@
+﻿@page
+@model KalaMarket.EndPoint.Pages.Admin.Users.RegisterModel
+
+@{
+   ViewData["Title"] = "ثبت نام کاربر جدید";
+  
+}
+<partial name="Shared/_Partials/_DisplayPageMessages"/>  
+<section class="basic-elements">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="content-header pr-3">فرم ثبت نام کاربر جدید</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div asp-validation-summary="ModelOnly" class="alert-danger">
+                 
+                    </div>
+                    <div class="card-title-wrap bar-success">
+                        <h4 class="card-title mb-0">اطلاعات کاربر جدید را وارد نمایید</h4>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="px-3">
+                        <form method="post" class="form">
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <label asp-for="RegisterAdmin.FullName">نام و نام خانوادگی</label>
+                                            <input asp-for="RegisterAdmin.FullName" type="text" class="form-control" >
+                                            <span class="text-danger" asp-validation-for="RegisterAdmin.FullName"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <label asp-for="RegisterAdmin.Email">پست الکترونیک</label>
+                                            <small class="text-muted"><i>info@Amb.net</i></small>
+                                            <input asp-for="RegisterAdmin.Email" type="text" class="form-control" >
+                                            <span class="text-danger" asp-validation-for="RegisterAdmin.Email"></span>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <label for="basicSelect">نقش</label>
+                                            <select class="form-control" asp-for="RegisterAdmin.RoleId" asp-items="@Model.Roles">
+                                            <option selected value="0" >نقش مورد نظر را انتخاب کنید</option>
+                                                </select>
+                                            <p><small class="text-muted">سطح دسترسی کاربر مورد نظر را تعیین کنید</small></p>
+                                            <span class="text-danger" asp-validation-for="RegisterAdmin.RoleId"></span>
+                                        </fieldset>
+                                  
+                                    </div>
+
+
+                                    <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <label asp-for="RegisterAdmin.Password" for="disabledInput">رمز عبور</label>
+                                            <input asp-for="RegisterAdmin.Password" type="password" class="form-control" id="disabledInput">
+                                        </fieldset>
+                                        <span class="text-danger" asp-validation-for="RegisterAdmin.Password"></span>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <label asp-for="RegisterAdmin.RePassword" for="disabledInput">تکرار رمز عبور</label>
+                                            <input asp-for="RegisterAdmin.RePassword" class="form-control">
+                                        </fieldset>
+                                        <span class="text-danger" asp-validation-for="RegisterAdmin.RePassword"></span>
+                                    </div>
+
+                                    <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <br />
+                                            <button class="btn btn-success col-md-12">تکمیل ثبت نام </button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Script
+{
+    <partial name="Shared/_ValidationScriptsPartial"/>
+    <partial name="Shared/_Partials/SideScript/_DisableFormBtn"/>
+}

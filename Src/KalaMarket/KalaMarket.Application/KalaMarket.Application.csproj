@@ -6,4 +6,23 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\Context\" />
+    <Folder Include="Services\Users\Commands\EditUser\Dto\" />
+    <Folder Include="Services\Users\Queries\GetRole\" />
+    <Folder Include="Validations\Utility\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.2.0" />
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KalaMarket.Domain\KalaMarket.Domain.csproj" />
+    <ProjectReference Include="..\KalaMarket.Resourses\KalaMarket.Resourses.csproj" />
+    <ProjectReference Include="..\KalaMarket.Shared\KalaMarket.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,77 @@
+﻿@{
+	// نکته مهم
+	// در همه شرایط کار نمی‌کند List استفاده از کلاس
+	var pageErrors =
+		TempData[key: Infrastructure.Messages.MessageType.PageError.ToString()] as
+		System.Collections.Generic.IList<string>;
+
+	var pageWarnings =
+		TempData[key: Infrastructure.Messages.MessageType.PageWarning.ToString()] as
+		System.Collections.Generic.IList<string>;
+
+	var pageSuccesses =
+		TempData[key: Infrastructure.Messages.MessageType.PageSuccess.ToString()] as
+		System.Collections.Generic.IList<string>;
+    
+    
+    
+    var pageInformation = TempData[key: Infrastructure.Messages.MessageType.PageInformation.ToString()] as System.Collections.Generic.IList<string>;
+	if (pageErrors != null && pageErrors.Count != 0)
+	{
+        <div class="m-3 alert Amb-alert-danger alert-dismissible fade show" role="alert">
+            <ul class="mb-0">
+                @foreach (var message in pageErrors)
+                {
+                    <li>@(message)</li>
+                }
+            </ul>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span class="text-bold-700" aria-hidden="true">&times;</span>
+            </button>
+		</div>
+	}
+
+	if (pageWarnings != null && pageWarnings.Count != 0)
+	{
+        <div class="m-3 alert Amb-alert-warning alert-dismissible fade show" role="alert">
+            <ul class="mb-0">
+                @foreach (var message in pageWarnings)
+                {
+                    <li class="">@(message)</li>
+                }
+            </ul>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span class="text-light" aria-hidden="true">&times;</span>
+            </button>
+		</div>
+	}
+
+	if (pageSuccesses != null && pageSuccesses.Count != 0)
+	{
+        <div class="m-3 alert Amb-alert-success alert-dismissible fade show" role="alert">
+            <ul class="mb-0 ">
+                @foreach (var message in pageSuccesses)
+                {
+                    <li>@(message)</li>
+                }
+            </ul>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span class="text-light" aria-hidden="true">&times;</span>
+            </button>
+		</div>
+	}
+	if (pageInformation != null && pageInformation.Count != 0)
+	{
+        <div class="m-3 alert Amb-alert-info alert-dismissible fade show" role="alert">
+            <ul class="mb-0">
+                @foreach (var message in pageInformation)
+                {
+                    <li>@(message)</li>
+                }
+            </ul>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span class="text-light" aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+}

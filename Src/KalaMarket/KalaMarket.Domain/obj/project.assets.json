@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "KalaMarket.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/KalaMarket.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Shared.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "KalaMarket.Shared/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Shared/KalaMarket.Shared.csproj",
+      "msbuildProject": "../KalaMarket.Shared/KalaMarket.Shared.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "KalaMarket.Shared >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\manga\\.nuget\\packages\\": {}
@@ -34,7 +53,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Shared\\KalaMarket.Shared.csproj": {
+              "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Shared\\KalaMarket.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
