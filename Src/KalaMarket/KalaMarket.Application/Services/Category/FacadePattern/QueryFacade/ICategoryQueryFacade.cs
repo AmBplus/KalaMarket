@@ -8,7 +8,7 @@ namespace KalaMarket.Application.Services.Category.FacadePattern.QueryFacade;
 public interface ICategoryQueryFacade
 {
     IGetCategoryService GetCategoryService { get; }
-    IGetCategoryWithChildService GetCategoryWithChildService { get; }
+    IGetCategoryChildService GetCategoryChildService { get; }
     IGetCategoryWithParentChildService GetCategoryWithParentChildService { get; }
-    IGetCategoryWithParentService GetCategoryWithParentService { get; }
+    IGetCategoryParentService GetCategoryParentService { get; }
 }

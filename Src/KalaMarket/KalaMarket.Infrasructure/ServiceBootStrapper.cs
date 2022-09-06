@@ -18,6 +18,7 @@ using KalaMarket.Application.Services.Users.Commands.EditUser;
 using KalaMarket.Application.Services.Users.FacadePattern;
 using KalaMarket.Application.Services.Users.FecadePattern;
 using KalaMarket.Application.Services.Users.Queries.GetRole;
+using KalaMarket.Shared;
 
 #endregion
 
@@ -58,5 +59,9 @@ public static class ServiceBootStrapper
         services.AddScoped<ICategoryFacade, CategoryFacade>();
 
         #endregion /Category Facade Service
+
+
+        // Custom Log Manger
+        services.AddSingleton<ILoggerManger, LoggerManger>();
     }
 }

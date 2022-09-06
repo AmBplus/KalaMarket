@@ -11,9 +11,9 @@ public class CategoryQueryFacade : ICategoryQueryFacade
     #region Fields
 
     private IGetCategoryService? _getCategoryService;
-    private IGetCategoryWithChildService? _getCategoryWithChildService;
+    private IGetCategoryChildService? _getCategoryWithChildService;
     private IGetCategoryWithParentChildService? _getCategoryWithParentChildService;
-    private IGetCategoryWithParentService? _getCategoryWithParentService;
+    private IGetCategoryParentService? _getCategoryWithParentService;
 
     #endregion /Fields
 
@@ -32,14 +32,14 @@ public class CategoryQueryFacade : ICategoryQueryFacade
 
     public IGetCategoryService GetCategoryService => _getCategoryService ??= new GetCategoryService(Context);
 
-    public IGetCategoryWithChildService GetCategoryWithChildService =>
-        _getCategoryWithChildService ??= new GetCategoryWithChildService(Context);
+    public IGetCategoryChildService GetCategoryChildService =>
+        _getCategoryWithChildService ??= new GetCategoryChildService(Context);
 
     public IGetCategoryWithParentChildService GetCategoryWithParentChildService =>
         _getCategoryWithParentChildService ??= new GetCategoryWithParentChildService(Context);
 
-    public IGetCategoryWithParentService GetCategoryWithParentService =>
-        _getCategoryWithParentService ??=new GetCategoryWithParentService(Context);
+    public IGetCategoryParentService GetCategoryParentService =>
+        _getCategoryWithParentService ??=new GetCategoryParentService(Context);
 
     #endregion /Properties
 }

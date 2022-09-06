@@ -1,0 +1,32 @@
+2022-09-05 21:05:22.8471 Info Message Template Auto Format enabled
+2022-09-05 21:05:22.8607 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-05 21:05:22.9319 Info Adding target FileTarget(Name=allfile)
+2022-09-05 21:05:22.9319 Info Adding target FileTarget(Name=ownFile-web)
+2022-09-05 21:05:22.9319 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-09-05 21:05:22.9837 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=56, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\NLog.config
+2022-09-05 21:05:23.7952 Info Shutdown() called. Logger closing...
+2022-09-05 21:05:23.7952 Info Closing old configuration.
+2022-09-05 21:05:23.8947 Info Logger has been closed down.
+2022-09-05 21:05:24.2339 Info Loading NLog config from XML file: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-09-05 21:05:24.2339 Info Message Template Auto Format enabled
+2022-09-05 21:05:24.2612 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-05 21:05:24.2771 Info Adding target FileTarget(Name=allfile)
+2022-09-05 21:05:24.2927 Info Adding target FileTarget(Name=ownFile-web)
+2022-09-05 21:05:24.3087 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-09-05 21:05:24.3253 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=56, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-09-05 23:56:25.7359 Info Message Template Auto Format enabled
+2022-09-05 23:56:25.7543 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-05 23:56:25.8322 Info Adding target FileTarget(Name=allfile)
+2022-09-05 23:56:25.8322 Info Adding target FileTarget(Name=ownFile-web)
+2022-09-05 23:56:25.8322 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-09-05 23:56:25.8814 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=52, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\NLog.config
+2022-09-05 23:56:26.8178 Info Shutdown() called. Logger closing...
+2022-09-05 23:56:26.8178 Info Closing old configuration.
+2022-09-05 23:56:26.8822 Info Logger has been closed down.
+2022-09-05 23:56:27.2122 Info Loading NLog config from XML file: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-09-05 23:56:27.2122 Info Message Template Auto Format enabled
+2022-09-05 23:56:27.2390 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-05 23:56:27.2549 Info Adding target FileTarget(Name=allfile)
+2022-09-05 23:56:27.2705 Info Adding target FileTarget(Name=ownFile-web)
+2022-09-05 23:56:27.2857 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-09-05 23:56:27.3018 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=52, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
