@@ -2912,9 +2912,9 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
-          "KalaMarket.Domain": "1.0.0",
           "KalaMarket.Persistence": "1.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "NLog": "5.0.4"
         },
         "compile": {
           "bin/placeholder/KalaMarket.Infrastructure.dll": {}
@@ -2929,11 +2929,9 @@
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
           "KalaMarket.Domain": "1.0.0",
-          "Mapster": "7.3.0",
           "Microsoft.EntityFrameworkCore": "6.0.7",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.7",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.7",
-          "NLog.Web.AspNetCore": "5.1.4"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.7"
         },
         "compile": {
           "bin/placeholder/KalaMarket.Persistence.dll": {}

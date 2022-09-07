@@ -5,10 +5,9 @@ using KalaMarket.Application.Services.Users.Commands.ChangeRemoveUser;
 using KalaMarket.Application.Services.Users.Commands.EditUser;
 using KalaMarket.Application.Services.Users.Commands.RegisterUser.Implement;
 using KalaMarket.Application.Services.Users.Commands.RegisterUser.Interfaces;
-using KalaMarket.Application.Services.Users.FecadePattern;
 using KalaMarket.Application.Services.Users.Queries.GetRole;
-using KalaMarket.Application.Services.Users.Queries.GetRole.Implement;
-using KalaMarket.Application.Services.Users.Queries.GetRole.Interface;
+using KalaMarket.Application.Services.Users.Queries.GetRoles.Implement;
+using KalaMarket.Application.Services.Users.Queries.GetRoles.Interface;
 using KalaMarket.Application.Services.Users.Queries.GetUsers.Implement;
 using KalaMarket.Application.Services.Users.Queries.GetUsers.Interfaces;
 

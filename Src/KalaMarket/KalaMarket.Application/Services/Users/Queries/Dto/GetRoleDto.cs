@@ -1,6 +1,6 @@
 ﻿using KalaMarket.Domain.Entities.BaseEntities;
 
-namespace KalaMarket.Application.Services.Users.Queries.GetRole.Dto;
+namespace KalaMarket.Application.Services.Users.Queries.Dto;
 
 public class GetRoleDto : BaseEntity<long>
 {

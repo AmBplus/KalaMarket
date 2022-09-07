@@ -1,9 +1,9 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
-using KalaMarket.Application.Services.Users.Queries.GetRole.Dto;
-using KalaMarket.Application.Services.Users.Queries.GetRole.Interface;
+using KalaMarket.Application.Services.Users.Queries.Dto;
+using KalaMarket.Application.Services.Users.Queries.GetRoles.Interface;
 using Mapster;
 
-namespace KalaMarket.Application.Services.Users.Queries.GetRole.Implement;
+namespace KalaMarket.Application.Services.Users.Queries.GetRoles.Implement;
 
 public class GetRemovedRoleService : IGetRolesService
 {
@@ -22,7 +22,7 @@ public class GetRemovedRoleService : IGetRolesService
     #region Method
     public ResultGetRolesDto Execute()
     {
-        var roles = Context.Roles.Where(x=>x.IsRemoved).ProjectToType<GetRoleDto>().ToList();
+        var roles = Context.Roles.Where(x => x.IsRemoved).ProjectToType<GetRoleDto>().ToList();
         return new ResultGetRolesDto()
         {
             Roles = roles,

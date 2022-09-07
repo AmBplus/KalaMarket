@@ -4,10 +4,10 @@ using KalaMarket.Application.Services.Users.Commands.ChangeRemoveUser;
 using KalaMarket.Application.Services.Users.Commands.EditUser;
 using KalaMarket.Application.Services.Users.Commands.RegisterUser.Interfaces;
 using KalaMarket.Application.Services.Users.Queries.GetRole;
-using KalaMarket.Application.Services.Users.Queries.GetRole.Interface;
+using KalaMarket.Application.Services.Users.Queries.GetRoles.Interface;
 using KalaMarket.Application.Services.Users.Queries.GetUsers.Interfaces;
 
-namespace KalaMarket.Application.Services.Users.FecadePattern;
+namespace KalaMarket.Application.Services.Users.FacadePattern;
 
 public interface IUserFacadeService
 {

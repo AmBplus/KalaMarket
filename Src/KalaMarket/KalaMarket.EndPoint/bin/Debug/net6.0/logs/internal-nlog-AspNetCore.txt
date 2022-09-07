@@ -1,0 +1,36 @@
+2022-09-07 17:43:52.4593 Info Message Template Auto Format enabled
+2022-09-07 17:43:52.5146 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-07 17:43:52.6705 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-09-07 17:43:52.9823 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-09-07 17:43:52.9823 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-09-07 17:43:53.0904 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-09-07 17:43:53.0904 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-09-07 17:43:53.3099 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\NLog.config
+2022-09-07 17:43:55.9481 Info Shutdown() called. Logger closing...
+2022-09-07 17:43:55.9481 Info Closing old configuration.
+2022-09-07 17:43:56.1045 Info Logger has been closed down.
+2022-09-07 17:43:57.1284 Info Loading NLog config from XML file: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-09-07 17:43:57.1284 Info Message Template Auto Format enabled
+2022-09-07 17:43:57.1456 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-07 17:43:57.1627 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-09-07 17:43:57.1627 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-09-07 17:43:57.1762 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-09-07 17:43:57.1935 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-09-07 17:43:57.2101 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-09-07 17:43:57.2259 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config

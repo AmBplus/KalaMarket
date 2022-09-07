@@ -1,0 +1,6 @@
+INFO |***| Now listening on: https://localhost:7060  |***| 2022-09-07 17:43:58.5433 |***| 14|***| Microsoft.Hosting.Lifetime|
+INFO |***| Now listening on: http://localhost:5060  |***| 2022-09-07 17:43:58.5433 |***| 14|***| Microsoft.Hosting.Lifetime|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-07 17:43:58.5433 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-07 17:43:58.5433 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-07 17:43:58.5433 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| User Added KalaMarket.EndPoint.Pages.person  |***| 2022-09-07 17:44:02.6584 |***| 0|***| KalaMarket.EndPoint.Pages.IndexModel|

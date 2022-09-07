@@ -16,16 +16,18 @@ namespace KalaMarket.EndPoint.Pages.Account
     {
         #region Constructor
 
-        public RegisterModel(IGetRoleService roleService , IRegisterUserService registerUserService)
+        public RegisterModel(IGetRoleService roleService , IRegisterUserService registerUserService, ILoggerManger<RegisterModel> logger)
         {
             RoleService = roleService;
             RegisterUserService = registerUserService;
+            Logger = logger;
         }
 
         #endregion /Constructor
 
         #region Properties
 
+        private ILoggerManger<RegisterModel> Logger { get; set; }
         private IGetRoleService RoleService { get; }
         private IRegisterUserService RegisterUserService { get; }
         [BindProperty]
@@ -37,15 +39,16 @@ namespace KalaMarket.EndPoint.Pages.Account
 
         public void OnGet()
         {
+            
             var roleId =RoleService.Execute(UserRoles.Customer.ToString());
             if (roleId == null)
             {
                 throw new Exception("با پشتبانی تماس حاصل فرمایید");
             }
-
             RegisterUser = new();
             RegisterUser.RoleId = (long)roleId;
         }
+    
 
         public async Task<IActionResult> OnPost()
         {

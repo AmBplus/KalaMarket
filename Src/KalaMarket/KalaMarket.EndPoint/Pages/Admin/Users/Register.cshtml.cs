@@ -1,8 +1,6 @@
 ﻿using KalaMarket.Application.Services.Users.Commands.RegisterUser.Dto;
 using KalaMarket.Application.Services.Users.Commands.RegisterUser.Interfaces;
-using KalaMarket.Application.Services.Users.FecadePattern;
-using KalaMarket.Application.Services.Users.Queries.GetRole.Interface;
-using KalaMarket.Application.Services.Users.Queries.GetUsers;
+using KalaMarket.Application.Services.Users.FacadePattern;
 using KalaMarket.EndPoint.Infrastructure;
 using KalaMarket.EndPoint.Models.Account.Admin;
 using Mapster;

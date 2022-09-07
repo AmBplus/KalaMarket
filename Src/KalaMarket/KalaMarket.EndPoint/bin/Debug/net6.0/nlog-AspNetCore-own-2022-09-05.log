@@ -1,6 +1,0 @@
-2022-09-05 21:05:23.0287|0|DEBUG|Program|init main |url: |action: |Program.<Main>$
-2022-09-05 21:05:24.7137|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
-2022-09-05 21:05:24.7365|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
-2022-09-05 21:05:24.7365|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
-2022-09-05 21:05:24.9320|0|DEBUG|KalaMarket.EndPoint.Pages.IndexModel|1 |url: https://localhost/|action: |KalaMarket.EndPoint.Pages.IndexModel..ctor
-2022-09-05 21:05:24.9491|0|INFO|KalaMarket.EndPoint.Pages.IndexModel|Hello , This is OnGet Method Of Main |url: https://localhost/|action: |KalaMarket.EndPoint.Pages.IndexModel.OnGet

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QTyIs6GmjHTEzlC7NAtiovxYiI8j2MStvFEHwNNL1VfMUNMuCnE8KFhbY6+eNeJt5kYntl3NQAf/e6szJQ0Glg==",
+  "dgSpecHash": "BZNeGX8wZIgZacwXaZ/XgJYUbAtZNZapwvL0OcZ86Io3FOxnZut/fIMqUs/giLmw8BGJVO+ldXwhY6KnUyy1JQ==",
   "success": true,
   "projectFilePath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Persistence\\KalaMarket.Persistence.csproj",
   "expectedPackageFiles": [
@@ -37,9 +37,6 @@
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\manga\\.nuget\\packages\\nlog\\5.0.4\\nlog.5.0.4.nupkg.sha512",
-    "C:\\Users\\manga\\.nuget\\packages\\nlog.extensions.logging\\5.0.4\\nlog.extensions.logging.5.0.4.nupkg.sha512",
-    "C:\\Users\\manga\\.nuget\\packages\\nlog.web.aspnetcore\\5.1.4\\nlog.web.aspnetcore.5.1.4.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

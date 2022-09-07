@@ -9,10 +9,10 @@
       "KalaMarket.Infrastructure/1.0.0": {
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
-          "KalaMarket.Domain": "1.0.0",
           "KalaMarket.Persistence": "1.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.7",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "NLog": "5.0.4"
         },
         "runtime": {
           "KalaMarket.Infrastructure.dll": {}
@@ -184,6 +184,12 @@
       "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
         }
       },
       "Microsoft.Extensions.Caching.Memory/6.0.1": {
@@ -204,15 +210,34 @@
       "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
         }
       },
       "Microsoft.Extensions.DependencyInjection/6.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {},
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
       "Microsoft.Extensions.Logging/6.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
@@ -220,18 +245,43 @@
           "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
           "Microsoft.Extensions.Options": "6.0.0",
           "System.Diagnostics.DiagnosticSource": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Extensions.Logging.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {},
+      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
       "Microsoft.Extensions.Options/6.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Extensions.Options.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
         }
       },
       "Microsoft.Extensions.Primitives/6.0.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
         }
       },
       "Microsoft.Identity.Client/4.21.1": {
@@ -330,30 +380,6 @@
           "lib/netstandard2.0/NLog.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.0.4.1331"
-          }
-        }
-      },
-      "NLog.Extensions.Logging/5.0.4": {
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Logging": "6.0.0",
-          "NLog": "5.0.4"
-        },
-        "runtime": {
-          "lib/net5.0/NLog.Extensions.Logging.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.4.221"
-          }
-        }
-      },
-      "NLog.Web.AspNetCore/5.1.4": {
-        "dependencies": {
-          "NLog.Extensions.Logging": "5.0.4"
-        },
-        "runtime": {
-          "lib/net5.0/NLog.Web.AspNetCore.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.1.4.628"
           }
         }
       },
@@ -565,8 +591,7 @@
           "KalaMarket.Resourses": "1.0.0",
           "KalaMarket.Shared": "1.0.0",
           "Mapster": "7.3.0",
-          "Microsoft.EntityFrameworkCore": "6.0.7",
-          "NLog.Web.AspNetCore": "5.1.4"
+          "Microsoft.EntityFrameworkCore": "6.0.7"
         },
         "runtime": {
           "KalaMarket.Application.dll": {}
@@ -574,8 +599,7 @@
       },
       "KalaMarket.Domain/1.0.0": {
         "dependencies": {
-          "KalaMarket.Shared": "1.0.0",
-          "NLog.Web.AspNetCore": "5.1.4"
+          "KalaMarket.Shared": "1.0.0"
         },
         "runtime": {
           "KalaMarket.Domain.dll": {}
@@ -585,11 +609,9 @@
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
           "KalaMarket.Domain": "1.0.0",
-          "Mapster": "7.3.0",
           "Microsoft.EntityFrameworkCore": "6.0.7",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.7",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.7",
-          "NLog.Web.AspNetCore": "5.1.4"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.7"
         },
         "runtime": {
           "KalaMarket.Persistence.dll": {}
@@ -850,20 +872,6 @@
       "sha512": "sha512-hMyC7jq1m7c339DZXTRz96b+0YsIYSwAUB8sAWMtqXd2uwJjYe+y1k74fbItODPqDuE/krd6A4mxew9gLMS+PQ==",
       "path": "nlog/5.0.4",
       "hashPath": "nlog.5.0.4.nupkg.sha512"
-    },
-    "NLog.Extensions.Logging/5.0.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-43f4l7pY5cEjU/m2Xj4kDZhBmwS1xYP1kOzCQiXwv3PWpziGLfF8kA22idk+yRhMfNVExQ/OFnBaoxk6JB3JeA==",
-      "path": "nlog.extensions.logging/5.0.4",
-      "hashPath": "nlog.extensions.logging.5.0.4.nupkg.sha512"
-    },
-    "NLog.Web.AspNetCore/5.1.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-LxKgX/vvjk8dHe5EcHTrSBrgu5G+I8KLtU2if9x83CEK2bwFNvb5oudtH/ZtjzLALFM8uN/URHznBMocQi30Ng==",
-      "path": "nlog.web.aspnetcore/5.1.4",
-      "hashPath": "nlog.web.aspnetcore.5.1.4.nupkg.sha512"
     },
     "System.Collections.Immutable/6.0.0": {
       "type": "package",

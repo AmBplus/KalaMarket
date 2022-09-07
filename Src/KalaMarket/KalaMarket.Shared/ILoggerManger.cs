@@ -1,25 +1,25 @@
-﻿using Microsoft.Extensions.Logging;
+﻿
 
 namespace KalaMarket.Shared;
 /// <summary>
 /// Use For Logging in System
 /// _V1_
 /// </summary>
-public interface ILoggerManger
+public interface ILoggerManger<T>
 {
-  
-    void LogInfo(Exception? exception ,string? message, params object?[] args);
-    void LogWarning(Exception? exception, string? message, params object?[] args);
-    void LogDebug(Exception? exception, string? message, params object?[] args);
-    void LogError(Exception? exception, string? message, params object?[] args);
-    void LogTrace(Exception? exception, string? message, params object?[] args);
-    void LogCritical(Exception? exception, string? message, params object?[] args);
+   
+    Task LogInformation(Exception? exception ,string? message, params object?[] args);
+    Task LogWarning(Exception? exception, string? message, params object?[] args);
+    Task LogDebug(Exception? exception, string? message, params object?[] args);
+    Task LogError(Exception? exception, string? message, params object?[] args);
+    Task LogTrace(Exception? exception, string? message, params object?[] args);
+    Task LogCritical(Exception? exception, string? message, params object?[] args);
     //
-    void LogInfo(string? message, params object?[] args);
-    void LogWarning(string? message, params object?[] args);
-    void LogDebug(string? message, params object?[] args);
-    void LogError(string? message, params object?[] args);
-    void LogTrace(string? message, params object?[] args);
-    void LogCritical(string? message, params object?[] args);
+    Task LogInformation(string? message, params object?[] args);
+    Task LogWarning(string? message, params object?[] args);
+    Task LogDebug(string? message, params object?[] args);
+    Task LogError(string? message, params object?[] args);
+    Task LogTrace(string? message, params object?[] args);
+    Task LogCritical(string? message, params object?[] args);
     //
 }
