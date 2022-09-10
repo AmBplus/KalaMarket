@@ -1,6 +1,7 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Services.Users.Commands.ChangeRemoveRole;
 using KalaMarket.Resourses;
+using KalaMarket.Shared;
 using KalaMarket.Shared.Dto;
 
 namespace KalaMarket.Application.Services.Users.Commands.ChangeActivationUser;
@@ -8,20 +9,18 @@ namespace KalaMarket.Application.Services.Users.Commands.ChangeActivationUser;
 public class ChangeActivationUserService : IChangeActivationUserService
 {
     #region Ctor
-
-    // Ctor
-    public ChangeActivationUserService(IKalaMarketContext context)
+    public ChangeActivationUserService(IKalaMarketContext context, ILoggerManger logManger)
     {
+        LogManger = logManger;
         Context = context;
     }
-
     #endregion
 
-    #region Property
+    #region Properties
 
     // Property
+    private ILoggerManger LogManger { get; set; }
     private IKalaMarketContext Context { get; }
-
     #endregion
 
     #region Method
@@ -33,6 +32,7 @@ public class ChangeActivationUserService : IChangeActivationUserService
         if (user == null)
         {
             resultDto.Message = Messages.NotFindUser;
+            LogManger.LogInformation(Messages.NotFindUser);
             return resultDto;
         }
 
@@ -41,11 +41,13 @@ public class ChangeActivationUserService : IChangeActivationUserService
         {
             Context.SaveChanges();
             resultDto.IsSuccess = true;
+            LogManger.LogInformation(Messages.OperationDoneSuccessfully);
             resultDto.Message = Messages.OperationDoneSuccessfully;
         }
         catch (Exception e)
         {
             resultDto.Message = e.Message;
+            LogManger.LogError(exception: e,message : e.Message);
         }
 
         return resultDto;

@@ -19,7 +19,7 @@ public class BaseEntityWithoutId
         return true;
     }
 
-    public bool ChangeIsRemoved()
+    public bool ChangeRemoveStatus()
     {
         IsRemoved = !IsRemoved;
         RemoveTime = Utility.Now;

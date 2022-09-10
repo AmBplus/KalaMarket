@@ -1,26 +1,29 @@
-﻿using KalaMarket.Shared;
+﻿using KalaMarket.Resourses;
+using KalaMarket.Shared;
+using KalaMarket.Shared.Dto;
 using Microsoft.Extensions.Logging;
 using NLog;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 
 namespace KalaMarket.Infrastructure;
-
-public class LoggerManger<T> :ILoggerManger<T> 
+public class LoggerManger : ILoggerManger
 {
-
-    private  NLog.ILogger Logger { get; }
-  
+    protected NLog.ILogger Logger { get; set; }
     public LoggerManger()
     {
-        Logger = LogManager.GetLogger(typeof(T).FullName);
+        if(Logger == null)
+        {
+            Logger = LogManager.GetCurrentClassLogger();
+        }
     }
+    #region Methods
     #region With Exception
 
     public async Task LogInformation(Exception? exception, string? message, params object?[] args)
         => Logger.Info(exception: exception, message: message, args: args);
-   
-    
+
+
     public async Task LogWarning(Exception? exception, string? message, params object?[] args)
         => Logger.Warn(exception: exception, message: message, args: args);
 
@@ -59,5 +62,15 @@ public class LoggerManger<T> :ILoggerManger<T>
     public async Task LogCritical(string? message, params object?[] args)
         => Logger.Fatal(message: message, args: args);
 
-    #endregion /Without Exception
+    #endregion /Without Exception 
+    #endregion
+}
+
+public class LoggerManger<T> : LoggerManger , ILoggerManger<T> where T : class
+{
+    public LoggerManger() :base()
+    {
+       base.Logger = LogManager.GetLogger(typeof(T).FullName);
+    }
+   
 }

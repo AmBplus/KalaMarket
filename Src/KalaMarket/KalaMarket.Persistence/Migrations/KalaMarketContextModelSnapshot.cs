@@ -85,21 +85,21 @@ namespace KalaMarket.Persistence.Migrations
                             Id = 1L,
                             IsRemoved = false,
                             Name = "Admin",
-                            UpdateTime = new DateTime(2022, 9, 3, 15, 30, 46, 916, DateTimeKind.Local).AddTicks(5895)
+                            UpdateTime = new DateTime(2022, 9, 10, 0, 36, 42, 898, DateTimeKind.Local).AddTicks(3193)
                         },
                         new
                         {
                             Id = 2L,
                             IsRemoved = false,
                             Name = "Operator",
-                            UpdateTime = new DateTime(2022, 9, 3, 15, 30, 46, 916, DateTimeKind.Local).AddTicks(6011)
+                            UpdateTime = new DateTime(2022, 9, 10, 0, 36, 42, 898, DateTimeKind.Local).AddTicks(3302)
                         },
                         new
                         {
                             Id = 3L,
                             IsRemoved = false,
                             Name = "Customer",
-                            UpdateTime = new DateTime(2022, 9, 3, 15, 30, 46, 916, DateTimeKind.Local).AddTicks(6046)
+                            UpdateTime = new DateTime(2022, 9, 10, 0, 36, 42, 898, DateTimeKind.Local).AddTicks(3317)
                         });
                 });
 

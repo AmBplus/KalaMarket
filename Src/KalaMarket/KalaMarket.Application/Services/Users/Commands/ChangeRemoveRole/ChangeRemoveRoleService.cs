@@ -1,18 +1,24 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
+using KalaMarket.Application.Services.Users.Commands.ChangeActivationUser;
 using KalaMarket.Resourses;
+using KalaMarket.Shared;
 using KalaMarket.Shared.Dto;
 
 namespace KalaMarket.Application.Services.Users.Commands.ChangeRemoveRole;
 
 public class ChangeRemoveRoleService : IChangeRemoveRoleService
 {
-    // Property
-    public ChangeRemoveRoleService(IKalaMarketContext context)
+    // Ctor
+    public ChangeRemoveRoleService(IKalaMarketContext context , ILoggerManger logManger)
     {
         Context = context;
+        LogManger = logManger;
     }
-    // Ctor
+
+    #region Properties
     private IKalaMarketContext Context { get; }
+    private ILoggerManger LogManger { get; set; }
+    #endregion /Properties
 
     #region Method
 
@@ -23,24 +29,25 @@ public class ChangeRemoveRoleService : IChangeRemoveRoleService
         if (role == null)
         {
             resultDto.Message = string.Format(Messages.NotFind,PropertiesName.Role);
+            LogManger.LogInformation(string.Format(Messages.NotFind, PropertiesName.Role));
             return resultDto;
         }
-
-        role.ChangeIsRemoved();
+        // Change Role Remove Status
+        role.ChangeRemoveStatus();
         try
         {
-           
             Context.SaveChanges();
             resultDto.IsSuccess = true;
             resultDto.Message = Messages.OperationDoneSuccessfully;
+            LogManger.LogInformation(Messages.OperationDoneSuccessfully);
         }
         catch (Exception e)
         {
             resultDto.Message = e.Message;
+            LogManger.LogError(exception: e, message: e.Message);
         }
 
         return resultDto;
     }
-
     #endregion /Method
 }

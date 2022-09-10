@@ -10,14 +10,16 @@ using KalaMarket.Application.Services.Users.Queries.GetRoles.Implement;
 using KalaMarket.Application.Services.Users.Queries.GetRoles.Interface;
 using KalaMarket.Application.Services.Users.Queries.GetUsers.Implement;
 using KalaMarket.Application.Services.Users.Queries.GetUsers.Interfaces;
+using KalaMarket.Shared;
 
 namespace KalaMarket.Application.Services.Users.FacadePattern;
 
 public class UserFacadeService : IUserFacadeService
 {
-    public UserFacadeService(IKalaMarketContext context)
+    public UserFacadeService(IKalaMarketContext context , ILoggerManger logger)
     {
         Context = context;
+        Logger = logger;
     }
     private IGetUsersService? _getUsersService;
     private IRegisterUserService? _registerUserService;
@@ -30,6 +32,7 @@ public class UserFacadeService : IUserFacadeService
     private IEditUserService? _editUserService;
     private IGetUserWithRolesService? _getUserWithRolesService;
     private IKalaMarketContext? Context;
+    private ILoggerManger Logger { get; }
     public IGetUsersService GetUsersService => _getUsersService ??= new GetUsersService(Context);
 
     public IRegisterUserService RegisterUserService => _registerUserService ??= new RegisterUserService(Context);
@@ -41,9 +44,9 @@ public class UserFacadeService : IUserFacadeService
 
     public IGetRoleService GetRoleService => _getRoleService ??= new GetRoleService(Context);
 
-    public IChangeActivationUserService ChangeActivationUserService => _changeActivationUserService ??= new ChangeActivationUserService(Context);
+    public IChangeActivationUserService ChangeActivationUserService => _changeActivationUserService ??= new ChangeActivationUserService(Context, Logger);
 
-    public IChangeRemoveRoleService ChangeRemoveRoleService => _changeRemoveRoleService ??= new ChangeRemoveRoleService(Context);
+    public IChangeRemoveRoleService ChangeRemoveRoleService => _changeRemoveRoleService ??= new ChangeRemoveRoleService(Context, Logger);
 
     public IChangeRemoveUserService ChangeRemoveUserService => _changeRemoveUserService ??= new ChangeRemoveUserService(Context);
 

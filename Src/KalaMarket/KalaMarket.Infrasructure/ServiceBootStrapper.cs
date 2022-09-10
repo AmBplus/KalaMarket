@@ -61,6 +61,7 @@ public static class ServiceBootStrapper
 
 
         // Custom LogManger
+        services.AddSingleton<ILoggerManger, LoggerManger>();
         services.AddSingleton(typeof(ILoggerManger<>), typeof(LoggerManger<>));
     }
 }

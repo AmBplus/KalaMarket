@@ -88,6 +88,15 @@ namespace KalaMarket.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to این یک کلاس نیست.
+        /// </summary>
+        public static string NotAClass {
+            get {
+                return ResourceManager.GetString("NotAClass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  {0} خواسته شده پیدا نشد.
         /// </summary>
         public static string NotFind {

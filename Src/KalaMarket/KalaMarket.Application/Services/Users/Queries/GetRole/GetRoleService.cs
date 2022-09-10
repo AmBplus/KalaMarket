@@ -10,6 +10,11 @@ public class GetRoleService : IGetRoleService
     }
 
     IKalaMarketContext Context { get;  }
+    /// <summary>
+    ///  Get Role Id
+    /// </summary>
+    /// <param name="role"></param>
+    /// <returns>Null Or Role Id</returns>
     public long? Execute(string role)
     {
         var result = Context.Roles.FirstOrDefault(x => x.Name == role);
