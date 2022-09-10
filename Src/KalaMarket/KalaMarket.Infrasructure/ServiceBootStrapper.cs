@@ -1,7 +1,7 @@
 ﻿#region Using
 
 using KalaMarket.Application.Interfaces.Context;
-using KalaMarket.Application.Services.Category.FacadePattern.Facade;
+using KalaMarket.Application.Services.Product.CategoryServices.FacadePattern.Facade;
 using KalaMarket.Application.Services.Users.Commands.ChangeActivationUser;
 using KalaMarket.Application.Services.Users.Commands.ChangeRemoveRole;
 using KalaMarket.Application.Services.Users.Commands.RegisterUser.Implement;

@@ -132,6 +132,9 @@
   <data name="NotFind" xml:space="preserve">
     <value> {0} خواسته شده پیدا نشد</value>
   </data>
+  <data name="NotFindRole" xml:space="preserve">
+    <value>نقش منتصب شده پیدا نشد</value>
+  </data>
   <data name="NotSamePassword" xml:space="preserve">
     <value>فیلد های رمز عبور یکسان نمیباشد</value>
   </data>

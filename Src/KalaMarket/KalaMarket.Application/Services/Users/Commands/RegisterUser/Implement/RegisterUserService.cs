@@ -6,6 +6,7 @@ using KalaMarket.Application.Validations.User;
 using KalaMarket.Application.Validations.Utility;
 using KalaMarket.Domain.Entities.UserAgg;
 using KalaMarket.Resourses;
+using KalaMarket.Shared;
 using KalaMarket.Shared.Dto;
 using KalaMarket.Shared.Security;
 using Mapster;
@@ -16,13 +17,15 @@ public class RegisterUserService : IRegisterUserService
 {
     #region Properties_Fileds
     private IKalaMarketContext Context { get; }
+    private ILoggerManger LoggerManger { get; }
     #endregion
 
     #region Ctor
 
-    public RegisterUserService(IKalaMarketContext context)
+    public RegisterUserService(IKalaMarketContext context, ILoggerManger loggerManger)
     {
         Context = context;
+        LoggerManger = loggerManger;
     }
 
     #endregion Ctor
@@ -58,7 +61,7 @@ public class RegisterUserService : IRegisterUserService
                 result.Data.UserId = user.Id;
                 result.IsSuccess = true;
                 result.Message =(string.Format(Messages.RegisterSuccessMessageWithUserName, user.Email));
-
+                LoggerManger.LogInformation(Messages.RegisterSuccessMessageWithUserName, user.Email);
             }
         }
         catch (Exception e)
@@ -66,6 +69,7 @@ public class RegisterUserService : IRegisterUserService
             result.Data.UserId = user.Id;
             result.IsSuccess = false;
             result.Message = string.Format(Messages.RegisterFailedMessageWithUserName,registerUserDto.Email);
+            LoggerManger.LogError(exception: e, message: e.Message);
         } 
         return result;
 
@@ -81,10 +85,8 @@ public class RegisterUserService : IRegisterUserService
     {
         RegisterUserValidator userValidator = new RegisterUserValidator();
         var resultValidate = userValidator.Validate(registerUserDto);
-      
         if (resultValidate.Errors.Count > 0)
         {
-         
             result.IsSuccess = false;
             result.Message = resultValidate.Errors.ToStringError();
             return true;
@@ -101,23 +103,26 @@ public class RegisterUserService : IRegisterUserService
             result.Message = ErrorMessages.EmailExists;
             return true;
         }
-
         return false;
     }
 
     private bool AddUserInRole(User user, long roleId)
     {
         var roles = Context.Roles.Find(roleId);
-        UserInRole userInRole = new UserInRole()
+        if (roles != null)
         {
-            User = user,
-            RoleId = roles.Id,
-            Role = roles,
-            UserId = user.Id
-        };
-        // Add Role To New User
-        user.UserInRoles.Add(userInRole);
-        return true;
+            // Add Role To New User
+            UserInRole userInRole = new UserInRole()
+            {
+                User = user,
+                RoleId = roles.Id,
+                Role = roles,
+                UserId = user.Id
+            };
+            user.UserInRoles.Add(userInRole);
+            return true;
+        }
+        return false;
     }
 
     #endregion

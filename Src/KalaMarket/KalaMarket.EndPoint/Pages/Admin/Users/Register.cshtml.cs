@@ -34,7 +34,7 @@ namespace KalaMarket.EndPoint.Pages.Admin.Users
 
         public void OnGet()
         {
-            Roles = new SelectList(UserFacadeService.GetRolesService.Execute().Roles, "Id", "Name");
+            Roles = new SelectList(UserFacadeService.UserQuery.GetRolesService.Execute().Roles, "Id", "Name");
         }
 
         public IActionResult OnPost()
@@ -42,11 +42,11 @@ namespace KalaMarket.EndPoint.Pages.Admin.Users
             // Check Model Is Valid
             if (!ModelState.IsValid)
             {
-                Roles = new SelectList(UserFacadeService.GetRolesService.Execute().Roles, "Id", "Name");
+                Roles = new SelectList(UserFacadeService.UserQuery.GetRolesService.Execute().Roles, "Id", "Name");
                 return Page();
             }
             // Register User
-            var result =UserFacadeService.RegisterUserService.Execute(RegisterAdmin.Adapt<RequestRegisterUserDto>());
+            var result =UserFacadeService.UserCommand.RegisterUserService.Execute(RegisterAdmin.Adapt<RequestRegisterUserDto>());
             // Check Register Is Failed
             if (!result.IsSuccess)
             {

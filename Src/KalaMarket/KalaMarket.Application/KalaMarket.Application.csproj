@@ -8,12 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\Context\" />
-    <Folder Include="Services\Category\FacadePattern\Facade\" />
-    <Folder Include="Services\Product\command\" />
-    <Folder Include="Services\Product\FacadePattern\CommandFacade\" />
-    <Folder Include="Services\Product\FacadePattern\Facade\" />
-    <Folder Include="Services\Product\FacadePattern\QueryFacade\" />
-    <Folder Include="Services\Product\query\" />
     <Folder Include="Services\Users\Commands\EditUser\Dto\" />
     <Folder Include="Services\Users\Queries\GetRole\" />
     <Folder Include="Validations\Product\" />

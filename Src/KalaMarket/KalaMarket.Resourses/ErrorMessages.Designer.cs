@@ -106,6 +106,15 @@ namespace KalaMarket.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to نقش منتصب شده پیدا نشد.
+        /// </summary>
+        public static string NotFindRole {
+            get {
+                return ResourceManager.GetString("NotFindRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to فیلد های رمز عبور یکسان نمیباشد.
         /// </summary>
         public static string NotSamePassword {

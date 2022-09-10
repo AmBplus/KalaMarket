@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using KalaMarket.Application.Services.Category.Commands.AddNewCategory;
+using KalaMarket.Application.Services.Product.CategoryServices.Commands.AddNewCategory;
 using KalaMarket.Resourses;
 
 namespace KalaMarket.Application.Validations.Category;

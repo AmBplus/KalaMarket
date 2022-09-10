@@ -16,41 +16,23 @@ namespace KalaMarket.Application.Services.Users.FacadePattern;
 
 public class UserFacadeService : IUserFacadeService
 {
-    public UserFacadeService(IKalaMarketContext context , ILoggerManger logger)
+    #region Constructor
+    public UserFacadeService(IKalaMarketContext context, ILoggerManger logger)
     {
         Context = context;
         Logger = logger;
-    }
-    private IGetUsersService? _getUsersService;
-    private IRegisterUserService? _registerUserService;
-    private IGetRemovedUsersService? _getRemovedUsersService;
-    private IGetRolesService? _getRolesService;
-    private IGetRoleService? _getRoleService;
-    private IChangeActivationUserService? _changeActivationUserService;
-    private IChangeRemoveRoleService? _changeRemoveRoleService;
-    private IChangeRemoveUserService? _changeRemoveUserService;
-    private IEditUserService? _editUserService;
-    private IGetUserWithRolesService? _getUserWithRolesService;
+    } 
+    #endregion
+   
+    #region Fields
     private IKalaMarketContext? Context;
+    private IUserQueryFacadeService? _userQuery;
+    private IUserCommandFacadeService? _userCommand;
     private ILoggerManger Logger { get; }
-    public IGetUsersService GetUsersService => _getUsersService ??= new GetUsersService(Context);
-
-    public IRegisterUserService RegisterUserService => _registerUserService ??= new RegisterUserService(Context);
-
-    public IGetRemovedUsersService GetRemovedUsersService =>
-        _getRemovedUsersService ??= new GetRemovedUsersService(Context);
-
-    public IGetRolesService GetRolesService => _getRolesService ??= new GetRolesService(Context);
-
-    public IGetRoleService GetRoleService => _getRoleService ??= new GetRoleService(Context);
-
-    public IChangeActivationUserService ChangeActivationUserService => _changeActivationUserService ??= new ChangeActivationUserService(Context, Logger);
-
-    public IChangeRemoveRoleService ChangeRemoveRoleService => _changeRemoveRoleService ??= new ChangeRemoveRoleService(Context, Logger);
-
-    public IChangeRemoveUserService ChangeRemoveUserService => _changeRemoveUserService ??= new ChangeRemoveUserService(Context);
-
-    public IEditUserService EditUserService => _editUserService ??= new EditUserService(Context);
-
-    public IGetUserWithRolesService GetUserWithRolesService => _getUserWithRolesService ??= new GetUserWithRolesService(Context);
+    #endregion
+   
+    #region Properties
+    public IUserQueryFacadeService UserQuery => _userQuery ?? new UserQueryFacadeService(Context, Logger);
+    public IUserCommandFacadeService UserCommand => _userCommand ?? new UserCommandFacadeService(Context, Logger); 
+    #endregion
 }
