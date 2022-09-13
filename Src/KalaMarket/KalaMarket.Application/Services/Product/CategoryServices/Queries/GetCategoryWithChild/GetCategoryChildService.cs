@@ -27,7 +27,7 @@ public class GetCategoryChildService : IGetCategoryChildService
         result.Data = Context.Categories.Where(x => x.Id == id).Include(x => x.SubCategories)
             .Select(x=> new GetCategoryChildServiceDto()
             {
-                Name = x.Name,Id = x.Id ,
+                Name = x.Name,Id = x.Id ,CategoryType = x.CategoryType,
                 ChildCategories = x.SubCategories.Select(c=> new GetCategoryServiceDto()
                 {
                     Name = c.Name,

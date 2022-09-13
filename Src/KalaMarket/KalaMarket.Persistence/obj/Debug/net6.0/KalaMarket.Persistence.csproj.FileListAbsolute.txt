@@ -1,8 +1,3 @@
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.csproj.AssemblyReference.cache
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.AssemblyInfoInputs.cache
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.AssemblyInfo.cs
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.csproj.CoreCompileInputs.cache
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Persistence.deps.json
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Persistence.runtimeconfig.json
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Persistence.dll
@@ -15,6 +10,11 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\D
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Domain.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Resourses.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Shared.pdb
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.csproj.AssemblyReference.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.AssemblyInfoInputs.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.AssemblyInfo.cs
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.csproj.CoreCompileInputs.cache
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.csproj.CopyComplete
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\refint\KalaMarket.Persistence.dll

@@ -1,6 +1,7 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Validations.Category;
 using KalaMarket.Application.Validations.Utility;
+using KalaMarket.Domain.Entities.CategoryAgg;
 using KalaMarket.Resourses;
 using KalaMarket.Shared.Dto;
 
@@ -31,7 +32,7 @@ public class AddCategoryService : IAddCategoryService
         // Check Has Error-es
         if(ValidateRequest(result,request)) return result;
         // Create Category
-        Domain.Entities.CategoryAgg.Category category = CreateCategory(request.Name, request.ParentCategoryId);
+        Domain.Entities.CategoryAgg.Category category = CreateCategory(request);
         // Add To Db
         Context.Categories.Add(category);
         // Try Save To Db
@@ -51,14 +52,16 @@ public class AddCategoryService : IAddCategoryService
         return result;
     }
 
-    private Domain.Entities.CategoryAgg.Category CreateCategory(string name, long? parentCategoryId)
+    private Domain.Entities.CategoryAgg.Category CreateCategory(RequestAddNewCategoryDto request)
     {
-        Domain.Entities.CategoryAgg.Category category = new Domain.Entities.CategoryAgg.Category(name, parentCategoryId);
-        if (parentCategoryId != null || parentCategoryId > 0)
+        Category parentCategory = null;
+        if (request.ParentCategoryId != null || request.ParentCategoryId > 0)
         {
-            var parentCategory = Context.Categories.FirstOrDefault(x => x.Id == parentCategoryId);
-            if (parentCategory != null) category.SetParentCategory(parentCategory);
+         parentCategory = Context.Categories.FirstOrDefault(x => x.Id == request.ParentCategoryId);
         }
+        Domain.Entities.CategoryAgg.Category category = new Domain.Entities.CategoryAgg.Category(request.Name, request.ParentCategoryId, 
+            request.CategoryType, parentCategory?.Name);
+       
         return category;
     }
 

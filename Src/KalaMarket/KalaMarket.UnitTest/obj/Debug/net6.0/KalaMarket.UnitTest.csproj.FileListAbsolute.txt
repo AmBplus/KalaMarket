@@ -1,9 +1,4 @@
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\CoverletSourceRootsMapping
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.csproj.AssemblyReference.cache
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.GeneratedMSBuildEditorConfig.editorconfig
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.AssemblyInfoInputs.cache
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.AssemblyInfo.cs
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.csproj.CoreCompileInputs.cache
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\testhost.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.EndPoint.deps.json
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.EndPoint.runtimeconfig.json
@@ -475,6 +470,11 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debu
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Persistence.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Resourses.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Shared.pdb
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.csproj.AssemblyReference.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.AssemblyInfoInputs.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.AssemblyInfo.cs
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.csproj.CoreCompileInputs.cache
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.csproj.CopyComplete
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\refint\KalaMarket.UnitTest.dll

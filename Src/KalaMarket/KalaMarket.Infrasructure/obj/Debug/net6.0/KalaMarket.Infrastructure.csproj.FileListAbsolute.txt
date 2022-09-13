@@ -1,8 +1,3 @@
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.csproj.AssemblyReference.cache
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.AssemblyInfoInputs.cache
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.AssemblyInfo.cs
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.csproj.CoreCompileInputs.cache
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Infrastructure.deps.json
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Infrastructure.runtimeconfig.json
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Infrastructure.dll
@@ -17,6 +12,11 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Domain.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Resourses.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Shared.pdb
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.csproj.AssemblyReference.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.AssemblyInfoInputs.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.AssemblyInfo.cs
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.csproj.CoreCompileInputs.cache
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.csproj.CopyComplete
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\refint\KalaMarket.Infrastructure.dll

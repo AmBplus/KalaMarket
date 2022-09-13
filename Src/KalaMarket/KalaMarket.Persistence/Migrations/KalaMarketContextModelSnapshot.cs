@@ -30,6 +30,9 @@ namespace KalaMarket.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
+                    b.Property<byte>("CategoryType")
+                        .HasColumnType("tinyint");
+
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
 
@@ -43,9 +46,6 @@ namespace KalaMarket.Persistence.Migrations
                     b.Property<string>("ParentName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte>("ParentType")
-                        .HasColumnType("tinyint");
 
                     b.Property<DateTime?>("RemoveTime")
                         .HasColumnType("datetime2");
@@ -92,21 +92,21 @@ namespace KalaMarket.Persistence.Migrations
                             Id = 1L,
                             IsRemoved = false,
                             Name = "Admin",
-                            UpdateTime = new DateTime(2022, 9, 13, 2, 56, 42, 619, DateTimeKind.Local).AddTicks(7223)
+                            UpdateTime = new DateTime(2022, 9, 13, 15, 57, 33, 4, DateTimeKind.Local).AddTicks(5306)
                         },
                         new
                         {
                             Id = 2L,
                             IsRemoved = false,
                             Name = "Operator",
-                            UpdateTime = new DateTime(2022, 9, 13, 2, 56, 42, 619, DateTimeKind.Local).AddTicks(7307)
+                            UpdateTime = new DateTime(2022, 9, 13, 15, 57, 33, 4, DateTimeKind.Local).AddTicks(5421)
                         },
                         new
                         {
                             Id = 3L,
                             IsRemoved = false,
                             Name = "Customer",
-                            UpdateTime = new DateTime(2022, 9, 13, 2, 56, 42, 619, DateTimeKind.Local).AddTicks(7320)
+                            UpdateTime = new DateTime(2022, 9, 13, 15, 57, 33, 4, DateTimeKind.Local).AddTicks(5435)
                         });
                 });
 

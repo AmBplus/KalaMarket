@@ -6,7 +6,7 @@ namespace KalaMarket.Domain.Entities.CategoryAgg;
 public class Category : BaseEntity<long>
 {
     #region Properties
-    public byte ParentType { get;private set; }
+    public byte CategoryType { get;private set; }
     public string ParentName { get; set; }
     public string Name { get; private set; }
     public virtual Category ParentCategory { get; set; }
@@ -20,13 +20,13 @@ public class Category : BaseEntity<long>
     {
     }
     public Category(string name, long? parentCategoryId = null
-        , byte parentType = KalaMarketConstants.CategoryType.Category, string parentName = null) : base()
+        , byte categoryType = KalaMarketConstants.CategoryType.Category, string parentName = null) : base()
     {
         Name = name;
         ParentCategoryId = parentCategoryId;
         ParentCategory = new Category();
         SubCategories = new List<Category>();
-        ParentType = parentType;
+        CategoryType = categoryType;
         ParentName = parentName;
     }
     #endregion
@@ -41,7 +41,7 @@ public class Category : BaseEntity<long>
     {
         Name = name;
         ParentCategoryId = parentCategoryId;
-        ParentType = parentType;
+        CategoryType = parentType;
         ParentName = parentName ; 
         base.UpdateTimes();
         return true;

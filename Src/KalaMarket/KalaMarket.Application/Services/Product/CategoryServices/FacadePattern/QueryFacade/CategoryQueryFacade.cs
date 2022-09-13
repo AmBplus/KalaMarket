@@ -1,6 +1,7 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
+using KalaMarket.Application.Services.Product.CategoryServices.Queries.GetCategories;
 using KalaMarket.Application.Services.Product.CategoryServices.Queries.GetCategory;
-using KalaMarket.Application.Services.Product.CategoryServices.Queries.GetCategoryAllParent;
+using KalaMarket.Application.Services.Product.CategoryServices.Queries.GetCategoryWithAllParent;
 using KalaMarket.Application.Services.Product.CategoryServices.Queries.GetCategoryWithChild;
 using KalaMarket.Application.Services.Product.CategoryServices.Queries.GetCategoryWithParent;
 using KalaMarket.Application.Services.Product.CategoryServices.Queries.GetCategoryWithParentChild;
@@ -15,7 +16,8 @@ public class CategoryQueryFacade : ICategoryQueryFacade
     private IGetCategoryChildService? _getCategoryWithChildService;
     private IGetCategoryWithParentChildService? _getCategoryWithParentChildService;
     private IGetCategoryParentService? _getCategoryWithParentService;
-    private IGetCategoryAllParentService? _getAllParent;
+    private IGetCategoryWithAllParentService? _getAllParent;
+    private IGetCategoriesService? _getCategories;
 
     #endregion /Fields
 
@@ -41,9 +43,12 @@ public class CategoryQueryFacade : ICategoryQueryFacade
         _getCategoryWithParentChildService ??= new GetCategoryWithParentChildService(Context);
 
     public IGetCategoryParentService GetParent =>
-        _getCategoryWithParentService ??=new GetCategoryParentService(Context);
+        _getCategoryWithParentService ??= new GetCategoryParentService(Context);
 
-    public IGetCategoryAllParentService GetAllParent => _getAllParent ?? new GetCategoryAllParentService(Context);
+    public IGetCategoryWithAllParentService GetAllParent => _getAllParent ?? new GetCategoryAllParentService(Context);
+
+    public IGetCategoriesService GetCategories => _getCategories ?? new GetCategoriesService(context: Context);
+
 
     #endregion /Properties
 }

@@ -22,7 +22,7 @@ public class GetCategoryAllParentService : IGetCategoryWithAllParentService
             new ResultDto<GetCategoryWithAllParentServiceDto>(new GetCategoryWithAllParentServiceDto());
         var category = Context.Categories.Where(x => x.Id == categoryId).Select(x=> new 
         {
-            parentType = x.ParentType
+            parentType = x.CategoryType
         }).FirstOrDefault();
         if (category == null)
         {
@@ -130,14 +130,14 @@ public class GetCategoryAllParentService : IGetCategoryWithAllParentService
                 Name = x.Name,
                 Id = x.Id,
                 ParentId = x.ParentCategoryId,
-                ParentType = x.ParentType,
+                CategoryType = x.CategoryType,
                 Parent =  new GetCategoryWithAllParentServiceDto()
                 {
                     Name = x.ParentCategory.Name,
                     Id = x.Id,
                     Parent = null,
                     ParentId = x.ParentCategoryId,
-                    ParentType = x.ParentType
+                    CategoryType = x.CategoryType
                 }
             }).FirstOrDefault();
      result.IsSuccess = true;
