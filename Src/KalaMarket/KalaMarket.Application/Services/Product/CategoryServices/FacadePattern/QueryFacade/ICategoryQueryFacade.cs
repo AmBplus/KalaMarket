@@ -6,7 +6,7 @@ using KalaMarket.Application.Services.Product.CategoryServices.Queries.GetCatego
 
 namespace KalaMarket.Application.Services.Product.CategoryServices.FacadePattern.QueryFacade;
 
-public interface ICategoryQueryFacade
+ public interface ICategoryQueryFacade
 {
     IGetCategoryService GetCategory { get; }
     IGetCategoryChildService GetChild { get; }

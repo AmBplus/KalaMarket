@@ -21,7 +21,7 @@
                     method: "Put",
                     beforeSend: function (xhr) {
                         xhr.setRequestHeader("XSRF-TOKEN",
-                            $(`input:hidden[name="__RequestVerificationToken"]`).val());
+                            $(`input:hidden[name="__RequestVerificationToken"]`).val()); 
                     }
                 }).done((result) => {
                     Swal.fire({

@@ -4,6 +4,5 @@ namespace KalaMarket.Application.Services.Product.CategoryServices.Queries.GetCa
 
 public class GetCategoryChildServiceDto
 {
-
     public GetCategoryServiceDto Category { get; set; } 
 }

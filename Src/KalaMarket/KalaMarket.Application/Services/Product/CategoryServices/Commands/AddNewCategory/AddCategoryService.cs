@@ -57,7 +57,7 @@ public class AddCategoryService : IAddCategoryService
         if (parentCategoryId != null || parentCategoryId > 0)
         {
             var parentCategory = Context.Categories.FirstOrDefault(x => x.Id == parentCategoryId);
-            if (parentCategory != null) category.SetParrentCategory(parentCategory);
+            if (parentCategory != null) category.SetParentCategory(parentCategory);
         }
         return category;
     }

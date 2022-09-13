@@ -126,6 +126,9 @@
   <data name="EmailType" xml:space="preserve">
     <value>لطفا ایمیل معتبر وارد نمایید</value>
   </data>
+  <data name="ItsSelfFather" xml:space="preserve">
+    <value>دسته خواسته شده پدری ندارد</value>
+  </data>
   <data name="NotAClass" xml:space="preserve">
     <value>این یک کلاس نیست</value>
   </data>

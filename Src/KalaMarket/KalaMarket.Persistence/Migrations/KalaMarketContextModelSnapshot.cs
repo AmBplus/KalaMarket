@@ -40,6 +40,13 @@ namespace KalaMarket.Persistence.Migrations
                     b.Property<long?>("ParentCategoryId")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("ParentName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte>("ParentType")
+                        .HasColumnType("tinyint");
+
                     b.Property<DateTime?>("RemoveTime")
                         .HasColumnType("datetime2");
 
@@ -85,21 +92,21 @@ namespace KalaMarket.Persistence.Migrations
                             Id = 1L,
                             IsRemoved = false,
                             Name = "Admin",
-                            UpdateTime = new DateTime(2022, 9, 10, 0, 36, 42, 898, DateTimeKind.Local).AddTicks(3193)
+                            UpdateTime = new DateTime(2022, 9, 13, 2, 56, 42, 619, DateTimeKind.Local).AddTicks(7223)
                         },
                         new
                         {
                             Id = 2L,
                             IsRemoved = false,
                             Name = "Operator",
-                            UpdateTime = new DateTime(2022, 9, 10, 0, 36, 42, 898, DateTimeKind.Local).AddTicks(3302)
+                            UpdateTime = new DateTime(2022, 9, 13, 2, 56, 42, 619, DateTimeKind.Local).AddTicks(7307)
                         },
                         new
                         {
                             Id = 3L,
                             IsRemoved = false,
                             Name = "Customer",
-                            UpdateTime = new DateTime(2022, 9, 10, 0, 36, 42, 898, DateTimeKind.Local).AddTicks(3317)
+                            UpdateTime = new DateTime(2022, 9, 13, 2, 56, 42, 619, DateTimeKind.Local).AddTicks(7320)
                         });
                 });
 

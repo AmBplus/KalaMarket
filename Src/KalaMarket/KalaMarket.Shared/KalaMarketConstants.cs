@@ -5,6 +5,13 @@
 		static KalaMarketConstants()
 		{
 		}
+		public static class  CategoryType
+        {
+            public const byte Category = 1;
+			public const byte SubCategory = 2;
+			//public const byte DepartmentCategory = 3;
+			//public const byte SubDepartmentCategory = 4;
+        }
         public static class Page
         {
             static Page()
@@ -13,7 +20,7 @@
 
             public const byte PageSize= 8;
         }
-public static class Logger 
+        public static class Logger 
 		{
 			static Logger()
 			{

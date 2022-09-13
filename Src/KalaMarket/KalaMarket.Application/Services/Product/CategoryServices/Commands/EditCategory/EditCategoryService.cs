@@ -56,7 +56,7 @@ public class EditCategoryService : IEditCategoryService
             var parentCategory = Context.Categories.FirstOrDefault(x => x.Id == request.ParentCategoryId);
             if (parentCategory != null)
             {
-                category.UpdateCategory(request.Name, parentCategory.Id, parentCategory);
+                category.UpdateCategory(request.Name, parentCategory.Id,parentCategory.ParentType,parentCategory.Name);
                 return category;
             }
         }
