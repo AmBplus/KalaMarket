@@ -6,9 +6,10 @@ public class BaseEntityWithoutId
 {
     public BaseEntityWithoutId()
     {
-        UpdateTime = InserTime = Utility.Now;
+        UpdateTime = Utility.Now;
+        InsertTime = Utility.Now;
     }
-    public DateTime InserTime { get; }
+    public DateTime InsertTime { get; private set; }
     public DateTime? UpdateTime { get;private set; }
     public bool IsRemoved { get;private set; } = false;
     public DateTime? RemoveTime { get;private set; }

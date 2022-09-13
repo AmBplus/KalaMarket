@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using KalaMarket.Domain.Entities.CategoryAgg;
+using KalaMarket.Domain.Entities.ProductAgg.CategoryAgg;
 using KalaMarket.Domain.Entities.UserAgg;
 using Microsoft.EntityFrameworkCore;
 

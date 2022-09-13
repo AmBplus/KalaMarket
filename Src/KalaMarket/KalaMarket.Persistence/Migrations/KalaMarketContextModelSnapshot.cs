@@ -22,7 +22,36 @@ namespace KalaMarket.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.CategoryAgg.Category", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.BrandAgg.Brand", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("InsertTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("RemoveTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Brands");
+                });
+
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.CategoryAgg.Category", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -32,6 +61,9 @@ namespace KalaMarket.Persistence.Migrations
 
                     b.Property<byte>("CategoryType")
                         .HasColumnType("tinyint");
+
+                    b.Property<DateTime>("InsertTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
@@ -68,6 +100,9 @@ namespace KalaMarket.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
+                    b.Property<DateTime>("InsertTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
 
@@ -90,23 +125,26 @@ namespace KalaMarket.Persistence.Migrations
                         new
                         {
                             Id = 1L,
+                            InsertTime = new DateTime(2022, 9, 13, 16, 37, 4, 675, DateTimeKind.Local).AddTicks(1521),
                             IsRemoved = false,
                             Name = "Admin",
-                            UpdateTime = new DateTime(2022, 9, 13, 15, 57, 33, 4, DateTimeKind.Local).AddTicks(5306)
+                            UpdateTime = new DateTime(2022, 9, 13, 16, 37, 4, 675, DateTimeKind.Local).AddTicks(1453)
                         },
                         new
                         {
                             Id = 2L,
+                            InsertTime = new DateTime(2022, 9, 13, 16, 37, 4, 675, DateTimeKind.Local).AddTicks(1591),
                             IsRemoved = false,
                             Name = "Operator",
-                            UpdateTime = new DateTime(2022, 9, 13, 15, 57, 33, 4, DateTimeKind.Local).AddTicks(5421)
+                            UpdateTime = new DateTime(2022, 9, 13, 16, 37, 4, 675, DateTimeKind.Local).AddTicks(1582)
                         },
                         new
                         {
                             Id = 3L,
+                            InsertTime = new DateTime(2022, 9, 13, 16, 37, 4, 675, DateTimeKind.Local).AddTicks(1617),
                             IsRemoved = false,
                             Name = "Customer",
-                            UpdateTime = new DateTime(2022, 9, 13, 15, 57, 33, 4, DateTimeKind.Local).AddTicks(5435)
+                            UpdateTime = new DateTime(2022, 9, 13, 16, 37, 4, 675, DateTimeKind.Local).AddTicks(1610)
                         });
                 });
 
@@ -128,6 +166,9 @@ namespace KalaMarket.Persistence.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("InsertTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -161,6 +202,9 @@ namespace KalaMarket.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
+                    b.Property<DateTime>("InsertTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
 
@@ -185,9 +229,9 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("UserInRoles");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.CategoryAgg.Category", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.CategoryAgg.Category", b =>
                 {
-                    b.HasOne("KalaMarket.Domain.Entities.CategoryAgg.Category", "ParentCategory")
+                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.CategoryAgg.Category", "ParentCategory")
                         .WithMany("SubCategories")
                         .HasForeignKey("ParentCategoryId");
 
@@ -213,7 +257,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.CategoryAgg.Category", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.CategoryAgg.Category", b =>
                 {
                     b.Navigation("SubCategories");
                 });

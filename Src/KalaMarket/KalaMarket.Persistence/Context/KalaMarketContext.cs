@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using KalaMarket.Application.Interfaces.Context;
-using KalaMarket.Domain.Entities.CategoryAgg;
+using KalaMarket.Domain.Entities.ProductAgg.BrandAgg;
+using KalaMarket.Domain.Entities.ProductAgg.CategoryAgg;
 using KalaMarket.Domain.Entities.UserAgg;
 using Microsoft.EntityFrameworkCore;
 namespace KalaMarket.Persistence.Context;
@@ -18,6 +19,7 @@ public class KalaMarketContext : DbContext , IKalaMarketContext
     public DbSet<UserInRole> UserInRoles { get; set; }
     public DbSet<Role> Roles { get; set; }
     public DbSet<Category> Categories { get; set; }
+    public DbSet<Brand> Brands { get; set; }
 
     #endregion Properties
 

@@ -1,6 +1,7 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Validations.Category;
 using KalaMarket.Application.Validations.Utility;
+using KalaMarket.Domain.Entities.ProductAgg.CategoryAgg;
 using KalaMarket.Resourses;
 using KalaMarket.Shared.Dto;
 
@@ -30,7 +31,7 @@ public class EditCategoryService : IEditCategoryService
         // Check Valid request
         if(ValidateRequestEditCategoryDto(request, result)) return result;
         // Edit category
-        Domain.Entities.CategoryAgg.Category category = UpdateCategory(request);
+        Category category = UpdateCategory(request);
         // Try save changes
         try
         {
@@ -48,7 +49,7 @@ public class EditCategoryService : IEditCategoryService
         return result;
     }
 
-    private Domain.Entities.CategoryAgg.Category UpdateCategory(RequestEditCategoryDto request)
+    private Category UpdateCategory(RequestEditCategoryDto request)
     {
         var category = Context.Categories.FirstOrDefault(x => x.Id == request.id);
         if (category.ParentCategoryId != request.ParentCategoryId)
