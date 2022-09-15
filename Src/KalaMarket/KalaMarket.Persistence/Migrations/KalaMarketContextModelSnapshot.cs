@@ -69,6 +69,7 @@ namespace KalaMarket.Persistence.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -87,8 +88,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("Name")
-                        .IsUnique()
-                        .HasFilter("[Name] IS NOT NULL");
+                        .IsUnique();
 
                     b.HasIndex("ParentCategoryId");
 
@@ -128,26 +128,26 @@ namespace KalaMarket.Persistence.Migrations
                         new
                         {
                             Id = 1L,
-                            InsertTime = new DateTime(2022, 9, 15, 0, 48, 21, 471, DateTimeKind.Local).AddTicks(3062),
+                            InsertTime = new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1592),
                             IsRemoved = false,
                             Name = "Admin",
-                            UpdateTime = new DateTime(2022, 9, 15, 0, 48, 21, 471, DateTimeKind.Local).AddTicks(2979)
+                            UpdateTime = new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1521)
                         },
                         new
                         {
                             Id = 2L,
-                            InsertTime = new DateTime(2022, 9, 15, 0, 48, 21, 471, DateTimeKind.Local).AddTicks(3172),
+                            InsertTime = new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1690),
                             IsRemoved = false,
                             Name = "Operator",
-                            UpdateTime = new DateTime(2022, 9, 15, 0, 48, 21, 471, DateTimeKind.Local).AddTicks(3156)
+                            UpdateTime = new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1678)
                         },
                         new
                         {
                             Id = 3L,
-                            InsertTime = new DateTime(2022, 9, 15, 0, 48, 21, 471, DateTimeKind.Local).AddTicks(3210),
+                            InsertTime = new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1722),
                             IsRemoved = false,
                             Name = "Customer",
-                            UpdateTime = new DateTime(2022, 9, 15, 0, 48, 21, 471, DateTimeKind.Local).AddTicks(3195)
+                            UpdateTime = new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1710)
                         });
                 });
 

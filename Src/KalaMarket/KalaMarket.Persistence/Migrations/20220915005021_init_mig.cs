@@ -34,7 +34,7 @@ namespace KalaMarket.Persistence.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CategoryType = table.Column<byte>(type: "tinyint", nullable: false),
                     ParentName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     ParentCategoryId = table.Column<long>(type: "bigint", nullable: true),
                     InsertTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateTime = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -121,24 +121,23 @@ namespace KalaMarket.Persistence.Migrations
             migrationBuilder.InsertData(
                 table: "Roles",
                 columns: new[] { "Id", "InsertTime", "IsRemoved", "Name", "RemoveTime", "UpdateTime" },
-                values: new object[] { 1L, new DateTime(2022, 9, 15, 0, 42, 18, 396, DateTimeKind.Local).AddTicks(5564), false, "Admin", null, new DateTime(2022, 9, 15, 0, 42, 18, 396, DateTimeKind.Local).AddTicks(5489) });
+                values: new object[] { 1L, new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1592), false, "Admin", null, new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1521) });
 
             migrationBuilder.InsertData(
                 table: "Roles",
                 columns: new[] { "Id", "InsertTime", "IsRemoved", "Name", "RemoveTime", "UpdateTime" },
-                values: new object[] { 2L, new DateTime(2022, 9, 15, 0, 42, 18, 396, DateTimeKind.Local).AddTicks(5777), false, "Operator", null, new DateTime(2022, 9, 15, 0, 42, 18, 396, DateTimeKind.Local).AddTicks(5653) });
+                values: new object[] { 2L, new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1690), false, "Operator", null, new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1678) });
 
             migrationBuilder.InsertData(
                 table: "Roles",
                 columns: new[] { "Id", "InsertTime", "IsRemoved", "Name", "RemoveTime", "UpdateTime" },
-                values: new object[] { 3L, new DateTime(2022, 9, 15, 0, 42, 18, 396, DateTimeKind.Local).AddTicks(5822), false, "Customer", null, new DateTime(2022, 9, 15, 0, 42, 18, 396, DateTimeKind.Local).AddTicks(5807) });
+                values: new object[] { 3L, new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1722), false, "Customer", null, new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1710) });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Categories_Name",
                 table: "Categories",
                 column: "Name",
-                unique: true,
-                filter: "[Name] IS NOT NULL");
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Categories_ParentCategoryId",

@@ -24,7 +24,7 @@
                             <div class="card-block card-dashboard">
                                 <p class="card-text">دسته بندی محصولات فروشگاه کالا مارکت
                                 </p>
-                                <a class="btn btn-success">افزودن دسته بندی جدید</a>
+                                <a asp-page="addCategory" class="btn btn-success">افزودن دسته بندی جدید</a>
 
                                 <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
                                     <div class="col-sm-12">
@@ -58,7 +58,7 @@
 
                                                         @if (item.HasChild == true)
                                                         {
-                                                            <a href="#" class="btn btn-info">مشاهده لیست فرزند ها </a>
+                                                            <a asp-page="SubCategories" asp-route-id="@item.Id" class="btn btn-info">مشاهده لیست فرزند ها </a>
                                                         }
 
                                                     </td>
