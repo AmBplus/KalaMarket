@@ -1,4 +1,5 @@
 ﻿using KalaMarket.Domain.Entities.BaseEntities;
+using KalaMarket.Domain.Entities.ProductAgg.ProductAgg;
 using KalaMarket.Shared;
 
 namespace KalaMarket.Domain.Entities.ProductAgg.CategoryAgg;
@@ -11,7 +12,8 @@ public class Category : BaseEntity<long>
     public string? Name { get; private set; }
     public virtual Category? ParentCategory { get; set; }
     public long? ParentCategoryId { get;private set; }
-    public virtual IList<Category>? SubCategories { get; private set; }
+    public virtual IList<Category> SubCategories { get; private set; }
+    public virtual IList<Product> Products { get;private set; }
     #endregion
 
     #region Constructors
@@ -25,6 +27,7 @@ public class Category : BaseEntity<long>
         Name = name;
         ParentCategoryId = parentCategoryId;
         SubCategories = new List<Category>();
+        Products = new List<Product>();
         CategoryType = categoryType;
         ParentName = parentName;
     }

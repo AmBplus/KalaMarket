@@ -21,4 +21,8 @@
     <ProjectReference Include="..\KalaMarket.Domain\KalaMarket.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Configuration\ProductAggConfigurations\" />
+  </ItemGroup>
+
 </Project>

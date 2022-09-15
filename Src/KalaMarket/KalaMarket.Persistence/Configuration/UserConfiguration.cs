@@ -12,14 +12,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasMany(x => x.UserInRoles).WithOne(x => x.User).HasForeignKey(x => x.UserId);
         builder.Property(x => x.FullName).HasMaxLength(KalaMarketConstants.MaxLength.FullName);
         builder.Property(x => x.Email).IsUnicode(false).HasMaxLength(KalaMarketConstants.MaxLength.EmailAddress);
-        
         builder.HasIndex(x => new{x.Email}).IsUnique();
-        
-        //builder.HasData(new User()
-        //{
-        //    FullName = "AMB",
-        //    Email = 
-        //})
     }
 
 }

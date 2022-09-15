@@ -2,6 +2,7 @@
 using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Domain.Entities.ProductAgg;
 using KalaMarket.Domain.Entities.ProductAgg.CategoryAgg;
+using KalaMarket.Domain.Entities.ProductAgg.ProductAgg;
 using KalaMarket.Domain.Entities.UserAgg;
 using Microsoft.EntityFrameworkCore;
 namespace KalaMarket.Persistence.Context;
@@ -19,7 +20,10 @@ public class KalaMarketContext : DbContext , IKalaMarketContext
     public DbSet<UserInRole> UserInRoles { get; set; }
     public DbSet<Role> Roles { get; set; }
     public DbSet<Category> Categories { get; set; }
+    public DbSet<Product> Products { get; set; }
     public DbSet<Brand> Brands { get; set; }
+    public DbSet<ProductFeatures> ProductFeatures { get; set; }
+    public DbSet<ProductImages> ProductImages { get; set; }
 
     #endregion Properties
 

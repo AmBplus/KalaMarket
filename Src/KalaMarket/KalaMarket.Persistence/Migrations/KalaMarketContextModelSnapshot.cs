@@ -22,7 +22,7 @@ namespace KalaMarket.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.BrandAgg.Brand", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Brand", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,7 +38,8 @@ namespace KalaMarket.Persistence.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime?>("RemoveTime")
                         .HasColumnType("datetime2");
@@ -47,6 +48,9 @@ namespace KalaMarket.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
 
                     b.ToTable("Brands");
                 });
@@ -95,6 +99,132 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductAgg.Product", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("BrandId")
+                        .HasColumnType("int");
+
+                    b.Property<long>("CategoryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Displayed")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("InsertTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Inventory")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("RemoveTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BrandId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("Name");
+
+                    b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductFeatures", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("InsertTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("KeyName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("RemoveTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductFeatures");
+                });
+
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductImages", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("InsertTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("RemoveTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Src")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductImages");
+                });
+
             modelBuilder.Entity("KalaMarket.Domain.Entities.UserAgg.Role", b =>
                 {
                     b.Property<long>("Id")
@@ -128,26 +258,26 @@ namespace KalaMarket.Persistence.Migrations
                         new
                         {
                             Id = 1L,
-                            InsertTime = new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1592),
+                            InsertTime = new DateTime(2022, 9, 15, 6, 27, 49, 282, DateTimeKind.Local).AddTicks(5769),
                             IsRemoved = false,
                             Name = "Admin",
-                            UpdateTime = new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1521)
+                            UpdateTime = new DateTime(2022, 9, 15, 6, 27, 49, 282, DateTimeKind.Local).AddTicks(5722)
                         },
                         new
                         {
                             Id = 2L,
-                            InsertTime = new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1690),
+                            InsertTime = new DateTime(2022, 9, 15, 6, 27, 49, 282, DateTimeKind.Local).AddTicks(5830),
                             IsRemoved = false,
                             Name = "Operator",
-                            UpdateTime = new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1678)
+                            UpdateTime = new DateTime(2022, 9, 15, 6, 27, 49, 282, DateTimeKind.Local).AddTicks(5823)
                         },
                         new
                         {
                             Id = 3L,
-                            InsertTime = new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1722),
+                            InsertTime = new DateTime(2022, 9, 15, 6, 27, 49, 282, DateTimeKind.Local).AddTicks(5848),
                             IsRemoved = false,
                             Name = "Customer",
-                            UpdateTime = new DateTime(2022, 9, 15, 5, 20, 20, 913, DateTimeKind.Local).AddTicks(1710)
+                            UpdateTime = new DateTime(2022, 9, 15, 6, 27, 49, 282, DateTimeKind.Local).AddTicks(5842)
                         });
                 });
 
@@ -241,6 +371,47 @@ namespace KalaMarket.Persistence.Migrations
                     b.Navigation("ParentCategory");
                 });
 
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductAgg.Product", b =>
+                {
+                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Brand", "Brand")
+                        .WithMany("Products")
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.CategoryAgg.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Brand");
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductFeatures", b =>
+                {
+                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.ProductAgg.Product", "Product")
+                        .WithMany("Features")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductImages", b =>
+                {
+                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.ProductAgg.Product", "Product")
+                        .WithMany("Images")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("KalaMarket.Domain.Entities.UserAgg.UserInRole", b =>
                 {
                     b.HasOne("KalaMarket.Domain.Entities.UserAgg.Role", "Role")
@@ -260,9 +431,23 @@ namespace KalaMarket.Persistence.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Brand", b =>
+                {
+                    b.Navigation("Products");
+                });
+
             modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.CategoryAgg.Category", b =>
                 {
+                    b.Navigation("Products");
+
                     b.Navigation("SubCategories");
+                });
+
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductAgg.Product", b =>
+                {
+                    b.Navigation("Features");
+
+                    b.Navigation("Images");
                 });
 
             modelBuilder.Entity("KalaMarket.Domain.Entities.UserAgg.Role", b =>

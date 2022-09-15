@@ -10,9 +10,17 @@ public class Product : BaseEntity<long>
     public int Inventory { get; set; }
     public bool Displayed { get; set; }
     public Brand Brand { get; set; }
-    public long BrandId { get; set; }
-    public virtual Category Category { get; set; }
+    public ushort BrandId { get; set; }
+    public virtual Category Category { get;private set; }
     public long CategoryId { get; set; }
-    public virtual ICollection<ProductFeatures> Features { get; set; }
-    public virtual ICollection<ProductImages> Images { get; set; }
+    public virtual ICollection<ProductFeatures> Features { get;private set; }
+    public virtual ICollection<ProductImages> Images { get;private set; }
+
+    public Product()
+    {
+        Features = new List<ProductFeatures>();
+        Images = new List<ProductImages>();
+    }
+
+    
 }
