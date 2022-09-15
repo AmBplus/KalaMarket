@@ -10,7 +10,7 @@ public interface IKalaMarketContext
     DbSet<User> Users { get; set; }
     DbSet<Role> Roles { get; set; }
     DbSet<UserInRole> UserInRoles { get; set; }
-    public DbSet<Category> Categories { get; set; }
+    DbSet<Category> Categories { get; set; }
     int SaveChanges(bool acceptAllChangesOnSuccess);
     int SaveChanges();
     Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = new CancellationToken());

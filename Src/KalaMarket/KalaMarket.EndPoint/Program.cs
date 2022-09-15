@@ -25,13 +25,11 @@ try
     #endregion /NLog
 
     #region Routing
-
     builder.Services.AddRouting(op =>
     {
         op.LowercaseUrls = true;
         op.LowercaseQueryStrings = true;
     });
-
     #endregion /Routing
     builder.Services.AddControllers();
     builder.Services.AddRazorPages();
@@ -75,8 +73,6 @@ try
 
     #endregion /Configure ApplicationSettings Class Service
 
-    #region CodeForCors
-
     #region Cors
 
     //builder.Services.AddCors(options =>
@@ -88,7 +84,7 @@ try
 
     #endregion
 
-    #endregion /CodeForCors
+
 
     string connection = builder.Configuration.GetConnectionString("ConnectionSql");
 

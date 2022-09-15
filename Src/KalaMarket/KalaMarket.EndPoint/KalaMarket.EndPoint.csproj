@@ -166,6 +166,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\01_Framework.AspCore\01_Framework.AspCore.csproj" />
     <ProjectReference Include="..\KalaMarket.Infrasructure\KalaMarket.Infrastructure.csproj" />
   </ItemGroup>
 

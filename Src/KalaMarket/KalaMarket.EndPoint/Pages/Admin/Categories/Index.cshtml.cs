@@ -1,5 +1,7 @@
 using KalaMarket.Application.Services.Product.CategoryServices.FacadePattern.Facade;
+using KalaMarket.Application.Services.Product.CategoryServices.Queries.GetCategories;
 using KalaMarket.EndPoint.Infrastructure;
+using KalaMarket.Shared.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -11,11 +13,12 @@ namespace KalaMarket.EndPoint.Pages.Admin.Categories
         {
             _categoryFacade = categoryFacade;
         }
-
+        public ResultDto<GetCategoriesServiceDto> Result { get; set; }
         private ICategoryFacade _categoryFacade { get; }
         public void OnGet()
         {
-           var result = _categoryFacade.CategoryQuery.GetAllParent.Execute(4);
+         Result = _categoryFacade.CategoryQuery.GetCategories.Execute();
+            
         }
     }
 }

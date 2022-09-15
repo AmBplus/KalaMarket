@@ -1,4 +1,5 @@
-﻿@*@page
+﻿@page
+@using KalaMarket.Shared
 @model KalaMarket.EndPoint.Pages.Admin.Categories.IndexModel
 @{
 }
@@ -38,26 +39,26 @@
                                             </thead>
                                             <tbody>
 
-                                            @foreach (var item in Model)
+                                            @foreach (var item in Model.Result.Data._categories)
                                             {
                                                 <tr role="row" class="odd">
                                                     <td class="sorting_1">@item.Name</td>
                                                     <td>
                                                         @{
-                                                            string parent = item.Parent != null ? item.Parent.name : "-";
+                                                                string parent = !string.IsNullOrWhiteSpace(item.ParentName) ? item.ParentName : "-";
                                                          }
 
                                                         <text> @parent </text>
                                                     </td>
                                                     <td>
-                                                        @if (item.Parent == null)
+                                                        @if (item.Type == KalaMarketConstants.CategoryType.Category)
                                                         {
-                                                            <a href="~/admin/categories/addnewcategory?ParentId=@item.Id" class="btn btn-success">افزودن فرزند</a>
+                                                                <a asp-page="AddCategory" asp-route-parentCategoryId="@item.Id" class="btn btn-success">افزودن فرزند</a>
                                                         }
 
                                                         @if (item.HasChild == true)
                                                         {
-                                                            <a href="~/admin/categories/index?ParentId=@item.Id" class="btn btn-info">مشاهده لیست فرزند ها </a>
+                                                            <a href="#" class="btn btn-info">مشاهده لیست فرزند ها </a>
                                                         }
 
                                                     </td>
@@ -76,4 +77,3 @@
         </section>
     </div>
 </div>
-*@

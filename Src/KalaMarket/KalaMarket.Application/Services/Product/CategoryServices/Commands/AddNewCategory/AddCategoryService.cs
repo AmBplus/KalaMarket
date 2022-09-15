@@ -1,8 +1,10 @@
-﻿using KalaMarket.Application.Interfaces.Context;
+﻿using System.Xml;
+using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Validations.Category;
 using KalaMarket.Application.Validations.Utility;
 using KalaMarket.Domain.Entities.ProductAgg.CategoryAgg;
 using KalaMarket.Resourses;
+using KalaMarket.Shared;
 using KalaMarket.Shared.Dto;
 
 namespace KalaMarket.Application.Services.Product.CategoryServices.Commands.AddNewCategory;
@@ -42,7 +44,7 @@ public class AddCategoryService : IAddCategoryService
             {
                 result.IsSuccess = true;
                 result.Message = Messages.OperationDoneSuccessfully;
-            }
+            } 
         }
         catch (Exception e)
         {
@@ -54,14 +56,19 @@ public class AddCategoryService : IAddCategoryService
 
     private Category CreateCategory(RequestAddNewCategoryDto request)
     {
-        Category parentCategory = null;
+        Category category;
         if (request.ParentCategoryId != null || request.ParentCategoryId > 0)
         {
-         parentCategory = Context.Categories.FirstOrDefault(x => x.Id == request.ParentCategoryId);
+         var parentCategory = Context.Categories.FirstOrDefault(x => x.Id == request.ParentCategoryId);
+         if (parentCategory != null)
+         {
+             category = new Category(request.Name, (byte)(parentCategory.CategoryType + KalaMarketConstants.CategoryType.Category), request.ParentCategoryId, parentCategory.Name);
+             return category;
+         }
+         
         }
-        Category category = new Category(request.Name, request.ParentCategoryId, 
-            request.CategoryType, parentCategory?.Name);
-       
+        category = new Category(request.Name,request.CategoryType);
+
         return category;
     }
 

@@ -133,6 +133,15 @@ namespace KalaMarket.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to مدل ارسال شده معتبر نیست.
+        /// </summary>
+        public static string NotValidModel {
+            get {
+                return ResourceManager.GetString("NotValidModel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to فیلد {0} باید بین {2} و {1} حرف باشد.
         /// </summary>
         public static string OutofMinMax {

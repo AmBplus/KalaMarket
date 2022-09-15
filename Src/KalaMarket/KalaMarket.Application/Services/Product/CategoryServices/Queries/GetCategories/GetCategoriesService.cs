@@ -24,7 +24,8 @@ public class GetCategoriesService  : IGetCategoriesService
                 Id = x.Id,
                 Name = x.Name,
                 Type = x.CategoryType,
-                HasChild = x.SubCategories.Count > 0
+                HasChild = x.SubCategories.Count > 0,
+                ParentName = x.ParentName
             }).ToList();
         ResultDto<GetCategoriesServiceDto> result = new ResultDto<GetCategoriesServiceDto>(new GetCategoriesServiceDto());
         result.Data._categories = list;

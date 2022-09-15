@@ -7,11 +7,11 @@ public class Category : BaseEntity<long>
 {
     #region Properties
     public byte CategoryType { get;private set; }
-    public string ParentName { get; set; }
-    public string Name { get; private set; }
-    public virtual Category ParentCategory { get; set; }
+    public string? ParentName { get; set; }
+    public string? Name { get; private set; }
+    public virtual Category? ParentCategory { get; set; }
     public long? ParentCategoryId { get;private set; }
-    public virtual IList<Category> SubCategories { get; private set; }
+    public virtual IList<Category>? SubCategories { get; private set; }
     #endregion
 
     #region Constructors
@@ -19,12 +19,11 @@ public class Category : BaseEntity<long>
     protected Category()
     {
     }
-    public Category(string name, long? parentCategoryId = null
-        , byte categoryType = KalaMarketConstants.CategoryType.Category, string parentName = null) : base()
+    public Category(string name, byte categoryType = KalaMarketConstants.CategoryType.Category,
+       long? parentCategoryId = null, string? parentName = null) : base()
     {
         Name = name;
         ParentCategoryId = parentCategoryId;
-        ParentCategory = new Category();
         SubCategories = new List<Category>();
         CategoryType = categoryType;
         ParentName = parentName;
