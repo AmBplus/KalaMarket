@@ -11,7 +11,7 @@ public class ProductFeaturesConfiguration : IEntityTypeConfiguration<ProductFeat
     {
         builder.Property(x => x.KeyName)
             .HasMaxLength(KalaMarketConstants.MaxLength.Name);
-        builder.Property(x => x.Value)
+        builder.Property(x => x.KeyValue)
             .HasMaxLength(KalaMarketConstants.MaxLength.Name);
         builder
             .HasOne(x => x.Product)

@@ -10,10 +10,15 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.RazorPages" Version="2.2.5" />
+    <PackageReference Include="Myrmec" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\KalaMarket.Resourses\KalaMarket.Resourses.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CheckContentType\" />
   </ItemGroup>
 
 </Project>

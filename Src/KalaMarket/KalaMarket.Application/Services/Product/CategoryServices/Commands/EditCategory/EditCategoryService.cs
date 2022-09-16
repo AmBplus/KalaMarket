@@ -1,7 +1,7 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Validations.Category;
 using KalaMarket.Application.Validations.Utility;
-using KalaMarket.Domain.Entities.ProductAgg.CategoryAgg;
+using KalaMarket.Domain.Entities.ProductAgg;
 using KalaMarket.Resourses;
 using KalaMarket.Shared.Dto;
 

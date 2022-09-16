@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "kIe3/slwfb75GBu/P37Eb+B1e6fa1uneZv3JKkJ7G3pYQDQRP526F/7uWqo57lbRDDEMV113cnaBTzek+MEFuQ==",
+  "dgSpecHash": "DvRo5ARQZhS18ml7VKStqOXY24/Y4kSd6ZxgX8/ZdQQrsOwQ3YFBQB2+nYRcN7nmfxaF+t3tXKiSN0q1HmtdWw==",
   "success": true,
   "projectFilePath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Application\\KalaMarket.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\manga\\.nuget\\packages\\fluentvalidation\\11.2.0\\fluentvalidation.11.2.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
+    "C:\\Users\\manga\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.7\\microsoft.entityframeworkcore.6.0.7.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.7\\microsoft.entityframeworkcore.abstractions.6.0.7.nupkg.sha512",

@@ -10,4 +10,8 @@
     <None Include="Dtat.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Security\VerifyFiles\" />
+  </ItemGroup>
+
 </Project>

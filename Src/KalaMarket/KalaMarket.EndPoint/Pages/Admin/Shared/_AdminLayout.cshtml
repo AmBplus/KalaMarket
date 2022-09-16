@@ -18,7 +18,7 @@
             <div class="logo clearfix">
                 <a href="#" class="logo-text float-right">
                     <div class="logo-img"><img src="~/AdminTemplate/app-assets/img/logo.png" alt="Convex Logo"/></div><span class="text align-middle">CONVEX</span>
-                </a><a id="sidebarToggle" href="javascript:;" class="nav-toggle d-none d-sm-none d-md-none d-lg-block"><i data-toggle="expanded" class="ft-disc toggle-icon"></i></a><a id="sidebarClose" href="javascript:;" class="nav-close d-block d-md-block d-lg-none d-xl-none"><i class="ft-circle"></i></a>
+                </a><a id="sidebarToggle" href="#" class="nav-toggle d-none d-sm-none d-md-none d-lg-block"><i data-toggle="expanded" class="ft-disc toggle-icon"></i></a><a id="sidebarClose" href="javascript:;" class="nav-close d-block d-md-block d-lg-none d-xl-none"><i class="ft-circle"></i></a>
             </div>
         </div>
         <div class="sidebar-content">
@@ -42,7 +42,7 @@
                         </ul>
                     </li>
                     <li class="has-sub nav-item">
-                            <a href="#"><i class="icon-crop"></i><span data-i18n="" class="menu-title">دسته بندی ها</span></a>
+                        <a href="#"><i class="icon-crop"></i><span data-i18n="" class="menu-title">دسته بندی ها</span></a>
                         <ul class="menu-content">
                             <li>
                                 <a asp-page="/Admin/Categories/Index" class="menu-item">لیست دسته بندی ها</a>
@@ -52,6 +52,20 @@
                             </li>
                             <li>
                                 <a asp-page="/Admin/Categories/AddCategory" class="menu-item">اضافه کردن دسته بندی جدید*</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-sub nav-item">
+                        <a href="#"><i class="icon-crop"></i><span data-i18n="" class="menu-title">محصولات</span></a>
+                        <ul class="menu-content">
+                            <li>
+                                <a asp-page="/Admin/Categories/Index" class="menu-item">لیست محصولات </a>
+                            </li>
+                            <li>
+                                <a asp-page="/Admin/Categories/RemovedCategories" class="menu-item">حذف شده</a>
+                            </li>
+                            <li>
+                                <a asp-page="/Admin/Products/AddProduct" class="menu-item">اضافه کردن محصول جدید*</a>
                             </li>
                         </ul>
                     </li>

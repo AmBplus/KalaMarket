@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\ProductAgg\CategoryAgg\" />
-    <Folder Include="Entities\ProductAgg\ProductAgg\" />
     <Folder Include="Entities\UserAgg\" />
   </ItemGroup>
 

@@ -1022,6 +1022,31 @@
           }
         }
       },
+      "Myrmec/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Myrmec.Mime": "1.2.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Myrmec.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Myrmec.dll": {}
+        }
+      },
+      "Myrmec.Mime/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Myrmec.Mime.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Myrmec.Mime.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -3599,6 +3624,33 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Myrmec/1.2.0": {
+      "sha512": "cEUj360SGnXZoJpS0fOEWLj0Dd32hfjkVWWWE1GkbhlA8PcskRxLsmlnaNjKTB7QundyvktxgfG+Z7PQyS97kw==",
+      "type": "package",
+      "path": "myrmec/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Myrmec.dll",
+        "lib/net45/Myrmec.xml",
+        "lib/netstandard1.3/Myrmec.dll",
+        "myrmec.1.2.0.nupkg.sha512",
+        "myrmec.nuspec"
+      ]
+    },
+    "Myrmec.Mime/1.2.0": {
+      "sha512": "odDCp1JB8D7hBIubj7Mw/LypJg1pwp5SaNtiUwLXRkh2bck1GEP0yCcdkuTcfDCwgRqtVwPhBP6nn3kIGws7hg==",
+      "type": "package",
+      "path": "myrmec.mime/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Myrmec.Mime.dll",
+        "lib/netstandard1.3/Myrmec.Mime.dll",
+        "myrmec.mime.1.2.0.nupkg.sha512",
+        "myrmec.mime.nuspec"
       ]
     },
     "NETStandard.Library/1.6.1": {
@@ -7707,7 +7759,8 @@
     "net6.0": [
       "KalaMarket.Resourses >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Abstractions >= 2.2.0",
-      "Microsoft.AspNetCore.Mvc.RazorPages >= 2.2.5"
+      "Microsoft.AspNetCore.Mvc.RazorPages >= 2.2.5",
+      "Myrmec >= 1.2.0"
     ]
   },
   "packageFolders": {
@@ -7767,6 +7820,10 @@
           "Microsoft.AspNetCore.Mvc.RazorPages": {
             "target": "Package",
             "version": "[2.2.5, )"
+          },
+          "Myrmec": {
+            "target": "Package",
+            "version": "[1.2.0, )"
           }
         },
         "imports": [

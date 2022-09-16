@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "10s4cccBFkQnknN/LJEK1X1FpoLYltw65Fw6Jg9fI5aNyupnoOroQObwv4qG969Hwc1vqWDEVN70S3pUJYu1tg==",
+  "dgSpecHash": "4uWDaGWwUmlr8FgIQiMcuw7h6choQw9CFQnEWNHj///nkgv14aZHbF+v2WKhVWnwxt4QtXfWQAWkZXN0H8IjcQ==",
   "success": true,
   "projectFilePath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\01_Framework.AspCore\\01_Framework.AspCore.csproj",
   "expectedPackageFiles": [
@@ -63,6 +63,8 @@
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\manga\\.nuget\\packages\\myrmec\\1.2.0\\myrmec.1.2.0.nupkg.sha512",
+    "C:\\Users\\manga\\.nuget\\packages\\myrmec.mime\\1.2.0\\myrmec.mime.1.2.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",

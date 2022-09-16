@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NLcwZ+vx3pojDduaQ5Cq8zidAfvFfg9I+HoZEbbA3vRq896GxMZtGuiRMv1GgPS9AlpkEU6z/RqewlLR6UewBA==",
+  "dgSpecHash": "/JeWs4Eoo1SkF+mkzVFehdtLobbDAKHqdjROJChEnPUJONRjjemSIK6AdOOnvkFBErYo9Dyv3abptEOENDvhqw==",
   "success": true,
   "projectFilePath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.UnitTest\\KalaMarket.UnitTest.csproj",
   "expectedPackageFiles": [
@@ -89,6 +89,8 @@
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\moq\\4.18.2\\moq.4.18.2.nupkg.sha512",
+    "C:\\Users\\manga\\.nuget\\packages\\myrmec\\1.2.0\\myrmec.1.2.0.nupkg.sha512",
+    "C:\\Users\\manga\\.nuget\\packages\\myrmec.mime\\1.2.0\\myrmec.mime.1.2.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",

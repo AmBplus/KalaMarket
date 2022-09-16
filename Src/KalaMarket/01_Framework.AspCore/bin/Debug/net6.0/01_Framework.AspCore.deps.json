@@ -10,7 +10,8 @@
         "dependencies": {
           "KalaMarket.Resourses": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
-          "Microsoft.AspNetCore.Mvc.RazorPages": "2.2.5"
+          "Microsoft.AspNetCore.Mvc.RazorPages": "2.2.5",
+          "Myrmec": "1.2.0"
         },
         "runtime": {
           "01_Framework.AspCore.dll": {}
@@ -723,6 +724,29 @@
         "dependencies": {
           "System.Security.AccessControl": "4.5.0",
           "System.Security.Principal.Windows": "4.5.0"
+        }
+      },
+      "Myrmec/1.2.0": {
+        "dependencies": {
+          "Myrmec.Mime": "1.2.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Myrmec.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "Myrmec.Mime/1.2.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Myrmec.Mime.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
         }
       },
       "NETStandard.Library/1.6.1": {
@@ -1999,6 +2023,20 @@
       "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "Myrmec/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cEUj360SGnXZoJpS0fOEWLj0Dd32hfjkVWWWE1GkbhlA8PcskRxLsmlnaNjKTB7QundyvktxgfG+Z7PQyS97kw==",
+      "path": "myrmec/1.2.0",
+      "hashPath": "myrmec.1.2.0.nupkg.sha512"
+    },
+    "Myrmec.Mime/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-odDCp1JB8D7hBIubj7Mw/LypJg1pwp5SaNtiUwLXRkh2bck1GEP0yCcdkuTcfDCwgRqtVwPhBP6nn3kIGws7hg==",
+      "path": "myrmec.mime/1.2.0",
+      "hashPath": "myrmec.mime.1.2.0.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",

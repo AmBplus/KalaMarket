@@ -1,4 +1,4 @@
-﻿using KalaMarket.Domain.Entities.ProductAgg.CategoryAgg;
+﻿using KalaMarket.Domain.Entities.ProductAgg;
 using KalaMarket.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

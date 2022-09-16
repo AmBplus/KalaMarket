@@ -1,12 +1,40 @@
 ﻿using KalaMarket.Domain.Entities.BaseEntities;
-using KalaMarket.Domain.Entities.ProductAgg.ProductAgg;
 
 namespace KalaMarket.Domain.Entities.ProductAgg;
 
 public class ProductFeatures : BaseEntity<long>
 {
-    public virtual Product Product { get; set; }
-    public long ProductId { get; set; }
-    public string KeyName { get; set; }
-    public string Value { get; set; }
+    #region Constructors
+
+    protected ProductFeatures()
+    {
+
+    }
+    public ProductFeatures(long productId, string keyName, string keyValue)
+    {
+        ProductId = productId;
+        KeyName = keyName;
+        KeyValue = keyValue;
+    }
+
+    #endregion /Constructors
+
+    #region Method
+
+    public bool Edit(long productId, string keyName, string keyValue)
+    {
+        ProductId = productId;
+        KeyName = keyName;
+        KeyValue = keyValue;
+        return true;
+    }
+
+    #endregion /Method
+
+    #region Properties
+    public virtual Product Product { get; private set; }
+    public long ProductId { get; private set; }
+    public string KeyName { get; private set; }
+    public string KeyValue { get; private set; }
+    #endregion /Properties
 }
