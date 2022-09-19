@@ -9,6 +9,7 @@
       "KalaMarket.Infrastructure/1.0.0": {
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Application.User": "1.0.0",
           "KalaMarket.Persistence": "1.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.7",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
@@ -609,6 +610,17 @@
           "KalaMarket.Application.dll": {}
         }
       },
+      "KalaMarket.Application.User/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.2.0",
+          "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Shared": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Application.User.dll": {}
+        }
+      },
       "KalaMarket.Domain/1.0.0": {
         "dependencies": {
           "KalaMarket.Shared": "1.0.0"
@@ -1047,6 +1059,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "KalaMarket.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Application.User/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

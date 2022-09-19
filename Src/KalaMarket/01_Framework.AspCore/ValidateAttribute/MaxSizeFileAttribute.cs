@@ -25,6 +25,6 @@ public class MaxSizeFileAttribute : ValidationAttribute, IClientModelValidator
     public void AddValidation(ClientModelValidationContext context)
     {
         context.Attributes.Add("data-val", "true");
-        context.Attributes.Add("data-val-MaxFileSize", ErrorMessage);
+        context.Attributes.Add("data-val-MaxFileSize", $" حداکثر فایل اپلودی باید{MaxSize/(1024)}کیلو بایت باشد ");
     }
 }

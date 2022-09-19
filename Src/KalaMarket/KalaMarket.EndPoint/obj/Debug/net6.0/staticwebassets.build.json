@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eSuqS19CFF91zHOJOLtiDFzEPyGrMSVLRp5V10+UFRM=",
+  "Hash": "4MbrIiKzD0Tuo6ZQ62rt5Pf4kQt4069Ra1/9mhRH5xg=",
   "Source": "KalaMarket.EndPoint",
   "BasePath": "_content/KalaMarket.EndPoint",
   "Mode": "Default",
@@ -5848,6 +5848,23 @@
       "OriginalItemSpec": "wwwroot\\images\\Products\\1bd77b93-8ff3-4b69-ab3c-23849fa31181.jpg"
     },
     {
+      "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\images\\Products\\4a8ce04f-e2b0-4746-bd88-120fcba9adc6.png",
+      "SourceId": "KalaMarket.EndPoint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\",
+      "BasePath": "_content/KalaMarket.EndPoint",
+      "RelativePath": "images/Products/4a8ce04f-e2b0-4746-bd88-120fcba9adc6.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Products\\4a8ce04f-e2b0-4746-bd88-120fcba9adc6.png"
+    },
+    {
       "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\images\\Products\\655a00aa-f933-406c-9dde-428ac98befe4.png",
       "SourceId": "KalaMarket.EndPoint",
       "SourceType": "Discovered",
@@ -5882,6 +5899,40 @@
       "OriginalItemSpec": "wwwroot\\images\\Products\\7c417ddb-616a-4eb8-8e41-be17c19d159e.jpg"
     },
     {
+      "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\images\\Products\\9b35686a-809e-4a62-b485-13e913034948.png",
+      "SourceId": "KalaMarket.EndPoint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\",
+      "BasePath": "_content/KalaMarket.EndPoint",
+      "RelativePath": "images/Products/9b35686a-809e-4a62-b485-13e913034948.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Products\\9b35686a-809e-4a62-b485-13e913034948.png"
+    },
+    {
+      "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\images\\Products\\a33419e7-31a5-47c0-ae84-e08e18deae45.jpg",
+      "SourceId": "KalaMarket.EndPoint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\",
+      "BasePath": "_content/KalaMarket.EndPoint",
+      "RelativePath": "images/Products/a33419e7-31a5-47c0-ae84-e08e18deae45.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Products\\a33419e7-31a5-47c0-ae84-e08e18deae45.jpg"
+    },
+    {
       "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\images\\Products\\adf5fff9-49a8-4494-8d3c-f9afab25ad07.jpg",
       "SourceId": "KalaMarket.EndPoint",
       "SourceType": "Discovered",
@@ -5899,6 +5950,23 @@
       "OriginalItemSpec": "wwwroot\\images\\Products\\adf5fff9-49a8-4494-8d3c-f9afab25ad07.jpg"
     },
     {
+      "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\images\\Products\\bbeeccdd-b828-46f7-90e7-b3a71c93762f.jpg",
+      "SourceId": "KalaMarket.EndPoint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\",
+      "BasePath": "_content/KalaMarket.EndPoint",
+      "RelativePath": "images/Products/bbeeccdd-b828-46f7-90e7-b3a71c93762f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Products\\bbeeccdd-b828-46f7-90e7-b3a71c93762f.jpg"
+    },
+    {
       "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\images\\Products\\cb1a874d-2a8e-4f9e-adf8-1fc539cfd9bd.png",
       "SourceId": "KalaMarket.EndPoint",
       "SourceType": "Discovered",
@@ -5914,6 +5982,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Products\\cb1a874d-2a8e-4f9e-adf8-1fc539cfd9bd.png"
+    },
+    {
+      "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\images\\Products\\d084841b-3ef1-4166-9195-2bbd510f0576.png",
+      "SourceId": "KalaMarket.EndPoint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\",
+      "BasePath": "_content/KalaMarket.EndPoint",
+      "RelativePath": "images/Products/d084841b-3ef1-4166-9195-2bbd510f0576.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Products\\d084841b-3ef1-4166-9195-2bbd510f0576.png"
     },
     {
       "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\images\\Products\\iitkkw3i.l2x.jpg",

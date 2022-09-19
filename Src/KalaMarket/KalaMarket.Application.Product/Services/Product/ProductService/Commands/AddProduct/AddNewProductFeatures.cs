@@ -1,0 +1,7 @@
+﻿namespace KalaMarket.Application.Product.Services.Product.ProductService.Commands.AddProduct;
+
+public class AddNewProductFeatures
+{
+    public string KeyName { get; set; }
+    public string KeyValue { get; set; }
+}

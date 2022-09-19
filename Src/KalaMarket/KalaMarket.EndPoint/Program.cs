@@ -1,6 +1,8 @@
 using KalaMarket.EndPoint.Infrastructure.Security;
 using KalaMarket.EndPoint.Infrastructure.Settings;
 using KalaMarket.Infrastructure;
+using KalaMarket.Infrastructure.Product;
+using KalaMarket.Infrastructure.User;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.Extensions.Options;
 using NLog;
@@ -88,12 +90,10 @@ try
 
     string connection = builder.Configuration.GetConnectionString("ConnectionSql");
 
-    #region Add Application And Db Servicess
-
+    // Add Application And Db Services
     builder.Services.ConfigureServices(connection);
-
-    #endregion /Add Application And Db Servicess
-
+    builder.Services.ConfigureUserServices();
+    builder.Services.ConfigureProductServices();
 }
 catch (Exception e)
 {

@@ -35,7 +35,10 @@
       "KalaMarket.EndPoint/1.0.0": {
         "dependencies": {
           "01_Framework.AspCore": "1.0.0",
+          "KalaMarket.Application.User": "1.0.0",
           "KalaMarket.Infrastructure": "1.0.0",
+          "KalaMarket.Infrastructure.Product": "1.0.0",
+          "KalaMarket.Infrastructure.User": "1.0.0",
           "Mapster": "7.3.0",
           "Microsoft.AspNetCore.Authentication.Google": "6.0.8",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.8",
@@ -2069,6 +2072,34 @@
           "KalaMarket.Application.dll": {}
         }
       },
+      "KalaMarket.Application.Product/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Resourses": "1.0.0",
+          "KalaMarket.Shared": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Application.Product.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Application.Product.dll": {}
+        }
+      },
+      "KalaMarket.Application.User/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.2.0",
+          "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Shared": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Application.User.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Application.User.dll": {}
+        }
+      },
       "KalaMarket.Domain/1.0.0": {
         "dependencies": {
           "KalaMarket.Shared": "1.0.0"
@@ -2083,6 +2114,7 @@
       "KalaMarket.Infrastructure/1.0.0": {
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Application.User": "1.0.0",
           "KalaMarket.Persistence": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "NLog": "5.0.4"
@@ -2092,6 +2124,30 @@
         },
         "compile": {
           "KalaMarket.Infrastructure.dll": {}
+        }
+      },
+      "KalaMarket.Infrastructure.Product/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Application.Product": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Infrastructure.Product.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Infrastructure.Product.dll": {}
+        }
+      },
+      "KalaMarket.Infrastructure.User/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Application.User": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Infrastructure.User.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Infrastructure.User.dll": {}
         }
       },
       "KalaMarket.Persistence/1.0.0": {
@@ -5110,12 +5166,32 @@
       "serviceable": false,
       "sha512": ""
     },
+    "KalaMarket.Application.Product/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Application.User/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "KalaMarket.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "KalaMarket.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Infrastructure.Product/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Infrastructure.User/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

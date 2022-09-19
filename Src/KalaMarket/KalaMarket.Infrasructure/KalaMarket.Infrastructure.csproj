@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\KalaMarket.Application.User\KalaMarket.Application.User.csproj" />
     <ProjectReference Include="..\KalaMarket.Application\KalaMarket.Application.csproj" />
     <ProjectReference Include="..\KalaMarket.Persistence\KalaMarket.Persistence.csproj" />
   </ItemGroup>

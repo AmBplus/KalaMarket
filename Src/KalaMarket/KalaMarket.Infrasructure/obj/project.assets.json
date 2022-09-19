@@ -991,6 +991,22 @@
           "bin/placeholder/KalaMarket.Application.dll": {}
         }
       },
+      "KalaMarket.Application.User/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FluentValidation": "11.2.0",
+          "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Application.User.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Application.User.dll": {}
+        }
+      },
       "KalaMarket.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2897,6 +2913,11 @@
       "path": "../KalaMarket.Application/KalaMarket.Application.csproj",
       "msbuildProject": "../KalaMarket.Application/KalaMarket.Application.csproj"
     },
+    "KalaMarket.Application.User/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Application.User/KalaMarket.Application.User.csproj",
+      "msbuildProject": "../KalaMarket.Application.User/KalaMarket.Application.User.csproj"
+    },
     "KalaMarket.Domain/1.0.0": {
       "type": "project",
       "path": "../KalaMarket.Domain/KalaMarket.Domain.csproj",
@@ -2921,6 +2942,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "KalaMarket.Application >= 1.0.0",
+      "KalaMarket.Application.User >= 1.0.0",
       "KalaMarket.Persistence >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.7",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 6.0.0",
@@ -2961,6 +2983,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Application.User\\KalaMarket.Application.User.csproj": {
+              "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Application.User\\KalaMarket.Application.User.csproj"
+            },
             "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Application\\KalaMarket.Application.csproj": {
               "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Application\\KalaMarket.Application.csproj"
             },

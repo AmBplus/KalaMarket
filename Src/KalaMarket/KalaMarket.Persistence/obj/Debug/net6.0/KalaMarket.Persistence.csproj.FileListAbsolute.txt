@@ -2,11 +2,9 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\D
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Persistence.runtimeconfig.json
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Persistence.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Persistence.pdb
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Application.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Domain.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Resourses.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Shared.dll
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Application.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Domain.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Resourses.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Shared.pdb
@@ -21,3 +19,5 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\D
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\KalaMarket.Persistence.genruntimeconfig.cache
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\obj\Debug\net6.0\ref\KalaMarket.Persistence.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Application.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Persistence\bin\Debug\net6.0\KalaMarket.Application.pdb

@@ -1,7 +1,6 @@
-﻿using KalaMarket.Application.Services.Users.Commands.ChangeRemoveUser;
-using KalaMarket.Application.Services.Users.Commands.EditUser;
-using KalaMarket.Application.Services.Users.Commands.EditUser.Dto;
-using KalaMarket.Shared.Dto;
+﻿using KalaMarket.Application.User.Services.Users.Commands.ChangeRemoveUser;
+using KalaMarket.Application.User.Services.Users.Commands.EditUser;
+using KalaMarket.Application.User.Services.Users.Commands.EditUser.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KalaMarket.EndPoint.Areas.Admin.Controllers;

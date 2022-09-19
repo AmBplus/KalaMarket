@@ -9,10 +9,14 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Infrastructure\Binder\" />
     <Folder Include="Infrastructure\TagHelpers\" />
     <Folder Include="Models\Account\Customer\" />
     <Folder Include="Pages\Admin\Shared\_Partials\" />
     <Folder Include="Pages\Shared\_Partials\SideScript\" />
+    <Folder Include="wwwroot\AdminTemplate\Scripts\Category\" />
+    <Folder Include="wwwroot\AdminTemplate\Scripts\Users\" />
+    <Folder Include="wwwroot\AdminTemplate\Scripts\Products\AddProducts\" />
     <Folder Include="wwwroot\images\Products\" />
     <Folder Include="wwwroot\SiteTemplate\assets\images\menu-main\card\" />
   </ItemGroup>
@@ -168,7 +172,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\01_Framework.AspCore\01_Framework.AspCore.csproj" />
+    <ProjectReference Include="..\KalaMarket.Application.User\KalaMarket.Application.User.csproj" />
     <ProjectReference Include="..\KalaMarket.Infrasructure\KalaMarket.Infrastructure.csproj" />
+    <ProjectReference Include="..\KalaMarket.Infrastructure.Product\KalaMarket.Infrastructure.Product.csproj" />
+    <ProjectReference Include="..\KalaMarket.Infrastructure.User\KalaMarket.Infrastructure.User.csproj" />
   </ItemGroup>
 
   <ItemGroup>

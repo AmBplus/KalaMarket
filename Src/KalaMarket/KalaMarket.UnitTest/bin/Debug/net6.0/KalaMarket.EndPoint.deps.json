@@ -35,7 +35,10 @@
       "KalaMarket.EndPoint/1.0.0": {
         "dependencies": {
           "01_Framework.AspCore": "1.0.0",
+          "KalaMarket.Application.User": "1.0.0",
           "KalaMarket.Infrastructure": "1.0.0",
+          "KalaMarket.Infrastructure.Product": "1.0.0",
+          "KalaMarket.Infrastructure.User": "1.0.0",
           "Mapster": "7.3.0",
           "Microsoft.AspNetCore.Authentication.Google": "6.0.8",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.8",
@@ -1149,6 +1152,35 @@
           }
         }
       },
+      "Myrmec/1.2.0": {
+        "dependencies": {
+          "Myrmec.Mime": "1.2.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Myrmec.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Myrmec.dll": {}
+        }
+      },
+      "Myrmec.Mime/1.2.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Myrmec.Mime.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Myrmec.Mime.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -2013,7 +2045,8 @@
         "dependencies": {
           "KalaMarket.Resourses": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
-          "Microsoft.AspNetCore.Mvc.RazorPages": "2.2.5"
+          "Microsoft.AspNetCore.Mvc.RazorPages": "2.2.5",
+          "Myrmec": "1.2.0"
         },
         "runtime": {
           "01_Framework.AspCore.dll": {}
@@ -2039,6 +2072,34 @@
           "KalaMarket.Application.dll": {}
         }
       },
+      "KalaMarket.Application.Product/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Resourses": "1.0.0",
+          "KalaMarket.Shared": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Application.Product.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Application.Product.dll": {}
+        }
+      },
+      "KalaMarket.Application.User/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.2.0",
+          "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Shared": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Application.User.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Application.User.dll": {}
+        }
+      },
       "KalaMarket.Domain/1.0.0": {
         "dependencies": {
           "KalaMarket.Shared": "1.0.0"
@@ -2053,6 +2114,7 @@
       "KalaMarket.Infrastructure/1.0.0": {
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Application.User": "1.0.0",
           "KalaMarket.Persistence": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "NLog": "5.0.4"
@@ -2062,6 +2124,30 @@
         },
         "compile": {
           "KalaMarket.Infrastructure.dll": {}
+        }
+      },
+      "KalaMarket.Infrastructure.Product/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Application.Product": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Infrastructure.Product.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Infrastructure.Product.dll": {}
+        }
+      },
+      "KalaMarket.Infrastructure.User/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Application.User": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Infrastructure.User.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Infrastructure.User.dll": {}
         }
       },
       "KalaMarket.Persistence/1.0.0": {
@@ -4398,6 +4484,20 @@
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
     },
+    "Myrmec/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cEUj360SGnXZoJpS0fOEWLj0Dd32hfjkVWWWE1GkbhlA8PcskRxLsmlnaNjKTB7QundyvktxgfG+Z7PQyS97kw==",
+      "path": "myrmec/1.2.0",
+      "hashPath": "myrmec.1.2.0.nupkg.sha512"
+    },
+    "Myrmec.Mime/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-odDCp1JB8D7hBIubj7Mw/LypJg1pwp5SaNtiUwLXRkh2bck1GEP0yCcdkuTcfDCwgRqtVwPhBP6nn3kIGws7hg==",
+      "path": "myrmec.mime/1.2.0",
+      "hashPath": "myrmec.mime.1.2.0.nupkg.sha512"
+    },
     "NETStandard.Library/1.6.1": {
       "type": "package",
       "serviceable": true,
@@ -5066,12 +5166,32 @@
       "serviceable": false,
       "sha512": ""
     },
+    "KalaMarket.Application.Product/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Application.User/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "KalaMarket.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "KalaMarket.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Infrastructure.Product/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Infrastructure.User/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

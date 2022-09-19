@@ -7,13 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\**" />
+    <Compile Remove="Validations\Product\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <EmbeddedResource Remove="Validations\Product\**" />
+    <None Remove="Services\**" />
+    <None Remove="Validations\Product\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Interfaces\Context\" />
-    <Folder Include="Services\Product\ProductService\Commands\AddProduct\" />
-    <Folder Include="Services\Product\ProductService\Queries\" />
-    <Folder Include="Services\Users\Commands\EditUser\Dto\" />
-    <Folder Include="Services\Users\Queries\GetRole\" />
-    <Folder Include="Validations\Product\" />
-    <Folder Include="Validations\Utility\" />
   </ItemGroup>
 
   <ItemGroup>

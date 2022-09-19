@@ -1,5 +1,5 @@
-using KalaMarket.Application.Services.Users.Commands.ChangeRemoveUser;
-using KalaMarket.Application.Services.Users.Commands.EditUser;
+using KalaMarket.Application.User.Services.Users.Commands.ChangeRemoveUser;
+using KalaMarket.Application.User.Services.Users.Commands.EditUser;
 using KalaMarket.EndPoint.Areas.Admin.Controllers;
 using Moq;
 
