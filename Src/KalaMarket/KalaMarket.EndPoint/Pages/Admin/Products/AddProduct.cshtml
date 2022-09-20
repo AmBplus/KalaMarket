@@ -23,13 +23,12 @@
                                 <div class="form-body">
                                     <div id="Show_Errors"></div>
                                     <div class="row">
-                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
-                                            <fieldset class="form-group">
-                                                <label asp-for="Name">نام محصول </label>
-                                                <input asp-for="Name" class="form-control">
-                                                <span class="text-danger" asp-validation-for="Name"></span>
-                                            </fieldset>
-                                        </div>
+                                        <amb-admin-divForm>
+                                            <label asp-for="Name">نام محصول </label>
+                                            <input asp-for="Name" class="form-control">
+                                            <span class="text-danger" asp-validation-for="Name"></span>
+                                        </amb-admin-divForm>
+                                       
                                         @*       <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
                                         <fieldset class="form-group">
                                         <label asp-for="BrandId"> برند </label>
@@ -39,43 +38,28 @@
                                         <span class="text-danger" asp-validation-for="BrandId"></span>
                                         </fieldset>
                                         </div>*@
-                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
-                                            <fieldset class="form-group">
-                                                <label asp-for="Price"> قیمت</label>
-                                                <input asp-for="Price" class="form-control">
-                                                <span class="text-danger" asp-validation-for="Price"></span>
-                                            </fieldset>
-                                        </div>
-                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
-                                            <fieldset class="form-group">
-                                                <label asp-for="Inventory"> تعداد موجودی</label>
-                                                <input asp-for="Inventory" class="form-control">
-                                                <span class="text-danger" asp-validation-for="Inventory"></span>
-                                            </fieldset>
-                                        </div>
-                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
-                                            <fieldset class="form-group">
-                                                <label asp-for="Displayed">نمایش داده شود؟ </label>
-                                                <input asp-for="Displayed" class="form-control">
-                                                <span class="text-danger" asp-validation-for="Displayed"></span>
-                                            </fieldset>
-                                        </div>
-                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
-                                            <fieldset class="form-group">
-                                                <label asp-for="Images">تصاویر </label>
-                                                <input asp-for="Images" multiple class="form-control">
-                                                <span class="text-danger" asp-validation-for="Images"></span>
-                                            </fieldset>
-                                        </div>
+                                        <amb-admin-divForm>
+                                            <label asp-for="Price"> قیمت</label>
+                                            <input asp-for="Price" class="form-control">
+                                            <span class="text-danger" asp-validation-for="Price"></span>
+                                        </amb-admin-divForm>
+                                        <amb-admin-divForm>
+                                            <label asp-for="Inventory"> تعداد موجودی</label>
+                                            <input asp-for="Inventory" class="form-control">
+                                            <span class="text-danger" asp-validation-for="Inventory"></span>
+                                        </amb-admin-divForm>
+                                    
+                                        <amb-admin-divForm>
+                                            <label asp-for="Images">تصاویر </label>
+                                            <input asp-for="Images" multiple class="form-control">
+                                            <span class="text-danger" asp-validation-for="Images"></span>
+                                        </amb-admin-divForm>
+                                        <amb-admin-divForm>
+                                            <label asp-for="CategoryId">دسته بندی </label>
+                                            <select class="form-control" asp-for="CategoryId" asp-items="@Model.Categories"></select>
+                                            <span class="text-danger" asp-validation-for="CategoryId"></span>
+                                        </amb-admin-divForm>
 
-
-                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
-                                            <fieldset class="form-group">
-                                                <label asp-for="CategoryId">دسته بندی </label>
-                                                <select class="form-control" asp-for="CategoryId" asp-items="@Model.Categories"></select>
-                                                <span class="text-danger" asp-validation-for="CategoryId"></span>
-                                            </fieldset>
-                                        </div>
                                         <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
                                             <fieldset class="form-group">
                                                 <label asp-for="Description"> توضیحات</label>
@@ -83,45 +67,53 @@
                                                 <span class="text-danger" asp-validation-for="Description"></span>
                                             </fieldset>
                                         </div>
-                                        <hr />
-                                        <hr />
-                                        <div class="col-xl-2 col-lg-6 col-md-12 mb-1">
+                                        <hr/>
+                                        <hr/>
+                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
                                             <fieldset class="form-group">
-                                                <label for="Feature_Key"> نام ویژگی </label>
-                                                <input id="Feature_Key" class="form-control" placeholder="نام ویژگی" />
+                                                <input id="Feature_Key" class="form-control" placeholder="نام ویژگی"/> 
                                             </fieldset>
                                         </div>
-
-                                        <div class="col-xl-6 col-lg-8 col-md-12 mb-1">
+                                       
+                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
                                             <fieldset class="form-group">
-                                                <label for="Feature_Value"> مقدار ویژگی </label>
-                                                <input id="Feature_Value" class="form-control" placeholder="مقدار ویژگی" />
-                                                <a class="btn btn-success mt-3" id="btnAddFeatures">اضافه کردن ویژگی</a>
+                                          
+                                                <input id="Feature_Value" class="form-control" placeholder="مقدار ویژگی"/>
                                             </fieldset>
                                         </div>
-
-                                        <table id="tbl_Features" class="col-md-12 table table-bordered table-hover  table-condensed table-responsive">
+                                        <div class="col-xl-4 col-lg-10 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <a class="btn btn-success" id="btnAddFeatures">اضافه کردن ویژگی</a>
+                                            </fieldset>
+                                        </div>
+                                       
+                                        <amb-admin-divForm>
+                                            <label asp-for="Displayed" class="h5 mx-3 ">نمایش داده شود؟ </label>
+                                            <input asp-for="Displayed" class="form-check-input" type="checkbox">
+                                            <span class="text-danger" asp-validation-for="Displayed"></span>
+                                        </amb-admin-divForm>
+                                        <table id="tbl_Features" class="col-md-12 table table-bordered table-hover table-striped table-condensed table-responsive">
                                             <thead>
-                                                <tr>
-                                                    <th>
-                                                        نام
-                                                    </th>
-                                                    <th>
-                                                        مقدار
-                                                    </th>
-                                                    <th>
+                                            <tr>
+                                                <th>
+                                                    نام
+                                                </th>
+                                                <th>
+                                                    مقدار
+                                                </th>
+                                                <th>
 
-                                                    </th>
-                                                </tr>
+                                                </th>
+                                            </tr>
                                             </thead>
                                             <tbody></tbody>
                                         </table>
                                         <div class="position-absolute" id="List_Feature">
                                         </div>
-                                        <br />
+                                        <br/>
                                         <div class="col-xl-12 col-lg-12 col-md-12 mb-1 text-center">
                                             <fieldset class="form-group ">
-                                                <button type="submit" id="btnAddProduct" class="col-xl-4 col-lg-4 col-md-4 mb-1 text-center btn btn-blue"> افزودن محصول </button>
+                                                <button type="submit" id="btnAddProduct" class="col-xl-4 col-lg-4 col-md-4 mb-1 text-center btn btn-info"> افزودن محصول </button>
                                             </fieldset>
                                         </div>
                                     </div>

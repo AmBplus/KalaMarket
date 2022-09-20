@@ -1,6 +1,5 @@
 using System.Text.RegularExpressions;
 using _01_Framework.AspCore.CheckContentType;
-using _01_Framework.AspCore.Filter.ModelState;
 using _01_Framework.AspCore.Utility;
 using _01_Framework.AspCore.ValidateAttribute;
 using KalaMarket.Application.Product.Services.Product.CategoryServices.FacadePattern.Facade;
@@ -40,7 +39,7 @@ namespace KalaMarket.EndPoint.Pages.Admin.Products
         public decimal Price { get; set; }
         public int Inventory { get; set; }
         public long CategoryId { get; set; }
-        public bool Displayed { get; set; }
+        public bool Displayed { get; set; } = true;
         public ushort? BrandId { get; set; }
         [FileAcceptExtensions(new[] {KalaMarketConstants.ImageExtension.Jpg
             ,KalaMarketConstants.ImageExtension.Jpeg,
