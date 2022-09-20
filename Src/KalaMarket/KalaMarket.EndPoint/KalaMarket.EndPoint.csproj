@@ -14,8 +14,6 @@
     <Folder Include="Pages\Admin\Shared\_Partials\" />
     <Folder Include="Pages\Shared\_Partials\SideScript\" />
     <Folder Include="wwwroot\AdminTemplate\Scripts\Category\" />
-    <Folder Include="wwwroot\AdminTemplate\Scripts\Users\" />
-    <Folder Include="wwwroot\AdminTemplate\Scripts\Products\AddProducts\" />
     <Folder Include="wwwroot\images\Products\" />
     <Folder Include="wwwroot\SiteTemplate\assets\images\menu-main\card\" />
   </ItemGroup>
@@ -178,12 +176,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\Admin\Users\_Partial\_ChangeActivationUserScript.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <_ContentIncludedByDefault Remove="Pages\Account\_Partial\_RegisterScriptPartial.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\Admin\Users\_Partial\_ChangeActivationUserScript.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
