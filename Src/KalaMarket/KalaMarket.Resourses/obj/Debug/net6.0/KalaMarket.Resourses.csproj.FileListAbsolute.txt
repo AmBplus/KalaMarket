@@ -1,0 +1,17 @@
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\bin\Debug\net6.0\KalaMarket.Resourses.deps.json
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\bin\Debug\net6.0\KalaMarket.Resourses.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\bin\Debug\net6.0\KalaMarket.Resourses.pdb
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.csproj.AssemblyReference.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.ErrorFluentValidation.resources
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.ErrorMessages.resources
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.Messages.resources
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.PropertiesName.resources
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.csproj.GenerateResource.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.AssemblyInfoInputs.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.AssemblyInfo.cs
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.csproj.CoreCompileInputs.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\refint\KalaMarket.Resourses.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\KalaMarket.Resourses.pdb
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Resourses\obj\Debug\net6.0\ref\KalaMarket.Resourses.dll

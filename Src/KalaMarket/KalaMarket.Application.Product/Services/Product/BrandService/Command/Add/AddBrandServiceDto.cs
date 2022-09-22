@@ -2,5 +2,5 @@
 
 public class AddBrandServiceDto
 {
-    
+    public long Id { get; set; }
 }

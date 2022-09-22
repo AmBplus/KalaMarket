@@ -1,6 +1,6 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Product.Validations.Category;
-using KalaMarket.Application.Product.Validations.Utility;
+using KalaMarket.Application.Utility;
 using KalaMarket.Domain.Entities.ProductAgg;
 using KalaMarket.Resourses;
 using KalaMarket.Shared;
@@ -75,13 +75,7 @@ public class AddCategoryService : IAddCategoryService
     {
         AddCategoryDtoValidation dtoValidation = new AddCategoryDtoValidation();
         var validateResult =dtoValidation.Validate(request);
-        if (validateResult.Errors.Count > 0)
-        {
-            result.Message = validateResult.Errors.ToStringError();
-            return true;
-        }
-
-        return false;
+        return  validateResult.ValidateResultHasError(result);
     }
 
     #endregion /Methods

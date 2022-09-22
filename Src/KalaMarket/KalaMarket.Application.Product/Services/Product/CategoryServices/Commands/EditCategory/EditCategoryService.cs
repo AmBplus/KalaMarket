@@ -1,6 +1,6 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Product.Validations.Category;
-using KalaMarket.Application.Product.Validations.Utility;
+using KalaMarket.Application.Utility;
 using KalaMarket.Domain.Entities.ProductAgg;
 using KalaMarket.Resourses;
 using KalaMarket.Shared.Dto;
@@ -69,12 +69,7 @@ public class EditCategoryService : IEditCategoryService
     {
         EditCategoryDtoValidation validation = new EditCategoryDtoValidation();
         var validateResult = validation.Validate(request);
-        if(validateResult.Errors.Count>0)
-        {
-            resultDto.Message = validateResult.Errors.ToStringError();
-            return true;
-        }
-        return false;
+        return validateResult.ValidateResultHasError(resultDto);
     }
 
     #endregion /Methods

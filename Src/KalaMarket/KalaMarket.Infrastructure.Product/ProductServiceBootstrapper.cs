@@ -1,5 +1,7 @@
 ﻿#region Using
 
+using KalaMarket.Application.Product.Services.Product.BrandService.Facade.Implement;
+using KalaMarket.Application.Product.Services.Product.BrandService.Facade.Interface;
 using KalaMarket.Application.Product.Services.Product.CategoryServices.FacadePattern.Facade;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,12 +13,10 @@ public static class ProductServiceBootstrapper
 {
     public static void ConfigureProductServices(this IServiceCollection services )
     {
-        
-        #region Category Facade Service
 
+        // Add Category Services      
         services.AddScoped<ICategoryFacade, CategoryFacade>();
-
-        #endregion /Category Facade Service
-
+        // Add Brand Services
+        services.AddScoped<IBrandFacade, BrandFacade>();
     }
 }

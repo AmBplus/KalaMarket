@@ -10,9 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace KalaMarket.EndPoint.Pages.Admin.Categories;
 [ValidateModelRazorPage]
-public class AddCategoryModel : BasePageModel
+public class AddBrandModel : BasePageModel
     {
-        public AddCategoryModel(ICategoryFacade categoryFacade)
+        public AddBrandModel(ICategoryFacade categoryFacade)
         {
             _categoryFacade = categoryFacade;
         }
