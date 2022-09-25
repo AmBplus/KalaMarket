@@ -8,12 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\AdminTemplate\Scripts\**" />
+    <Content Remove="wwwroot\AdminTemplate\Scripts\**" />
+    <EmbeddedResource Remove="wwwroot\AdminTemplate\Scripts\**" />
+    <None Remove="wwwroot\AdminTemplate\Scripts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Infrastructure\Binder\" />
     <Folder Include="Models\Account\Customer\" />
     <Folder Include="Pages\Admin\Shared\_Partials\" />
     <Folder Include="Pages\Shared\_Partials\SideScript\" />
-    <Folder Include="wwwroot\AdminTemplate\Scripts\Category\" />
     <Folder Include="wwwroot\images\Products\" />
     <Folder Include="wwwroot\SiteTemplate\assets\images\menu-main\card\" />
   </ItemGroup>
