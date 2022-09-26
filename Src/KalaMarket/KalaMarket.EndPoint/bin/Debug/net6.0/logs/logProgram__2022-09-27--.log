@@ -1,0 +1,10 @@
+INFO |***| Now listening on: https://localhost:7060  |***| 2022-09-27 02:17:38.1151 |***| 14|***| Microsoft.Hosting.Lifetime|
+INFO |***| Now listening on: http://localhost:5060  |***| 2022-09-27 02:17:38.1151 |***| 14|***| Microsoft.Hosting.Lifetime|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-27 02:17:38.1151 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-27 02:17:38.1151 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-27 02:17:38.1151 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-27 02:17:43.1201 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-27 02:18:12.7631 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 1, PageSize: 8, TotalRecords: 1, TotalPages: 1, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-27 02:18:12.7631 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-27 02:19:57.1666 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 1, PageSize: 8, TotalRecords: 1, TotalPages: 1, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-27 02:19:57.1666 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|

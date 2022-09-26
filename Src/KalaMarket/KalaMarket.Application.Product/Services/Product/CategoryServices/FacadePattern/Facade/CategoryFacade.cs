@@ -1,6 +1,7 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Product.Services.Product.CategoryServices.FacadePattern.CommandFacade;
 using KalaMarket.Application.Product.Services.Product.CategoryServices.FacadePattern.QueryFacade;
+using KalaMarket.Shared;
 
 namespace KalaMarket.Application.Product.Services.Product.CategoryServices.FacadePattern.Facade;
 
@@ -15,9 +16,10 @@ public class CategoryFacade : ICategoryFacade
 
     #region Constructor
 
-    public CategoryFacade(IKalaMarketContext context)
+    public CategoryFacade(IKalaMarketContext context, ILoggerManger logger)
     {
         Context = context;
+        Logger = logger;
     }
 
     #endregion
@@ -25,7 +27,7 @@ public class CategoryFacade : ICategoryFacade
     #region Properties
 
     private IKalaMarketContext Context { get; }
-
+    private ILoggerManger Logger { get; }
     public ICategoryCommandFacade CategoryCommand => _categoryCommand = new CategoryCommandFacade(Context);
 
     public ICategoryQueryFacade CategoryQuery => _categoryQuery = new CategoryQueryFacade(Context);

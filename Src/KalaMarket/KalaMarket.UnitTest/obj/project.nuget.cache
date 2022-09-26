@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "GwaZhevUSj0XIt1h84rVjY/kIZQFOq3yK7ebSjffNdW0DFaRd0eTQV2WTsCPVb93TRQK2DCS8Nffb9wSczNfyw==",
+  "dgSpecHash": "Sh7d1j7PNjzt6FyfX+sm9/XZbmUSTXt6K5AgdYeeMP0BcTjluKyEZvQDQOPojYkDL86vBGF8lvS8S+CPTgAnwA==",
   "success": true,
   "projectFilePath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.UnitTest\\KalaMarket.UnitTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\manga\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\fluentvalidation\\11.2.0\\fluentvalidation.11.2.0.nupkg.sha512",
+    "C:\\Users\\manga\\.nuget\\packages\\lazziya.taghelpers\\6.0.2\\lazziya.taghelpers.6.0.2.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

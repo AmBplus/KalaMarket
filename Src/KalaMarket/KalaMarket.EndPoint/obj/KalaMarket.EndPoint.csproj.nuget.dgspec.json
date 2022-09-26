@@ -446,6 +446,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "LazZiya.TagHelpers": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
             "Mapster": {
               "target": "Package",
               "version": "[7.3.0, )"

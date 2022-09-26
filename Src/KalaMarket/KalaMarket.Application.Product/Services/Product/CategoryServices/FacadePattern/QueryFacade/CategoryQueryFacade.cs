@@ -45,9 +45,9 @@ public class CategoryQueryFacade : ICategoryQueryFacade
     public IGetCategoryParentService GetParent =>
         _getCategoryWithParentService ??= new GetCategoryParentService(Context);
 
-    public IGetCategoryWithAllParentService GetAllParent => _getAllParent ?? new GetCategoryAllParentService(Context);
+    public IGetCategoryWithAllParentService GetAllParent => _getAllParent ??= new GetCategoryAllParentService(Context);
 
-    public IGetCategoriesService GetCategories => _getCategories ?? new GetCategoriesService(context: Context);
+    public IGetCategoriesService GetCategories => _getCategories ??= new GetCategoriesService(context: Context);
 
 
     #endregion /Properties

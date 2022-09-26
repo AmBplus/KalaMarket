@@ -7,15 +7,27 @@ namespace KalaMarket.Application.Product.Services.Product.ProductService.FacadeP
 
 internal class ProductCommandFacade : IProductCommandFacade
 {
+    #region Constructor
+
     public ProductCommandFacade(IKalaMarketContext context, ILoggerManger logger)
     {
         Context = context;
         Logger = logger;
     }
 
+    #endregion /Constructor
+
+    #region Fields
+
     private IKalaMarketContext Context { get;  }
     private ILoggerManger Logger { get; }
     private IAddProductService? _add;
 
-    public IAddProductService Add => _add ?? new AddProductService(Context,Logger);
+    #endregion /Fields
+
+    #region Properties
+
+    public IAddProductService Add => _add ??= new AddProductService(Context,Logger);
+
+    #endregion
 }

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "4yu3Nmw7txbe8KWJTDiLJnLmw0CT6c/rwRNizehiBV+lP61ZjGyuPcr+trPF0nFIF3vqkWK7dHCNBPGPDwLMBA==",
+  "dgSpecHash": "O8fh5bjjeaNfPP206Mio0ZOUeBZt8J239GxhFf37iRVK9N1w5Afm1+zOEPSRJQe1V42doI+DiHvTl3UQWCTftg==",
   "success": true,
   "projectFilePath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\KalaMarket.EndPoint.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\manga\\.nuget\\packages\\fluentvalidation\\11.2.0\\fluentvalidation.11.2.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\manga\\.nuget\\packages\\lazziya.taghelpers\\6.0.2\\lazziya.taghelpers.6.0.2.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
     "C:\\Users\\manga\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

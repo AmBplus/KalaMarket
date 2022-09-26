@@ -41,13 +41,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Resourses", "Kal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_Framework.AspCore", "01_Framework.AspCore\01_Framework.AspCore.csproj", "{F6F10435-4C03-4C97-B638-A0E361DD87E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Application.User", "KalaMarket.Application.User\KalaMarket.Application.User.csproj", "{2282AD52-B1CD-4750-A58C-465ECF10679D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Application.User", "KalaMarket.Application.User\KalaMarket.Application.User.csproj", "{2282AD52-B1CD-4750-A58C-465ECF10679D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Infrastructure.User", "KalaMarket.Infrastructure.User\KalaMarket.Infrastructure.User.csproj", "{8AA85BB0-C7B2-47F3-A3B3-EF136E3DDC19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Infrastructure.User", "KalaMarket.Infrastructure.User\KalaMarket.Infrastructure.User.csproj", "{8AA85BB0-C7B2-47F3-A3B3-EF136E3DDC19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Infrastructure.Product", "KalaMarket.Infrastructure.Product\KalaMarket.Infrastructure.Product.csproj", "{B55E010E-E95C-4285-BCBC-47AB317C9691}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Infrastructure.Product", "KalaMarket.Infrastructure.Product\KalaMarket.Infrastructure.Product.csproj", "{B55E010E-E95C-4285-BCBC-47AB317C9691}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Application.Product", "KalaMarket.Application.Product\KalaMarket.Application.Product.csproj", "{6973862D-A185-492A-B4D3-E263D4D7BF24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Application.Product", "KalaMarket.Application.Product\KalaMarket.Application.Product.csproj", "{6973862D-A185-492A-B4D3-E263D4D7BF24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

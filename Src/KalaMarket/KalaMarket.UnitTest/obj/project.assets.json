@@ -37,6 +37,22 @@
           }
         }
       },
+      "LazZiya.TagHelpers/6.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/LazZiya.TagHelpers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/LazZiya.TagHelpers.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Mapster/7.3.0": {
         "type": "package",
         "dependencies": {
@@ -3633,6 +3649,7 @@
           "KalaMarket.Infrastructure": "1.0.0",
           "KalaMarket.Infrastructure.Product": "1.0.0",
           "KalaMarket.Infrastructure.User": "1.0.0",
+          "LazZiya.TagHelpers": "6.0.2",
           "Mapster": "7.3.0",
           "Microsoft.AspNetCore.Authentication.Google": "6.0.8",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.8",
@@ -3827,6 +3844,33 @@
         "lib/netstandard2.0/FluentValidation.xml",
         "lib/netstandard2.1/FluentValidation.dll",
         "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
+    "LazZiya.TagHelpers/6.0.2": {
+      "sha512": "qYWVS9Mx61jmYrI+iNhw6vyH5u4W/VsAy0aTeKplNDU63K2WVSI7RdvWKSXuti0kZn+iQGkwpHz820ukCTTpPQ==",
+      "type": "package",
+      "path": "lazziya.taghelpers/6.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lazziya.taghelpers.6.0.2.nupkg.sha512",
+        "lazziya.taghelpers.nuspec",
+        "lib/net5.0/LazZiya.TagHelpers.dll",
+        "lib/net5.0/LazZiya.TagHelpers.xml",
+        "lib/net6.0/LazZiya.TagHelpers.dll",
+        "lib/net6.0/LazZiya.TagHelpers.xml",
+        "lib/netcoreapp2.0/LazZiya.TagHelpers.dll",
+        "lib/netcoreapp2.0/LazZiya.TagHelpers.xml",
+        "lib/netcoreapp2.1/LazZiya.TagHelpers.dll",
+        "lib/netcoreapp2.1/LazZiya.TagHelpers.xml",
+        "lib/netcoreapp2.2/LazZiya.TagHelpers.dll",
+        "lib/netcoreapp2.2/LazZiya.TagHelpers.xml",
+        "lib/netcoreapp3.0/LazZiya.TagHelpers.dll",
+        "lib/netcoreapp3.0/LazZiya.TagHelpers.xml",
+        "lib/netcoreapp3.1/LazZiya.TagHelpers.dll",
+        "lib/netcoreapp3.1/LazZiya.TagHelpers.xml",
+        "license.txt"
       ]
     },
     "Mapster/7.3.0": {

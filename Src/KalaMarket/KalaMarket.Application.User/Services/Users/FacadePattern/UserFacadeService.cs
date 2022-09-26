@@ -21,7 +21,7 @@ public class UserFacadeService : IUserFacadeService
     #endregion
    
     #region Properties
-    public IUserQueryFacadeService UserQuery => _userQuery ?? new UserQueryFacadeService(Context, Logger);
-    public IUserCommandFacadeService UserCommand => _userCommand ?? new UserCommandFacadeService(Context, Logger); 
+    public IUserQueryFacadeService UserQuery => _userQuery ??= new UserQueryFacadeService(Context, Logger);
+    public IUserCommandFacadeService UserCommand => _userCommand ??= new UserCommandFacadeService(Context, Logger); 
     #endregion
 }
