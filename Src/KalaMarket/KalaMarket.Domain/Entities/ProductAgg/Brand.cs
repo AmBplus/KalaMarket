@@ -2,14 +2,15 @@
 
 namespace KalaMarket.Domain.Entities.ProductAgg;
 
-public class Brand : BaseEntity<ushort>
+public class Brand : BaseEntityWithActive<ushort>
 {
     #region Constructors
     protected Brand() { }
-    public Brand(string name)
+    public Brand(string name) :base()
     {
         Name = name;
         Products = new List<Product>();
+    
     }
     #endregion /Constructors
 
@@ -27,4 +28,6 @@ public class Brand : BaseEntity<ushort>
     }
 
     #endregion
+ 
+  
 }

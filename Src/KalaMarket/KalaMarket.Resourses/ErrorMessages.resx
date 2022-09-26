@@ -129,6 +129,18 @@
   <data name="ItsSelfFather" xml:space="preserve">
     <value>دسته خواسته شده پدری ندارد</value>
   </data>
+  <data name="MaxLen" xml:space="preserve">
+    <value>حداکثر طول {1} میباشد</value>
+  </data>
+  <data name="MaxLenWithName" xml:space="preserve">
+    <value>حداکثر طول {0} باید {1} باشد</value>
+  </data>
+  <data name="MinLen" xml:space="preserve">
+    <value>حداقل طول {1} میباشد</value>
+  </data>
+  <data name="MinLenWithName" xml:space="preserve">
+    <value>حداقل طول {0} باید {1} باشد</value>
+  </data>
   <data name="NotAClass" xml:space="preserve">
     <value>این یک کلاس نیست</value>
   </data>
@@ -158,6 +170,9 @@
   </data>
   <data name="RoleUnvalid" xml:space="preserve">
     <value>نقش انتخاب شده نا معتبر میباشد</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
   </data>
   <data name="UnValid" xml:space="preserve">
     <value> وارد شده نا معتبر مباشد {0}</value>

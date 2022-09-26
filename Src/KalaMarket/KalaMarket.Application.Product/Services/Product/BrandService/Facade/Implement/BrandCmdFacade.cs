@@ -1,4 +1,5 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
+using KalaMarket.Application.Product.Services.Product.BrandService.Command.Active;
 using KalaMarket.Application.Product.Services.Product.BrandService.Command.Add;
 using KalaMarket.Application.Product.Services.Product.BrandService.Facade.Interface;
 using KalaMarket.Shared;
@@ -15,6 +16,9 @@ public class BrandCmdFacade : IBrandCmdFacade
     private ILoggerManger Logger { get;}
     private IKalaMarketContext Context { get;}
     private IAddBrandService? _addBrandService;
+    private IChangeBrandActivationService? _changeActivation;
 
     public IAddBrandService AddBrandService => _addBrandService?? new AddBrandService(Logger,Context);
+
+    public IChangeBrandActivationService ChangeActivation => _changeActivation ?? new ChangeBrandActivationService(Logger,Context);
 }

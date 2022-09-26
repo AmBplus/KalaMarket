@@ -11,12 +11,11 @@ public static class ParsContext
     {
         try
         {
-            if (context.SaveChanges() > 0)
-            {
-                result.IsSuccess = true;
-                result.Message = Messages.OperationDoneSuccessfully;
-                return true;
-            }
+            context.SaveChanges();
+            result.IsSuccess = true;
+            result.Message = Messages.OperationDoneSuccessfully;
+            return true;
+            
         }
         catch (Exception e)
         {
@@ -45,4 +44,5 @@ public static class ParsContext
 
         return false;
     }
+
 }

@@ -1,7 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using _01_Framework.AspCore.Filters.ModelState;
 using KalaMarket.Application.Product.Services.Product.BrandService.Facade.Interface;
-using KalaMarket.Application.Product.Services.Product.CategoryServices.FacadePattern.Facade;
 using KalaMarket.EndPoint.Infrastructure;
 using KalaMarket.Resourses;
 using KalaMarket.Shared;
@@ -26,6 +25,9 @@ public class AddBrandModel : BasePageModel
         #region Brand Model
         
         [BindProperty]
+        [Display(ResourceType = typeof(PropertiesName),Name = nameof(PropertiesName.Name))]
+        [Required(ErrorMessageResourceType = typeof(ErrorMessages),ErrorMessageResourceName = nameof(ErrorMessages.RequiredWithFieldName))]
+        [MaxLength(KalaMarketConstants.MaxLength.Name,ErrorMessageResourceType = typeof(ErrorMessages),ErrorMessageResourceName = nameof(ErrorMessages.MaxLen))]
         public string Name { get; set; }
     #endregion /Brand Model
 

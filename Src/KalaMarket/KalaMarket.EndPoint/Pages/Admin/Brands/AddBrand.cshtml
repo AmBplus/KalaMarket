@@ -1,7 +1,7 @@
 ﻿@page
-@model KalaMarket.EndPoint.Pages.Admin.Categories.AddBrandModel
+@model KalaMarket.EndPoint.Pages.Admin.Brands.AddBrandModel
 @{
-    ViewData["Title"] = "AddNewCategory";
+    ViewData["Title"] = "Add Brand Model";
 }
 <section class="basic-elements">
 
@@ -18,7 +18,7 @@
                         <div class="form">
                             <div class="form-body">
                                 <div class="row">
-                                    <form id="myAddBrandForm" method="post">
+                                    <form id="myAddBrandForm" method="POST">
                                         <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
                                             <label asp-for="Name">نام برند</label>
                                                 <input type="text" class="form-control" asp-for="Name">
@@ -26,7 +26,7 @@
                                         </div>
                                         <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
                                             <br />
-                                            <button id="submitBrandForm" class="btn btn-success col-md-12">اضافه کردن به لیست</button>
+                                            <button type="submit" id="submitBrandForm" class="btn btn-success col-md-12">اضافه کردن به لیست</button>
                                            </div>
                                     </form>
                                 </div>
@@ -47,7 +47,6 @@
     <partial name="Shared/_ValidationScriptsPartial"/>
     <script>
         var form = document.querySelector("#myAddBrandForm");
-        var submitBtnCategory = document.querySelector("#submitBrandForm");
         var IsSelect = false;
         form.addEventListener('submit',
             (e) => {
@@ -69,9 +68,13 @@
                 cancelButtonText: 'خیر'
             }).then((result) => {
                 if (result.isConfirmed) {
+                 
                     IsSelect = true;
+                    var form = $("#myAddBrandForm");
                     form.validate();
-                    if(form.validation)
+                    if (form.valid()) {
+                        form.submit();
+                    }
                 } else {
                     IsSelect = false; 
                 }

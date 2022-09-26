@@ -33,6 +33,9 @@ namespace KalaMarket.Persistence.Migrations
                     b.Property<DateTime>("InsertTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
 
@@ -55,7 +58,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("Brands");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.CategoryAgg.Category", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Category", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -99,7 +102,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductAgg.Product", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Product", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -139,6 +142,10 @@ namespace KalaMarket.Persistence.Migrations
 
                     b.Property<DateTime?>("RemoveTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("UpdateTime")
                         .HasColumnType("datetime2");
@@ -211,6 +218,10 @@ namespace KalaMarket.Persistence.Migrations
                     b.Property<long>("ProductId")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("RemoveTime")
                         .HasColumnType("datetime2");
 
@@ -261,26 +272,26 @@ namespace KalaMarket.Persistence.Migrations
                         new
                         {
                             Id = 1L,
-                            InsertTime = new DateTime(2022, 9, 15, 15, 48, 49, 889, DateTimeKind.Local).AddTicks(680),
+                            InsertTime = new DateTime(2022, 9, 26, 6, 27, 31, 376, DateTimeKind.Local).AddTicks(3175),
                             IsRemoved = false,
                             Name = "Admin",
-                            UpdateTime = new DateTime(2022, 9, 15, 15, 48, 49, 889, DateTimeKind.Local).AddTicks(621)
+                            UpdateTime = new DateTime(2022, 9, 26, 6, 27, 31, 376, DateTimeKind.Local).AddTicks(3083)
                         },
                         new
                         {
                             Id = 2L,
-                            InsertTime = new DateTime(2022, 9, 15, 15, 48, 49, 889, DateTimeKind.Local).AddTicks(787),
+                            InsertTime = new DateTime(2022, 9, 26, 6, 27, 31, 376, DateTimeKind.Local).AddTicks(3280),
                             IsRemoved = false,
                             Name = "Operator",
-                            UpdateTime = new DateTime(2022, 9, 15, 15, 48, 49, 889, DateTimeKind.Local).AddTicks(732)
+                            UpdateTime = new DateTime(2022, 9, 26, 6, 27, 31, 376, DateTimeKind.Local).AddTicks(3271)
                         },
                         new
                         {
                             Id = 3L,
-                            InsertTime = new DateTime(2022, 9, 15, 15, 48, 49, 889, DateTimeKind.Local).AddTicks(808),
+                            InsertTime = new DateTime(2022, 9, 26, 6, 27, 31, 376, DateTimeKind.Local).AddTicks(3360),
                             IsRemoved = false,
                             Name = "Customer",
-                            UpdateTime = new DateTime(2022, 9, 15, 15, 48, 49, 889, DateTimeKind.Local).AddTicks(801)
+                            UpdateTime = new DateTime(2022, 9, 26, 6, 27, 31, 376, DateTimeKind.Local).AddTicks(3292)
                         });
                 });
 
@@ -365,16 +376,16 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("UserInRoles");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.CategoryAgg.Category", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Category", b =>
                 {
-                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.CategoryAgg.Category", "ParentCategory")
+                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Category", "ParentCategory")
                         .WithMany("SubCategories")
                         .HasForeignKey("ParentCategoryId");
 
                     b.Navigation("ParentCategory");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductAgg.Product", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Product", b =>
                 {
                     b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Brand", "Brand")
                         .WithMany("Products")
@@ -382,7 +393,7 @@ namespace KalaMarket.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.CategoryAgg.Category", "Category")
+                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -395,7 +406,7 @@ namespace KalaMarket.Persistence.Migrations
 
             modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductFeatures", b =>
                 {
-                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.ProductAgg.Product", "Product")
+                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Product", "Product")
                         .WithMany("Features")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -406,7 +417,7 @@ namespace KalaMarket.Persistence.Migrations
 
             modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductImages", b =>
                 {
-                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.ProductAgg.Product", "Product")
+                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -439,14 +450,14 @@ namespace KalaMarket.Persistence.Migrations
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.CategoryAgg.Category", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Category", b =>
                 {
                     b.Navigation("Products");
 
                     b.Navigation("SubCategories");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductAgg.Product", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Product", b =>
                 {
                     b.Navigation("Features");
 

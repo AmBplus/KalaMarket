@@ -106,8 +106,6 @@
                 function (i, val) {
                     List_Feature.append(`<input name="Features[${i}].KeyName" id="Features_${i}__KeyName" type="hidden" data-val="true" value="${val.DisplayName}"/></br>`);
                     List_Feature.append(`<input name="Features[${i}].KeyValue" id="Features_${i}__KeyValue" type="hidden"  value="${val.Value}"/></br>`);
-                    ShowError.append(`< span class="text-danger" asp - validation -for= "Features[${i}].KeyName" ></span > `);
-                    ShowError.append(`< span class="text-danger" asp - validation -for= "Features[${i}].KeyValue" ></span > `);
                     isInputFeatureAdded = true;
                 });
             var formProduct = $('#AddProductForm');

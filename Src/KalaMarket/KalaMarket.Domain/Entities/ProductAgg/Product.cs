@@ -10,12 +10,10 @@ public class Product : BaseEntity<long>
     {
 
     }
-    public Product(string name, string description,
+    public Product(string name, string description, string slug,
         long categoryId , int inventory = 0 ,
         bool displayed = true, decimal price = 0,
-        ushort? brandId = null,
-        ICollection<ProductFeatures>? features = null,
-        ICollection<ProductImages>? images = null)
+        ushort? brandId = null)
     {
         Name = name;
         Description = description;
@@ -24,8 +22,9 @@ public class Product : BaseEntity<long>
         Price = price;
         BrandId = brandId;
         CategoryId = categoryId;
-        Features = features ?? new List<ProductFeatures>();
-        Images = images ?? new List<ProductImages>();
+        Slug = slug;
+        Features = new List<ProductFeatures>();
+        Images =  new List<ProductImages>();
     }
 
     #endregion /Constructors
@@ -33,12 +32,13 @@ public class Product : BaseEntity<long>
     #region Methods
 
     public bool Edit(string name, string description,
-        long categoryId, ushort? brandId)
+        long categoryId, ushort? brandId,string slug)
     {
         Name = name;
         Description = description;
         BrandId = brandId;
         CategoryId = categoryId;
+        Slug = slug;
         return true;
     }
 
@@ -64,6 +64,16 @@ public class Product : BaseEntity<long>
         return true;
     }
 
+    public bool SetFeature(ICollection<ProductFeatures> productFeatures)
+    {
+        Features = productFeatures;
+        return true;
+    }
+    public bool SetImages(ICollection<ProductImages> productImages)
+    {
+        Images = productImages;
+        return true;
+    }
     #endregion /Inventory Methods
 
     #region Price Methods
@@ -103,15 +113,16 @@ public class Product : BaseEntity<long>
     #region Properties
 
 
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public int Inventory { get; set; }
-    public bool Displayed { get; set; }
+    public string Name { get;private set; }
+    public string Slug { get; private set; }
+    public string Description { get; private set; }
+    public int Inventory { get; private set; }
+    public bool Displayed { get; private set; }
     public Brand Brand { get; set; }
-    public decimal Price { get; set; }
-    public ushort? BrandId { get; set; }
-    public virtual Category Category { get; private set; }
-    public long CategoryId { get; set; }
+    public decimal Price { get; private set; }
+    public ushort? BrandId { get; private set; }
+    public virtual Category Category { get;  set; }
+    public long CategoryId { get;private set; }
     public virtual ICollection<ProductFeatures> Features { get; private set; }
     public virtual ICollection<ProductImages> Images { get; private set; }
 

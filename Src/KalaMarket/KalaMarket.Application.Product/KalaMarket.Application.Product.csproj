@@ -13,14 +13,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Product\BrandService\Query\GetAll\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\KalaMarket.Application\KalaMarket.Application.csproj" />
     <ProjectReference Include="..\KalaMarket.Domain\KalaMarket.Domain.csproj" />
     <ProjectReference Include="..\KalaMarket.Resourses\KalaMarket.Resourses.csproj" />
     <ProjectReference Include="..\KalaMarket.Shared\KalaMarket.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\Product\BrandService\Query\GetAll\" />
   </ItemGroup>
 
 </Project>

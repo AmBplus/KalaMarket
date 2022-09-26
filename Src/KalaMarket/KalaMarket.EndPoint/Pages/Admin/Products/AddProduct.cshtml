@@ -28,16 +28,13 @@
                                             <input asp-for="Name" class="form-control">
                                             <span class="text-danger" asp-validation-for="Name"></span>
                                         </amb-admin-divForm>
-                                       
-                                        @*       <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
-                                        <fieldset class="form-group">
-                                        <label asp-for="BrandId"> برند </label>
-                                        <select asp-for="BrandId">
-                                        <option selected value="1">Enter</option>
-                                        </select>
-                                        <span class="text-danger" asp-validation-for="BrandId"></span>
-                                        </fieldset>
-                                        </div>*@
+                                        <amb-admin-divForm>
+                                            <label asp-for="BrandId"> برند </label>
+                                            <select class="form-control" asp-for="BrandId" asp-items="Model.Brand">
+                                                <option selected value="0">انتخاب</option>
+                                            </select>
+                                            <span class="text-danger" asp-validation-for="BrandId"></span>
+                                        </amb-admin-divForm>
                                         <amb-admin-divForm>
                                             <label asp-for="Price"> قیمت</label>
                                             <input asp-for="Price" class="form-control">
@@ -86,7 +83,7 @@
                                                 <a class="btn btn-success" id="btnAddFeatures">اضافه کردن ویژگی</a>
                                             </fieldset>
                                         </div>
-                                       
+                                  
                                         <amb-admin-divForm>
                                             <label asp-for="Displayed" class="h5 mx-3 ">نمایش داده شود؟ </label>
                                             <input asp-for="Displayed" class="form-check-input" type="checkbox">

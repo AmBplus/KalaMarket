@@ -10,5 +10,5 @@ public class RequestAddProductDto
     public bool Displayed { get; set; }
     public ushort BrandId { get; set; }
     public IList<string> ImagesSrc { get; set; }
-    public List<AddNewProductFeatures> Features { get; set; }
+    public IEnumerable<AddNewProductFeatures> Features { get; set; }
 }

@@ -97,6 +97,42 @@ namespace KalaMarket.Resourses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to حداکثر طول {1} میباشد.
+        /// </summary>
+        public static string MaxLen {
+            get {
+                return ResourceManager.GetString("MaxLen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to حداکثر طول {0} باید {1} باشد.
+        /// </summary>
+        public static string MaxLenWithName {
+            get {
+                return ResourceManager.GetString("MaxLenWithName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to حداقل طول {1} میباشد.
+        /// </summary>
+        public static string MinLen {
+            get {
+                return ResourceManager.GetString("MinLen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to حداقل طول {0} باید {1} باشد.
+        /// </summary>
+        public static string MinLenWithName {
+            get {
+                return ResourceManager.GetString("MinLenWithName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to این یک کلاس نیست.
         /// </summary>
         public static string NotAClass {
@@ -183,6 +219,15 @@ namespace KalaMarket.Resourses {
         public static string RoleUnvalid {
             get {
                 return ResourceManager.GetString("RoleUnvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         

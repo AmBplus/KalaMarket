@@ -1,22 +1,46 @@
-using KalaMarket.Application.Product.Services.Product.CategoryServices.FacadePattern.Facade;
-using KalaMarket.Application.Product.Services.Product.CategoryServices.Queries.GetCategories;
+using KalaMarket.Application.Product.Services.Product.BrandService.Command.Active;
+using KalaMarket.Application.Product.Services.Product.BrandService.Facade.Interface;
+using KalaMarket.Application.Product.Services.Product.BrandService.Query.Get;
+using KalaMarket.Application.Product.Services.Product.BrandService.Query.GetAll;
 using KalaMarket.EndPoint.Infrastructure;
-using KalaMarket.Shared.Dto;
+using Microsoft.AspNetCore.Mvc;
 
 namespace KalaMarket.EndPoint.Pages.Admin.Brands
 {
     public class IndexModel : BasePageModel
     {
-        public IndexModel(ICategoryFacade categoryFacade)
+        public IndexModel(IBrandFacade brandFacade)
         {
-            _categoryFacade = categoryFacade;
+            BrandFacade = brandFacade;
         }
-        public ResultDto<GetCategoriesServiceDto> Result { get; set; }
-        private ICategoryFacade _categoryFacade { get; }
+        public List<GetBrandServiceDto> Brands { get; set; }
+        private IBrandFacade BrandFacade{ get; }
         public void OnGet()
         {
-         Result = _categoryFacade.CategoryQuery.GetCategories.Execute();
-            
+         var result = BrandFacade.BrandQuery.GetAll.Execute(new RequestGetAllBrandDto());
+         if (result.IsSuccess == false)
+         {
+             result.Data.Brands = new List<GetBrandServiceDto>();
+             AddToastError(result.Message);
+         }
+         Brands = result.Data.Brands;
         }
+
+        public IActionResult OnGetChangeActivation(ushort id)
+        {
+           
+            var result = BrandFacade.brandCmd.ChangeActivation.Execute(new RequestChangeActivation()
+            {
+                Id = id
+            });
+            if (result.IsSuccess == false)
+            {
+                AddToastError(result.Message);
+                return RedirectToPage();
+            }
+            AddToastSuccess(result.Message);
+            return RedirectToPage();
+            }
+
     }
 }
