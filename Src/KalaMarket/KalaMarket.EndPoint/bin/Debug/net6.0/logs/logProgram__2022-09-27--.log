@@ -8,3 +8,8 @@ INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-
 INFO |***| ----> PagingTagHelper - PageNo: 1, PageSize: 8, TotalRecords: 1, TotalPages: 1, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-27 02:18:12.7631 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
 INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-27 02:19:57.1666 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
 INFO |***| ----> PagingTagHelper - PageNo: 1, PageSize: 8, TotalRecords: 1, TotalPages: 1, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-27 02:19:57.1666 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| Now listening on: https://localhost:7060  |***| 2022-09-27 04:37:09.2481 |***| 14|***| Microsoft.Hosting.Lifetime|
+INFO |***| Now listening on: http://localhost:5060  |***| 2022-09-27 04:37:09.2481 |***| 14|***| Microsoft.Hosting.Lifetime|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-27 04:37:09.2481 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-27 04:37:09.2481 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-27 04:37:09.2481 |***| 0|***| Microsoft.Hosting.Lifetime|

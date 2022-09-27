@@ -20,8 +20,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Map\" />
     <Folder Include="Services\Product\BrandService\Query\GetAll\" />
     <Folder Include="Services\Product\ProductService\Query\GetProductsForAdmin\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
   </ItemGroup>
 
 </Project>

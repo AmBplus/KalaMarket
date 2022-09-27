@@ -58,6 +58,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -132,7 +138,7 @@
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
-              "version": "[11.2.0, )"
+              "version": "[11.2.2, )"
             },
             "Mapster": {
               "target": "Package",
@@ -140,11 +146,11 @@
             },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[5.0.17, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[6.0.9, )"
             }
           },
           "imports": [
