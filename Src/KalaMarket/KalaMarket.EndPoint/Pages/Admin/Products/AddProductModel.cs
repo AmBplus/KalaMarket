@@ -4,6 +4,7 @@ using _01_Framework.AspCore.ValidateAttribute;
 using KalaMarket.Application.Product.Services.Product.BrandService.Facade.Interface;
 using KalaMarket.Application.Product.Services.Product.BrandService.Query.GetAll;
 using KalaMarket.Application.Product.Services.Product.CategoryServices.FacadePattern.Facade;
+using KalaMarket.Application.Product.Services.Product.CategoryServices.Queries.GetCategories;
 using KalaMarket.Application.Product.Services.Product.ProductService.Commands.AddProduct;
 using KalaMarket.Application.Product.Services.Product.ProductService.FacadePattern.Interfaces;
 using KalaMarket.EndPoint.Infrastructure;
@@ -102,7 +103,10 @@ namespace KalaMarket.EndPoint.Pages.Admin.Products
             Categories = new List<SelectListItem>() { };
             // Get Categories
             var result =
-                CategoryFacade.CategoryQuery.GetCategories.Execute(KalaMarketConstants.CategoryType.SubCategory);
+                CategoryFacade.CategoryQuery.GetCategories.Execute(new RequestGetCategoriesDto()
+                {
+                    Type = KalaMarketConstants.CategoryType.SubCategory
+                });
             
             if (!result.IsSuccess)
             {

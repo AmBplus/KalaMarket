@@ -45,15 +45,15 @@
                                                     <td class="sorting_1">@item.Name</td>
                                                     <td>
                                                         @{
-                                                                string parent = !string.IsNullOrWhiteSpace(item.ParentName) ? item.ParentName : "-";
-                                                         }
+                                                            string parent = !string.IsNullOrWhiteSpace(item.ParentName) ? item.ParentName : "-";
+                                                        }
 
                                                         <text> @parent </text>
                                                     </td>
                                                     <td>
                                                         @if (item.Type == KalaMarketConstants.CategoryType.Category)
                                                         {
-                                                                <a asp-page="AddCategory" asp-route-parentCategoryId="@item.Id" class="btn btn-success">افزودن فرزند</a>
+                                                            <a asp-page="AddCategory" asp-route-parentCategoryId="@item.Id" class="btn btn-success">افزودن فرزند</a>
                                                         }
 
                                                         @if (item.HasChild == true)
@@ -68,6 +68,23 @@
                                         </table>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="  text-center">
+                                <paging total-records="@Model.Result.Data.RowCount"
+                                        page-no="@Model.Result.Data.RowCount"
+                                        page-size="@Model.Result.Data.PageSize"
+                                        show-prev-next="true"
+                                        show-total-pages="false"
+                                        show-total-records="false"
+                                        show-page-size-nav="true"
+                                        show-first-numbered-page="true"
+                                        show-last-numbered-page="true"
+                                        query-string-key-page-no="page"
+                                        query-string-key-page-size="pageSize"
+                                        class-active-page="bg-primary"
+                                        gap-size="2">
+                                </paging>
+
                             </div>
                         </div>
                     </div>

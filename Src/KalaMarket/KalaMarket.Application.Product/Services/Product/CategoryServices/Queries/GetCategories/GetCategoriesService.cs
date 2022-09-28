@@ -1,6 +1,8 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Product.Services.Product.CategoryServices.Queries.GetCategory;
+using KalaMarket.Domain.Entities.ProductAgg;
 using KalaMarket.Resourses;
+using KalaMarket.Shared;
 using KalaMarket.Shared.Dto;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,9 +16,11 @@ public class GetCategoriesService  : IGetCategoriesService
     }
 
     private IKalaMarketContext Context { get; }
-    public ResultDto<GetCategoriesServiceDto> Execute(byte? type = null)
+    public ResultDto<GetCategoriesServiceDto> Execute(RequestGetCategoriesDto request)
     {
-        var list = Context.Categories.Where(x => type != null ? (x.CategoryType == type) : (true))
+        int rowCount =0;
+
+       var query = Context.Categories.Where(x => request.Type != null ? (x.CategoryType == request.Type) : (true))
             .Include(x => x.SubCategories)
             .Select(x => new GetCategoryServiceDto()
             {
@@ -25,12 +29,24 @@ public class GetCategoriesService  : IGetCategoriesService
                 Type = x.CategoryType,
                 HasChild = x.SubCategories.Count > 0,
                 ParentName = x.ParentName
-            }).ToList();
+            });
+       List<GetCategoryServiceDto> list;
+        if (request.Page > 0 && request.PageSize > 0)
+        {
+            list= query.ToPaged(request.Page, request.PageSize, out rowCount).ToList();
+        }
+        else
+        {
+            list = query.ToList();
+        }
         ResultDto<GetCategoriesServiceDto> result = new ResultDto<GetCategoriesServiceDto>(new GetCategoriesServiceDto());
         result.Data._categories = list;
         if (list != null)
         {
             result.IsSuccess = true;
+            result.Data.RowCount = rowCount;
+            result.Data.PageSize = request.PageSize;
+            result.Data.CurrentPage = request.Page;
             result.Message = Messages.OperationDoneSuccessfully;
         }
         else

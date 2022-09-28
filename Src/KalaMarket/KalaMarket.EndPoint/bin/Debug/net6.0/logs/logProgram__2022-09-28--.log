@@ -1,0 +1,517 @@
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-28 05:23:27.6869 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-28 05:23:27.6869 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-28 05:23:27.6869 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-28 05:23:32.8901 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 05:26:02.3301 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 1, PageSize: 8, TotalRecords: 1, TotalPages: 1, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-28 05:26:02.3301 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 05:27:14.3048 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 1, PageSize: 8, TotalRecords: 1, TotalPages: 1, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-28 05:27:14.3048 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-28 07:52:15.1650 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-28 07:52:15.1650 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-28 07:52:15.1650 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-28 07:52:18.5736 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+ERROR |***| An unhandled exception has occurred while executing the request. System.InvalidOperationException: Multiple handlers matched. The following handlers matched route data and had all constraints satisfied:
+
+Void OnGet(Byte, Int32, Byte), Void OnGet(Int32, Byte)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageHandlerMethodSelector.Select(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 07:52:45.9432 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-28 07:54:47.6276 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-28 07:54:47.6276 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-28 07:54:47.6276 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-28 07:54:50.6813 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+ERROR |***| An unhandled exception has occurred while executing the request. System.InvalidOperationException: Multiple handlers matched. The following handlers matched route data and had all constraints satisfied:
+
+Void OnGet(System.Nullable`1[System.Byte], Int32, Byte), Void OnGet(Int32, Byte)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageHandlerMethodSelector.Select(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 07:55:03.8974 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An unhandled exception has occurred while executing the request. System.InvalidOperationException: Multiple handlers matched. The following handlers matched route data and had all constraints satisfied:
+
+Void OnGet(System.Nullable`1[System.Byte], Int32, Byte), Void OnGet(Int32, Byte)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageHandlerMethodSelector.Select(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 07:55:48.4153 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An unhandled exception has occurred while executing the request. System.InvalidOperationException: Multiple handlers matched. The following handlers matched route data and had all constraints satisfied:
+
+Void OnGet(System.Nullable`1[System.Byte], Int32, Byte), Void OnGet(Int32, Byte)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageHandlerMethodSelector.Select(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 07:55:50.0707 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-28 07:56:22.9558 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-28 07:56:22.9558 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-28 07:56:22.9558 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-28 07:56:25.9315 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 07:56:39.3693 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-28 07:56:39.3693 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 07:56:50.9946 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-28 07:56:50.9946 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 07:57:05.8370 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-28 07:57:05.8370 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 07:57:16.8830 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-28 07:57:16.8830 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 07:57:35.0868 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-28 07:57:35.0868 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 07:58:14.7581 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-28 07:58:14.7581 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 07:58:25.3862 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-28 07:58:25.3862 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 07:58:38.3254 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-28 07:58:38.3254 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 07:58:49.6205 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: Page, QueryStringKeyPageSize: PageSize,   |***| 2022-09-28 07:58:49.6205 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-28 08:01:02.6474 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-28 08:01:02.6474 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-28 08:01:02.6474 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-28 08:01:05.6202 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:01:15.0464 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:01:15.0464 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-28 08:02:40.6681 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-28 08:02:40.6681 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-28 08:02:40.6681 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-28 08:02:44.9800 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:02:47.8633 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:02:47.8633 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:03:01.5726 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:03:01.5726 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:03:05.3080 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:03:05.3080 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:14:58.1059 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:14:58.1059 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:14:59.5562 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:14:59.5562 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:15:37.6511 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:15:37.6511 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:15:40.1333 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:15:40.1333 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:15:41.9770 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:15:41.9770 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:15:44.5420 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:15:44.5420 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:15:48.1021 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:15:48.1021 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:15:52.4926 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 25, TotalRecords: 16, TotalPages: 1, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:15:52.4926 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:16:01.5712 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 10, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:16:01.5712 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-28 08:19:54.4535 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-28 08:19:54.4535 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-28 08:19:54.4707 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-28 08:19:59.2085 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:20:26.7772 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:20:26.7772 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at LazZiya.TagHelpers.PagingTagHelper.CreatePageSizeControl()
+   at LazZiya.TagHelpers.PagingTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index.ExecuteAsync() in C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\Pages\Admin\Categories\Index.cshtml:line 79
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:20:27.1805 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:21:04.8751 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:21:04.8751 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:05.1016 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An exception was thrown attempting to display the error page. System.TypeLoadException: Could not load type 'KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index+<ExecuteAsync>d__20#1' from assembly 'KalaMarket.EndPoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, RuntimeType type, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, RuntimeType type, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeMethodInfo method, RuntimeType caType, Boolean inherit)
+   at System.Reflection.RuntimeMethodInfo.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttributes[T](MemberInfo element)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.TryResolveStateMachineMethod(MethodBase& method, Type& declaringType)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetMethodDisplayString(MethodBase method)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception, AggregateException& error)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetStackFrames(Exception original)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetDetails(Exception exception)+MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:21:05.1188 |***| 3|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| Connection ID "16501189061260607542", Request ID "40000037-0006-e500-b63f-84710c7967bb": An unhandled exception was thrown by the application. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:05.1188 |***| 2|***| Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:21:07.0878 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:21:07.0878 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:07.2050 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An exception was thrown attempting to display the error page. System.TypeLoadException: Could not load type 'KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index+<ExecuteAsync>d__20#1' from assembly 'KalaMarket.EndPoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, RuntimeType type, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, RuntimeType type, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeMethodInfo method, RuntimeType caType, Boolean inherit)
+   at System.Reflection.RuntimeMethodInfo.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttributes[T](MemberInfo element)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.TryResolveStateMachineMethod(MethodBase& method, Type& declaringType)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetMethodDisplayString(MethodBase method)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception, AggregateException& error)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetStackFrames(Exception original)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetDetails(Exception exception)+MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:21:07.2139 |***| 3|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| Connection ID "17582052976124493867", Request ID "4000002c-0007-f400-b63f-84710c7967bb": An unhandled exception was thrown by the application. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:07.2139 |***| 2|***| Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:21:08.3686 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:21:08.3686 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:08.5007 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An exception was thrown attempting to display the error page. System.TypeLoadException: Could not load type 'KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index+<ExecuteAsync>d__20#1' from assembly 'KalaMarket.EndPoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, RuntimeType type, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, RuntimeType type, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeMethodInfo method, RuntimeType caType, Boolean inherit)
+   at System.Reflection.RuntimeMethodInfo.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttributes[T](MemberInfo element)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.TryResolveStateMachineMethod(MethodBase& method, Type& declaringType)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetMethodDisplayString(MethodBase method)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception, AggregateException& error)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetStackFrames(Exception original)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetDetails(Exception exception)+MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:21:08.5103 |***| 3|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| Connection ID "18302628886439002269", Request ID "4000009e-0000-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:08.5103 |***| 2|***| Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:21:09.4474 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:21:09.4474 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:09.5903 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An exception was thrown attempting to display the error page. System.TypeLoadException: Could not load type 'KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index+<ExecuteAsync>d__20#1' from assembly 'KalaMarket.EndPoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, RuntimeType type, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, RuntimeType type, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeMethodInfo method, RuntimeType caType, Boolean inherit)
+   at System.Reflection.RuntimeMethodInfo.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttributes[T](MemberInfo element)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.TryResolveStateMachineMethod(MethodBase& method, Type& declaringType)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetMethodDisplayString(MethodBase method)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception, AggregateException& error)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetStackFrames(Exception original)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetDetails(Exception exception)+MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:21:09.5903 |***| 3|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| Connection ID "17582052976124493869", Request ID "4000002e-0007-f400-b63f-84710c7967bb": An unhandled exception was thrown by the application. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:09.6020 |***| 2|***| Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:21:12.3552 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:21:12.3552 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:12.4851 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An exception was thrown attempting to display the error page. System.TypeLoadException: Could not load type 'KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index+<ExecuteAsync>d__20#1' from assembly 'KalaMarket.EndPoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, RuntimeType type, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, RuntimeType type, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeMethodInfo method, RuntimeType caType, Boolean inherit)
+   at System.Reflection.RuntimeMethodInfo.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttributes[T](MemberInfo element)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.TryResolveStateMachineMethod(MethodBase& method, Type& declaringType)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetMethodDisplayString(MethodBase method)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception, AggregateException& error)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetStackFrames(Exception original)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetDetails(Exception exception)+MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:21:12.4942 |***| 3|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| Connection ID "15060037167617146920", Request ID "40000029-0003-d100-b63f-84710c7967bb": An unhandled exception was thrown by the application. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:12.4942 |***| 2|***| Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:21:18.9310 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:21:18.9310 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:19.0600 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An exception was thrown attempting to display the error page. System.TypeLoadException: Could not load type 'KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index+<ExecuteAsync>d__20#1' from assembly 'KalaMarket.EndPoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, RuntimeType type, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, RuntimeType type, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeMethodInfo method, RuntimeType caType, Boolean inherit)
+   at System.Reflection.RuntimeMethodInfo.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttributes[T](MemberInfo element)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.TryResolveStateMachineMethod(MethodBase& method, Type& declaringType)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetMethodDisplayString(MethodBase method)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception, AggregateException& error)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetStackFrames(Exception original)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetDetails(Exception exception)+MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:21:19.0600 |***| 3|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| Connection ID "16501189061260607544", Request ID "40000039-0006-e500-b63f-84710c7967bb": An unhandled exception was thrown by the application. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:19.0728 |***| 2|***| Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:21:38.6221 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:21:38.6221 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:38.8063 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An exception was thrown attempting to display the error page. System.TypeLoadException: Could not load type 'KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index+<ExecuteAsync>d__19#2' from assembly 'KalaMarket.EndPoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, RuntimeType type, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, RuntimeType type, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeMethodInfo method, RuntimeType caType, Boolean inherit)
+   at System.Reflection.RuntimeMethodInfo.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttributes[T](MemberInfo element)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.TryResolveStateMachineMethod(MethodBase& method, Type& declaringType)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetMethodDisplayString(MethodBase method)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception, AggregateException& error)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetStackFrames(Exception original)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetDetails(Exception exception)+MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:21:38.8063 |***| 3|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| Connection ID "17798225741058408485", Request ID "40000026-0003-f700-b63f-84710c7967bb": An unhandled exception was thrown by the application. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:21:38.8063 |***| 2|***| Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:22:04.8674 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:22:04.8674 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:22:04.9959 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An exception was thrown attempting to display the error page. System.TypeLoadException: Could not load type 'KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index+<ExecuteAsync>d__19#2' from assembly 'KalaMarket.EndPoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, RuntimeType type, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, RuntimeType type, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeMethodInfo method, RuntimeType caType, Boolean inherit)
+   at System.Reflection.RuntimeMethodInfo.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttributes[T](MemberInfo element)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.TryResolveStateMachineMethod(MethodBase& method, Type& declaringType)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetMethodDisplayString(MethodBase method)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception, AggregateException& error)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetStackFrames(Exception original)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetDetails(Exception exception)+MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:22:04.9959 |***| 3|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| Connection ID "18374686510541701215", Request ID "40000060-0007-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:22:04.9959 |***| 2|***| Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:22:10.5712 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:22:10.5712 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:22:10.7117 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An exception was thrown attempting to display the error page. System.TypeLoadException: Could not load type 'KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index+<ExecuteAsync>d__19#2' from assembly 'KalaMarket.EndPoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, RuntimeType type, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, RuntimeType type, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeMethodInfo method, RuntimeType caType, Boolean inherit)
+   at System.Reflection.RuntimeMethodInfo.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttributes[T](MemberInfo element, Boolean inherit)
+   at System.Diagnostics.StackTrace.TryResolveStateMachineMethod(MethodBase& method, Type& declaringType)
+   at System.Diagnostics.StackTrace.ToString(TraceFormat traceFormat, StringBuilder sb)
+   at System.Diagnostics.StackTrace.ToString(TraceFormat traceFormat)
+   at System.Exception.get_StackTrace()
+   at System.Exception.ToString()
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.DisplayException(ErrorContext errorContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:22:10.7117 |***| 3|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| Connection ID "17437937766573801487", Request ID "40000010-0002-f200-b63f-84710c7967bb": An unhandled exception was thrown by the application. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:22:10.7117 |***| 2|***| Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:22:54.7428 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:22:54.7428 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:22:54.8848 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An exception was thrown attempting to display the error page. System.TypeLoadException: Could not load type 'KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index+<ExecuteAsync>d__19#2' from assembly 'KalaMarket.EndPoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, RuntimeType type, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, RuntimeType type, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeMethodInfo method, RuntimeType caType, Boolean inherit)
+   at System.Reflection.RuntimeMethodInfo.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttributes[T](MemberInfo element)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.TryResolveStateMachineMethod(MethodBase& method, Type& declaringType)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetMethodDisplayString(MethodBase method)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception, AggregateException& error)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetStackFrames(Exception original)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetDetails(Exception exception)+MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:22:54.9038 |***| 3|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| Connection ID "17582052976124493877", Request ID "40000036-0007-f400-b63f-84710c7967bb": An unhandled exception was thrown by the application. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:22:54.9038 |***| 2|***| Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-28 08:23:37.9556 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-28 08:23:37.9556 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-28 08:23:37.9556 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-28 08:23:42.3450 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:24:04.1503 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:24:04.1503 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at LazZiya.TagHelpers.PagingTagHelper.CreatePageSizeControl()
+   at LazZiya.TagHelpers.PagingTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index.ExecuteAsync() in C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\Pages\Admin\Categories\Index.cshtml:line 78
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:24:04.4672 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:24:31.1201 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:24:31.1201 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:24:31.2942 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An exception was thrown attempting to display the error page. System.TypeLoadException: Could not load type 'KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index+<ExecuteAsync>d__19#1' from assembly 'KalaMarket.EndPoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, RuntimeType type, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, RuntimeType type, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeMethodInfo method, RuntimeType caType, Boolean inherit)
+   at System.Reflection.RuntimeMethodInfo.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttributes[T](MemberInfo element)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.TryResolveStateMachineMethod(MethodBase& method, Type& declaringType)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetMethodDisplayString(MethodBase method)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception, AggregateException& error)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetStackFrames(Exception original)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetDetails(Exception exception)+MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:24:31.3084 |***| 3|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| Connection ID "18302628890733969505", Request ID "40000062-0001-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:24:31.3084 |***| 2|***| Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:24:33.9829 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:24:33.9829 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:24:34.1185 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| An exception was thrown attempting to display the error page. System.TypeLoadException: Could not load type 'KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index+<ExecuteAsync>d__19#1' from assembly 'KalaMarket.EndPoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, RuntimeType type, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, RuntimeType type, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeMethodInfo method, RuntimeType caType, Boolean inherit)
+   at System.Reflection.RuntimeMethodInfo.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Attribute.GetCustomAttributes(MemberInfo element, Type attributeType, Boolean inherit)
+   at System.Reflection.CustomAttributeExtensions.GetCustomAttributes[T](MemberInfo element)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.TryResolveStateMachineMethod(MethodBase& method, Type& declaringType)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetMethodDisplayString(MethodBase method)
+   at Microsoft.Extensions.StackTrace.Sources.StackTraceHelper.GetFrames(Exception exception, AggregateException& error)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetStackFrames(Exception original)
+   at Microsoft.Extensions.StackTrace.Sources.ExceptionDetailsProvider.GetDetails(Exception exception)+MoveNext()
+   at Microsoft.AspNetCore.Diagnostics.RazorViews.ErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:24:34.1185 |***| 3|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+ERROR |***| Connection ID "18374686480476930277", Request ID "400000e6-0000-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application. NLog message: Exception in NLog.LayoutRenderers.ExceptionLayoutRenderer.AppendToString(): System.TypeLoadException. |***| 2022-09-28 08:24:34.1185 |***| 2|***| Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-28 08:25:11.9375 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-28 08:25:11.9375 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-28 08:25:11.9375 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-28 08:25:15.1885 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:25:32.3200 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:25:32.3200 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+ERROR |***| An unhandled exception has occurred while executing the request. System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at LazZiya.TagHelpers.PagingTagHelper.CreatePageSizeControl()
+   at LazZiya.TagHelpers.PagingTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at KalaMarket.EndPoint.Pages.Admin.Categories.Pages_Admin_Categories_Index.ExecuteAsync() in C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\Pages\Admin\Categories\Index.cshtml:line 77
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context) |***| 2022-09-28 08:25:32.6043 |***| 1|***| Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-28 08:26:46.0594 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-28 08:26:46.0594 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-28 08:26:46.0594 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-28 08:26:49.1920 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:27:07.2464 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:27:07.2464 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:27:16.1519 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:27:16.1519 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:30:48.0552 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:30:48.0554 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-28 08:31:29.4577 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-28 08:31:29.4577 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-28 08:31:29.4577 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-28 08:31:32.7948 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:31:48.9057 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:31:48.9057 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:32:30.3052 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:32:30.3052 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:32:32.6646 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:32:32.6646 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 08:32:42.1969 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 08:32:42.1969 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| Now listening on: https://localhost:7060  |***| 2022-09-28 18:27:15.6088 |***| 14|***| Microsoft.Hosting.Lifetime|
+INFO |***| Now listening on: http://localhost:5060  |***| 2022-09-28 18:27:15.6088 |***| 14|***| Microsoft.Hosting.Lifetime|
+INFO |***| Application started. Press Ctrl+C to shut down.  |***| 2022-09-28 18:27:15.6088 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Hosting environment: Development  |***| 2022-09-28 18:27:15.6088 |***| 0|***| Microsoft.Hosting.Lifetime|
+INFO |***| Content root path: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\  |***| 2022-09-28 18:27:15.6088 |***| 0|***| Microsoft.Hosting.Lifetime|
+WARN |***| No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.  |***| 2022-09-28 18:27:20.6420 |***| 30000|***| Microsoft.EntityFrameworkCore.Model.Validation|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 18:28:18.7586 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 18:28:18.7586 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper SettingsJson: default - default  |***| 2022-09-28 18:29:11.3405 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|
+INFO |***| ----> PagingTagHelper - PageNo: 16, PageSize: 8, TotalRecords: 16, TotalPages: 2, QueryStringKeyPageNo: page, QueryStringKeyPageSize: pageSize,   |***| 2022-09-28 18:29:11.3405 |***| 0|***| LazZiya.TagHelpers.PagingTagHelper|

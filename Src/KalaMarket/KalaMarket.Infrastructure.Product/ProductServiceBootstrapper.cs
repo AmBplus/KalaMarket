@@ -5,7 +5,9 @@ using KalaMarket.Application.Product.Services.Product.CategoryServices.FacadePat
 using KalaMarket.Application.Product.Services.Product.ProductAggFacade;
 using KalaMarket.Application.Product.Services.Product.ProductService.FacadePattern.Implement;
 using KalaMarket.Application.Product.Services.Product.ProductService.FacadePattern.Interfaces;
+using Mapster;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 #endregion /using
 
 namespace KalaMarket.Infrastructure.Product;
@@ -23,5 +25,9 @@ public static class ProductServiceBootstrapper
         services.AddScoped<IProductFacadeService, ProductFacadeService>();
         // Add ProductAgg Facade Service
         services.AddScoped<IProductAggFacadeService, ProductAggFacadeService>();
+        var typeAdapterConfig = TypeAdapterConfig.GlobalSettings;
+       // Add Mapster Map Config
+        typeAdapterConfig.Scan(typeof(ProductAggFacadeService).Assembly);
+        
     }
 }

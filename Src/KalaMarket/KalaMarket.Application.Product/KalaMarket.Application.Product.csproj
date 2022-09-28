@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Map\" />
+    <Folder Include="MapConfig\Mapster\" />
     <Folder Include="Services\Product\BrandService\Query\GetAll\" />
     <Folder Include="Services\Product\ProductService\Query\GetProductsForAdmin\" />
   </ItemGroup>

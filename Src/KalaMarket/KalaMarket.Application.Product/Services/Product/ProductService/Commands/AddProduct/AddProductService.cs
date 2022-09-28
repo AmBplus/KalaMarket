@@ -20,28 +20,27 @@ public class AddProductService : IAddProductService
     public ResultDto Execute(RequestAddProductDto requestAddProduct)
     {
         ResultDto result = new ResultDto();
-            // Create Product 
-        
-            Domain.Entities.ProductAgg.Product product = AddProduct(requestAddProduct, result);
-            Context.Products.Add(product);
-            Context.HandleSaveChange(result, Logger);
-            // Return result 
-            return result;
+
+        Domain.Entities.ProductAgg.Product product = GetProduct(requestAddProduct, result);
+        Context.Products.Add(product);
+        Context.HandleSaveChange(result, Logger);
+
+        return result;
     }
 
-    private Domain.Entities.ProductAgg.Product AddProduct(RequestAddProductDto requestAddProduct,
+    private Domain.Entities.ProductAgg.Product GetProduct(RequestAddProductDto requestAddProduct,
         ResultDto result)
     {
         Domain.Entities.ProductAgg.Product product =
             new Domain.Entities.ProductAgg.Product(requestAddProduct.Name, requestAddProduct.Description,
                 requestAddProduct.Name.Slugify(),
                 requestAddProduct.CategoryId,
-                requestAddProduct.Inventory, requestAddProduct.Displayed, 
+                requestAddProduct.Inventory, requestAddProduct.Displayed,
                 requestAddProduct.Price, requestAddProduct.BrandId);
-       var features = requestAddProduct.Features.Select(x => new ProductFeatures(product.Id, x.KeyName, x.KeyValue)).ToList();
-       var images = requestAddProduct.ImagesSrc.Select(imagePath => new ProductImages(product.Id, product.Name, imagePath)).ToList();
-       product.SetFeature(features);
-       product.SetImages(images);
+        var features = requestAddProduct.Features.Select(x => new ProductFeatures(product.Id, x.KeyName, x.KeyValue)).ToList();
+        var images = requestAddProduct.ImagesSrc.Select(imagePath => new ProductImages(product.Id, product.Name, imagePath)).ToList();
+        product.SetFeature(features);
+        product.SetImages(images);
         return product;
     }
 }

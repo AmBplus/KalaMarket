@@ -4,5 +4,5 @@ namespace KalaMarket.Application.Product.Services.Product.CategoryServices.Queri
 
 public interface IGetCategoriesService
 {
-    ResultDto<GetCategoriesServiceDto> Execute(byte? type = null);
+    ResultDto<GetCategoriesServiceDto> Execute(RequestGetCategoriesDto request);
 }

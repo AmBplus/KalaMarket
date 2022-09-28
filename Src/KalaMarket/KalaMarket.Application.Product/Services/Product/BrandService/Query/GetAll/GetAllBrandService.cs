@@ -1,10 +1,9 @@
-﻿using System.Xml;
-using KalaMarket.Application.Interfaces.Context;
+﻿using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Product.Services.Product.BrandService.Query.Get;
-using KalaMarket.Domain.Entities.ProductAgg;
 using KalaMarket.Resourses;
 using KalaMarket.Shared;
 using KalaMarket.Shared.Dto;
+using Mapster;
 
 namespace KalaMarket.Application.Product.Services.Product.BrandService.Query.GetAll;
 
@@ -35,12 +34,8 @@ public class GetAllBrandService : IGetAllBrandService
             {
                 query = query.Where(x => x.IsActive == true);
             }
-            AllBrandResult.Data.Brands = query.Select(x => new GetBrandServiceDto()
-                {
-                    Name = x.Name,
-                    Id = x.Id,
-                    IsActive = x.IsActive
-                }).ToList();
+            
+            AllBrandResult.Data.Brands = query.ProjectToType<GetBrandServiceDto>().ToList();
             AllBrandResult.IsSuccess = true;
             AllBrandResult.Message = Messages.OperationDoneSuccessfully;
         }

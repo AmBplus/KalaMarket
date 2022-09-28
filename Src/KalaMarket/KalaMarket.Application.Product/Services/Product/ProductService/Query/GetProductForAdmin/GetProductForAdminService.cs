@@ -2,6 +2,7 @@
 using KalaMarket.Resourses;
 using KalaMarket.Shared;
 using KalaMarket.Shared.Dto;
+using Mapster;
 using Microsoft.EntityFrameworkCore;
 
 namespace KalaMarket.Application.Product.Services.Product.ProductService.Query.GetProductForAdmin;
@@ -20,7 +21,7 @@ public class GetProductForAdminService : IGetProductForAdminService
     {
         var products = Context.Products
             .Where(x => x.IsRemoved == requestGetProductsForAdmin.GetIsRemoved)
-            .Include(x=>x.Category).Include(x=>x.Brand)
+            .Include(x => x.Category).Include(x => x.Brand)
             .Select(x =>
             new GetProductForAdminDto()
             {
@@ -32,7 +33,8 @@ public class GetProductForAdminService : IGetProductForAdminService
                 Id = x.Id,
                 Inventory = x.Inventory,
                 Price = x.Price,
-            }).FirstOrDefault(x=>x.Id == requestGetProductsForAdmin.Id);
+            }).FirstOrDefault(x => x.Id == requestGetProductsForAdmin.Id);
+
         ResultDto<GetProductForAdminDto> result;
         if (products == null)
         {
