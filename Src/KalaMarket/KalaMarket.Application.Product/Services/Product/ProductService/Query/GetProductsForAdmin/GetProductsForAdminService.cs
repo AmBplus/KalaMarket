@@ -3,6 +3,7 @@ using KalaMarket.Application.Product.Services.Product.ProductService.Query.GetPr
 using KalaMarket.Resourses;
 using KalaMarket.Shared;
 using KalaMarket.Shared.Dto;
+using Mapster;
 using Microsoft.EntityFrameworkCore;
 
 namespace KalaMarket.Application.Product.Services.Product.ProductService.Query.GetProductsForAdmin;
@@ -22,20 +23,9 @@ public class GetProductsForAdminService : IGetProductsForAdminService
         int rowCount = 0;
         var products = Context.Products
             .Where(x => x.IsRemoved == requestGetProductsForAdmin.GetIsRemoved)
-            .Include(x => x.Category).Include(x => x.Brand)
-            .ToPaged(requestGetProductsForAdmin.Page,requestGetProductsForAdmin.PageSize,out rowCount)
-            .Select(x =>
-                new GetProductForAdminDto()
-                {
-                    Name = x.Name,
-                    Brand = x.Brand.Name,
-                    Category = x.Category.Name,
-                    Description = x.Description,
-                    Displayed = x.Displayed,
-                    Id = x.Id,
-                    Inventory = x.Inventory,
-                    Price = x.Price,
-                }).ToList();
+            .Include(x => x.Category).Include(x => x.Brand).ProjectToType<GetProductForAdminDto>()
+            .ToPaged(requestGetProductsForAdmin.Page, requestGetProductsForAdmin.PageSize, out rowCount)
+            .ToList();
         ResultDto<GetProductsForAdminDto> result;
      
         if (products == null)
