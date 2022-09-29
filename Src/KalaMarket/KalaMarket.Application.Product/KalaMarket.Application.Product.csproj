@@ -23,6 +23,8 @@
     <Folder Include="MapConfig\Mapster\" />
     <Folder Include="Services\Product\BrandService\Query\GetAll\" />
     <Folder Include="Services\Product\ProductService\Query\GetProductsForAdmin\" />
+    <Folder Include="Services\Product\ProductService\Query\GetDetailProductForAdmin\" />
+    <Folder Include="Services\Product\ProductService\Query\GetProductDetailForSite\" />
   </ItemGroup>
 
   <ItemGroup>

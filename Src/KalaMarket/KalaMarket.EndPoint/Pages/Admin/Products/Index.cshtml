@@ -42,7 +42,7 @@
                                                         <td>@item.Displayed</td>
                                                         <td>
                                                             <a class="btn btn-danger">حذف</a>
-                                                            <a asp-page="Detail" class="btn btn-info">اطلاعات بیشتر</a>
+                                                            <a asp-page="Detail" asp-route-id="@item.Id" class="btn btn-info">اطلاعات بیشتر</a>
                                                         </td>
                                                     </tr>
                                                 }

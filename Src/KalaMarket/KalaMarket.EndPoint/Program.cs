@@ -140,7 +140,10 @@ app.MapControllerRoute(
 
 #endregion
 app.MapRazorPages();
-
+app.MapGet("/", async (context) =>
+{
+    context.Response.Redirect("/Site/Index");
+});
 app.Run();
 
 

@@ -30,6 +30,7 @@
             }
 
             public const byte PageSize= 8;
+            public static byte PageSizeInWeb = 8;
         }
         public static class Logger 
 		{

@@ -1,7 +1,10 @@
 ﻿using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Application.Product.Services.Product.ProductService.FacadePattern.Interfaces;
+using KalaMarket.Application.Product.Services.Product.ProductService.Query.GetDetailProductForAdmin;
+using KalaMarket.Application.Product.Services.Product.ProductService.Query.GetProductDetailForSite;
 using KalaMarket.Application.Product.Services.Product.ProductService.Query.GetProductForAdmin;
 using KalaMarket.Application.Product.Services.Product.ProductService.Query.GetProductsForAdmin;
+using KalaMarket.Application.Product.Services.Product.ProductService.Query.GetProductsForSite;
 using KalaMarket.Shared;
 
 namespace KalaMarket.Application.Product.Services.Product.ProductService.FacadePattern.Implement;
@@ -12,6 +15,9 @@ internal class ProductQueryFacade : IProductQueryFacade
 
     private IGetProductForAdminService? _productForAdmin;
     private IGetProductsForAdminService? _productsForAdmin;
+    private IGetDetailProductForAdminService? _detailProductForAdmin;
+    private IGetProductsForSiteService? _productsForSite;
+    private IGetProductDetailForSiteService? _productDetailForSite;
 
     #endregion /Fields
 
@@ -27,20 +33,23 @@ internal class ProductQueryFacade : IProductQueryFacade
 
     private IKalaMarketContext Context { get; }
     private ILoggerManger Logger { get; }
-    /// <summary>
-    /// دریافت محصول
-    /// </summary>
     public IGetProductForAdminService ProductForAdmin
     {
         get => _productForAdmin ??= new GetProductForAdminService(Context,Logger);
     }
-    /// <summary>
-    /// دریافت محصولات
-    /// </summary>
     public IGetProductsForAdminService ProductsForAdmin
     {
         get => _productsForAdmin ??= new GetProductsForAdminService(Context,Logger);
     }
+
+    public IGetDetailProductForAdminService DetailProductForAdmin =>
+        _detailProductForAdmin ??= new GetProductDetailForAdminService(context:Context,Logger);
+
+    public IGetProductsForSiteService ProductsForSite =>
+        _productsForSite ??= new GetProductsForSiteService(Context);
+
+    public IGetProductDetailForSiteService ProductDetailForSite => 
+        _productDetailForSite ??= new GetProductDetailForSiteService(Context,Logger);
 
     #endregion /Properties
 }
