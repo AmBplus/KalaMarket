@@ -2,7 +2,7 @@ using KalaMarket.Application.Product.Services.Product.ProductAggFacade;
 using KalaMarket.Application.Product.Services.Product.ProductService.Query.GetProductsForSite;
 using KalaMarket.EndPoint.Infrastructure;
 using KalaMarket.Resourses;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc;
 
 namespace KalaMarket.EndPoint.Pages.Site.Products
 {
@@ -14,17 +14,20 @@ namespace KalaMarket.EndPoint.Pages.Site.Products
         }
         public ResultGetProductsForSiteDto ResultGetProducts {get; set; }
         private IProductAggFacadeService ProductAggFacadeService { get; }
-        public void OnGet(int page = 1)
+        public async Task<IActionResult> OnGetAsync(int page = 1,string searchKey = null ,  long? categoryId = null)
         {
-           var result = ProductAggFacadeService.Product.Query.ProductsForSite.Execute(new RequestGetProductsForSiteDto()
+           var result = await ProductAggFacadeService.Product.Query.ProductsForSite.ExecuteAsync(new RequestGetProductsForSiteDto()
             {
-                Page = page
+                Page = page,
+                CategoryId = categoryId,
+                SearchKey = searchKey,
             });
            if (!result.IsSuccess)
            {
                AddToastError(ErrorMessages.ProblemOccurred);
            }
            ResultGetProducts = result.Data;
+           return Page();
         }
     }
 }

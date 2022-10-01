@@ -8,4 +8,10 @@ public static class Pagination
         rowsCounts = source.Count();
         return source.Skip(((int)page - 1) * pageSize).Take(pageSize);
     }
+    public static IQueryable<TSource> ToPaged<TSource>(this IQueryable<TSource> source, int? page, byte pageSize,
+        out int rowsCounts)
+    {
+        rowsCounts = source.Count();
+        return source.Skip(((int)page - 1) * pageSize).Take(pageSize);
+    }
 }

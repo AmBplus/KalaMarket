@@ -20,7 +20,7 @@ public class GetMenuItemService : IGetMenuItemService
     private ResultDto<IEnumerable<GetMenuItemDto>> result { get; } 
     private IKalaMarketContext Context { get; }
     private ILoggerManger Logger { get; }
-    public ResultDto<IEnumerable<GetMenuItemDto>> GetMenuItem(RequestGetMenuItem request)
+    public ResultDto<IEnumerable<GetMenuItemDto>> Execute(RequestGetMenuItem request)
     {
       
         var categories = GenerateQueryForCategory().ToList();
@@ -35,7 +35,7 @@ public class GetMenuItemService : IGetMenuItemService
         return result;
     }
 
-    public async Task<ResultDto<IEnumerable<GetMenuItemDto>>> GetMenuItemAsync(RequestGetMenuItem request)
+    public async Task<ResultDto<IEnumerable<GetMenuItemDto>>> ExecuteAsync(RequestGetMenuItem request)
     {
         var categories = await GenerateQueryForCategory().ToListAsync();
         var message = string.Format(ErrorMessages.NotFind, nameof(categories));
@@ -54,6 +54,7 @@ public class GetMenuItemService : IGetMenuItemService
         return Context.Categories
             .Include(x => x.SubCategories)
             .Where(x => !x.IsRemoved)
+            .Where(x=>x.ParentCategoryId ==null)
             .AsNoTracking();
     }
     private IEnumerable<GetMenuItemDto> GetMenuItem(List<Category> categories)

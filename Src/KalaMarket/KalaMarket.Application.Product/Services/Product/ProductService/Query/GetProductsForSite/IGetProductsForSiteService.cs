@@ -5,4 +5,5 @@ namespace KalaMarket.Application.Product.Services.Product.ProductService.Query.G
 public interface IGetProductsForSiteService
 {
     ResultDto<ResultGetProductsForSiteDto> Execute(RequestGetProductsForSiteDto request);
+    Task<ResultDto<ResultGetProductsForSiteDto>> ExecuteAsync(RequestGetProductsForSiteDto request);
 }

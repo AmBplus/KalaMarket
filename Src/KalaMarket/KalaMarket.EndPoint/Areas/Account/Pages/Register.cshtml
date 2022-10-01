@@ -1,0 +1,116 @@
+﻿@page "{handler?}"
+@model KalaMarket.EndPoint.Areas.Account.Pages.RegisterModel
+@{
+}
+
+@{
+    ViewData["Title"] = "ثبت نام";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام</title>
+   <partial name="_Partial/_RegisterStylePartial"/>
+</head>
+<body>
+<partial name="_Partials/_DisplayToastMessages"/>
+    <!-- login----------------------------------->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <section class="page-account-box">
+                    <div class="col-lg-6 col-md-6 col-xs-12 mx-auto">
+                        <div class="ds-userlogin">
+                            <a href="~/" class="account-box-logo">باگتو</a>
+                            <div class="account-box">
+                                <div class="account-box-headline">
+                                    <a asp-area="Account" asp-page="/Login" class="login-ds">
+                                      <span class="title">ورود</span>
+                                      <span class="sub-title">به فروشگاه کالا مارکت</span>
+                                  </a>
+                                  <a href="#" class="register-ds active">
+                                      <span class="title">ثبت نام</span>
+                                      <span class="sub-title">در فروشگاه کالا مارکت</span>
+                                  </a>
+                                </div>
+                                <div class="Login-to-account mt-4">
+                                    <div class="alert alert-danger m-3" asp-validation-summary="ModelOnly"></div>
+                                    <div class="account-box-content">
+                                        <h4>ثبت نام </h4>
+                                        <form id="RegisterForm" method="post" class="form-account text-right">
+                                            <div class="form-account-title">
+                                                <label asp-for="RegisterUser.FullName">نام نام خانوادگی</label>
+                                                <input asp-for="RegisterUser.FullName" type="text" class="number-email-input">
+                                                <span class="text-danger" asp-validation-for="RegisterUser.FullName"></span>
+                                            </div>
+
+
+                                            <div class="form-account-title">
+                                                <label asp-for="RegisterUser.Email">ایمیل </label>
+                                                <input asp-for="RegisterUser.Email" class="number-email-input">
+                                                <span class="text-danger" asp-validation-for="RegisterUser.Email"></span>
+                                            </div>
+                                            <div class="form-account-title">
+                                                <label asp-for="RegisterUser.Password">رمز عبور</label>
+                                                <input asp-for="RegisterUser.Password" class="password-input">
+                                                <span class="text-danger" asp-validation-for="RegisterUser.Password"></span>
+                                            </div>
+                                            <div class="form-account-title">
+                                                <label asp-for="RegisterUser.RePassword">تکرار رمز عبور</label>
+                                                <input asp-for="RegisterUser.RePassword" class="password-input">
+                                                <span class="text-danger" asp-validation-for="RegisterUser.RePassword"></span>
+                                            </div>
+                                            <div class="form-auth-row">
+                                                <label asp-for="RegisterUser.IsAcceptLaw" class="ui-checkbox mt-1">
+                                                    <input asp-for="RegisterUser.IsAcceptLaw">
+                                                    <span class="ui-checkbox-check"></span>
+                                                </label>
+                                                <label asp-for="RegisterUser.IsAcceptLaw" class="remember-me mr-0"><a href="#">حریم خصوصی</a> و <a href="#">شرایط قوانین </a>استفاده از سرویس های سایت دیجی‌اسمارت را مطالعه نموده و با کلیه موارد آن موافقم.</label>
+                                                <span class="text-danger" asp-validation-for="RegisterUser.IsAcceptLaw"></span><br/>
+                                                <span class="text-danger lawAccept"></span>
+                                            </div>
+                                            <div class="form-row-account">
+                                                <button type="submit" class="btn btn-primary btn-register">ثبت نام در فروشگاه کالامارکت</button>
+                                            </div>
+                                            <input asp-for="RegisterUser.RoleId" hidden/>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- login----------------------------------->
+    <!-- scroll_Progress------------------------->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+<!-- scroll_Progress------------------------->
+<partial name="_Partial/_RegisterScriptPartial"/>
+<partial name="Shared/_ValidationScriptsPartial"/>
+<script>
+        var form = document.getElementById('RegisterForm');
+        form.addEventListener("submit",(event) => {
+            event.preventDefault();
+            var inputAuth = document.querySelector(".form-auth-row input");
+            if (inputAuth.checked == false) {
+                var textAuth = document.querySelector(".lawAccept");
+                textAuth.innerHTML = "لطفا قوانین و شرایط را مطالعه نموده و با کلیه موارد آن موافقت نمایید.";
+                return;
+            }
+            else{
+                    form.submit();
+                } 
+          
+        });
+</script>
+</body>
+</html>

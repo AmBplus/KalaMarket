@@ -16,8 +16,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Infrastructure\Binder\" />
-    <Folder Include="Models\Account\Customer\" />
+    <Folder Include="Models\ViewComponents\" />
     <Folder Include="Pages\Admin\Shared\_Partials\" />
     <Folder Include="Pages\Shared\_Partials\SideScript\" />
     <Folder Include="wwwroot\images\Products\" />
@@ -183,11 +182,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\Account\_Partial\_RegisterScriptPartial.cshtml" />
+    <_ContentIncludedByDefault Remove="Areas\Account\Pages\Shared\_Partial\_RegisterScriptPartial.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Shared\Components\SearchInSiteComponent\SearchInSiteComponent.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Shared\Components\GetSiteMenuComponent\GetSiteMenu.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\Account\_Partial\_RegisterScriptPartial.cshtml" />
+    <UpToDateCheckInput Remove="Areas\Account\Pages\Shared\_Partial\_RegisterScriptPartial.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Shared\Components\GetSiteMenuComponent\GetSiteMenu.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Shared\Components\SearchInSiteComponent\SearchInSiteComponent.cshtml" />
   </ItemGroup>
 
 </Project>

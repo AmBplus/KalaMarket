@@ -4,6 +4,6 @@ namespace KalaMarket.Application.Product.Services.Product.Common.Query.GetMenuIt
 
 public interface IGetMenuItemService
 {
-    ResultDto<IEnumerable<GetMenuItemDto>> GetMenuItem(RequestGetMenuItem request);
-    Task<ResultDto<IEnumerable<GetMenuItemDto>>> GetMenuItemAsync(RequestGetMenuItem request);
+    ResultDto<IEnumerable<GetMenuItemDto>> Execute(RequestGetMenuItem request);
+    Task<ResultDto<IEnumerable<GetMenuItemDto>>> ExecuteAsync(RequestGetMenuItem request);
 }

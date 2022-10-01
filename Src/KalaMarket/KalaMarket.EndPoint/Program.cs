@@ -142,7 +142,7 @@ app.MapControllerRoute(
 app.MapRazorPages();
 app.MapGet("/", async (context) =>
 {
-    context.Response.Redirect("/Site/Index");
+    context.Response.Redirect("/Site");
 });
 app.Run();
 

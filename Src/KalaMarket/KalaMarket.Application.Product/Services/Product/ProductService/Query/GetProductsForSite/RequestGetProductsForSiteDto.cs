@@ -3,4 +3,6 @@
 public class RequestGetProductsForSiteDto
 {
     public int Page { get; set; } = 1;
+    public long? CategoryId { get; set; }
+    public string? SearchKey { get; set; }
 }

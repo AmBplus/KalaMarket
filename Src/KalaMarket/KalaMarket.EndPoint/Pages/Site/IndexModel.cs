@@ -15,7 +15,6 @@ namespace KalaMarket.EndPoint.Pages.Site
         }
         public async Task OnGet()
         {
-          var result =  CategoryService.CategoryQuery.GetAllParent.Execute(4);
         }
      
     }
