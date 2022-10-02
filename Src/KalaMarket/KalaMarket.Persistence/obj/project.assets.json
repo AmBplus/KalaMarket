@@ -979,6 +979,9 @@
         "dependencies": {
           "FluentValidation": "11.2.2",
           "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.HomePage": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "KalaMarket.Domain.Users": "1.0.0",
           "KalaMarket.Resourses": "1.0.0",
           "KalaMarket.Shared": "1.0.0",
           "Mapster": "7.3.0",
@@ -1003,6 +1006,89 @@
         },
         "runtime": {
           "bin/placeholder/KalaMarket.Domain.dll": {}
+        }
+      },
+      "KalaMarket.Domain.HomePage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Domain.HomePage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Domain.HomePage.dll": {}
+        }
+      },
+      "KalaMarket.Domain.Products/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Domain.Products.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Domain.Products.dll": {}
+        }
+      },
+      "KalaMarket.Domain.Users/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Domain.Users.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Domain.Users.dll": {}
+        }
+      },
+      "KalaMarket.Persistence.HomePage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Domain.HomePage": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Persistence.HomePage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Persistence.HomePage.dll": {}
+        }
+      },
+      "KalaMarket.Persistence.Products/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Persistence.Products.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Persistence.Products.dll": {}
+        }
+      },
+      "KalaMarket.Persistence.Users/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.Users": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Persistence.Users.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Persistence.Users.dll": {}
         }
       },
       "KalaMarket.Resourses/1.0.0": {
@@ -2895,6 +2981,36 @@
       "path": "../KalaMarket.Domain/KalaMarket.Domain.csproj",
       "msbuildProject": "../KalaMarket.Domain/KalaMarket.Domain.csproj"
     },
+    "KalaMarket.Domain.HomePage/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Domain.HomePage/KalaMarket.Domain.HomePage.csproj",
+      "msbuildProject": "../KalaMarket.Domain.HomePage/KalaMarket.Domain.HomePage.csproj"
+    },
+    "KalaMarket.Domain.Products/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Domain.Products/KalaMarket.Domain.Products.csproj",
+      "msbuildProject": "../KalaMarket.Domain.Products/KalaMarket.Domain.Products.csproj"
+    },
+    "KalaMarket.Domain.Users/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Domain.Users/KalaMarket.Domain.Users.csproj",
+      "msbuildProject": "../KalaMarket.Domain.Users/KalaMarket.Domain.Users.csproj"
+    },
+    "KalaMarket.Persistence.HomePage/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Persistence.HomePage/KalaMarket.Persistence.HomePage.csproj",
+      "msbuildProject": "../KalaMarket.Persistence.HomePage/KalaMarket.Persistence.HomePage.csproj"
+    },
+    "KalaMarket.Persistence.Products/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Persistence.Products/KalaMarket.Persistence.Products.csproj",
+      "msbuildProject": "../KalaMarket.Persistence.Products/KalaMarket.Persistence.Products.csproj"
+    },
+    "KalaMarket.Persistence.Users/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Persistence.Users/KalaMarket.Persistence.Users.csproj",
+      "msbuildProject": "../KalaMarket.Persistence.Users/KalaMarket.Persistence.Users.csproj"
+    },
     "KalaMarket.Resourses/1.0.0": {
       "type": "project",
       "path": "../KalaMarket.Resourses/KalaMarket.Resourses.csproj",
@@ -2910,6 +3026,12 @@
     "net6.0": [
       "KalaMarket.Application >= 1.0.0",
       "KalaMarket.Domain >= 1.0.0",
+      "KalaMarket.Domain.HomePage >= 1.0.0",
+      "KalaMarket.Domain.Products >= 1.0.0",
+      "KalaMarket.Domain.Users >= 1.0.0",
+      "KalaMarket.Persistence.HomePage >= 1.0.0",
+      "KalaMarket.Persistence.Products >= 1.0.0",
+      "KalaMarket.Persistence.Users >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.9",
       "Microsoft.EntityFrameworkCore.Relational >= 6.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.9",
@@ -2953,8 +3075,26 @@
             "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Application\\KalaMarket.Application.csproj": {
               "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Application\\KalaMarket.Application.csproj"
             },
+            "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Domain.HomePage\\KalaMarket.Domain.HomePage.csproj": {
+              "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Domain.HomePage\\KalaMarket.Domain.HomePage.csproj"
+            },
+            "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Domain.Products\\KalaMarket.Domain.Products.csproj": {
+              "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Domain.Products\\KalaMarket.Domain.Products.csproj"
+            },
+            "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Domain.Users\\KalaMarket.Domain.Users.csproj": {
+              "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Domain.Users\\KalaMarket.Domain.Users.csproj"
+            },
             "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Domain\\KalaMarket.Domain.csproj": {
               "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Domain\\KalaMarket.Domain.csproj"
+            },
+            "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Persistence.HomePage\\KalaMarket.Persistence.HomePage.csproj": {
+              "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Persistence.HomePage\\KalaMarket.Persistence.HomePage.csproj"
+            },
+            "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Persistence.Products\\KalaMarket.Persistence.Products.csproj": {
+              "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Persistence.Products\\KalaMarket.Persistence.Products.csproj"
+            },
+            "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Persistence.Users\\KalaMarket.Persistence.Users.csproj": {
+              "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Persistence.Users\\KalaMarket.Persistence.Users.csproj"
             }
           }
         }

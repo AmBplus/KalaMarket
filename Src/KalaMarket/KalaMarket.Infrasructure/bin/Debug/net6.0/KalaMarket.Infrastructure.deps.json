@@ -9,6 +9,7 @@
       "KalaMarket.Infrastructure/1.0.0": {
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Application.Agg": "1.0.0",
           "KalaMarket.Application.User": "1.0.0",
           "KalaMarket.Persistence": "1.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.9",
@@ -620,6 +621,9 @@
         "dependencies": {
           "FluentValidation": "11.2.2",
           "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.HomePage": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "KalaMarket.Domain.Users": "1.0.0",
           "KalaMarket.Resourses": "1.0.0",
           "KalaMarket.Shared": "1.0.0",
           "Mapster": "7.3.0",
@@ -628,6 +632,37 @@
         },
         "runtime": {
           "KalaMarket.Application.dll": {}
+        }
+      },
+      "KalaMarket.Application.Agg/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Application.HomePage": "1.0.0",
+          "KalaMarket.Application.Product": "1.0.0",
+          "KalaMarket.Application.User": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Application.Agg.dll": {}
+        }
+      },
+      "KalaMarket.Application.HomePage/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Application": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Application.HomePage.dll": {}
+        }
+      },
+      "KalaMarket.Application.Product/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "11.0.1",
+          "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "KalaMarket.Resourses": "1.0.0",
+          "KalaMarket.Shared": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Application.Product.dll": {}
         }
       },
       "KalaMarket.Application.User/1.0.0": {
@@ -650,16 +685,75 @@
           "KalaMarket.Domain.dll": {}
         }
       },
+      "KalaMarket.Domain.HomePage/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Domain.HomePage.dll": {}
+        }
+      },
+      "KalaMarket.Domain.Products/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Domain.Products.dll": {}
+        }
+      },
+      "KalaMarket.Domain.Users/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Domain.Users.dll": {}
+        }
+      },
       "KalaMarket.Persistence/1.0.0": {
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
           "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.HomePage": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "KalaMarket.Domain.Users": "1.0.0",
+          "KalaMarket.Persistence.HomePage": "1.0.0",
+          "KalaMarket.Persistence.Products": "1.0.0",
+          "KalaMarket.Persistence.Users": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.9",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9"
         },
         "runtime": {
           "KalaMarket.Persistence.dll": {}
+        }
+      },
+      "KalaMarket.Persistence.HomePage/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain.HomePage": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
+        "runtime": {
+          "KalaMarket.Persistence.HomePage.dll": {}
+        }
+      },
+      "KalaMarket.Persistence.Products/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
+        "runtime": {
+          "KalaMarket.Persistence.Products.dll": {}
+        }
+      },
+      "KalaMarket.Persistence.Users/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.Users": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
+        "runtime": {
+          "KalaMarket.Persistence.Users.dll": {}
         }
       },
       "KalaMarket.Resourses/1.0.0": {
@@ -1098,6 +1192,21 @@
       "serviceable": false,
       "sha512": ""
     },
+    "KalaMarket.Application.Agg/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Application.HomePage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Application.Product/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "KalaMarket.Application.User/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1108,7 +1217,37 @@
       "serviceable": false,
       "sha512": ""
     },
+    "KalaMarket.Domain.HomePage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Domain.Products/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Domain.Users/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "KalaMarket.Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Persistence.HomePage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Persistence.Products/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Persistence.Users/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

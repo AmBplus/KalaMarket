@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "KalaMarket.Domain.Users/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Domain.Users.dll": {}
+        }
+      },
+      "KalaMarket.Domain/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Shared": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Domain.dll": {}
+        }
+      },
+      "KalaMarket.Shared/1.0.0": {
+        "runtime": {
+          "KalaMarket.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KalaMarket.Domain.Users/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

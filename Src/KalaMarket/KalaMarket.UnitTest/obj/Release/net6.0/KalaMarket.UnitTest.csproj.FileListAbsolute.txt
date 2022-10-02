@@ -1,0 +1,6 @@
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Release\net6.0\CoverletSourceRootsMapping
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Release\net6.0\KalaMarket.UnitTest.csproj.AssemblyReference.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Release\net6.0\KalaMarket.UnitTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Release\net6.0\KalaMarket.UnitTest.AssemblyInfoInputs.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Release\net6.0\KalaMarket.UnitTest.AssemblyInfo.cs
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Release\net6.0\KalaMarket.UnitTest.csproj.CoreCompileInputs.cache

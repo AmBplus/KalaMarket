@@ -272,6 +272,9 @@
         "dependencies": {
           "FluentValidation": "11.2.2",
           "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.HomePage": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "KalaMarket.Domain.Users": "1.0.0",
           "KalaMarket.Resourses": "1.0.0",
           "KalaMarket.Shared": "1.0.0",
           "Mapster": "7.3.0",
@@ -287,6 +290,7 @@
           "AutoMapper": "11.0.1",
           "KalaMarket.Application": "1.0.0",
           "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
           "KalaMarket.Resourses": "1.0.0",
           "KalaMarket.Shared": "1.0.0"
         },
@@ -300,6 +304,30 @@
         },
         "runtime": {
           "KalaMarket.Domain.dll": {}
+        }
+      },
+      "KalaMarket.Domain.HomePage/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Domain.HomePage.dll": {}
+        }
+      },
+      "KalaMarket.Domain.Products/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Domain.Products.dll": {}
+        }
+      },
+      "KalaMarket.Domain.Users/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Domain.Users.dll": {}
         }
       },
       "KalaMarket.Resourses/1.0.0": {
@@ -548,6 +576,21 @@
       "sha512": ""
     },
     "KalaMarket.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Domain.HomePage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Domain.Products/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Domain.Users/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

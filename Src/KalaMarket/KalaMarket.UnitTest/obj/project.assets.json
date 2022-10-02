@@ -3618,6 +3618,9 @@
         "dependencies": {
           "FluentValidation": "11.2.2",
           "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.HomePage": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "KalaMarket.Domain.Users": "1.0.0",
           "KalaMarket.Resourses": "1.0.0",
           "KalaMarket.Shared": "1.0.0",
           "Mapster": "7.3.0",
@@ -3631,6 +3634,34 @@
           "bin/placeholder/KalaMarket.Application.dll": {}
         }
       },
+      "KalaMarket.Application.Agg/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Application.HomePage": "1.0.0",
+          "KalaMarket.Application.Product": "1.0.0",
+          "KalaMarket.Application.User": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Application.Agg.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Application.Agg.dll": {}
+        }
+      },
+      "KalaMarket.Application.HomePage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Application.HomePage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Application.HomePage.dll": {}
+        }
+      },
       "KalaMarket.Application.Product/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3638,6 +3669,7 @@
           "AutoMapper": "11.0.1",
           "KalaMarket.Application": "1.0.0",
           "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
           "KalaMarket.Resourses": "1.0.0",
           "KalaMarket.Shared": "1.0.0"
         },
@@ -3678,6 +3710,45 @@
           "bin/placeholder/KalaMarket.Domain.dll": {}
         }
       },
+      "KalaMarket.Domain.HomePage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Domain.HomePage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Domain.HomePage.dll": {}
+        }
+      },
+      "KalaMarket.Domain.Products/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Domain.Products.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Domain.Products.dll": {}
+        }
+      },
+      "KalaMarket.Domain.Users/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Domain.Users.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Domain.Users.dll": {}
+        }
+      },
       "KalaMarket.EndPoint/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3685,6 +3756,7 @@
           "01_Framework.AspCore": "1.0.0",
           "KalaMarket.Application.User": "1.0.0",
           "KalaMarket.Infrastructure": "1.0.0",
+          "KalaMarket.Infrastructure.HomePage": "1.0.0",
           "KalaMarket.Infrastructure.Product": "1.0.0",
           "KalaMarket.Infrastructure.User": "1.0.0",
           "LazZiya.TagHelpers": "6.0.2",
@@ -3708,6 +3780,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Application.Agg": "1.0.0",
           "KalaMarket.Application.User": "1.0.0",
           "KalaMarket.Persistence": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
@@ -3718,6 +3791,21 @@
         },
         "runtime": {
           "bin/placeholder/KalaMarket.Infrastructure.dll": {}
+        }
+      },
+      "KalaMarket.Infrastructure.HomePage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Application.HomePage": "1.0.0",
+          "Mapster": "7.3.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Infrastructure.HomePage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Infrastructure.HomePage.dll": {}
         }
       },
       "KalaMarket.Infrastructure.Product/1.0.0": {
@@ -3754,6 +3842,12 @@
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
           "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.HomePage": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "KalaMarket.Domain.Users": "1.0.0",
+          "KalaMarket.Persistence.HomePage": "1.0.0",
+          "KalaMarket.Persistence.Products": "1.0.0",
+          "KalaMarket.Persistence.Users": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.9",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9"
@@ -3763,6 +3857,50 @@
         },
         "runtime": {
           "bin/placeholder/KalaMarket.Persistence.dll": {}
+        }
+      },
+      "KalaMarket.Persistence.HomePage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Domain.HomePage": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Persistence.HomePage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Persistence.HomePage.dll": {}
+        }
+      },
+      "KalaMarket.Persistence.Products/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Persistence.Products.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Persistence.Products.dll": {}
+        }
+      },
+      "KalaMarket.Persistence.Users/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.Users": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
+        "compile": {
+          "bin/placeholder/KalaMarket.Persistence.Users.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Persistence.Users.dll": {}
         }
       },
       "KalaMarket.Resourses/1.0.0": {
@@ -10375,6 +10513,16 @@
       "path": "../KalaMarket.Application/KalaMarket.Application.csproj",
       "msbuildProject": "../KalaMarket.Application/KalaMarket.Application.csproj"
     },
+    "KalaMarket.Application.Agg/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Application.Contract/KalaMarket.Application.Agg.csproj",
+      "msbuildProject": "../KalaMarket.Application.Contract/KalaMarket.Application.Agg.csproj"
+    },
+    "KalaMarket.Application.HomePage/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Application.HomePage/KalaMarket.Application.HomePage.csproj",
+      "msbuildProject": "../KalaMarket.Application.HomePage/KalaMarket.Application.HomePage.csproj"
+    },
     "KalaMarket.Application.Product/1.0.0": {
       "type": "project",
       "path": "../KalaMarket.Application.Product/KalaMarket.Application.Product.csproj",
@@ -10390,6 +10538,21 @@
       "path": "../KalaMarket.Domain/KalaMarket.Domain.csproj",
       "msbuildProject": "../KalaMarket.Domain/KalaMarket.Domain.csproj"
     },
+    "KalaMarket.Domain.HomePage/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Domain.HomePage/KalaMarket.Domain.HomePage.csproj",
+      "msbuildProject": "../KalaMarket.Domain.HomePage/KalaMarket.Domain.HomePage.csproj"
+    },
+    "KalaMarket.Domain.Products/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Domain.Products/KalaMarket.Domain.Products.csproj",
+      "msbuildProject": "../KalaMarket.Domain.Products/KalaMarket.Domain.Products.csproj"
+    },
+    "KalaMarket.Domain.Users/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Domain.Users/KalaMarket.Domain.Users.csproj",
+      "msbuildProject": "../KalaMarket.Domain.Users/KalaMarket.Domain.Users.csproj"
+    },
     "KalaMarket.EndPoint/1.0.0": {
       "type": "project",
       "path": "../KalaMarket.EndPoint/KalaMarket.EndPoint.csproj",
@@ -10399,6 +10562,11 @@
       "type": "project",
       "path": "../KalaMarket.Infrasructure/KalaMarket.Infrastructure.csproj",
       "msbuildProject": "../KalaMarket.Infrasructure/KalaMarket.Infrastructure.csproj"
+    },
+    "KalaMarket.Infrastructure.HomePage/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Infrastructure.HomePage/KalaMarket.Infrastructure.HomePage.csproj",
+      "msbuildProject": "../KalaMarket.Infrastructure.HomePage/KalaMarket.Infrastructure.HomePage.csproj"
     },
     "KalaMarket.Infrastructure.Product/1.0.0": {
       "type": "project",
@@ -10414,6 +10582,21 @@
       "type": "project",
       "path": "../KalaMarket.Persistence/KalaMarket.Persistence.csproj",
       "msbuildProject": "../KalaMarket.Persistence/KalaMarket.Persistence.csproj"
+    },
+    "KalaMarket.Persistence.HomePage/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Persistence.HomePage/KalaMarket.Persistence.HomePage.csproj",
+      "msbuildProject": "../KalaMarket.Persistence.HomePage/KalaMarket.Persistence.HomePage.csproj"
+    },
+    "KalaMarket.Persistence.Products/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Persistence.Products/KalaMarket.Persistence.Products.csproj",
+      "msbuildProject": "../KalaMarket.Persistence.Products/KalaMarket.Persistence.Products.csproj"
+    },
+    "KalaMarket.Persistence.Users/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Persistence.Users/KalaMarket.Persistence.Users.csproj",
+      "msbuildProject": "../KalaMarket.Persistence.Users/KalaMarket.Persistence.Users.csproj"
     },
     "KalaMarket.Resourses/1.0.0": {
       "type": "project",

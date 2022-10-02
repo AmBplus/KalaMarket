@@ -35,11 +35,11 @@
       "KalaMarket.UnitTest/1.0.0": {
         "dependencies": {
           "KalaMarket.EndPoint": "1.0.0",
-          "Microsoft.NET.Test.Sdk": "17.1.0",
+          "Microsoft.NET.Test.Sdk": "17.3.2",
           "Moq": "4.18.2",
           "coverlet.collector": "3.1.2",
-          "xunit": "2.4.1",
-          "xunit.runner.visualstudio": "2.4.3",
+          "xunit": "2.4.2",
+          "xunit.runner.visualstudio": "2.4.5",
           "Microsoft.AspNetCore.Antiforgery.Reference": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "6.0.0.0",
@@ -223,7 +223,7 @@
           "System.IO.FileSystem.Watcher": "6.0.0.0",
           "System.IO.IsolatedStorage": "6.0.0.0",
           "System.IO.MemoryMappedFiles": "6.0.0.0",
-          "System.IO.Pipelines": "6.0.0.0",
+          "System.IO.Pipelines.Reference": "6.0.0.0",
           "System.IO.Pipes.AccessControl": "6.0.0.0",
           "System.IO.Pipes": "6.0.0.0",
           "System.IO.UnmanagedMemoryStream": "6.0.0.0",
@@ -336,6 +336,20 @@
           "KalaMarket.UnitTest.dll": {}
         }
       },
+      "AutoMapper/11.0.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.dll": {}
+        }
+      },
       "Castle.Core/5.1.0": {
         "dependencies": {
           "System.Diagnostics.EventLog": "6.0.0"
@@ -351,21 +365,32 @@
         }
       },
       "coverlet.collector/3.1.2": {},
-      "FluentValidation/11.2.0": {
+      "FluentValidation/11.2.2": {
         "runtime": {
           "lib/net6.0/FluentValidation.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.2.0.0"
+            "fileVersion": "11.2.2.0"
           }
         },
         "compile": {
           "lib/net6.0/FluentValidation.dll": {}
         }
       },
+      "LazZiya.TagHelpers/6.0.2": {
+        "runtime": {
+          "lib/net6.0/LazZiya.TagHelpers.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2.0"
+          }
+        },
+        "compile": {
+          "lib/net6.0/LazZiya.TagHelpers.dll": {}
+        }
+      },
       "Mapster/7.3.0": {
         "dependencies": {
           "Mapster.Core": "1.2.0",
-          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.CSharp": "4.7.0",
           "System.Reflection.Emit": "4.3.0"
         },
         "runtime": {
@@ -412,11 +437,11 @@
           "Microsoft.AspNetCore.Http.Extensions": "2.2.0"
         }
       },
-      "Microsoft.AspNetCore.Authentication.Google/6.0.8": {
+      "Microsoft.AspNetCore.Authentication.Google/6.0.9": {
         "runtime": {
           "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.dll": {
-            "assemblyVersion": "6.0.8.0",
-            "fileVersion": "6.0.822.36316"
+            "assemblyVersion": "6.0.9.0",
+            "fileVersion": "6.0.922.41926"
           }
         },
         "compile": {
@@ -460,7 +485,7 @@
       },
       "Microsoft.AspNetCore.Hosting.Server.Abstractions/2.2.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
         }
       },
@@ -480,7 +505,7 @@
       },
       "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "System.Text.Encodings.Web": "6.0.0"
         }
       },
@@ -492,14 +517,15 @@
           "System.Buffers": "4.5.1"
         }
       },
-      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "Microsoft.AspNetCore.Http.Features/5.0.17": {
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "6.0.0"
+          "Microsoft.Extensions.Primitives": "6.0.0",
+          "System.IO.Pipelines": "5.0.2"
         }
       },
       "Microsoft.AspNetCore.JsonPatch/2.2.0": {
         "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.CSharp": "4.7.0",
           "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
@@ -552,40 +578,40 @@
       },
       "Microsoft.AspNetCore.Mvc.Razor/2.2.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Razor.Extensions": "6.0.8",
+          "Microsoft.AspNetCore.Mvc.Razor.Extensions": "6.0.9",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
           "Microsoft.AspNetCore.Razor.Runtime": "2.2.0",
           "Microsoft.CodeAnalysis.CSharp": "4.0.0",
-          "Microsoft.CodeAnalysis.Razor": "6.0.8",
+          "Microsoft.CodeAnalysis.Razor": "6.0.9",
           "Microsoft.Extensions.Caching.Memory": "6.0.1",
           "Microsoft.Extensions.FileProviders.Composite": "2.2.0"
         }
       },
-      "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.8": {
+      "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.9": {
         "dependencies": {
-          "Microsoft.AspNetCore.Razor.Language": "6.0.8",
-          "Microsoft.CodeAnalysis.Razor": "6.0.8"
+          "Microsoft.AspNetCore.Razor.Language": "6.0.9",
+          "Microsoft.CodeAnalysis.Razor": "6.0.9"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll": {
-            "assemblyVersion": "6.0.8.0",
-            "fileVersion": "6.0.822.36316"
+            "assemblyVersion": "6.0.9.0",
+            "fileVersion": "6.0.922.41926"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/6.0.8": {
+      "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/6.0.9": {
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Razor.Extensions": "6.0.8",
-          "Microsoft.CodeAnalysis.Razor": "6.0.8",
+          "Microsoft.AspNetCore.Mvc.Razor.Extensions": "6.0.9",
+          "Microsoft.CodeAnalysis.Razor": "6.0.9",
           "Microsoft.Extensions.DependencyModel": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll": {
-            "assemblyVersion": "6.0.8.0",
-            "fileVersion": "6.0.822.36316"
+            "assemblyVersion": "6.0.9.0",
+            "fileVersion": "6.0.922.41926"
           }
         },
         "compile": {
@@ -614,11 +640,11 @@
           "Microsoft.AspNetCore.Html.Abstractions": "2.2.0"
         }
       },
-      "Microsoft.AspNetCore.Razor.Language/6.0.8": {
+      "Microsoft.AspNetCore.Razor.Language/6.0.9": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Language.dll": {
-            "assemblyVersion": "6.0.8.0",
-            "fileVersion": "6.0.822.36316"
+            "assemblyVersion": "6.0.9.0",
+            "fileVersion": "6.0.922.41926"
           }
         },
         "compile": {
@@ -773,34 +799,34 @@
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.Razor/6.0.8": {
+      "Microsoft.CodeAnalysis.Razor/6.0.9": {
         "dependencies": {
-          "Microsoft.AspNetCore.Razor.Language": "6.0.8",
+          "Microsoft.AspNetCore.Razor.Language": "6.0.9",
           "Microsoft.CodeAnalysis.CSharp": "4.0.0",
           "Microsoft.CodeAnalysis.Common": "4.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Razor.dll": {
-            "assemblyVersion": "6.0.8.0",
-            "fileVersion": "6.0.822.36316"
+            "assemblyVersion": "6.0.9.0",
+            "fileVersion": "6.0.922.41926"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Razor.dll": {}
         }
       },
-      "Microsoft.CodeCoverage/17.1.0": {
+      "Microsoft.CodeCoverage/17.3.2": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.100.221.61401"
+            "fileVersion": "17.300.622.32707"
           }
         },
         "compile": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {}
         }
       },
-      "Microsoft.CSharp/4.5.0": {},
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Data.SqlClient/2.1.4": {
         "dependencies": {
           "Microsoft.Data.SqlClient.SNI.runtime": "2.1.1",
@@ -862,10 +888,10 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore/6.0.7": {
+      "Microsoft.EntityFrameworkCore/6.0.9": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.7",
-          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.7",
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.9",
+          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.9",
           "Microsoft.Extensions.Caching.Memory": "6.0.1",
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
           "Microsoft.Extensions.Logging": "6.0.0",
@@ -874,50 +900,50 @@
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.dll": {
-            "assemblyVersion": "6.0.7.0",
-            "fileVersion": "6.0.722.31501"
+            "assemblyVersion": "6.0.9.0",
+            "fileVersion": "6.0.922.41505"
           }
         },
         "compile": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/6.0.7": {
+      "Microsoft.EntityFrameworkCore.Abstractions/6.0.9": {
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
-            "assemblyVersion": "6.0.7.0",
-            "fileVersion": "6.0.722.31501"
+            "assemblyVersion": "6.0.9.0",
+            "fileVersion": "6.0.922.41505"
           }
         },
         "compile": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/6.0.7": {},
-      "Microsoft.EntityFrameworkCore.Relational/6.0.7": {
+      "Microsoft.EntityFrameworkCore.Analyzers/6.0.9": {},
+      "Microsoft.EntityFrameworkCore.Relational/6.0.9": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.7",
+          "Microsoft.EntityFrameworkCore": "6.0.9",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "assemblyVersion": "6.0.7.0",
-            "fileVersion": "6.0.722.31501"
+            "assemblyVersion": "6.0.9.0",
+            "fileVersion": "6.0.922.41505"
           }
         },
         "compile": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/6.0.7": {
+      "Microsoft.EntityFrameworkCore.SqlServer/6.0.9": {
         "dependencies": {
           "Microsoft.Data.SqlClient": "2.1.4",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.7"
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.9"
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {
-            "assemblyVersion": "6.0.7.0",
-            "fileVersion": "6.0.722.31501"
+            "assemblyVersion": "6.0.9.0",
+            "fileVersion": "6.0.922.41505"
           }
         },
         "compile": {
@@ -1095,7 +1121,7 @@
       },
       "Microsoft.IdentityModel.Tokens/6.8.0": {
         "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.CSharp": "4.7.0",
           "Microsoft.IdentityModel.Logging": "6.8.0",
           "System.Security.Cryptography.Cng": "4.5.0"
         },
@@ -1115,15 +1141,15 @@
           "System.Buffers": "4.5.1"
         }
       },
-      "Microsoft.NET.Test.Sdk/17.1.0": {
+      "Microsoft.NET.Test.Sdk/17.3.2": {
         "dependencies": {
-          "Microsoft.CodeCoverage": "17.1.0",
-          "Microsoft.TestPlatform.TestHost": "17.1.0"
+          "Microsoft.CodeCoverage": "17.3.2",
+          "Microsoft.TestPlatform.TestHost": "17.3.2"
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "Microsoft.TestPlatform.ObjectModel/17.1.0": {
+      "Microsoft.TestPlatform.ObjectModel/17.3.2": {
         "dependencies": {
           "NuGet.Frameworks": "5.11.0",
           "System.Reflection.Metadata": "5.0.0"
@@ -1228,9 +1254,9 @@
           "lib/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll": {}
         }
       },
-      "Microsoft.TestPlatform.TestHost/17.1.0": {
+      "Microsoft.TestPlatform.TestHost/17.3.2": {
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "17.1.0",
+          "Microsoft.TestPlatform.ObjectModel": "17.3.2",
           "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
@@ -1839,6 +1865,7 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.IO.Pipelines/5.0.2": {},
       "System.Linq/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -2332,11 +2359,11 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "xunit/2.4.1": {
+      "xunit/2.4.2": {
         "dependencies": {
-          "xunit.analyzers": "0.10.0",
-          "xunit.assert": "2.4.1",
-          "xunit.core": "2.4.1"
+          "xunit.analyzers": "1.0.0",
+          "xunit.assert": "2.4.2",
+          "xunit.core": "2.4.2"
         }
       },
       "xunit.abstractions/2.0.3": {
@@ -2350,58 +2377,58 @@
           "lib/netstandard2.0/xunit.abstractions.dll": {}
         }
       },
-      "xunit.analyzers/0.10.0": {},
-      "xunit.assert/2.4.1": {
+      "xunit.analyzers/1.0.0": {},
+      "xunit.assert/2.4.2": {
         "dependencies": {
           "NETStandard.Library": "1.6.1"
         },
         "runtime": {
           "lib/netstandard1.1/xunit.assert.dll": {
-            "assemblyVersion": "2.4.1.0",
-            "fileVersion": "2.4.1.0"
+            "assemblyVersion": "2.4.2.0",
+            "fileVersion": "2.4.2.0"
           }
         },
         "compile": {
           "lib/netstandard1.1/xunit.assert.dll": {}
         }
       },
-      "xunit.core/2.4.1": {
+      "xunit.core/2.4.2": {
         "dependencies": {
-          "xunit.extensibility.core": "2.4.1",
-          "xunit.extensibility.execution": "2.4.1"
+          "xunit.extensibility.core": "2.4.2",
+          "xunit.extensibility.execution": "2.4.2"
         }
       },
-      "xunit.extensibility.core/2.4.1": {
+      "xunit.extensibility.core/2.4.2": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "xunit.abstractions": "2.0.3"
         },
         "runtime": {
           "lib/netstandard1.1/xunit.core.dll": {
-            "assemblyVersion": "2.4.1.0",
-            "fileVersion": "2.4.1.0"
+            "assemblyVersion": "2.4.2.0",
+            "fileVersion": "2.4.2.0"
           }
         },
         "compile": {
           "lib/netstandard1.1/xunit.core.dll": {}
         }
       },
-      "xunit.extensibility.execution/2.4.1": {
+      "xunit.extensibility.execution/2.4.2": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
-          "xunit.extensibility.core": "2.4.1"
+          "xunit.extensibility.core": "2.4.2"
         },
         "runtime": {
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {
-            "assemblyVersion": "2.4.1.0",
-            "fileVersion": "2.4.1.0"
+            "assemblyVersion": "2.4.2.0",
+            "fileVersion": "2.4.2.0"
           }
         },
         "compile": {
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {}
         }
       },
-      "xunit.runner.visualstudio/2.4.3": {},
+      "xunit.runner.visualstudio/2.4.5": {},
       "01_Framework.AspCore/1.0.0": {
         "dependencies": {
           "KalaMarket.Resourses": "1.0.0",
@@ -2418,13 +2445,16 @@
       },
       "KalaMarket.Application/1.0.0": {
         "dependencies": {
-          "FluentValidation": "11.2.0",
+          "FluentValidation": "11.2.2",
           "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.HomePage": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "KalaMarket.Domain.Users": "1.0.0",
           "KalaMarket.Resourses": "1.0.0",
           "KalaMarket.Shared": "1.0.0",
           "Mapster": "7.3.0",
-          "Microsoft.AspNetCore.Http.Features": "2.2.0",
-          "Microsoft.EntityFrameworkCore": "6.0.7"
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
         },
         "runtime": {
           "KalaMarket.Application.dll": {}
@@ -2433,10 +2463,36 @@
           "KalaMarket.Application.dll": {}
         }
       },
+      "KalaMarket.Application.Agg/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Application.HomePage": "1.0.0",
+          "KalaMarket.Application.Product": "1.0.0",
+          "KalaMarket.Application.User": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Application.Agg.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Application.Agg.dll": {}
+        }
+      },
+      "KalaMarket.Application.HomePage/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Application": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Application.HomePage.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Application.HomePage.dll": {}
+        }
+      },
       "KalaMarket.Application.Product/1.0.0": {
         "dependencies": {
+          "AutoMapper": "11.0.1",
           "KalaMarket.Application": "1.0.0",
           "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
           "KalaMarket.Resourses": "1.0.0",
           "KalaMarket.Shared": "1.0.0"
         },
@@ -2449,7 +2505,8 @@
       },
       "KalaMarket.Application.User/1.0.0": {
         "dependencies": {
-          "FluentValidation": "11.2.0",
+          "AutoMapper": "11.0.1",
+          "FluentValidation": "11.2.2",
           "KalaMarket.Application": "1.0.0",
           "KalaMarket.Domain": "1.0.0",
           "KalaMarket.Shared": "1.0.0"
@@ -2472,16 +2529,51 @@
           "KalaMarket.Domain.dll": {}
         }
       },
+      "KalaMarket.Domain.HomePage/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Domain.HomePage.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Domain.HomePage.dll": {}
+        }
+      },
+      "KalaMarket.Domain.Products/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Domain.Products.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Domain.Products.dll": {}
+        }
+      },
+      "KalaMarket.Domain.Users/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Domain.Users.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Domain.Users.dll": {}
+        }
+      },
       "KalaMarket.EndPoint/1.0.0": {
         "dependencies": {
           "01_Framework.AspCore": "1.0.0",
           "KalaMarket.Application.User": "1.0.0",
           "KalaMarket.Infrastructure": "1.0.0",
+          "KalaMarket.Infrastructure.HomePage": "1.0.0",
           "KalaMarket.Infrastructure.Product": "1.0.0",
           "KalaMarket.Infrastructure.User": "1.0.0",
+          "LazZiya.TagHelpers": "6.0.2",
           "Mapster": "7.3.0",
-          "Microsoft.AspNetCore.Authentication.Google": "6.0.8",
-          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.8",
+          "Microsoft.AspNetCore.Authentication.Google": "6.0.9",
+          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.9",
           "NLog.Web.AspNetCore": "5.1.4"
         },
         "runtime": {
@@ -2494,6 +2586,7 @@
       "KalaMarket.Infrastructure/1.0.0": {
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
+          "KalaMarket.Application.Agg": "1.0.0",
           "KalaMarket.Application.User": "1.0.0",
           "KalaMarket.Persistence": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
@@ -2504,6 +2597,19 @@
         },
         "compile": {
           "KalaMarket.Infrastructure.dll": {}
+        }
+      },
+      "KalaMarket.Infrastructure.HomePage/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Application.HomePage": "1.0.0",
+          "Mapster": "7.3.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "KalaMarket.Infrastructure.HomePage.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Infrastructure.HomePage.dll": {}
         }
       },
       "KalaMarket.Infrastructure.Product/1.0.0": {
@@ -2534,15 +2640,59 @@
         "dependencies": {
           "KalaMarket.Application": "1.0.0",
           "KalaMarket.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "6.0.7",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.7",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.7"
+          "KalaMarket.Domain.HomePage": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "KalaMarket.Domain.Users": "1.0.0",
+          "KalaMarket.Persistence.HomePage": "1.0.0",
+          "KalaMarket.Persistence.Products": "1.0.0",
+          "KalaMarket.Persistence.Users": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.9",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9"
         },
         "runtime": {
           "KalaMarket.Persistence.dll": {}
         },
         "compile": {
           "KalaMarket.Persistence.dll": {}
+        }
+      },
+      "KalaMarket.Persistence.HomePage/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain.HomePage": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
+        "runtime": {
+          "KalaMarket.Persistence.HomePage.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Persistence.HomePage.dll": {}
+        }
+      },
+      "KalaMarket.Persistence.Products/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.Products": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
+        "runtime": {
+          "KalaMarket.Persistence.Products.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Persistence.Products.dll": {}
+        }
+      },
+      "KalaMarket.Persistence.Users/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Domain": "1.0.0",
+          "KalaMarket.Domain.Users": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
+        "runtime": {
+          "KalaMarket.Persistence.Users.dll": {}
+        },
+        "compile": {
+          "KalaMarket.Persistence.Users.dll": {}
         }
       },
       "KalaMarket.Resourses/1.0.0": {
@@ -3659,7 +3809,7 @@
         },
         "compileOnly": true
       },
-      "System.IO.Pipelines/6.0.0.0": {
+      "System.IO.Pipelines.Reference/6.0.0.0": {
         "compile": {
           "System.IO.Pipelines.dll": {}
         },
@@ -4297,6 +4447,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoMapper/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WIadGC1pIwbnyTubvI577p3F++Bsj9q2Q3OaAc1I0QS+JhupN1xkdrPBhI9bPIeg63zM81tZplUNYkqU1HE5jQ==",
+      "path": "automapper/11.0.1",
+      "hashPath": "automapper.11.0.1.nupkg.sha512"
+    },
     "Castle.Core/5.1.0": {
       "type": "package",
       "serviceable": true,
@@ -4311,12 +4468,19 @@
       "path": "coverlet.collector/3.1.2",
       "hashPath": "coverlet.collector.3.1.2.nupkg.sha512"
     },
-    "FluentValidation/11.2.0": {
+    "FluentValidation/11.2.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KV1YBM8T4plLKmShjxfmHMF6X1lDuXgyqE+t8NYNxb7jmMbPnA3u30RsuXAf2NYMv0TBCUQguI2Z6W17c/Dh1A==",
-      "path": "fluentvalidation/11.2.0",
-      "hashPath": "fluentvalidation.11.2.0.nupkg.sha512"
+      "sha512": "sha512-5QEte2BUZZF6Sezeekr7Zu1THfgpxU7pmuL2SjIrajuGMah+pxPGiRiLtw+x/tSUSSVmcv9LrUe41lKu4l0n4A==",
+      "path": "fluentvalidation/11.2.2",
+      "hashPath": "fluentvalidation.11.2.2.nupkg.sha512"
+    },
+    "LazZiya.TagHelpers/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qYWVS9Mx61jmYrI+iNhw6vyH5u4W/VsAy0aTeKplNDU63K2WVSI7RdvWKSXuti0kZn+iQGkwpHz820ukCTTpPQ==",
+      "path": "lazziya.taghelpers/6.0.2",
+      "hashPath": "lazziya.taghelpers.6.0.2.nupkg.sha512"
     },
     "Mapster/7.3.0": {
       "type": "package",
@@ -4353,12 +4517,12 @@
       "path": "microsoft.aspnetcore.authentication.core/2.2.0",
       "hashPath": "microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Authentication.Google/6.0.8": {
+    "Microsoft.AspNetCore.Authentication.Google/6.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LncCnqtKYQspPgFUFa+iNCAF4G3cRP11wXqNvGKobZbVQBVoFyerutD2OaXoWUHakbt4H6SoVWsIc5HB5wvzZQ==",
-      "path": "microsoft.aspnetcore.authentication.google/6.0.8",
-      "hashPath": "microsoft.aspnetcore.authentication.google.6.0.8.nupkg.sha512"
+      "sha512": "sha512-el+CYfwbPZrbR9YoXhgWm9VeMpUCrSincdxfvPS4pW1fq3KLdf/Wxm1R7aZMahKfeCpOEe01gA6kOTuqvpPO0w==",
+      "path": "microsoft.aspnetcore.authentication.google/6.0.9",
+      "hashPath": "microsoft.aspnetcore.authentication.google.6.0.9.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/2.2.0": {
       "type": "package",
@@ -4444,12 +4608,12 @@
       "path": "microsoft.aspnetcore.http.extensions/2.2.0",
       "hashPath": "microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+    "Microsoft.AspNetCore.Http.Features/5.0.17": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
-      "path": "microsoft.aspnetcore.http.features/2.2.0",
-      "hashPath": "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512"
+      "sha512": "sha512-3jG2xS+dx8DDCGV/F+STdPTg89lX3ao3dF/VEPvJaz3wzBIjuadipTtYNEXDIVuOPZwb6jdmhrX9jkzOIBm5cw==",
+      "path": "microsoft.aspnetcore.http.features/5.0.17",
+      "hashPath": "microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/2.2.0": {
       "type": "package",
@@ -4493,19 +4657,19 @@
       "path": "microsoft.aspnetcore.mvc.razor/2.2.0",
       "hashPath": "microsoft.aspnetcore.mvc.razor.2.2.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.8": {
+    "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zBENAUijwKwHdUxXUk9TpvoWJuXc0dMppToKqRM5hdYN8WlpEbtjIPIUdmtwGkt29nkm0i6KxvKEt9a39yP/dw==",
-      "path": "microsoft.aspnetcore.mvc.razor.extensions/6.0.8",
-      "hashPath": "microsoft.aspnetcore.mvc.razor.extensions.6.0.8.nupkg.sha512"
+      "sha512": "sha512-Fs/85nHuWqmtYGc35BcyChs5IiSEUOZZCC/sWSD0QYvjYfbZ5XrJLCUDytjYoN7+PHxjiSpi5YLEvcVnJg8dsQ==",
+      "path": "microsoft.aspnetcore.mvc.razor.extensions/6.0.9",
+      "hashPath": "microsoft.aspnetcore.mvc.razor.extensions.6.0.9.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/6.0.8": {
+    "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/6.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-x0387GPRJWpyqvYSxg8Y0fzE9ECEJoQA1wsrpA5DU9mXr5zfxWqvgcvNV87RvNRQBqdjzCqwLu+LSoxyvlTtJw==",
-      "path": "microsoft.aspnetcore.mvc.razor.runtimecompilation/6.0.8",
-      "hashPath": "microsoft.aspnetcore.mvc.razor.runtimecompilation.6.0.8.nupkg.sha512"
+      "sha512": "sha512-3f62pyMoJhGmFpCT1SxeXe1LYESvWvCna4gmkiUjlu4Lg7Yx5VccmoFqideuFLVaLspefJzjKUkgEUvLWwwuYA==",
+      "path": "microsoft.aspnetcore.mvc.razor.runtimecompilation/6.0.9",
+      "hashPath": "microsoft.aspnetcore.mvc.razor.runtimecompilation.6.0.9.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Mvc.RazorPages/2.2.5": {
       "type": "package",
@@ -4528,12 +4692,12 @@
       "path": "microsoft.aspnetcore.razor/2.2.0",
       "hashPath": "microsoft.aspnetcore.razor.2.2.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Razor.Language/6.0.8": {
+    "Microsoft.AspNetCore.Razor.Language/6.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5HSg+7F1kVauirGQJTfmr5OvxbyWXetNZ1tkz3dV0DG1uT4PqcTUKbe2gy0lmQXnnzX9R97ZiWzMBhLWeuLP/A==",
-      "path": "microsoft.aspnetcore.razor.language/6.0.8",
-      "hashPath": "microsoft.aspnetcore.razor.language.6.0.8.nupkg.sha512"
+      "sha512": "sha512-+vqmkvCu5YRC3FigWbWllREL28otF/7c2NCkp6CPty+mSNC8JpDkT+UOVbC3UdbJfLJAYPP2Jf35I0s/HGeUpQ==",
+      "path": "microsoft.aspnetcore.razor.language/6.0.9",
+      "hashPath": "microsoft.aspnetcore.razor.language.6.0.9.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Runtime/2.2.0": {
       "type": "package",
@@ -4591,26 +4755,26 @@
       "path": "microsoft.codeanalysis.csharp/4.0.0",
       "hashPath": "microsoft.codeanalysis.csharp.4.0.0.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.Razor/6.0.8": {
+    "Microsoft.CodeAnalysis.Razor/6.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CwTImQOoLI9oV329WFtZs+RIf+zeLeKtv89N8prThh2sBLuYfJcW5RRibmhtGe84gDMOFrgbtNGMgBLXH1yw/w==",
-      "path": "microsoft.codeanalysis.razor/6.0.8",
-      "hashPath": "microsoft.codeanalysis.razor.6.0.8.nupkg.sha512"
+      "sha512": "sha512-lrne86FU1NX7MA+RK4ewpJ0qdoq1L52L1Nm7Px4i/loxFvukDJ+1ZNF8U2xXfNr/YlwtCTFz4qtI60FEJkh4nw==",
+      "path": "microsoft.codeanalysis.razor/6.0.9",
+      "hashPath": "microsoft.codeanalysis.razor.6.0.9.nupkg.sha512"
     },
-    "Microsoft.CodeCoverage/17.1.0": {
+    "Microsoft.CodeCoverage/17.3.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0N/ZJ71ncCxQWhgtkEYKOgu2oMHa8h1tsOUbhmIKXF8UwtSUCe4vHAsJ3DVcNWRwNfQzSTy263ZE+QF6MdIhhQ==",
-      "path": "microsoft.codecoverage/17.1.0",
-      "hashPath": "microsoft.codecoverage.17.1.0.nupkg.sha512"
+      "sha512": "sha512-+CeYNY9hYNRgv1wAID5koeDVob1ZOrOYfRRTLxU9Zm5ZMDMkMZ8wzXgakxVv+jtk8tPdE8Ze9vVE+czMKapv/Q==",
+      "path": "microsoft.codecoverage/17.3.2",
+      "hashPath": "microsoft.codecoverage.17.3.2.nupkg.sha512"
     },
-    "Microsoft.CSharp/4.5.0": {
+    "Microsoft.CSharp/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
-      "path": "microsoft.csharp/4.5.0",
-      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.Data.SqlClient/2.1.4": {
       "type": "package",
@@ -4626,40 +4790,40 @@
       "path": "microsoft.data.sqlclient.sni.runtime/2.1.1",
       "hashPath": "microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore/6.0.7": {
+    "Microsoft.EntityFrameworkCore/6.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9BsvGSpTzxvqnxH19wLBFivK5TzWmsHZQc/1cQ4b2e+k85aIG9R4FYewQLHZdPrAxNQImXjTyW5nRI3s1rpt6A==",
-      "path": "microsoft.entityframeworkcore/6.0.7",
-      "hashPath": "microsoft.entityframeworkcore.6.0.7.nupkg.sha512"
+      "sha512": "sha512-3QxYF6TR14O3cSZitdzM10Smsw+hweLXyB45PN4ZVjrX4GqzUoGZ0ZC06r0ST7O7SgYxNjxw34ay5XXbBTX86A==",
+      "path": "microsoft.entityframeworkcore/6.0.9",
+      "hashPath": "microsoft.entityframeworkcore.6.0.9.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/6.0.7": {
+    "Microsoft.EntityFrameworkCore.Abstractions/6.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bjU0CkTqldgpVPTSj9M+R/3EaTz+u0jMeQMIC91YdGYDbpX/tAN5UYx+Ihzk4AtP8gmhburQUgMTdnmCE9c5sA==",
-      "path": "microsoft.entityframeworkcore.abstractions/6.0.7",
-      "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.7.nupkg.sha512"
+      "sha512": "sha512-XglcSAr6EtjqJpI0DjMMDWkq3l5zG45hRHgrodZFMxNxE7KettJ+X8Em39Aaa0XQwH2P+NHVyK+xhtPX8ogdEA==",
+      "path": "microsoft.entityframeworkcore.abstractions/6.0.9",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.9.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/6.0.7": {
+    "Microsoft.EntityFrameworkCore.Analyzers/6.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VAOrGma8mRspUb/9quwIr21UZVqfWOcRQqhcYNkHBUD7woenwFTBvntiC9h2Ebtvj/BrRfezqjaHpWVvPSg4dw==",
-      "path": "microsoft.entityframeworkcore.analyzers/6.0.7",
-      "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.7.nupkg.sha512"
+      "sha512": "sha512-rNIx4fr7KWH4ypghhI+78PhCUYBHdjVbQ3yKvj/KmUIe4d9pysHXT3lF9TuReVdMDsn5mEx+3Yez8s80J4/JLA==",
+      "path": "microsoft.entityframeworkcore.analyzers/6.0.9",
+      "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.9.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational/6.0.7": {
+    "Microsoft.EntityFrameworkCore.Relational/6.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0uo4fPDHutMbd9AJJEKl2q/2fYuFGA8tEBE2fQeQFaNDd+F/aUjaXc1FUD84J7Wcax8WP40rZo1E0u9A0yPPZw==",
-      "path": "microsoft.entityframeworkcore.relational/6.0.7",
-      "hashPath": "microsoft.entityframeworkcore.relational.6.0.7.nupkg.sha512"
+      "sha512": "sha512-LAZHEvlgSg6OUzLUH3BoVneYrQj7cQqwwFnzSfwVGNjQvj5RRh7Vz0eSXLKfQD4xv5QuSm3l+MzFMZC1NBPQHw==",
+      "path": "microsoft.entityframeworkcore.relational/6.0.9",
+      "hashPath": "microsoft.entityframeworkcore.relational.6.0.9.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/6.0.7": {
+    "Microsoft.EntityFrameworkCore.SqlServer/6.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-D9YV3hc3VSN1qrfdrZcKtMcRLT6bUqj8KtaUdkmO1CH/+meL+8z3Rge5iPhwQ4ol2AwPQlQYVPTTajf9ulSFGg==",
-      "path": "microsoft.entityframeworkcore.sqlserver/6.0.7",
-      "hashPath": "microsoft.entityframeworkcore.sqlserver.6.0.7.nupkg.sha512"
+      "sha512": "sha512-AFSLWlwPKK92kvKGs9mwno7UMKHk30SRLmA4Ikh5FSzs86NqiyxvH2tvdFwUodTIWHXJPJ3fV/Q6v9znipOKBg==",
+      "path": "microsoft.entityframeworkcore.sqlserver/6.0.9",
+      "hashPath": "microsoft.entityframeworkcore.sqlserver.6.0.9.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
       "type": "package",
@@ -4829,12 +4993,12 @@
       "path": "microsoft.net.http.headers/2.2.0",
       "hashPath": "microsoft.net.http.headers.2.2.0.nupkg.sha512"
     },
-    "Microsoft.NET.Test.Sdk/17.1.0": {
+    "Microsoft.NET.Test.Sdk/17.3.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MVKvOsHIfrZrvg+8aqOF5dknO/qWrR1sWZjMPQ1N42MKMlL/zQL30FQFZxPeWfmVKWUWAOmAHYsqB5OerTKziw==",
-      "path": "microsoft.net.test.sdk/17.1.0",
-      "hashPath": "microsoft.net.test.sdk.17.1.0.nupkg.sha512"
+      "sha512": "sha512-apR0ha1T8FujBwq1P8i/DOZjbI5XhcP/i8As4NnVztVSpZG8GtWRPCstcmgkUkBpvEfcrrDPlJWbuZY+Hl1hSg==",
+      "path": "microsoft.net.test.sdk/17.3.2",
+      "hashPath": "microsoft.net.test.sdk.17.3.2.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",
@@ -4850,19 +5014,19 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.ObjectModel/17.1.0": {
+    "Microsoft.TestPlatform.ObjectModel/17.3.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OMo/FYnKGy3lZEK0gfitskRM3ga/YBt6MyCyFPq0xNLeybGOQ6HnYNAAvzyePo5WPuMiw3LX+HiuRWNjnas1fA==",
-      "path": "microsoft.testplatform.objectmodel/17.1.0",
-      "hashPath": "microsoft.testplatform.objectmodel.17.1.0.nupkg.sha512"
+      "sha512": "sha512-DJEIfSA2GDC+2m42vKGNR2hm+Uhta4SpCsLZVVvYIiYMjxtk7GzNnv82qvE4SCW3kIYllMg2D0rr8juuj/f7AA==",
+      "path": "microsoft.testplatform.objectmodel/17.3.2",
+      "hashPath": "microsoft.testplatform.objectmodel.17.3.2.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.TestHost/17.1.0": {
+    "Microsoft.TestPlatform.TestHost/17.3.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JS0JDLniDhIzkSPLHz7N/x1CG8ywJOtwInFDYA3KQvbz+ojGoT5MT2YDVReL1b86zmNRV8339vsTSm/zh0RcMg==",
-      "path": "microsoft.testplatform.testhost/17.1.0",
-      "hashPath": "microsoft.testplatform.testhost.17.1.0.nupkg.sha512"
+      "sha512": "sha512-113J19v31pIx+PzmdEw67cWTZWh/YApnprbclFeat6szNbnpKOKG7Ap4PX5LT6E5Da+xONyilxvx2HZPpEaXPQ==",
+      "path": "microsoft.testplatform.testhost/17.3.2",
+      "hashPath": "microsoft.testplatform.testhost.17.3.2.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
@@ -5228,6 +5392,13 @@
       "path": "system.io.filesystem.primitives/4.3.0",
       "hashPath": "system.io.filesystem.primitives.4.3.0.nupkg.sha512"
     },
+    "System.IO.Pipelines/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Iew+dfa6FFiyvWBdRmXApixRY1db+beyutpIck4SOSe0NLM8FD/7AD54MscqVLhvfSMLHO7KadjTRT7fqxOGTA==",
+      "path": "system.io.pipelines/5.0.2",
+      "hashPath": "system.io.pipelines.5.0.2.nupkg.sha512"
+    },
     "System.Linq/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -5578,12 +5749,12 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "xunit/2.4.1": {
+    "xunit/2.4.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XNR3Yz9QTtec16O0aKcO6+baVNpXmOnPUxDkCY97J+8krUYxPvXT1szYYEUdKk4sB8GOI2YbAjRIOm8ZnXRfzQ==",
-      "path": "xunit/2.4.1",
-      "hashPath": "xunit.2.4.1.nupkg.sha512"
+      "sha512": "sha512-6Mj73Ont3zj2CJuoykVJfE0ZmRwn7C+pTuRP8c4bnaaTFjwNG6tGe0prJ1yIbMe9AHrpDys63ctWacSsFJWK/w==",
+      "path": "xunit/2.4.2",
+      "hashPath": "xunit.2.4.2.nupkg.sha512"
     },
     "xunit.abstractions/2.0.3": {
       "type": "package",
@@ -5592,47 +5763,47 @@
       "path": "xunit.abstractions/2.0.3",
       "hashPath": "xunit.abstractions.2.0.3.nupkg.sha512"
     },
-    "xunit.analyzers/0.10.0": {
+    "xunit.analyzers/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4/IDFCJfIeg6bix9apmUtIMwvOsiwqdEexeO/R2D4GReIGPLIRODTpId/l4LRSrAJk9lEO3Zx1H0Zx6uohJDNg==",
-      "path": "xunit.analyzers/0.10.0",
-      "hashPath": "xunit.analyzers.0.10.0.nupkg.sha512"
+      "sha512": "sha512-BeO8hEgs/c8Ls2647fPfieMngncvf0D0xYNDfIO59MolxtCtVjFRd6SRc+7tj8VMqkVOuJcnc9eh4ngI2cAmLQ==",
+      "path": "xunit.analyzers/1.0.0",
+      "hashPath": "xunit.analyzers.1.0.0.nupkg.sha512"
     },
-    "xunit.assert/2.4.1": {
+    "xunit.assert/2.4.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-O/Oe0BS5RmSsM+LQOb041TzuPo5MdH2Rov+qXGS37X+KFG1Hxz7kopYklM5+1Y+tRGeXrOx5+Xne1RuqLFQoyQ==",
-      "path": "xunit.assert/2.4.1",
-      "hashPath": "xunit.assert.2.4.1.nupkg.sha512"
+      "sha512": "sha512-pxJISOFjn2XTTi1mcDCkRZrTFb9OtRRCtx2kZFNF51GdReLr1ls2rnyxvAS4JO247K3aNtflvh5Q0346K5BROA==",
+      "path": "xunit.assert/2.4.2",
+      "hashPath": "xunit.assert.2.4.2.nupkg.sha512"
     },
-    "xunit.core/2.4.1": {
+    "xunit.core/2.4.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Zsj5OMU6JasNGERXZy8s72+pcheG6Q15atS5XpZXqAtULuyQiQ6XNnUsp1gyfC6WgqScqMvySiEHmHcOG6Eg0Q==",
-      "path": "xunit.core/2.4.1",
-      "hashPath": "xunit.core.2.4.1.nupkg.sha512"
+      "sha512": "sha512-KB4yGCxNqIVyekhJLXtKSEq6BaXVp/JO3mbGVE1hxypZTLEe7h+sTbAhpA+yZW2dPtXTuiW+C1B2oxxHEkrmOw==",
+      "path": "xunit.core/2.4.2",
+      "hashPath": "xunit.core.2.4.2.nupkg.sha512"
     },
-    "xunit.extensibility.core/2.4.1": {
+    "xunit.extensibility.core/2.4.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-yKZKm/8QNZnBnGZFD9SewkllHBiK0DThybQD/G4PiAmQjKtEZyHi6ET70QPU9KtSMJGRYS6Syk7EyR2EVDU4Kg==",
-      "path": "xunit.extensibility.core/2.4.1",
-      "hashPath": "xunit.extensibility.core.2.4.1.nupkg.sha512"
+      "sha512": "sha512-W1BoXTIN1C6kpVSMw25huSet25ky6IAQUNovu3zGOGN/jWnbgSoTyCrlIhmXSg0tH5nEf8q7h3OjNHOjyu5PfA==",
+      "path": "xunit.extensibility.core/2.4.2",
+      "hashPath": "xunit.extensibility.core.2.4.2.nupkg.sha512"
     },
-    "xunit.extensibility.execution/2.4.1": {
+    "xunit.extensibility.execution/2.4.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7e/1jqBpcb7frLkB6XDrHCGXAbKN4Rtdb88epYxCSRQuZDRW8UtTfdTEVpdTl8s4T56e07hOBVd4G0OdCxIY2A==",
-      "path": "xunit.extensibility.execution/2.4.1",
-      "hashPath": "xunit.extensibility.execution.2.4.1.nupkg.sha512"
+      "sha512": "sha512-CZmgcKkwpyo8FlupZdWpJCryrAOWLh1FBPG6gmVZuPQkGQsim/oL4PcP4nfrC2hHgXUFtluvaJ0Sp9PQKUMNpg==",
+      "path": "xunit.extensibility.execution/2.4.2",
+      "hashPath": "xunit.extensibility.execution.2.4.2.nupkg.sha512"
     },
-    "xunit.runner.visualstudio/2.4.3": {
+    "xunit.runner.visualstudio/2.4.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kZZSmOmKA8OBlAJaquPXnJJLM9RwQ27H7BMVqfMLUcTi9xHinWGJiWksa3D4NEtz0wZ/nxd2mogObvBgJKCRhQ==",
-      "path": "xunit.runner.visualstudio/2.4.3",
-      "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
+      "sha512": "sha512-OwHamvBdUKgqsXfBzWiCW/O98BTx81UKzx2bieIOQI7CZFE5NEQZGi8PBQGIKawDW96xeRffiNf20SjfC0x9hw==",
+      "path": "xunit.runner.visualstudio/2.4.5",
+      "hashPath": "xunit.runner.visualstudio.2.4.5.nupkg.sha512"
     },
     "01_Framework.AspCore/1.0.0": {
       "type": "project",
@@ -5640,6 +5811,16 @@
       "sha512": ""
     },
     "KalaMarket.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Application.Agg/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Application.HomePage/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5659,12 +5840,32 @@
       "serviceable": false,
       "sha512": ""
     },
+    "KalaMarket.Domain.HomePage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Domain.Products/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Domain.Users/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "KalaMarket.EndPoint/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "KalaMarket.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Infrastructure.HomePage/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5680,6 +5881,21 @@
       "sha512": ""
     },
     "KalaMarket.Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Persistence.HomePage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Persistence.Products/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Persistence.Users/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -6609,7 +6825,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.IO.Pipelines/6.0.0.0": {
+    "System.IO.Pipelines.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

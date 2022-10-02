@@ -1,0 +1,8 @@
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\obj\Release\net6.0\KalaMarket.EndPoint.csproj.AssemblyReference.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\obj\Release\net6.0\KalaMarket.EndPoint.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\obj\Release\net6.0\KalaMarket.EndPoint.AssemblyInfoInputs.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\obj\Release\net6.0\KalaMarket.EndPoint.AssemblyInfo.cs
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\obj\Release\net6.0\KalaMarket.EndPoint.csproj.CoreCompileInputs.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\obj\Release\net6.0\KalaMarket.EndPoint.MvcApplicationPartsAssemblyInfo.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\obj\Release\net6.0\KalaMarket.EndPoint.RazorAssemblyInfo.cache
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\obj\Release\net6.0\KalaMarket.EndPoint.RazorAssemblyInfo.cs

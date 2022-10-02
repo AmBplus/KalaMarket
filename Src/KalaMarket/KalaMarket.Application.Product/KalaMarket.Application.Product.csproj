@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KalaMarket.Application\KalaMarket.Application.csproj" />
+    <ProjectReference Include="..\KalaMarket.Domain.Products\KalaMarket.Domain.Products.csproj" />
     <ProjectReference Include="..\KalaMarket.Domain\KalaMarket.Domain.csproj" />
     <ProjectReference Include="..\KalaMarket.Resourses\KalaMarket.Resourses.csproj" />
     <ProjectReference Include="..\KalaMarket.Shared\KalaMarket.Shared.csproj" />
