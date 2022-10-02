@@ -17,7 +17,7 @@ namespace KalaMarket.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.7")
+                .HasAnnotation("ProductVersion", "6.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -41,8 +41,8 @@ namespace KalaMarket.Persistence.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<DateTime?>("RemoveTime")
                         .HasColumnType("datetime2");
@@ -77,8 +77,8 @@ namespace KalaMarket.Persistence.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<long?>("ParentCategoryId")
                         .HasColumnType("bigint");
@@ -134,8 +134,8 @@ namespace KalaMarket.Persistence.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -149,6 +149,9 @@ namespace KalaMarket.Persistence.Migrations
 
                     b.Property<DateTime?>("UpdateTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<decimal>("ViewCount")
+                        .HasColumnType("decimal(20,0)");
 
                     b.HasKey("Id");
 
@@ -177,13 +180,13 @@ namespace KalaMarket.Persistence.Migrations
 
                     b.Property<string>("KeyName")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("KeyValue")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<long>("ProductId")
                         .HasColumnType("bigint");
@@ -272,26 +275,26 @@ namespace KalaMarket.Persistence.Migrations
                         new
                         {
                             Id = 1L,
-                            InsertTime = new DateTime(2022, 9, 26, 6, 27, 31, 376, DateTimeKind.Local).AddTicks(3175),
+                            InsertTime = new DateTime(2022, 10, 2, 6, 3, 40, 538, DateTimeKind.Local).AddTicks(220),
                             IsRemoved = false,
                             Name = "Admin",
-                            UpdateTime = new DateTime(2022, 9, 26, 6, 27, 31, 376, DateTimeKind.Local).AddTicks(3083)
+                            UpdateTime = new DateTime(2022, 10, 2, 6, 3, 40, 538, DateTimeKind.Local).AddTicks(175)
                         },
                         new
                         {
                             Id = 2L,
-                            InsertTime = new DateTime(2022, 9, 26, 6, 27, 31, 376, DateTimeKind.Local).AddTicks(3280),
+                            InsertTime = new DateTime(2022, 10, 2, 6, 3, 40, 538, DateTimeKind.Local).AddTicks(272),
                             IsRemoved = false,
                             Name = "Operator",
-                            UpdateTime = new DateTime(2022, 9, 26, 6, 27, 31, 376, DateTimeKind.Local).AddTicks(3271)
+                            UpdateTime = new DateTime(2022, 10, 2, 6, 3, 40, 538, DateTimeKind.Local).AddTicks(265)
                         },
                         new
                         {
                             Id = 3L,
-                            InsertTime = new DateTime(2022, 9, 26, 6, 27, 31, 376, DateTimeKind.Local).AddTicks(3360),
+                            InsertTime = new DateTime(2022, 10, 2, 6, 3, 40, 538, DateTimeKind.Local).AddTicks(341),
                             IsRemoved = false,
                             Name = "Customer",
-                            UpdateTime = new DateTime(2022, 9, 26, 6, 27, 31, 376, DateTimeKind.Local).AddTicks(3292)
+                            UpdateTime = new DateTime(2022, 10, 2, 6, 3, 40, 538, DateTimeKind.Local).AddTicks(334)
                         });
                 });
 

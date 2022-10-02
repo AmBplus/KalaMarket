@@ -20,6 +20,7 @@ public static class ParsContext
         catch (Exception e)
         {
             result.Message = ErrorMessages.ProblemOccurred;
+            result.IsSuccess = false;
             logger.LogError(e, e.Message);
         }
 
@@ -39,6 +40,7 @@ public static class ParsContext
         catch (Exception e)
         {
             result.Message = ErrorMessages.ProblemOccurred;
+            result.IsSuccess = false;
             logger.LogError(e, e.Message);
         }
 

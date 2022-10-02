@@ -108,6 +108,37 @@ public class Product : BaseEntity<long>
         Displayed = !Displayed;
         return true;
     }
+
+    /// <summary>
+    /// Plus 1 ViewCount
+    /// </summary>
+    /// <returns></returns>
+    public bool IncreaseViewCount()
+    {
+        ViewCount += 1;
+        return true;
+    }
+    /// <summary>
+    /// Increase ViewCount By Entered Params
+    /// </summary>
+    /// <param name="viewCount"></param>
+    /// <returns></returns>
+    public bool IncreaseViewCount(ulong viewCount)
+    {
+        ViewCount += viewCount;
+        return true;
+    }
+    /// <summary>
+    /// Set ViewCount By Entered Param
+    /// </summary>
+    /// <param name="viewCount"></param>
+    /// <returns></returns>
+    public bool SetViewCount(ulong viewCount)
+    {
+        ViewCount = viewCount;
+        return true;
+    }
+    
     #endregion /Methods
 
     #region Properties
@@ -120,6 +151,7 @@ public class Product : BaseEntity<long>
     public bool Displayed { get; private set; }
     public Brand Brand { get; set; }
     public decimal Price { get; private set; }
+    public ulong ViewCount { get; private set; } = 0; 
     public ushort? BrandId { get; private set; }
     public virtual Category Category { get;  set; }
     public long CategoryId { get;private set; }

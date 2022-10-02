@@ -10,40 +10,48 @@ public class GetProductDetailForSiteService : IGetProductDetailForSiteService
 {
     private IKalaMarketContext Context { get; }
     public ILoggerManger Logger { get; }
-
+    private ResultDto<ProductDetailForSiteDto> Result { get; }
     public GetProductDetailForSiteService(IKalaMarketContext context, ILoggerManger logger)
     {
         Context = context;
         Logger = logger;
+        Result = new ResultDto<ProductDetailForSiteDto>(new ProductDetailForSiteDto());
     }
     public ResultDto<ProductDetailForSiteDto> Execute(RequestGetDetailProductForSiteDto request)
     {
-        ResultDto<ProductDetailForSiteDto> result =
-            new ResultDto<ProductDetailForSiteDto>(new ProductDetailForSiteDto());
-        var Product = GenerateQueryForProduct(request.Id).FirstOrDefault();
-
-        if (CheckIsNullProduct(result, Product!)) return result;
-
-        result.Data = MapToDto(Product!);
-        result.IsSuccess = true;
-        result.Message = Messages.OperationDoneSuccessfully;
-        return result;
+        var product = GenerateQueryForProduct(request.Id).FirstOrDefault();
+        IncreaseViewCount(product);
+        if (CheckIsNullProduct( product!)) return Result;
+        return SetResult(product);
     }
-
     public async Task<ResultDto<ProductDetailForSiteDto>> ExecuteAsync(RequestGetDetailProductForSiteDto request)
     {
-        ResultDto<ProductDetailForSiteDto> result =
-            new ResultDto<ProductDetailForSiteDto>(new ProductDetailForSiteDto());
-        var Product =await GenerateQueryForProduct(request.Id).FirstOrDefaultAsync();
-
-        if (CheckIsNullProduct(result, Product)) return result;
-        result.Data = MapToDto(Product);
-        result.IsSuccess = true;
-        result.Message = Messages.OperationDoneSuccessfully;
-        return result;
+        var product = await GenerateQueryForProduct(request.Id).FirstOrDefaultAsync();
+        if (CheckIsNullProduct(product!)) return Result;
+        await IncreaseViewCountAsync(product);
+        return SetResult(product);
+    }
+    private ResultDto<ProductDetailForSiteDto> SetResult(Domain.Entities.ProductAgg.Product product)
+    {
+        Result.Data = MapToDto(product!);
+        Result.IsSuccess = true;
+        Result.Message = Messages.OperationDoneSuccessfully;
+        return Result;
     }
 
-    private bool CheckIsNullProduct(ResultDto<ProductDetailForSiteDto> result,Domain.Entities.ProductAgg.Product product)
+ 
+
+    private void IncreaseViewCount(Domain.Entities.ProductAgg.Product product)
+    {
+        product.IncreaseViewCount();
+        Context.SaveChanges();
+    }
+    private async Task IncreaseViewCountAsync(Domain.Entities.ProductAgg.Product product)
+    {
+        product.IncreaseViewCount();
+        await Context.SaveChangesAsync();
+    }
+    private bool CheckIsNullProduct(Domain.Entities.ProductAgg.Product product)
     {
         if (product != null)
         {
@@ -51,7 +59,7 @@ public class GetProductDetailForSiteService : IGetProductDetailForSiteService
         }
         var message = string.Format(ErrorMessages.NotFind, nameof(Product));
         Logger.LogError(exception: new NullReferenceException(message), message);
-        result.Message = message;
+        Result.Message = message;
         return true;
     }
 

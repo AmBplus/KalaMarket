@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DYUpRFpGZJUVgTmAl/nwCDdqlTurEekaxYW8WxRwVTA=",
+  "Hash": "AU8zucagcMwad2AbDCf+WE1Yepl+9pqzjOr0PnCyJSA=",
   "Source": "KalaMarket.EndPoint",
   "BasePath": "_content/KalaMarket.EndPoint",
   "Mode": "Default",
@@ -5914,6 +5914,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\images\\Products\\9dd96ce5-6b92-41db-a249-c797e1f58f5b.jpg",
+      "SourceId": "KalaMarket.EndPoint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\",
+      "BasePath": "_content/KalaMarket.EndPoint",
+      "RelativePath": "images/Products/9dd96ce5-6b92-41db-a249-c797e1f58f5b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Products\\9dd96ce5-6b92-41db-a249-c797e1f58f5b.jpg"
+    },
+    {
+      "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\images\\Products\\b0e28e89-9a96-43c6-b2df-4e984442fbd6.jpg",
+      "SourceId": "KalaMarket.EndPoint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\",
+      "BasePath": "_content/KalaMarket.EndPoint",
+      "RelativePath": "images/Products/b0e28e89-9a96-43c6-b2df-4e984442fbd6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Products\\b0e28e89-9a96-43c6-b2df-4e984442fbd6.jpg"
     },
     {
       "Identity": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.EndPoint\\wwwroot\\js\\site.js",

@@ -19,20 +19,20 @@ public class GetProductsForSiteService : IGetProductsForSiteService
     }
     public ResultDto<ResultGetProductsForSiteDto> Execute(RequestGetProductsForSiteDto request)
     {
-        result.Data.Products = SelectAndPagination(GenerateQuery(request), request.Page).ToList();
+        result.Data.Products = SelectAndPagination(GenerateQuery(request), request.Page,request.PageSize).ToList();
         return result;
     }
     public async Task<ResultDto<ResultGetProductsForSiteDto>> ExecuteAsync(RequestGetProductsForSiteDto request)
     {
-        result.Data.Products = await SelectAndPagination(GenerateQuery(request), request.Page).ToListAsync();
+        result.Data.Products = await SelectAndPagination(GenerateQuery(request), request.Page,request.PageSize).ToListAsync();
         return result;
     }
 
-    private IQueryable<GetProductForSiteDto> SelectAndPagination(IQueryable<Domain.Entities.ProductAgg.Product> query, int page)
+    private IQueryable<GetProductForSiteDto> SelectAndPagination(IQueryable<Domain.Entities.ProductAgg.Product> query, int page,byte pageSize)
     {
         int totalRow = 0;
         var result = SelectListProductDto(query)
-            .ToPaged(page, KalaMarketConstants.Page.PageSizeInWeb, out totalRow);
+            .ToPaged(page, pageSize, out totalRow);
         GenerateSucessResult(totalRow);
         return result;
     }
@@ -46,6 +46,7 @@ public class GetProductsForSiteService : IGetProductsForSiteService
     {
         var query = GenerateQueryIncludeImage();
         query = WhereCategoryIdIsNotNull(query, request.CategoryId);
+        query = OrderBy(query, request.Order);
         query = WhereSearchKeyNotNull(query, request.SearchKey).AsNoTracking();
         return query;
     }
@@ -87,6 +88,47 @@ public class GetProductsForSiteService : IGetProductsForSiteService
         if (categoryId != null && categoryId!=0)
         {
             return query.Include(x => x.Category).Where(x => x.Category.Id == categoryId || x.Category.Id == categoryId);
+        }
+        return query;
+    }
+
+    private IQueryable<Domain.Entities.ProductAgg.Product> OrderBy(IQueryable<Domain.Entities.ProductAgg.Product> query,OrderingProduct order)
+    {
+        switch (order)
+        {
+            case OrderingProduct.BestSelling:
+            {
+                
+                break;
+            }
+            case OrderingProduct.MostPopular:
+            {
+                query = query.OrderByDescending(x => x.ViewCount);
+                break;
+            }
+            case OrderingProduct.MostVisited:
+            {
+                query = query.OrderByDescending(x => x.ViewCount);
+                break;
+            }
+            case OrderingProduct.Cheapest:
+            {
+                query = query.OrderBy(x => x.Price);
+                break;
+            }
+            case OrderingProduct.TheMostExpensive:
+            {
+                query = query.OrderByDescending(x => x.Price);
+                break;
+            }
+            case OrderingProduct.TheNewest:
+            case OrderingProduct.NotOrder:
+            default:
+            {
+                query = query.OrderByDescending(x => x.Id);
+                break;
+            }
+                
         }
         return query;
     }

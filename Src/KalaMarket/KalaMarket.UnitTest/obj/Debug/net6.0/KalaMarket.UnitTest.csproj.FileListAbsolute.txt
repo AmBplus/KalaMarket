@@ -495,3 +495,5 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debu
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\KalaMarket.UnitTest.genruntimeconfig.cache
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\ref\KalaMarket.UnitTest.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\AutoMapper.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\LazZiya.TagHelpers.dll
