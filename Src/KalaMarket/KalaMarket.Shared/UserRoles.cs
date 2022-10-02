@@ -2,7 +2,7 @@
 
 public enum UserRoles : long
 {
-     Admin ,
-     Operator,
-     Customer
+    Admin,
+    Operator,
+    Customer
 }

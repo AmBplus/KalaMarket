@@ -10,7 +10,7 @@ public class GetRoleService : IGetRoleService
         Context = context;
     }
 
-    IKalaMarketContext Context { get;  }
+    IKalaMarketContext Context { get; }
     /// <summary>
     ///  Get Role Id
     /// </summary>

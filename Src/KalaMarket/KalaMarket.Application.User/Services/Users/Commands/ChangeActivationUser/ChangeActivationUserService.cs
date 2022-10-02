@@ -47,7 +47,7 @@ public class ChangeActivationUserService : IChangeActivationUserService
         catch (Exception e)
         {
             resultDto.Message = e.Message;
-            LogManger.LogError(exception: e,message : e.Message);
+            LogManger.LogError(exception: e, message: e.Message);
         }
 
         return resultDto;

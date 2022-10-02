@@ -14,17 +14,17 @@ public class GetUserWithRolesService : IGetUserWithRolesService
         Context = context;
     }
 
-    
+
     private IKalaMarketContext Context { get; }
     public ResultDto<GetUserWithRoleDto> Execute(RequestGetUserWithRolesDto request)
     {
-        var user = Context.Users.Include(x => x.UserInRoles).ThenInclude(x => x.Role).Select(x =>new GetUserWithRoleDto()
+        var user = Context.Users.Include(x => x.UserInRoles).ThenInclude(x => x.Role).Select(x => new GetUserWithRoleDto()
         {
             Email = x.Email,
             FullName = x.FullName,
             Password = x.Password,
             Id = x.Id,
-            Role = x.UserInRoles.Select(x=>x.Role.Name)
+            Role = x.UserInRoles.Select(x => x.Role.Name)
         }).Where(x => x.Email == request.Email).FirstOrDefault();
         ResultDto<GetUserWithRoleDto> result = new ResultDto<GetUserWithRoleDto>(user);
         if (user == null)
@@ -32,9 +32,9 @@ public class GetUserWithRolesService : IGetUserWithRolesService
             result.Message = Messages.NotFindUser;
             return result;
         }
-       
-            result.Message = Messages.OperationDoneSuccessfully;
-            result.IsSuccess = true;
-            return result;
+
+        result.Message = Messages.OperationDoneSuccessfully;
+        result.IsSuccess = true;
+        return result;
     }
 }

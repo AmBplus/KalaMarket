@@ -31,7 +31,7 @@ public static class CheckTypeHelper
     /// <returns>File is Image = true,Otherwise = False</returns>
     public static bool FileIsValidImage(this IFormFile file)
     {
-      
+
         // get file head byte
         byte[] fileHead = ReadFileHead(file);
         // Start Check Match To Supported Image Type

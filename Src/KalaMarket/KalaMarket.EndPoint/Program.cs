@@ -1,6 +1,7 @@
 using KalaMarket.EndPoint.Infrastructure.Security;
 using KalaMarket.EndPoint.Infrastructure.Settings;
 using KalaMarket.Infrastructure;
+using KalaMarket.Infrastructure.HomePage;
 using KalaMarket.Infrastructure.Product;
 using KalaMarket.Infrastructure.User;
 using Microsoft.AspNetCore.Authentication.Google;
@@ -20,7 +21,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 try
 {
- 
+
     #region NLog
     builder.Logging.ClearProviders();
     builder.Host.UseNLog();
@@ -90,10 +91,11 @@ try
 
     string connection = builder.Configuration.GetConnectionString("ConnectionSql");
 
-    // Add Application And Db Services
+    // Add Application And Database Services
     builder.Services.ConfigureServices(connection);
     builder.Services.ConfigureUserServices();
     builder.Services.ConfigureProductServices();
+    builder.Services.ConfigureHomePageServices();
 }
 catch (Exception e)
 {

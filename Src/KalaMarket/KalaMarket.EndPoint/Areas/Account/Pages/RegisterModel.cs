@@ -1,5 +1,4 @@
-﻿using System.Security.Claims;
-using KalaMarket.Application.User.Services.Users.Commands.RegisterUser.Dto;
+﻿using KalaMarket.Application.User.Services.Users.Commands.RegisterUser.Dto;
 using KalaMarket.Application.User.Services.Users.Commands.RegisterUser.Interfaces;
 using KalaMarket.Application.User.Services.Users.Queries.GetRole;
 using KalaMarket.EndPoint.Infrastructure;
@@ -8,6 +7,7 @@ using KalaMarket.Shared;
 using Mapster;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using Utility = KalaMarket.EndPoint.Infrastructure.Security.Utility;
 
 namespace KalaMarket.EndPoint.Areas.Account.Pages
@@ -16,7 +16,7 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
     {
         #region Constructor
 
-        public RegisterModel(IGetRoleService roleService , IRegisterUserService registerUserService, ILoggerManger<RegisterModel> logger)
+        public RegisterModel(IGetRoleService roleService, IRegisterUserService registerUserService, ILoggerManger<RegisterModel> logger)
         {
             RoleService = roleService;
             RegisterUserService = registerUserService;
@@ -39,8 +39,8 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
 
         public void OnGet()
         {
-            
-            var roleId =RoleService.Execute(UserRoles.Customer.ToString());
+
+            var roleId = RoleService.Execute(UserRoles.Customer.ToString());
             if (roleId == null)
             {
                 throw new Exception("با پشتبانی تماس حاصل فرمایید");
@@ -48,7 +48,7 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
             RegisterUser = new();
             RegisterUser.RoleId = (long)roleId;
         }
-    
+
 
         public async Task<IActionResult> OnPost()
         {
@@ -57,14 +57,14 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
 
             if (result.IsSuccess)
             {
-                AddToastSuccess(result.Message); 
+                AddToastSuccess(result.Message);
                 await LoginUser(RegisterUser);
                 return RedirectToPage("/");
             }
             else
             {
                 AddToastError(result.Message);
-                ModelState.AddModelError("",result.Message);
+                ModelState.AddModelError("", result.Message);
                 return Page();
             }
 
@@ -72,7 +72,7 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
 
         private async Task LoginUser(RegisterCustomerViewModel registerUser)
         {
-            if (User != null || User.Identity != null || User.Identity.IsAuthenticated ||  User.Identities.Count() > 0)
+            if (User != null || User.Identity != null || User.Identity.IsAuthenticated || User.Identities.Count() > 0)
             {
                 await HttpContext.SignOutAsync(Utility.AuthenticationScheme);
             }
@@ -91,7 +91,7 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
             };
             await HttpContext.SignInAsync(Utility.AuthenticationScheme,
                 new ClaimsPrincipal(claimIdentity), authProperties);
-            
+
         }
 
         #endregion /Methods

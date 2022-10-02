@@ -2,7 +2,6 @@
 using KalaMarket.Application.User.Services.Users.FacadePattern;
 using KalaMarket.EndPoint.Infrastructure;
 using KalaMarket.EndPoint.Models.Account.Admin;
-using KalaMarket.Shared.Dto;
 using Mapster;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -13,17 +12,17 @@ namespace KalaMarket.EndPoint.Pages.Admin.Users
     {
         #region Ctor
 
-        public RegisterModel(IUserFacadeService userFacadeService)
+        public RegisterModel(IUserAggFacadeService userAggFacadeService)
         {
-            UserFacadeService = userFacadeService;
+            UserAggFacadeService = userAggFacadeService;
         }
 
         #endregion
 
         #region Properties_Fields
 
-        private IUserFacadeService UserFacadeService { get; } 
-     
+        private IUserAggFacadeService UserAggFacadeService { get; }
+
         [BindProperty]
         public RegisterAdminViewModel RegisterAdmin { get; set; }
         public SelectList Roles { get; set; }
@@ -33,7 +32,7 @@ namespace KalaMarket.EndPoint.Pages.Admin.Users
 
         public void OnGet()
         {
-            Roles = new SelectList(UserFacadeService.UserQuery.GetRolesService.Execute().Roles, "Id", "Name");
+            Roles = new SelectList(UserAggFacadeService.UserQuery.GetRolesService.Execute().Roles, "Id", "Name");
         }
 
         public IActionResult OnPost()
@@ -41,16 +40,16 @@ namespace KalaMarket.EndPoint.Pages.Admin.Users
             // Check Model Is Valid
             if (!ModelState.IsValid)
             {
-                Roles = new SelectList(UserFacadeService.UserQuery.GetRolesService.Execute().Roles, "Id", "Name");
+                Roles = new SelectList(UserAggFacadeService.UserQuery.GetRolesService.Execute().Roles, "Id", "Name");
                 return Page();
             }
-            
+
             // Register User
-            var result =UserFacadeService.UserCommand.RegisterUserService.Execute(RegisterAdmin.Adapt<RequestRegisterUserDto>());
+            var result = UserAggFacadeService.UserCommand.RegisterUserService.Execute(RegisterAdmin.Adapt<RequestRegisterUserDto>());
             // Check Register Is Failed
             if (!result.IsSuccess)
             {
-                ModelState.AddModelError("",result.Message);
+                ModelState.AddModelError("", result.Message);
                 AddToastError(result.Message);
                 return Page();
             }
@@ -60,6 +59,6 @@ namespace KalaMarket.EndPoint.Pages.Admin.Users
         }
 
         #endregion Methods
-        
+
     }
 }

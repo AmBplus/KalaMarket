@@ -1,60 +1,60 @@
 ﻿namespace KalaMarket.EndPoint.Infrastructure.Messages
 {
-	/// <summary>
-	/// Version 3.0
-	/// </summary>
-	public static class Utility
-	{
-		static Utility()
-		{
-		}
+    /// <summary>
+    /// Version 3.0
+    /// </summary>
+    public static class Utility
+    {
+        static Utility()
+        {
+        }
 
-		public static bool AddMessage
-			(Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionary tempData,
-			MessageType type, string? message)
-		{
-			message =
-				Shared.Utility.FixText(text: message);
+        public static bool AddMessage
+            (Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionary tempData,
+            MessageType type, string? message)
+        {
+            message =
+                Shared.Utility.FixText(text: message);
 
-			if (message == null)
-			{
-				return false;
-			}
+            if (message == null)
+            {
+                return false;
+            }
 
-	
-			System.Collections.Generic.List<string>? list;
 
-			var tempDataItems =
-				(tempData[key: type.ToString()] as
-				System.Collections.Generic.IList<string>);
+            System.Collections.Generic.List<string>? list;
 
-			if (tempDataItems == null)
-			{
-				list = new System.Collections.Generic.List<string>();
-			}
-			else
-			{
-				list =
-					tempDataItems as
-					System.Collections.Generic.List<string>;
+            var tempDataItems =
+                (tempData[key: type.ToString()] as
+                System.Collections.Generic.IList<string>);
 
-				if (list == null)
-				{
-					list = tempDataItems.ToList();
-				}
-			}
+            if (tempDataItems == null)
+            {
+                list = new System.Collections.Generic.List<string>();
+            }
+            else
+            {
+                list =
+                    tempDataItems as
+                    System.Collections.Generic.List<string>;
 
-			tempData[key: type.ToString()] = list;
-			// **************************************************
+                if (list == null)
+                {
+                    list = tempDataItems.ToList();
+                }
+            }
 
-			if (list.Contains(item: message))
-			{
-				return false;
-			}
+            tempData[key: type.ToString()] = list;
+            // **************************************************
 
-			list.Add(item: message);
+            if (list.Contains(item: message))
+            {
+                return false;
+            }
 
-			return true;
-		}
-	}
+            list.Add(item: message);
+
+            return true;
+        }
+    }
 }

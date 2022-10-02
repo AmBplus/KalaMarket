@@ -12,12 +12,12 @@ namespace KalaMarket.EndPoint.Pages.Admin.Users
         private IGetUsersService GetUsersService { get; }
         private IChangeActivationUserService ChangeActivationUser { get; }
         public ResultGetUserDto UsersInfo { get; set; }
-        public IndexModel( IGetUsersService getUsersService, IChangeActivationUserService changeActivationUser)
+        public IndexModel(IGetUsersService getUsersService, IChangeActivationUserService changeActivationUser)
         {
             GetUsersService = getUsersService;
             ChangeActivationUser = changeActivationUser;
         }
-        public void OnGet(string? searchKey,int page = 1  )
+        public void OnGet(string? searchKey, int page = 1)
         {
             UsersInfo = GetUsersService.Execute(new RequestGetUserDto()
             {

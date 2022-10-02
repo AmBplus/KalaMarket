@@ -104,7 +104,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Product", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.Product", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -390,7 +390,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.Navigation("ParentCategory");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Product", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.Product", b =>
                 {
                     b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Brand", "Brand")
                         .WithMany("Products")
@@ -411,7 +411,7 @@ namespace KalaMarket.Persistence.Migrations
 
             modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductFeatures", b =>
                 {
-                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Product", "Product")
+                    b.HasOne("KalaMarket.Domain.Products.ProductAgg.Product", "Product")
                         .WithMany("Features")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -422,7 +422,7 @@ namespace KalaMarket.Persistence.Migrations
 
             modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductImages", b =>
                 {
-                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Product", "Product")
+                    b.HasOne("KalaMarket.Domain.Products.ProductAgg.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -462,7 +462,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.Navigation("SubCategories");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Product", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.Product", b =>
                 {
                     b.Navigation("Features");
 

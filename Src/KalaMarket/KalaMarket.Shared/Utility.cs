@@ -1,87 +1,87 @@
 ﻿namespace KalaMarket.Shared
 {
-	public static class Utility 
-	{
-		static Utility()
-		{
-		}
-	
-		public static System.DateTime Now
-		{
-			get
-			{
-				var currentCulture =
-					System.Threading.Thread.CurrentThread.CurrentCulture;
+    public static class Utility
+    {
+        static Utility()
+        {
+        }
 
-				var currentUICulture =
-					System.Threading.Thread.CurrentThread.CurrentUICulture;
+        public static System.DateTime Now
+        {
+            get
+            {
+                var currentCulture =
+                    System.Threading.Thread.CurrentThread.CurrentCulture;
 
-				var englishCulture =
-					new System.Globalization.CultureInfo(name: "en-US");
+                var currentUICulture =
+                    System.Threading.Thread.CurrentThread.CurrentUICulture;
 
-				System.Threading.Thread.CurrentThread.CurrentCulture = englishCulture;
-				System.Threading.Thread.CurrentThread.CurrentUICulture = englishCulture;
+                var englishCulture =
+                    new System.Globalization.CultureInfo(name: "en-US");
 
-				var result =
-					System.DateTime.Now;
+                System.Threading.Thread.CurrentThread.CurrentCulture = englishCulture;
+                System.Threading.Thread.CurrentThread.CurrentUICulture = englishCulture;
 
-				//var result =
-				//	System.DateTime.Now.AddMinutes(value: 210);
+                var result =
+                    System.DateTime.Now;
 
-				System.Threading.Thread.CurrentThread.CurrentCulture = currentCulture;
-				System.Threading.Thread.CurrentThread.CurrentUICulture = currentUICulture;
+                //var result =
+                //	System.DateTime.Now.AddMinutes(value: 210);
 
-				return result;
-			}
-		}
+                System.Threading.Thread.CurrentThread.CurrentCulture = currentCulture;
+                System.Threading.Thread.CurrentThread.CurrentUICulture = currentUICulture;
+
+                return result;
+            }
+        }
 
 
-		public static string? FixText(string? text)
-		{
-			if (string.IsNullOrWhiteSpace(text))
-			{
-				return null;
-			}
+        public static string? FixText(string? text)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                return null;
+            }
 
-			text =
-				text.Trim();
+            text =
+                text.Trim();
 
-			while (text.Contains("  "))
-			{
-				text =
-					text.Replace("  ", " ");
-			}
+            while (text.Contains("  "))
+            {
+                text =
+                    text.Replace("  ", " ");
+            }
 
-			return text;
-		}
+            return text;
+        }
 
-		public static string? RemoveSpaces(string? text)
-		{
-			if (string.IsNullOrWhiteSpace(text))
-			{
-				return null;
-			}
+        public static string? RemoveSpaces(string? text)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                return null;
+            }
 
-			text =
-				text.Trim();
+            text =
+                text.Trim();
 
-			text = text.Replace(oldValue: " ", newValue: string.Empty);
+            text = text.Replace(oldValue: " ", newValue: string.Empty);
 
-			return text;
-		}
+            return text;
+        }
 
-		public static string? RemoveSpacesAndMakeTextCaseInsensitive(string? text)
-		{
-			text = RemoveSpaces(text: text);
+        public static string? RemoveSpacesAndMakeTextCaseInsensitive(string? text)
+        {
+            text = RemoveSpaces(text: text);
 
-			if (string.IsNullOrWhiteSpace(value: text))
-			{
-				return text;
-			}
+            if (string.IsNullOrWhiteSpace(value: text))
+            {
+                return text;
+            }
 
-			text = text.ToLower();
+            text = text.ToLower();
 
-			return text;
-		}
-	}
+            return text;
+        }
+    }
 }

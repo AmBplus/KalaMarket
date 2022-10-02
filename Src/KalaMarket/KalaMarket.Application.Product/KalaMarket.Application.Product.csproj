@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Services\Product\ProductService\Queries\**" />
-    <EmbeddedResource Remove="Services\Product\ProductService\Queries\**" />
-    <None Remove="Services\Product\ProductService\Queries\**" />
+    <Compile Remove="Services\Products\ProductService\Queries\**" />
+    <EmbeddedResource Remove="Services\Products\ProductService\Queries\**" />
+    <None Remove="Services\Products\ProductService\Queries\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,10 +21,6 @@
 
   <ItemGroup>
     <Folder Include="MapConfig\Mapster\" />
-    <Folder Include="Services\Product\BrandService\Query\GetAll\" />
-    <Folder Include="Services\Product\ProductService\Query\GetProductsForAdmin\" />
-    <Folder Include="Services\Product\ProductService\Query\GetDetailProductForAdmin\" />
-    <Folder Include="Services\Product\ProductService\Query\GetProductDetailForSite\" />
   </ItemGroup>
 
   <ItemGroup>

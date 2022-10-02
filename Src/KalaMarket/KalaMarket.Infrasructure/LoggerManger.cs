@@ -1,18 +1,12 @@
-﻿using KalaMarket.Resourses;
-using KalaMarket.Shared;
-using KalaMarket.Shared.Dto;
-using Microsoft.Extensions.Logging;
+﻿using KalaMarket.Shared;
 using NLog;
-using ILogger = Microsoft.Extensions.Logging.ILogger;
-
-
 namespace KalaMarket.Infrastructure;
 public class LoggerManger : ILoggerManger
 {
     protected NLog.ILogger Logger { get; set; }
     public LoggerManger()
     {
-        if(Logger == null)
+        if (Logger == null)
         {
             Logger = LogManager.GetCurrentClassLogger();
         }
@@ -66,11 +60,11 @@ public class LoggerManger : ILoggerManger
     #endregion
 }
 
-public class LoggerManger<T> : LoggerManger , ILoggerManger<T> where T : class
+public class LoggerManger<T> : LoggerManger, ILoggerManger<T> where T : class
 {
-    public LoggerManger() :base()
+    public LoggerManger() : base()
     {
-       base.Logger = LogManager.GetLogger(typeof(T).FullName);
+        base.Logger = LogManager.GetLogger(typeof(T).FullName);
     }
-   
+
 }

@@ -2,5 +2,5 @@
 
 public interface IIsActive
 {
-    bool IsActive { get;   }
+    bool IsActive { get; }
 }

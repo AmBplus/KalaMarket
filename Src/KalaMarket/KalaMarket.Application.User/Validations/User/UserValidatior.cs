@@ -4,7 +4,7 @@ using KalaMarket.Shared;
 
 namespace KalaMarket.Application.User.Validations.User;
 
-public class UserValidatior : AbstractValidator<Domain.Entities.UserAgg.User>
+public class UserValidatior : AbstractValidator<Domain.Users.UserAgg.User>
 {
     public UserValidatior()
     {

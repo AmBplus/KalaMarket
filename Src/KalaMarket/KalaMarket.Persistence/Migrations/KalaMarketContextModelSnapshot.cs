@@ -22,7 +22,37 @@ namespace KalaMarket.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Brand", b =>
+            modelBuilder.Entity("KalaMarket.Domain.HomePage.HomePages.MainSlider", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("InsertTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("RemoveTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Src")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MainSliders");
+                });
+
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.Brand", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -58,7 +88,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("Brands");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Category", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.Category", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -102,7 +132,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Product", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.Product", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -164,7 +194,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductFeatures", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.ProductFeatures", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -204,7 +234,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("ProductFeatures");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductImages", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.ProductImages", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -242,7 +272,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("ProductImages");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.UserAgg.Role", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Users.UserAgg.Role", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -275,30 +305,30 @@ namespace KalaMarket.Persistence.Migrations
                         new
                         {
                             Id = 1L,
-                            InsertTime = new DateTime(2022, 10, 2, 6, 3, 40, 538, DateTimeKind.Local).AddTicks(220),
+                            InsertTime = new DateTime(2022, 10, 2, 10, 53, 19, 814, DateTimeKind.Local).AddTicks(362),
                             IsRemoved = false,
                             Name = "Admin",
-                            UpdateTime = new DateTime(2022, 10, 2, 6, 3, 40, 538, DateTimeKind.Local).AddTicks(175)
+                            UpdateTime = new DateTime(2022, 10, 2, 10, 53, 19, 814, DateTimeKind.Local).AddTicks(251)
                         },
                         new
                         {
                             Id = 2L,
-                            InsertTime = new DateTime(2022, 10, 2, 6, 3, 40, 538, DateTimeKind.Local).AddTicks(272),
+                            InsertTime = new DateTime(2022, 10, 2, 10, 53, 19, 814, DateTimeKind.Local).AddTicks(653),
                             IsRemoved = false,
                             Name = "Operator",
-                            UpdateTime = new DateTime(2022, 10, 2, 6, 3, 40, 538, DateTimeKind.Local).AddTicks(265)
+                            UpdateTime = new DateTime(2022, 10, 2, 10, 53, 19, 814, DateTimeKind.Local).AddTicks(620)
                         },
                         new
                         {
                             Id = 3L,
-                            InsertTime = new DateTime(2022, 10, 2, 6, 3, 40, 538, DateTimeKind.Local).AddTicks(341),
+                            InsertTime = new DateTime(2022, 10, 2, 10, 53, 19, 814, DateTimeKind.Local).AddTicks(728),
                             IsRemoved = false,
                             Name = "Customer",
-                            UpdateTime = new DateTime(2022, 10, 2, 6, 3, 40, 538, DateTimeKind.Local).AddTicks(334)
+                            UpdateTime = new DateTime(2022, 10, 2, 10, 53, 19, 814, DateTimeKind.Local).AddTicks(703)
                         });
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.UserAgg.User", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Users.UserAgg.User", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -344,7 +374,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.UserAgg.UserInRole", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Users.UserAgg.UserInRole", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -379,24 +409,24 @@ namespace KalaMarket.Persistence.Migrations
                     b.ToTable("UserInRoles");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Category", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.Category", b =>
                 {
-                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Category", "ParentCategory")
+                    b.HasOne("KalaMarket.Domain.Products.ProductAgg.Category", "ParentCategory")
                         .WithMany("SubCategories")
                         .HasForeignKey("ParentCategoryId");
 
                     b.Navigation("ParentCategory");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Product", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.Product", b =>
                 {
-                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Brand", "Brand")
+                    b.HasOne("KalaMarket.Domain.Products.ProductAgg.Brand", "Brand")
                         .WithMany("Products")
                         .HasForeignKey("BrandId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Category", "Category")
+                    b.HasOne("KalaMarket.Domain.Products.ProductAgg.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -407,9 +437,9 @@ namespace KalaMarket.Persistence.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductFeatures", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.ProductFeatures", b =>
                 {
-                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Product", "Product")
+                    b.HasOne("KalaMarket.Domain.Products.ProductAgg.Product", "Product")
                         .WithMany("Features")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -418,9 +448,9 @@ namespace KalaMarket.Persistence.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.ProductImages", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.ProductImages", b =>
                 {
-                    b.HasOne("KalaMarket.Domain.Entities.ProductAgg.Product", "Product")
+                    b.HasOne("KalaMarket.Domain.Products.ProductAgg.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -429,15 +459,15 @@ namespace KalaMarket.Persistence.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.UserAgg.UserInRole", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Users.UserAgg.UserInRole", b =>
                 {
-                    b.HasOne("KalaMarket.Domain.Entities.UserAgg.Role", "Role")
+                    b.HasOne("KalaMarket.Domain.Users.UserAgg.Role", "Role")
                         .WithMany("UserInRoles")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("KalaMarket.Domain.Entities.UserAgg.User", "User")
+                    b.HasOne("KalaMarket.Domain.Users.UserAgg.User", "User")
                         .WithMany("UserInRoles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -448,31 +478,31 @@ namespace KalaMarket.Persistence.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Brand", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.Brand", b =>
                 {
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Category", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.Category", b =>
                 {
                     b.Navigation("Products");
 
                     b.Navigation("SubCategories");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.ProductAgg.Product", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.Product", b =>
                 {
                     b.Navigation("Features");
 
                     b.Navigation("Images");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.UserAgg.Role", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Users.UserAgg.Role", b =>
                 {
                     b.Navigation("UserInRoles");
                 });
 
-            modelBuilder.Entity("KalaMarket.Domain.Entities.UserAgg.User", b =>
+            modelBuilder.Entity("KalaMarket.Domain.Users.UserAgg.User", b =>
                 {
                     b.Navigation("UserInRoles");
                 });

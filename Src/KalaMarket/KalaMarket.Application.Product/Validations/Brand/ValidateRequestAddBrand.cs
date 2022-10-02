@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using KalaMarket.Application.Product.Services.Product.BrandService.Command.Add;
+using KalaMarket.Application.Product.Services.Products.BrandService.Command.Add;
 using KalaMarket.Resourses;
 using KalaMarket.Shared;
 
@@ -9,9 +9,9 @@ public class ValidateRequestAddBrand : AbstractValidator<RequestAddBrand>
 {
     public ValidateRequestAddBrand()
     {
-        RuleFor(x => x.Name).NotNull().WithMessage(x=>ErrorFluentValidation.Null)
+        RuleFor(x => x.Name).NotNull().WithMessage(x => ErrorFluentValidation.Null)
             .NotEmpty().WithMessage(ErrorFluentValidation.EmptyOrWhiteSpace)
             .MaximumLength(KalaMarketConstants.MaxLength.Name).WithMessage(ErrorFluentValidation.MaxLen);
-        
+
     }
 }

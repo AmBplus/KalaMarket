@@ -1,7 +1,6 @@
-﻿using KalaMarket.Application.Product.Services.Product.Common.Query.GetCategorySite;
-using KalaMarket.Application.Product.Services.Product.ProductAggFacade;
+﻿using KalaMarket.Application.Product.Services.Products.Common.Query.GetCategorySite;
+using KalaMarket.Application.Product.Services.Products.ProductAggFacade;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ViewComponents;
 
 namespace KalaMarket.EndPoint.Models.ViewComponents;
 
@@ -14,7 +13,7 @@ public class SearchInSiteComponent : ViewComponent
     }
 
     private IProductAggFacadeService ProductAggFacadeService { get; }
- 
+
     public async Task<IViewComponentResult> InvokeAsync()
     {
         var result = await ProductAggFacadeService.Common.Query.GetCategoriesSite.ExecuteAsync(new RequestGetCategorySiteDto());

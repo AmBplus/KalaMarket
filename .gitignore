@@ -4,3 +4,12 @@
 
 /Src/KalaMarket/.vs/KalaMarket/FileContentIndex/merges
 /Src/KalaMarket/.vs/KalaMarket/FileContentIndex
+/Src/KalaMarket/KalaMarket.Application.Contract/obj
+/Src/KalaMarket/KalaMarket.Application.HomePage/obj
+/Src/KalaMarket/KalaMarket.Domain.HomePage/obj
+/Src/KalaMarket/KalaMarket.Domain.Products/obj
+/Src/KalaMarket/KalaMarket.Domain.Users/obj
+/Src/KalaMarket/KalaMarket.Infrastructure.HomePage/obj
+/Src/KalaMarket/KalaMarket.Persistence.HomePage/obj
+/Src/KalaMarket/KalaMarket.Persistence.Products/obj
+/Src/KalaMarket/KalaMarket.Persistence.Users/obj

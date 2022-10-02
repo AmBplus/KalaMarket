@@ -18,7 +18,7 @@ public class UserCommandFacadeService : IUserCommandFacadeService
         Logger = logger;
     }
     #endregion /Constructor
-  
+
     #region Fields
     private readonly IKalaMarketContext Context;
     private readonly ILoggerManger Logger;
@@ -28,7 +28,7 @@ public class UserCommandFacadeService : IUserCommandFacadeService
     private IChangeRemoveUserService? _changeRemoveUserService;
     private IEditUserService? _editUserService;
     #endregion /Fields
-    
+
     #region Properties
     public IChangeActivationUserService ChangeActivationUserService => _changeActivationUserService ??= new ChangeActivationUserService(Context, Logger);
     public IChangeRemoveRoleService ChangeRemoveRoleService => _changeRemoveRoleService ??= new ChangeRemoveRoleService(Context, Logger);

@@ -3,7 +3,7 @@ using KalaMarket.Application.User.Services.Users.Commands.RegisterUser.Dto;
 using KalaMarket.Application.User.Services.Users.Commands.RegisterUser.Interfaces;
 using KalaMarket.Application.User.Validations.User;
 using KalaMarket.Application.User.Validations.Utility;
-using KalaMarket.Domain.Entities.UserAgg;
+using KalaMarket.Domain.Users.UserAgg;
 using KalaMarket.Resourses;
 using KalaMarket.Shared;
 using KalaMarket.Shared.Dto;
@@ -36,7 +36,7 @@ public class RegisterUserService : IRegisterUserService
     /// <returns></returns>
     public ResultDto<ResultRegisterUserDto> Execute(RequestRegisterUserDto registerUserDto)
     {
-        ResultDto<ResultRegisterUserDto> result = new (new ResultRegisterUserDto());
+        ResultDto<ResultRegisterUserDto> result = new(new ResultRegisterUserDto());
 
         //*******
         if (ValidateRequestRegisterDto(registerUserDto, result)) return result;
@@ -54,10 +54,10 @@ public class RegisterUserService : IRegisterUserService
         {
             if (Convert.ToBoolean(Context.SaveChanges()))
             {
-                
+
                 result.Data.UserId = user.Id;
                 result.IsSuccess = true;
-                result.Message =(string.Format(Messages.RegisterSuccessMessageWithUserName, user.Email));
+                result.Message = (string.Format(Messages.RegisterSuccessMessageWithUserName, user.Email));
                 LoggerManger.LogInformation(Messages.RegisterSuccessMessageWithUserName, user.Email);
             }
         }
@@ -65,17 +65,17 @@ public class RegisterUserService : IRegisterUserService
         {
             result.Data.UserId = user.Id;
             result.IsSuccess = false;
-            result.Message = string.Format(Messages.RegisterFailedMessageWithUserName,registerUserDto.Email);
+            result.Message = string.Format(Messages.RegisterFailedMessageWithUserName, registerUserDto.Email);
             LoggerManger.LogError(exception: e, message: e.Message);
-        } 
+        }
         return result;
 
         #endregion Try Save User And Return Result 
     }
 
-    private Domain.Entities.UserAgg.User CreateUser(RequestRegisterUserDto registerUserDto)
+    private Domain.Users.UserAgg.User CreateUser(RequestRegisterUserDto registerUserDto)
     {
-        return  new Domain.Entities.UserAgg.User(fullName:registerUserDto.FullName,email:registerUserDto.Email,password:registerUserDto.Password);
+        return new Domain.Users.UserAgg.User(fullName: registerUserDto.FullName, email: registerUserDto.Email, password: registerUserDto.Password);
     }
 
     private bool ValidateRequestRegisterDto(RequestRegisterUserDto registerUserDto, ResultDto<ResultRegisterUserDto> result)
@@ -103,7 +103,7 @@ public class RegisterUserService : IRegisterUserService
         return false;
     }
 
-    private bool AddUserInRole(Domain.Entities.UserAgg.User user, long roleId)
+    private bool AddUserInRole(Domain.Users.UserAgg.User user, long roleId)
     {
         var roles = Context.Roles.Find(roleId);
         if (roles != null)

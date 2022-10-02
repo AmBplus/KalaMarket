@@ -1,5 +1,5 @@
 ﻿@page "{searchKey?}/{categoryId?}"
-@using KalaMarket.Application.Product.Services.Product.ProductService.Query.GetProductsForSite
+@using KalaMarket.Application.Product.Services.Products.ProductService.Query.GetProductsForSite
 @model KalaMarket.EndPoint.Pages.Site.Products.IndexModel
 @{
 }
@@ -15,7 +15,7 @@
                 <h4>مرتب&zwnj;سازی بر اساس :</h4>
             </div>
             <div class="nav-sort-tabs-res">
-                <ul class="nav sort-tabs-options" id="myTab" role="tablist">
+                <ul class="nav sort-tabs-options" id="myTab" role="tablist"> 
                     <li class="nav-item">
                         <a class="nav-link active" asp-route-CategoryId="@Model.CategoryId" asp-route-pageSize="@Model.PageSize" 
                            asp-route-searchKey="@Model.SearchKey" asp-route-page="@Model.Page"
@@ -105,8 +105,7 @@
                         show-prev-next="true"
                         show-total-pages="true"
                         show-total-records="true"
-                        show-page-size-nav="true"
-                        max-displayed-pages="8"
+                        text-total-records="تعداد رکورد ها"
                         text-next="بعدی"
                         text-total-pages="تعداد صفحات"
                         sr-text-next="Next"
@@ -114,7 +113,6 @@
                         text-first="اول"
                         text-last="آخر"
                         text-previous="قبلی"
-                        class-active-page="btn btn-primary"
                         show-first-numbered-page="true"
                         show-last-numbered-page="true"
                         query-string-key-page-no="page"

@@ -1,10 +1,11 @@
 ﻿#region Using
 
+using KalaMarket.Application.Agg.Services;
 using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Persistence.Context;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
 using KalaMarket.Shared;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 #endregion
 
@@ -12,7 +13,7 @@ namespace KalaMarket.Infrastructure;
 
 public static class ServiceBootstrapper
 {
-    public static void ConfigureServices(this IServiceCollection services , string connection )
+    public static void ConfigureServices(this IServiceCollection services, string connection)
     {
         #region DbService
         services.AddDbContext<IKalaMarketContext, KalaMarketContext>(option =>
@@ -23,5 +24,7 @@ public static class ServiceBootstrapper
         // Custom LogManger
         services.AddSingleton<ILoggerManger, LoggerManger>();
         services.AddSingleton(typeof(ILoggerManger<>), typeof(LoggerManger<>));
+        // Add Whole KalaMarket Services
+        services.AddScoped<IKalaMarketAggServices, KalaMarketAggServices>();
     }
 }

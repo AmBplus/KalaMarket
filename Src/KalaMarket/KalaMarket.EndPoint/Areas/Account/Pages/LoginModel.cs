@@ -1,4 +1,3 @@
-using System.Security.Claims;
 using KalaMarket.Application.User.Services.Users.FacadePattern;
 using KalaMarket.Application.User.Services.Users.Queries.GetUsers.Dto;
 using KalaMarket.EndPoint.Infrastructure;
@@ -6,6 +5,7 @@ using KalaMarket.EndPoint.Models.Account.Customer;
 using KalaMarket.Resourses;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using Task = System.Threading.Tasks.Task;
 using Utility = KalaMarket.EndPoint.Infrastructure.Security.Utility;
 
@@ -15,9 +15,9 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
     {
         #region Constructor
 
-        public LoginModel(IUserFacadeService userService)
+        public LoginModel(IUserAggFacadeService userAggService)
         {
-            UserService = userService;
+            UserAggService = userAggService;
         }
 
         #endregion /Constructor
@@ -26,7 +26,7 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
 
         [BindProperty]
         public LoginCustomerViewModel LoginViewModel { get; set; }
-        private IUserFacadeService UserService { get; }
+        private IUserAggFacadeService UserAggService { get; }
 
         #endregion /Properties
 
@@ -38,9 +38,9 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
 
         public async Task OnPost()
         {
-            if(!ModelState.IsValid)return;
+            if (!ModelState.IsValid) return;
             // Get UserResult
-            var userResult =  UserService.UserQuery.GetUserWithRolesService.Execute(new RequestGetUserWithRolesDto()
+            var userResult = UserAggService.UserQuery.GetUserWithRolesService.Execute(new RequestGetUserWithRolesDto()
             {
                 Email = LoginViewModel.Email,
                 Password = LoginViewModel.Password
@@ -53,18 +53,18 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
                 return;
             }
             // Check Password
-            var isSamePassword = string.Compare(LoginViewModel.Password, userResult.Data.Password,ignoreCase: false);
+            var isSamePassword = string.Compare(LoginViewModel.Password, userResult.Data.Password, ignoreCase: false);
             if (isSamePassword == 0)
             {
-                ModelState.AddModelError("", errorMessage:ErrorMessages.WrongEmailOrPassword);
+                ModelState.AddModelError("", errorMessage: ErrorMessages.WrongEmailOrPassword);
                 AddToastError(ErrorMessages.WrongEmailOrPassword);
                 return;
             }
             // LoginUser
-            await  LoginCustomerViewModel(userResult.Data);
+            await LoginCustomerViewModel(userResult.Data);
 
         }
-        private async Task<IActionResult> LoginCustomerViewModel(GetUserWithRoleDto loginDto )
+        private async Task<IActionResult> LoginCustomerViewModel(GetUserWithRoleDto loginDto)
         {
             // Create Claims
             var claims = new List<Claim>
@@ -74,9 +74,9 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
             };
             foreach (var role in loginDto.Role)
             {
-                claims.Add(new (ClaimTypes.Role,role));   
+                claims.Add(new(ClaimTypes.Role, role));
             }
-            
+
             // Add Clams To ClaimIdentity
             var claimIdentity = new ClaimsIdentity(claims, Utility.AuthenticationScheme);
             // Create AuthConfiguration

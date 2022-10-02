@@ -11,7 +11,7 @@ build_property.RootNamespace = KalaMarket.EndPoint
 build_property.ProjectDir = C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint
 build_property._RazorSourceGeneratorDebug = 
 
@@ -149,6 +149,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Shared/Components/GetSiteMenuComponent/GetSiteMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcR2V0U2l0ZU1lbnVDb21wb25lbnRcR2V0U2l0ZU1lbnUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Shared/Components/GetSiteSideMenuComponent/GetSiteSideMenuComponent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcR2V0U2l0ZVNpZGVNZW51Q29tcG9uZW50XEdldFNpdGVTaWRlTWVudUNvbXBvbmVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Shared/Components/SearchInSiteComponent/SearchInSiteComponent.cshtml]

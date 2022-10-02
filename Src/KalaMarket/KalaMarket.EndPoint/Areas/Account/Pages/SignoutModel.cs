@@ -10,7 +10,7 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
         public async Task<IActionResult> OnGetAsync(string returnUrl = null)
         {
             await HttpContext.SignOutAsync(Utility.AuthenticationScheme);
-            return RedirectToPage("/"); 
+            return RedirectToPage("/");
         }
     }
 }

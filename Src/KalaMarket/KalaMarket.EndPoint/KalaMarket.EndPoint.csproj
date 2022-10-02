@@ -177,12 +177,14 @@
     <ProjectReference Include="..\01_Framework.AspCore\01_Framework.AspCore.csproj" />
     <ProjectReference Include="..\KalaMarket.Application.User\KalaMarket.Application.User.csproj" />
     <ProjectReference Include="..\KalaMarket.Infrasructure\KalaMarket.Infrastructure.csproj" />
+    <ProjectReference Include="..\KalaMarket.Infrastructure.HomePage\KalaMarket.Infrastructure.HomePage.csproj" />
     <ProjectReference Include="..\KalaMarket.Infrastructure.Product\KalaMarket.Infrastructure.Product.csproj" />
     <ProjectReference Include="..\KalaMarket.Infrastructure.User\KalaMarket.Infrastructure.User.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Areas\Account\Pages\Shared\_Partial\_RegisterScriptPartial.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Shared\Components\GetSiteSideMenuComponent\GetSiteSideMenuComponent.cshtml" />
     <_ContentIncludedByDefault Remove="Pages\Shared\Components\SearchInSiteComponent\SearchInSiteComponent.cshtml" />
     <_ContentIncludedByDefault Remove="Pages\Shared\Components\GetSiteMenuComponent\GetSiteMenu.cshtml" />
   </ItemGroup>
@@ -197,6 +199,10 @@
 
   <ItemGroup>
     <UpToDateCheckInput Remove="Pages\Shared\Components\SearchInSiteComponent\SearchInSiteComponent.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Shared\Components\GetSiteSideMenuComponent\GetSiteSideMenuComponent.cshtml" />
   </ItemGroup>
 
 </Project>

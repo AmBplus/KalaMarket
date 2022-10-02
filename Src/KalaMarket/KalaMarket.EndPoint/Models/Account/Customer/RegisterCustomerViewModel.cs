@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using KalaMarket.Resourses;
+﻿using KalaMarket.Resourses;
 using KalaMarket.Shared;
+using System.ComponentModel.DataAnnotations;
 
 namespace KalaMarket.EndPoint.Models.Account.Customer;
 
@@ -24,7 +24,7 @@ public class RegisterCustomerViewModel : BaseRegisterViewModel
     public long RoleId { get; set; }
     // ************************************************************************************
     [Display(Name = "قوانین سایت")]
-    [IsAcceptValidation(ErrorMessageResourceName = nameof(ErrorMessages.AcceptLaw),ErrorMessageResourceType = typeof(ErrorMessages))]
+    [IsAcceptValidation(ErrorMessageResourceName = nameof(ErrorMessages.AcceptLaw), ErrorMessageResourceType = typeof(ErrorMessages))]
     public bool IsAcceptLaw { get; set; } = false;
 
     #endregion /RoleIdAttribute

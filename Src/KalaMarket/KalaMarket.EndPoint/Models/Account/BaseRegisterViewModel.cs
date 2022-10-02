@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using KalaMarket.Resourses;
+﻿using KalaMarket.Resourses;
 using KalaMarket.Shared;
+using System.ComponentModel.DataAnnotations;
 
 namespace KalaMarket.EndPoint.Models.Account;
 
@@ -21,7 +21,7 @@ public class BaseRegisterViewModel
         KalaMarketConstants.RegularExpression.EmailAddress
         , ErrorMessageResourceType = typeof(ErrorMessages)
         , ErrorMessageResourceName = nameof(ErrorMessages.EmailType))]
-   
+
     #endregion Attribute
 
     public string Email { get; set; }
@@ -43,7 +43,7 @@ public class BaseRegisterViewModel
     // ************************************************************************************
 
 
-   
+
     // ************************************************************************************
     #region Attribute
 

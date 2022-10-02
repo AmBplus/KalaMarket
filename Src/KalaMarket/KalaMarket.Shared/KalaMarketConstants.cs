@@ -1,38 +1,38 @@
 ﻿namespace KalaMarket.Shared
 {
-	public static class KalaMarketConstants 
+	public static class KalaMarketConstants
 	{
 		static KalaMarketConstants()
 		{
 		}
-		public static class  CategoryType
-        {
-            public const byte Category = 1;
+		public static class CategoryType
+		{
+			public const byte Category = 1;
 			public const byte SubCategory = 2;
 			//public const byte DepartmentCategory = 3;
 			//public const byte SubDepartmentCategory = 4;
-        }
+		}
 		public static class FolderPath
-        {
-            public const string ProductPath = "images\\products";
-        }
+		{
+			public const string ProductPath = "images\\products";
+		}
 		public static class ImageExtension
-        {
-            public const string Jpeg = ".jpeg";
-            public const string Jpg = ".jpg";
-            public const string Png = ".png";
-            public const string Webp = ".webp";
-        }
-        public static class Page
-        {
-            static Page()
-            {
-            }
+		{
+			public const string Jpeg = ".jpeg";
+			public const string Jpg = ".jpg";
+			public const string Png = ".png";
+			public const string Webp = ".webp";
+		}
+		public static class Page
+		{
+			static Page()
+			{
+			}
 
-            public const byte PageSize= 8;
-            public static byte PageSizeInWeb = 8;
-        }
-        public static class Logger 
+			public const byte PageSize = 8;
+			public static byte PageSizeInWeb = 8;
+		}
+		public static class Logger
 		{
 			static Logger()
 			{
@@ -41,17 +41,17 @@
 			public const string ErrorMessage = "Error Message: {Message}";
 		}
 
-		public static class Format 
+		public static class Format
 		{
 			static Format()
 			{
 			}
-            public const string Date = "yyyy/MM/dd";
+			public const string Date = "yyyy/MM/dd";
 			public const string Time = "HH:mm:ss";
 			public const string DateTime = "yyyy/MM/dd - HH:mm:ss";
 		}
 
-		public static class FixedLength 
+		public static class FixedLength
 		{
 			static FixedLength()
 			{
@@ -62,17 +62,17 @@
 			public const int DatabasePassword = 44;
 		}
 
-		public static class MinLength 
+		public static class MinLength
 		{
 			static MinLength()
 			{
 			}
 
-            public const int Password = 8; 
+			public const int Password = 8;
 			public const int CellPhoneNumberVerificationKey = 6;
 		}
 
-		public static class MaxLength 
+		public static class MaxLength
 		{
 			static MaxLength()
 			{
@@ -92,15 +92,15 @@
 			public const int CellPhoneNumberVerificationKey = 10;
 		}
 		public static class RoleId
-        {
-            public const int Minimum = 1;
+		{
+			public const int Minimum = 1;
 			public const int Maximum = 100;
-        }
+		}
 
 		/// <summary>
 		/// https://regex101.com/
 		/// </summary>
-		public static class RegularExpression 
+		public static class RegularExpression
 		{
 			static RegularExpression()
 			{
@@ -121,19 +121,19 @@
 			public const string EmailAddress =
 				@"^[a-zA-Z0-9_.-]+@[a-zA-Z0-9_.-]+$";
 
-            public const string Password =
-                //	@"^[a-zA-Z0-9_]$";
-                "^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+])[A-Za-z\\d][A-Za-z\\d!@#$%^&*()_+]{1,20}$";
+			public const string Password =
+				//	@"^[a-zA-Z0-9_]$";
+				"^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+])[A-Za-z\\d][A-Za-z\\d!@#$%^&*()_+]{1,20}$";
 
 
-            public const string IP =
+			public const string IP =
 				@"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$";
 
 			public const string Url =
 				@"https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)";
 		}
 
-		public static class Minimum 
+		public static class Minimum
 		{
 			static Minimum()
 			{
@@ -142,7 +142,7 @@
 			public const int Ordering = 1;
 		}
 
-		public static class Maximum 
+		public static class Maximum
 		{
 			static Maximum()
 			{

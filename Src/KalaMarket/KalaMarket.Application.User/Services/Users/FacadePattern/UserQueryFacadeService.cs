@@ -15,9 +15,9 @@ public class UserQueryFacadeService : IUserQueryFacadeService
     {
         Context = context;
         Logger = logger;
-    } 
+    }
     #endregion
-   
+
     #region Fields
     private readonly IKalaMarketContext Context;
     private readonly ILoggerManger Logger;
@@ -25,9 +25,9 @@ public class UserQueryFacadeService : IUserQueryFacadeService
     private IGetRemovedUsersService? _getRemovedUsersService;
     private IGetRolesService? _getRolesService;
     private IGetRoleService? _getRoleService;
-    private IGetUserWithRolesService? _getUserWithRolesService; 
+    private IGetUserWithRolesService? _getUserWithRolesService;
     #endregion
-    
+
     #region Properties
     public IGetUsersService GetUsersService => _getUsersService ??= new GetUsersService(Context);
 

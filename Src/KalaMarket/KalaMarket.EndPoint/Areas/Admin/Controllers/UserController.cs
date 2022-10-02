@@ -7,7 +7,7 @@ namespace KalaMarket.EndPoint.Areas.Admin.Controllers;
 [ApiController]
 [Area("Admin")]
 [Route("api/[area]/[controller]")]
-public class UserController :ControllerBase
+public class UserController : ControllerBase
 {
     public UserController(IChangeRemoveUserService changeRemoveUserService, IEditUserService editUserService)
     {
@@ -15,7 +15,7 @@ public class UserController :ControllerBase
         EditUserService = editUserService;
     }
 
-  
+
     private IChangeRemoveUserService ChangeRemoveUserService { get; }
     private IEditUserService EditUserService { get; }
     [HttpDelete("{id}")]

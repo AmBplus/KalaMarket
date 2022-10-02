@@ -37,7 +37,7 @@ public class EditUserService : IEditUserService
         catch (Exception e)
         {
             result.Message = e.Message;
-            LoggerManger.LogError(exception:e,message:e.Message);
+            LoggerManger.LogError(exception: e, message: e.Message);
         }
 
         return result;

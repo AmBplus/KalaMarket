@@ -1,5 +1,5 @@
-﻿using System.Text;
-using FluentValidation.Results;
+﻿using FluentValidation.Results;
+using System.Text;
 
 namespace KalaMarket.Application.User.Validations.Utility;
 

@@ -7,7 +7,7 @@ namespace KalaMarket.Application.Utility;
 
 public static class ParsContext
 {
-    public static bool HandleSaveChange(this IKalaMarketContext context, ResultDto result  , ILoggerManger logger )
+    public static bool HandleSaveChange(this IKalaMarketContext context, ResultDto result, ILoggerManger logger)
     {
         try
         {
@@ -15,7 +15,7 @@ public static class ParsContext
             result.IsSuccess = true;
             result.Message = Messages.OperationDoneSuccessfully;
             return true;
-            
+
         }
         catch (Exception e)
         {

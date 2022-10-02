@@ -35,8 +35,8 @@ public class GetUsersService : IGetUsersService
     public ResultGetUserDto Execute(RequestGetUserDto requestGetUser)
     {
         var users = Context.Users.AsQueryable();
-        users = users.QuerySearchGenerator(requestGetUser.SearchKey, 
-            p=>p.FullName.ToLower().Contains(requestGetUser.SearchKey.ToLower()) || p.Email.ToLower().Contains(requestGetUser.SearchKey.ToLower()));
+        users = users.QuerySearchGenerator(requestGetUser.SearchKey,
+            p => p.FullName.ToLower().Contains(requestGetUser.SearchKey.ToLower()) || p.Email.ToLower().Contains(requestGetUser.SearchKey.ToLower()));
         // filter by IsRemoved 
         users = users.Where(x => !x.IsRemoved);
         // Pagination 

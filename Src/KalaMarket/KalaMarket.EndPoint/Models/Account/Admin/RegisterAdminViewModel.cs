@@ -1,6 +1,6 @@
-using System.ComponentModel.DataAnnotations;
 using KalaMarket.Resourses;
 using KalaMarket.Shared;
+using System.ComponentModel.DataAnnotations;
 
 namespace KalaMarket.EndPoint.Models.Account.Admin;
 

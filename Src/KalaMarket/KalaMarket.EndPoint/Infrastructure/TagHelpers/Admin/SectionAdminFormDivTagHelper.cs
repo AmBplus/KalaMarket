@@ -1,7 +1,4 @@
 ﻿using _01_Framework.AspCore.TagHelpers;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
-using Microsoft.AspNetCore.Razor.Runtime.TagHelpers;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace KalaMarket.EndPoint.Infrastructure.TagHelpers.Admin

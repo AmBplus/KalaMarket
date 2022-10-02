@@ -1,10 +1,14 @@
-﻿using System.Reflection;
-using KalaMarket.Application.Interfaces.Context;
-using KalaMarket.Domain.Entities.ProductAgg;
-using KalaMarket.Domain.Entities.UserAgg;
+﻿using KalaMarket.Application.Interfaces.Context;
+using KalaMarket.Domain.HomePage.HomePages;
+using KalaMarket.Domain.Products.ProductAgg;
+using KalaMarket.Domain.Users.UserAgg;
+using KalaMarket.Persistence.HomePage.Configuration;
+using KalaMarket.Persistence.Products.Configuration;
+using KalaMarket.Persistence.Users.Configuration;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 namespace KalaMarket.Persistence.Context;
-public class KalaMarketContext : DbContext , IKalaMarketContext
+public class KalaMarketContext : DbContext, IKalaMarketContext
 {
     #region Ctor
     public KalaMarketContext(DbContextOptions<KalaMarketContext> options) : base(options)
@@ -22,6 +26,7 @@ public class KalaMarketContext : DbContext , IKalaMarketContext
     public DbSet<Brand> Brands { get; set; }
     public DbSet<ProductFeatures> ProductFeatures { get; set; }
     public DbSet<ProductImages> ProductImages { get; set; }
+    public DbSet<MainSlider> MainSliders { get; set; }
 
     #endregion Properties
 
@@ -29,9 +34,10 @@ public class KalaMarketContext : DbContext , IKalaMarketContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        //var assembly = typeof(KalaMarketContext).Assembly;
-        //modelBuilder.ApplyConfigurationsFromAssembly(assembly);
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(BrandConfiguration).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(UserConfiguration).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(SliderConfiguration).Assembly);
         base.OnModelCreating(modelBuilder);
     }
 

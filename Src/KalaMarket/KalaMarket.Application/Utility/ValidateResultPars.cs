@@ -14,7 +14,7 @@ public static class ValidateResultPars
         }
         return false;
     }
-    public static bool ValidateResultHasError(this ValidationResult resultValidate, ResultDto result) 
+    public static bool ValidateResultHasError(this ValidationResult resultValidate, ResultDto result)
     {
         if (resultValidate.Errors.Count > 0)
         {

@@ -18,11 +18,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KalaMarket.Application\KalaMarket.Application.csproj" />
+    <ProjectReference Include="..\KalaMarket.Domain.HomePage\KalaMarket.Domain.HomePage.csproj" />
+    <ProjectReference Include="..\KalaMarket.Domain.Products\KalaMarket.Domain.Products.csproj" />
+    <ProjectReference Include="..\KalaMarket.Domain.Users\KalaMarket.Domain.Users.csproj" />
     <ProjectReference Include="..\KalaMarket.Domain\KalaMarket.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Configuration\ProductAggConfigurations\" />
+    <ProjectReference Include="..\KalaMarket.Persistence.HomePage\KalaMarket.Persistence.HomePage.csproj" />
+    <ProjectReference Include="..\KalaMarket.Persistence.Products\KalaMarket.Persistence.Products.csproj" />
+    <ProjectReference Include="..\KalaMarket.Persistence.Users\KalaMarket.Persistence.Users.csproj" />
   </ItemGroup>
 
 </Project>

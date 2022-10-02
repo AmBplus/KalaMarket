@@ -1,12 +1,10 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 namespace _01_Framework.AspCore.ValidateAttribute;
 public class FileAcceptExtensionsAttribute : ValidationAttribute, IClientModelValidator
 {
-    private string[] ValidExtensions { get;  }
+    private string[] ValidExtensions { get; }
     public FileAcceptExtensionsAttribute(string[] validExtensions)
     {
         ValidExtensions = validExtensions;
@@ -18,7 +16,7 @@ public class FileAcceptExtensionsAttribute : ValidationAttribute, IClientModelVa
         {
             return IsValidFile(file);
         }
-        else if(value is ICollection<IFormFile> files)
+        else if (value is ICollection<IFormFile> files)
         {
             return IsValidFiles(files);
         }
@@ -51,7 +49,7 @@ public class FileAcceptExtensionsAttribute : ValidationAttribute, IClientModelVa
             else
             {
                 validEx += $"{ValidExtensions[i]},";
-                
+
             }
         }
         if (ErrorMessageResourceName != null)
@@ -62,6 +60,6 @@ public class FileAcceptExtensionsAttribute : ValidationAttribute, IClientModelVa
         {
             context.Attributes.Add("data-val-ValidFileExtension", $" فرمت های صحیح فقط {validEx}");
         }
-        context.Attributes.Add("accept",validEx);
+        context.Attributes.Add("accept", validEx);
     }
 }

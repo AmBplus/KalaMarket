@@ -20,7 +20,7 @@ namespace KalaMarket.Infrastructure.User;
 
 public static class UserServiceBootstrapper
 {
-    public static void ConfigureUserServices(this IServiceCollection services )
+    public static void ConfigureUserServices(this IServiceCollection services)
     {
         #region UserServices
         services.AddScoped<IGetUsersService, GetUsersService>();
@@ -35,7 +35,7 @@ public static class UserServiceBootstrapper
         services.AddScoped<IGetUserWithRolesService, GetUserWithRolesService>();
         #endregion /UserServices
         #region User Facade Service
-        services.AddScoped<IUserFacadeService, UserFacadeService>();
+        services.AddScoped<IUserAggFacadeService, UserAggFacadeService>();
         #endregion /User Facade Service
     }
 }

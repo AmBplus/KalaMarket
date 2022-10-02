@@ -7,7 +7,7 @@ public class ValidateModelRazorPageAttribute : Attribute, IPageFilter
 {
     public void OnPageHandlerSelected(PageHandlerSelectedContext context)
     {
-        
+
     }
 
     public void OnPageHandlerExecuting(PageHandlerExecutingContext context)
@@ -20,6 +20,6 @@ public class ValidateModelRazorPageAttribute : Attribute, IPageFilter
 
     public void OnPageHandlerExecuted(PageHandlerExecutedContext context)
     {
-        
+
     }
 }

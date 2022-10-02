@@ -1,49 +1,49 @@
 ﻿namespace KalaMarket.Shared.DateTime
 {
-	public class PersianDateTime : PersianDate
-	{
-		public static string ConvertToDateTime(System.DateTime dateTime)
-		{
-			var persianDateTime =
-				new PersianDateTime(dateTime: dateTime);
+    public class PersianDateTime : PersianDate
+    {
+        public static string ConvertToDateTime(System.DateTime dateTime)
+        {
+            var persianDateTime =
+                new PersianDateTime(dateTime: dateTime);
 
-			var result =
-				persianDateTime.ToString();
+            var result =
+                persianDateTime.ToString();
 
-			return result;
-		}
+            return result;
+        }
 
-		public PersianDateTime(System.DateTime dateTime) : base(dateTime: dateTime)
-		{
-			Hour = dateTime.Hour;
-			Minute = dateTime.Minute;
-			Second = dateTime.Second;
-		}
+        public PersianDateTime(System.DateTime dateTime) : base(dateTime: dateTime)
+        {
+            Hour = dateTime.Hour;
+            Minute = dateTime.Minute;
+            Second = dateTime.Second;
+        }
 
-		public int Hour { get; }
+        public int Hour { get; }
 
-		public int Minute { get; }
+        public int Minute { get; }
 
-		public int Second { get; }
+        public int Second { get; }
 
-		public override string ToString()
-		{
-			var hourString =
-				Hour.ToString()
-				.PadLeft(totalWidth: 2, paddingChar: '0');
+        public override string ToString()
+        {
+            var hourString =
+                Hour.ToString()
+                .PadLeft(totalWidth: 2, paddingChar: '0');
 
-			var minuteString =
-				Minute.ToString()
-				.PadLeft(totalWidth: 2, paddingChar: '0');
+            var minuteString =
+                Minute.ToString()
+                .PadLeft(totalWidth: 2, paddingChar: '0');
 
-			var secondString =
-				Second.ToString()
-				.PadLeft(totalWidth: 2, paddingChar: '0');
+            var secondString =
+                Second.ToString()
+                .PadLeft(totalWidth: 2, paddingChar: '0');
 
-			var result =
-				$"{base.ToString()} - {hourString}:{minuteString}:{secondString}";
+            var result =
+                $"{base.ToString()} - {hourString}:{minuteString}:{secondString}";
 
-			return result;
-		}
-	}
+            return result;
+        }
+    }
 }

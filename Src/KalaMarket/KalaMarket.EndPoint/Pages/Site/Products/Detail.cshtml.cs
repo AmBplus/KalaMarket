@@ -1,5 +1,5 @@
-using KalaMarket.Application.Product.Services.Product.ProductAggFacade;
-using KalaMarket.Application.Product.Services.Product.ProductService.Query.GetProductDetailForSite;
+using KalaMarket.Application.Product.Services.Products.ProductAggFacade;
+using KalaMarket.Application.Product.Services.Products.ProductService.Query.GetProductDetailForSite;
 using KalaMarket.EndPoint.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,9 +15,9 @@ namespace KalaMarket.EndPoint.Pages.Site.Products
         private IProductAggFacadeService ProductAggFacadeService { get; }
         public ProductDetailForSiteDto ProductDetail { get; set; }
 
-        public async Task<IActionResult> OnGet(long id,string slug)
+        public async Task<IActionResult> OnGet(long id, string slug)
         {
-            var resultDto = await 
+            var resultDto = await
             ProductAggFacadeService.Product.Query.ProductDetailForSite
                     .ExecuteAsync(new RequestGetDetailProductForSiteDto()
                     {

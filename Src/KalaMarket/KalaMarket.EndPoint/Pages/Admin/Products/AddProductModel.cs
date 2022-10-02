@@ -1,12 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using _01_Framework.AspCore.Utility;
+﻿using _01_Framework.AspCore.Utility;
 using _01_Framework.AspCore.ValidateAttribute;
-using KalaMarket.Application.Product.Services.Product.BrandService.Facade.Interface;
-using KalaMarket.Application.Product.Services.Product.BrandService.Query.GetAll;
-using KalaMarket.Application.Product.Services.Product.CategoryServices.FacadePattern.Facade;
-using KalaMarket.Application.Product.Services.Product.CategoryServices.Queries.GetCategories;
-using KalaMarket.Application.Product.Services.Product.ProductService.Commands.AddProduct;
-using KalaMarket.Application.Product.Services.Product.ProductService.FacadePattern.Interfaces;
 using KalaMarket.EndPoint.Infrastructure;
 using KalaMarket.Resourses;
 using KalaMarket.Shared;
@@ -14,12 +7,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
+using KalaMarket.Application.Product.Services.Products.BrandService.Facade.Interface;
+using KalaMarket.Application.Product.Services.Products.BrandService.Query.GetAll;
+using KalaMarket.Application.Product.Services.Products.CategoryServices.FacadePattern.Facade;
+using KalaMarket.Application.Product.Services.Products.CategoryServices.Queries.GetCategories;
+using KalaMarket.Application.Product.Services.Products.ProductService.Commands.AddProduct;
+using KalaMarket.Application.Product.Services.Products.ProductService.FacadePattern.Interfaces;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace KalaMarket.EndPoint.Pages.Admin.Products
 {
 
-    
+
     [BindProperties]
     public class AddProductModel : BasePageModel
     {
@@ -32,7 +32,7 @@ namespace KalaMarket.EndPoint.Pages.Admin.Products
         private ICategoryFacade CategoryFacade { get; }
         [ValidateNever]
         [BindNever]
-        public List<SelectListItem> Categories { get;private set; }
+        public List<SelectListItem> Categories { get; private set; }
         [ValidateNever]
         [BindNever]
         public SelectList Brand { get; set; }
@@ -44,8 +44,8 @@ namespace KalaMarket.EndPoint.Pages.Admin.Products
         public int Inventory { get; set; }
         public long CategoryId { get; set; }
         public bool Displayed { get; set; } = true;
-        [Range(minimum:1,maximum:ushort.MaxValue,ErrorMessageResourceType = typeof(ErrorMessages)
-            ,ErrorMessageResourceName = nameof(ErrorMessages.OutofMinMax))]
+        [Range(minimum: 1, maximum: ushort.MaxValue, ErrorMessageResourceType = typeof(ErrorMessages)
+            , ErrorMessageResourceName = nameof(ErrorMessages.OutofMinMax))]
         public ushort BrandId { get; set; }
         [FileAcceptExtensions(new[] {KalaMarketConstants.ImageExtension.Jpg
             ,KalaMarketConstants.ImageExtension.Jpeg,
@@ -60,7 +60,7 @@ namespace KalaMarket.EndPoint.Pages.Admin.Products
             SetCategoriesList();
             SetBrandList();
         }
-    
+
         public async Task<IActionResult> OnPost([FromServices] IHostingEnvironment hostEnvironment, [FromServices] IProductFacadeService productFacadeService)
         {
             if (!ModelState.IsValid)
@@ -88,8 +88,8 @@ namespace KalaMarket.EndPoint.Pages.Admin.Products
             if (!result.IsSuccess)
             {
                 // Remove Images
-                 await  RemoveFileHelper.RemoveRangeFiles(hostEnvironment, imagePath);
-                 AddToastError(result.Message);
+                await RemoveFileHelper.RemoveRangeFiles(hostEnvironment, imagePath);
+                AddToastError(result.Message);
             }
             else
             {
@@ -97,7 +97,7 @@ namespace KalaMarket.EndPoint.Pages.Admin.Products
             }
             return RedirectToPage();
         }
-         
+
         private void SetCategoriesList()
         {
             Categories = new List<SelectListItem>() { };
@@ -107,7 +107,7 @@ namespace KalaMarket.EndPoint.Pages.Admin.Products
                 {
                     Type = KalaMarketConstants.CategoryType.SubCategory
                 });
-            
+
             if (!result.IsSuccess)
             {
                 AddToastError(ErrorMessages.ProblemOccurred);
@@ -139,9 +139,9 @@ namespace KalaMarket.EndPoint.Pages.Admin.Products
         }
         private void SetBrandList()
         {
-            
+
             var result =
-                BrandFacade.BrandQuery.GetAll.Execute(new RequestGetAllBrandDto(){GetActiveBrand = true});
+                BrandFacade.BrandQuery.GetAll.Execute(new RequestGetAllBrandDto() { GetActiveBrand = true });
             if (!result.IsSuccess)
             {
                 Brand = new SelectList(null);
@@ -150,7 +150,7 @@ namespace KalaMarket.EndPoint.Pages.Admin.Products
             }
 
             Brand = new SelectList(result.Data.Brands, "Id", "Name");
-            
+
         }
     }
 }

@@ -2,5 +2,5 @@
 
 public class LoginCustomerViewModel : BaseLoginViewModel
 {
-    
+
 }

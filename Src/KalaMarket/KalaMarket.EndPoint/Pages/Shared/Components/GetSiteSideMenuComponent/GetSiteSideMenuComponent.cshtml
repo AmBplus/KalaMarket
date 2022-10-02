@@ -1,0 +1,24 @@
+﻿@model System.Collections.Generic.IEnumerable<KalaMarket.Application.Product.Services.Products.Common.Query.GetMenuItemService.GetMenuItemDto>
+
+   @{
+       Layout = null;
+}
+<ul class="nav-categories ul-base">
+    @foreach (var cat in Model)
+    {
+        <li>
+            <a href="#" class="collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i class="mdi mdi-chevron-down"></i>@cat.Name</a>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample" style="">
+                <ul>
+                    @foreach (var catChild in cat.Child)
+                    {
+                        <li >
+                            <a href="~/site/products/index?categoryId=@catChild.CategoryId" class="category-level-2">@catChild.Name</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </li>
+    }
+
+</ul>

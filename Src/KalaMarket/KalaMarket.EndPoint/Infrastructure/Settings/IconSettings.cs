@@ -1,22 +1,22 @@
 ﻿namespace KalaMarket.EndPoint.Infrastructure.Settings
 {
-	public class IconSettings : object
-	{
-		public static readonly string KeyName = nameof(IconSettings);
+    public class IconSettings : object
+    {
+        public static readonly string KeyName = nameof(IconSettings);
 
-		public IconSettings() : base()
-		{
-			UserIcons = new();
+        public IconSettings() : base()
+        {
+            UserIcons = new();
 
-			TableIcons = new();
+            TableIcons = new();
 
-			SharedIcons = new();
-		}
+            SharedIcons = new();
+        }
 
-		public UserIcons UserIcons { get; set; }
+        public UserIcons UserIcons { get; set; }
 
-		public TableIcons TableIcons { get; set; }
+        public TableIcons TableIcons { get; set; }
 
-		public SharedIcons SharedIcons { get; set; }
-	}
+        public SharedIcons SharedIcons { get; set; }
+    }
 }

@@ -1,20 +1,20 @@
 ﻿#region using
-using KalaMarket.Application.Product.Services.Product.BrandService.Facade.Implement;
-using KalaMarket.Application.Product.Services.Product.BrandService.Facade.Interface;
-using KalaMarket.Application.Product.Services.Product.CategoryServices.FacadePattern.Facade;
-using KalaMarket.Application.Product.Services.Product.ProductAggFacade;
-using KalaMarket.Application.Product.Services.Product.ProductService.FacadePattern.Implement;
-using KalaMarket.Application.Product.Services.Product.ProductService.FacadePattern.Interfaces;
+
+using KalaMarket.Application.Product.Services.Products.BrandService.Facade.Implement;
+using KalaMarket.Application.Product.Services.Products.BrandService.Facade.Interface;
+using KalaMarket.Application.Product.Services.Products.CategoryServices.FacadePattern.Facade;
+using KalaMarket.Application.Product.Services.Products.ProductAggFacade;
+using KalaMarket.Application.Product.Services.Products.ProductService.FacadePattern.Implement;
+using KalaMarket.Application.Product.Services.Products.ProductService.FacadePattern.Interfaces;
 using Mapster;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 #endregion /using
 
 namespace KalaMarket.Infrastructure.Product;
 
 public static class ProductServiceBootstrapper
 {
-    public static void ConfigureProductServices(this IServiceCollection services )
+    public static void ConfigureProductServices(this IServiceCollection services)
     {
 
         // Add Category Services      
@@ -26,8 +26,8 @@ public static class ProductServiceBootstrapper
         // Add ProductAgg Facade Service
         services.AddScoped<IProductAggFacadeService, ProductAggFacadeService>();
         var typeAdapterConfig = TypeAdapterConfig.GlobalSettings;
-       // Add Mapster Map Config
+        // Add Mapster Map Config
         typeAdapterConfig.Scan(typeof(ProductAggFacadeService).Assembly);
-        
+
     }
 }

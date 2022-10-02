@@ -18,20 +18,20 @@ namespace KalaMarket.EndPoint.Pages.Admin.Users
 
         public ResultGetUserDto Users { get; set; }
         private IGetRemovedUsersService RemovedUsersService { get; }
-        IChangeRemoveUserService ChangeRemoveUserService { get;  }
-        public void OnGet(int? page , string? searchKey)
+        IChangeRemoveUserService ChangeRemoveUserService { get; }
+        public void OnGet(int? page, string? searchKey)
         {
-            if (page == null || page == 0) page = 1;  
+            if (page == null || page == 0) page = 1;
             Users = RemovedUsersService.Execute(new RequestGetUserDto()
             {
-                Page = page ,
+                Page = page,
                 SearchKey = searchKey
             });
         }
         [HttpPut("{id?}")]
         public IActionResult OnPutChangeStatus(long? id)
         {
-            if (id == null || id <= 0) return BadRequest(new ResultDto {Message = ErrorMessages.UnValidId});
+            if (id == null || id <= 0) return BadRequest(new ResultDto { Message = ErrorMessages.UnValidId });
             var result = ChangeRemoveUserService.Execute((long)id);
             if (!result.IsSuccess) return BadRequest(result);
             return new OkObjectResult(result);

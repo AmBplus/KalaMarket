@@ -8,7 +8,7 @@ namespace KalaMarket.Application.User.Services.Users.Commands.ChangeRemoveRole;
 public class ChangeRemoveRoleService : IChangeRemoveRoleService
 {
     // Ctor
-    public ChangeRemoveRoleService(IKalaMarketContext context , ILoggerManger logManger)
+    public ChangeRemoveRoleService(IKalaMarketContext context, ILoggerManger logManger)
     {
         Context = context;
         LogManger = logManger;
@@ -27,7 +27,7 @@ public class ChangeRemoveRoleService : IChangeRemoveRoleService
         var role = Context.Roles.FirstOrDefault(x => x.Id == id);
         if (role == null)
         {
-            resultDto.Message = string.Format(Messages.NotFind,PropertiesName.Role);
+            resultDto.Message = string.Format(Messages.NotFind, PropertiesName.Role);
             LogManger.LogInformation(string.Format(Messages.NotFind, PropertiesName.Role));
             return resultDto;
         }
