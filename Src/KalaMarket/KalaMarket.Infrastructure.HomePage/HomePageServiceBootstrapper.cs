@@ -16,5 +16,6 @@ public static class HomePageServiceBootstrapper
         var typeAdapterConfig = TypeAdapterConfig.GlobalSettings;
         // Add Mapster Map Config
         typeAdapterConfig.Scan(typeof(IHomePageAggFacadeService).Assembly);
+        services.AddScoped<IHomePageAggFacadeService, HomePageAggFacadeService>();
     }
 }

@@ -1,8 +1,10 @@
-﻿using KalaMarket.Application.HomePage.HomePage.MainSliders.Facade.Interfaces;
+﻿using KalaMarket.Application.HomePage.HomePage.Common.Query.Facade.Interfaces;
+using KalaMarket.Application.HomePage.HomePage.Sliders.Facade.Interfaces;
 
 namespace KalaMarket.Application.HomePage.HomePage.Facade;
 
 public interface IHomePageAggFacadeService
 {
-    IMainSliderFacadeService MainSliderFacadeService { get; }
+    ISliderFacadeService Slider { get; }
+    IHomePageCommonService Common { get; }
 }

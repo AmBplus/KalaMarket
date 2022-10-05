@@ -1,0 +1,165 @@
+﻿@inject Infrastructure.Settings.ApplicationSettings applicationSettings
+
+@{
+	/// Version 3.0
+
+	var toastSettings =
+		applicationSettings.ToastSettings;
+
+	int delayStep =
+		toastSettings.DelayStep;
+
+	int delay =
+		toastSettings.InitialDelay;
+  
+
+	// نکته مهم
+	// در همه شرایط کار نمی‌کند List استفاده از کلاس
+	var toastErrors =
+		TempData[key: Infrastructure.Messages.MessageType.ToastError.ToString()] as
+		System.Collections.Generic.IList<string>;
+
+	var toastWarnings =
+		TempData[key: Infrastructure.Messages.MessageType.ToastWarning.ToString()] as
+		System.Collections.Generic.IList<string>;
+
+	var toastSuccesses =
+		TempData[key: Infrastructure.Messages.MessageType.ToastSuccess.ToString()] as
+		System.Collections.Generic.IList<string>;
+
+    var toastInformation=
+        TempData[key: Infrastructure.Messages.MessageType.ToastInformation.ToString()] as
+            System.Collections.Generic.IList<string>;
+	if ((toastErrors == null || toastErrors.Count == 0) &&
+		(toastWarnings == null || toastWarnings.Count == 0) &&
+		(toastSuccesses == null || toastSuccesses.Count == 0))
+	{
+		return;
+	}
+}
+
+<div aria-live="polite" aria-atomic="true" class="position-relative">
+
+
+	@{
+		if (toastErrors != null)
+		{
+			foreach (var message in toastErrors)
+			{
+				<p class="@(toastSettings.ToasterError)" hidden>@(message)</p>
+
+			}
+		}
+
+		if (toastWarnings != null)
+		{
+			foreach (var message in toastWarnings)
+			{
+				<p class="@(toastSettings.ToasterWarning)" hidden>@(message)</p>
+			}
+		}
+
+		if (toastSuccesses != null)
+		{
+			foreach (var message in toastSuccesses)
+			{
+				<p class="@(toastSettings.ToasterSuccess)" hidden>@(message)</p>
+			}
+		}
+	    if (toastInformation != null)
+	    {
+			foreach (var message in toastInformation)
+			{
+	            <p class="@(toastSettings.ToasterInformation)" hidden>@(message)</p>
+	        }
+	    }
+	}
+
+</div>
+
+<script>
+
+	window.addEventListener('load', (e) => {
+		var toasterError = "ToasterError";
+		var toasterWarning = "ToasterWarning";
+		var toasterSuccess = "ToasterSuccess";
+		var toasterInformation = "ToasterInformation";
+        var delaySteps = @(delayStep);
+		// Toaster Options
+        var	tOptions = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-left",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": `@(delay)`,
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+    }
+        // Set Toaster Options
+        toastr.options = tOptions;
+
+		// Get All Error Element
+        var toastElements =
+			document.querySelectorAll(`.${toasterError}`);
+		// Toast All Error
+		callToaster(toastElements, toasterError);
+        // Get All Warning Element
+		toastElements =
+			document.querySelectorAll(`.${toasterWarning}`);
+        // Toast All Warning
+		callToaster(toastElements, toasterWarning);
+        // Get All Success Element
+        toastElements =
+            document.querySelectorAll(`.${toasterSuccess}`);
+        // Toast All Success
+		callToaster(toastElements, toasterSuccess);
+
+        // Get All Information Element
+        toastElements =
+			document.querySelectorAll(`.${toasterInformation}`);
+		// Toast All Information
+		callToaster(toastElements, toasterInformation);
+		// Method For Call Toasts
+		function callToaster(toastElements, type) {
+            toastElements.forEach((toastElement, index) => {
+				console.log("1");
+				switch (type) {
+					case toasterError:
+                   
+                        toastr.error(toastElement.innerHTML);
+                        toastr.options.timeOut = parseFloat(toastr.options.timeOut) + delaySteps;
+						break;
+                    
+					case toasterWarning:
+                  
+                        toastr.warning(toastElement.innerHTML);
+                        toastr.options.timeOut = parseFloat(toastr.options.timeOut) + delaySteps;
+                        break;
+                  
+					case toasterSuccess:
+                   
+                        toastr.success(toastElement.innerHTML);
+                        toastr.options.timeOut = parseFloat(toastr.options.timeOut) + delaySteps;
+                        break;
+                    
+					case toasterInformation:
+                  
+						toastr.info(toastElement.innerHTML);
+                        toastr.options.timeOut = parseFloat(toastr.options.timeOut) + delaySteps;
+                        break;
+                    default:
+                }
+
+            });
+        }
+    })
+
+</script>

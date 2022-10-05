@@ -1,5 +1,5 @@
-﻿using _01_Framework.AspCore.TagHelpers;
-using Microsoft.AspNetCore.Razor.TagHelpers;
+﻿using Microsoft.AspNetCore.Razor.TagHelpers;
+using Shared.AspNetCore.TagHelpers;
 
 namespace KalaMarket.EndPoint.Infrastructure.TagHelpers.Admin
 {
@@ -14,14 +14,5 @@ namespace KalaMarket.EndPoint.Infrastructure.TagHelpers.Admin
             output.PreContent.SetHtmlContent(@"<fieldset class=""form-group"">");
             output.PostContent.SetHtmlContent("</fieldset>");
         }
-
     }
-
 }
-//< div class= "col-xl-4 col-lg-6 col-md-12 mb-1" >
-//    < fieldset class= "form-group" >
-//    < label asp -for= "Name" > نام محصول </ label >
-//    < input asp -for= "Name" class= "form-control" >
-//    < span class= "text-danger" asp - validation -for= "Name" ></ span >
-//    </ fieldset >
-//    </ div >

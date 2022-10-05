@@ -26,7 +26,7 @@ public class KalaMarketContext : DbContext, IKalaMarketContext
     public DbSet<Brand> Brands { get; set; }
     public DbSet<ProductFeatures> ProductFeatures { get; set; }
     public DbSet<ProductImages> ProductImages { get; set; }
-    public DbSet<MainSlider> MainSliders { get; set; }
+    public DbSet<Slider> Sliders { get; set; }
 
     #endregion Properties
 

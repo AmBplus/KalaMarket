@@ -129,8 +129,14 @@
   <data name="FullName" xml:space="preserve">
     <value>نام و نام خانوادگی</value>
   </data>
+  <data name="Image" xml:space="preserve">
+    <value>عکس</value>
+  </data>
   <data name="IsRemeberMe" xml:space="preserve">
     <value>مرا بخاطر بیاور</value>
+  </data>
+  <data name="Link" xml:space="preserve">
+    <value>لینک</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>نام</value>

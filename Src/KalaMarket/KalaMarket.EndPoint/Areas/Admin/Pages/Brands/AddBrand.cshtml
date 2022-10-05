@@ -1,0 +1,86 @@
+﻿@page
+@model AddBrandModel
+@{
+    ViewData["Title"] = "Add Brand Model";
+}
+<section class="basic-elements">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title-wrap bar-success">
+                        <h4 class="card-title mb-0">اضافه کردن دسته بندی جدید برای محصولات</h4>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="px-3">
+                        <div class="form">
+                            <div class="form-body">
+                                <div class="row">
+                                    <form id="myAddBrandForm" method="POST">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
+                                            <label asp-for="Name">نام برند</label>
+                                                <input type="text" class="form-control" asp-for="Name">
+                                                <span class="text-danger" asp-validation-for="Name"></span>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
+                                            <br />
+                                            <button type="submit" id="submitBrandForm" class="btn btn-success col-md-12">اضافه کردن به لیست</button>
+                                           </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+@section Script
+{
+    <partial name="Shared/_ValidationScriptsPartial"/>
+    <script>
+        var form = document.querySelector("#myAddBrandForm");
+        var IsSelect = false;
+        form.addEventListener('submit',
+            (e) => {
+                console.log(IsSelect);
+                if (IsSelect == false) {
+                    e.preventDefault();
+                    AddNewCategory(e);
+                }
+            });
+        function  AddNewCategory(e) {
+            swal.fire({
+                title: 'دسته بندی جدید',
+                text: "آیا میخواهید دسته بندی جدید به لیست دسته بندی ها اضافه شود؟",
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'بله، اضافه شود',
+                cancelButtonText: 'خیر'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                 
+                    IsSelect = true;
+                    var form = $("#myAddBrandForm");
+                    form.validate();
+                    if (form.valid()) {
+                        form.submit();
+                    }
+                } else {
+                    IsSelect = false; 
+                }
+            })
+        }
+    </script>
+  
+}
+

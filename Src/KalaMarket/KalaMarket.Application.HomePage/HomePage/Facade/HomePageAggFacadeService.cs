@@ -1,5 +1,7 @@
-﻿using KalaMarket.Application.HomePage.HomePage.MainSliders.Facade.Imp;
-using KalaMarket.Application.HomePage.HomePage.MainSliders.Facade.Interfaces;
+﻿using KalaMarket.Application.HomePage.HomePage.Common.Query.Facade.Imp;
+using KalaMarket.Application.HomePage.HomePage.Common.Query.Facade.Interfaces;
+using KalaMarket.Application.HomePage.HomePage.Sliders.Facade.Imp;
+using KalaMarket.Application.HomePage.HomePage.Sliders.Facade.Interfaces;
 using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Shared;
 
@@ -9,10 +11,11 @@ public class HomePageAggFacadeService : IHomePageAggFacadeService
 {
 
     #region Fields
-    private IMainSliderFacadeService? _mainSliderFacadeService;
-    private IKalaMarketContext Context { get; }
-    private ILoggerManger Logger { get; }
+    private ISliderFacadeService? _mainSliderFacadeService;
+    private IHomePageCommonService? _common;
+
     #endregion /Fields
+   
     #region Constructor
     public HomePageAggFacadeService(IKalaMarketContext context, ILoggerManger logger)
     {
@@ -20,7 +23,15 @@ public class HomePageAggFacadeService : IHomePageAggFacadeService
         Logger = logger;
     }
     #endregion /Constructor
+   
+    #region Properties
+    private IKalaMarketContext Context { get; }
+    private ILoggerManger Logger { get; }
+    public ISliderFacadeService Slider =>
+        _mainSliderFacadeService ??= new SliderFacadeService(Context, Logger);
 
-    public IMainSliderFacadeService MainSliderFacadeService =>
-        _mainSliderFacadeService ??= new MainSliderFacadeService(Context, Logger);
+    public IHomePageCommonService Common
+        => _common ??= new HomePageCommonService(Context,Logger);
+
+    #endregion /Properties
 }

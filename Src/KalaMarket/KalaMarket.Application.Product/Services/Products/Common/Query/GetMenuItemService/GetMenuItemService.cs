@@ -24,7 +24,7 @@ public class GetMenuItemService : IGetMenuItemService
 
         var categories = GenerateQueryForCategory().ToList();
         var message = string.Format(ErrorMessages.NotFind, nameof(categories));
-        if (result.CheckNullObject(categories, message))
+        if (result.CheckIsNullObject(categories, message))
         {
             Logger.LogError(message);
             return result;
@@ -38,7 +38,7 @@ public class GetMenuItemService : IGetMenuItemService
     {
         var categories = await GenerateQueryForCategory().ToListAsync();
         var message = string.Format(ErrorMessages.NotFind, nameof(categories));
-        if (result.CheckNullObject(categories, message))
+        if (result.CheckIsNullObject(categories, message))
         {
             Logger.LogError(message);
             return result;

@@ -14,7 +14,8 @@
 		}
 		public static class FolderPath
 		{
-			public const string ProductPath = "images\\products";
+			public static string ProductPath = "images\\products";
+			public static string SlidersPath = "images\\Sliders";
 		}
 		public static class ImageExtension
 		{

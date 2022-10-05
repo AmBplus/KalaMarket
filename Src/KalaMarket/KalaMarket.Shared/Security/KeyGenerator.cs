@@ -1,6 +1,6 @@
 ﻿namespace KalaMarket.Shared.Security
 {
-    public static class KeyGenerator : object
+    public static class KeyGenerator 
     {
         static KeyGenerator()
         {

@@ -31,15 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Infrastructure",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Persistence", "KalaMarket.Persistence\KalaMarket.Persistence.csproj", "{08E64B8E-9472-4701-9A02-7999B44303C1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{526F02F1-2F5A-436A-9990-6E3D8850200A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Shared", "00.Shared", "{526F02F1-2F5A-436A-9990-6E3D8850200A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Shared", "KalaMarket.Shared\KalaMarket.Shared.csproj", "{17E26EA8-3EEE-41E2-B22D-A682F81AB673}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.UnitTest", "KalaMarket.UnitTest\KalaMarket.UnitTest.csproj", "{83B6F744-A19D-4EBF-8AF2-6F6BE3FDCD95}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Resourses", "KalaMarket.Resourses\KalaMarket.Resourses.csproj", "{EDE59637-B62D-4356-A5B8-C426172567FA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_Framework.AspCore", "01_Framework.AspCore\01_Framework.AspCore.csproj", "{F6F10435-4C03-4C97-B638-A0E361DD87E8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Application.User", "KalaMarket.Application.User\KalaMarket.Application.User.csproj", "{2282AD52-B1CD-4750-A58C-465ECF10679D}"
 EndProject
@@ -49,23 +47,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Infrastructure.P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Application.Product", "KalaMarket.Application.Product\KalaMarket.Application.Product.csproj", "{6973862D-A185-492A-B4D3-E263D4D7BF24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Application.Agg", "KalaMarket.Application.Contract\KalaMarket.Application.Agg.csproj", "{8FCCA396-EDBA-440D-8BCC-8036C4049274}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Application.Agg", "KalaMarket.Application.Contract\KalaMarket.Application.Agg.csproj", "{8FCCA396-EDBA-440D-8BCC-8036C4049274}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Application.HomePage", "KalaMarket.Application.HomePage\KalaMarket.Application.HomePage.csproj", "{00887AB1-3818-4CED-AFE2-B075232374ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Application.HomePage", "KalaMarket.Application.HomePage\KalaMarket.Application.HomePage.csproj", "{00887AB1-3818-4CED-AFE2-B075232374ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Infrastructure.HomePage", "KalaMarket.Infrastructure.HomePage\KalaMarket.Infrastructure.HomePage.csproj", "{08ABABB1-EBDE-4781-A45A-C2A13FFB675D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Infrastructure.HomePage", "KalaMarket.Infrastructure.HomePage\KalaMarket.Infrastructure.HomePage.csproj", "{08ABABB1-EBDE-4781-A45A-C2A13FFB675D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Persistence.Users", "KalaMarket.Persistence.Users\KalaMarket.Persistence.Users.csproj", "{911CC995-0765-4CB1-9EF9-784A5E999FD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Persistence.Users", "KalaMarket.Persistence.Users\KalaMarket.Persistence.Users.csproj", "{911CC995-0765-4CB1-9EF9-784A5E999FD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Persistence.Products", "KalaMarket.Persistence.Products\KalaMarket.Persistence.Products.csproj", "{A9BD5931-AEA9-4918-A2BC-5B0F46C92E0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Persistence.Products", "KalaMarket.Persistence.Products\KalaMarket.Persistence.Products.csproj", "{A9BD5931-AEA9-4918-A2BC-5B0F46C92E0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Persistence.HomePage", "KalaMarket.Persistence.HomePage\KalaMarket.Persistence.HomePage.csproj", "{9661C028-871F-4119-889E-32C9D0A7B9E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Persistence.HomePage", "KalaMarket.Persistence.HomePage\KalaMarket.Persistence.HomePage.csproj", "{9661C028-871F-4119-889E-32C9D0A7B9E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Domain.Users", "KalaMarket.Domain.Users\KalaMarket.Domain.Users.csproj", "{B7AFA033-0976-4FD3-8542-8F8CCEEE97FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Domain.Users", "KalaMarket.Domain.Users\KalaMarket.Domain.Users.csproj", "{B7AFA033-0976-4FD3-8542-8F8CCEEE97FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Domain.Products", "KalaMarket.Domain.Products\KalaMarket.Domain.Products.csproj", "{F0D38193-598C-454A-9C4F-78A5DBC3C68B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Domain.Products", "KalaMarket.Domain.Products\KalaMarket.Domain.Products.csproj", "{F0D38193-598C-454A-9C4F-78A5DBC3C68B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaMarket.Domain.HomePage", "KalaMarket.Domain.HomePage\KalaMarket.Domain.HomePage.csproj", "{FE4C94B4-39F1-4D28-9009-E54A82ACA51E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalaMarket.Domain.HomePage", "KalaMarket.Domain.HomePage\KalaMarket.Domain.HomePage.csproj", "{FE4C94B4-39F1-4D28-9009-E54A82ACA51E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.AspNetCore", "Shared.AspNetCore\Shared.AspNetCore.csproj", "{E946C98E-7BE8-4645-90B2-DCBC17B7C659}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,10 +105,6 @@ Global
 		{EDE59637-B62D-4356-A5B8-C426172567FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDE59637-B62D-4356-A5B8-C426172567FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDE59637-B62D-4356-A5B8-C426172567FA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6F10435-4C03-4C97-B638-A0E361DD87E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6F10435-4C03-4C97-B638-A0E361DD87E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6F10435-4C03-4C97-B638-A0E361DD87E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6F10435-4C03-4C97-B638-A0E361DD87E8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2282AD52-B1CD-4750-A58C-465ECF10679D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2282AD52-B1CD-4750-A58C-465ECF10679D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2282AD52-B1CD-4750-A58C-465ECF10679D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -161,6 +157,10 @@ Global
 		{FE4C94B4-39F1-4D28-9009-E54A82ACA51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE4C94B4-39F1-4D28-9009-E54A82ACA51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE4C94B4-39F1-4D28-9009-E54A82ACA51E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E946C98E-7BE8-4645-90B2-DCBC17B7C659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E946C98E-7BE8-4645-90B2-DCBC17B7C659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E946C98E-7BE8-4645-90B2-DCBC17B7C659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E946C98E-7BE8-4645-90B2-DCBC17B7C659}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -182,7 +182,6 @@ Global
 		{17E26EA8-3EEE-41E2-B22D-A682F81AB673} = {526F02F1-2F5A-436A-9990-6E3D8850200A}
 		{83B6F744-A19D-4EBF-8AF2-6F6BE3FDCD95} = {0E7AFCAC-E754-4FD4-A31A-BB80AF8B08B5}
 		{EDE59637-B62D-4356-A5B8-C426172567FA} = {526F02F1-2F5A-436A-9990-6E3D8850200A}
-		{F6F10435-4C03-4C97-B638-A0E361DD87E8} = {526F02F1-2F5A-436A-9990-6E3D8850200A}
 		{2282AD52-B1CD-4750-A58C-465ECF10679D} = {B0AEB12A-C6DB-40AD-BB42-352A35E02098}
 		{8AA85BB0-C7B2-47F3-A3B3-EF136E3DDC19} = {F4F4E853-D291-49AD-888F-CAB42FB90AF1}
 		{B55E010E-E95C-4285-BCBC-47AB317C9691} = {F4F4E853-D291-49AD-888F-CAB42FB90AF1}
@@ -196,6 +195,7 @@ Global
 		{B7AFA033-0976-4FD3-8542-8F8CCEEE97FB} = {3CCA82E0-AD14-445A-B0C5-E32BEE797AB7}
 		{F0D38193-598C-454A-9C4F-78A5DBC3C68B} = {3CCA82E0-AD14-445A-B0C5-E32BEE797AB7}
 		{FE4C94B4-39F1-4D28-9009-E54A82ACA51E} = {3CCA82E0-AD14-445A-B0C5-E32BEE797AB7}
+		{E946C98E-7BE8-4645-90B2-DCBC17B7C659} = {526F02F1-2F5A-436A-9990-6E3D8850200A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7AE34251-A72D-4785-878A-ABCBD59A4A89}

@@ -1,0 +1,97 @@
+﻿@page
+@using KalaMarket.Shared
+@model IndexModel
+@{
+}
+@{
+    ViewData["Title"] = "Category List";
+}
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <!-- Zero configuration table -->
+        <section id="configuration">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title-wrap bar-success">
+                                <h4 class="card-title">لیست دسته بندی ها</h4>
+                            </div>
+                        </div>
+                        <div class="card-body collapse show">
+                            <div class="card-block card-dashboard">
+                                <p class="card-text">دسته بندی محصولات فروشگاه کالا مارکت
+                                </p>
+                                <a asp-page="addCategory" class="btn btn-success">افزودن دسته بندی جدید</a>
+
+                                <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                                    <div class="col-sm-12">
+                                        <table class="table table-striped table-bordered zero-configuration dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                                            <thead>
+                                            <tr role="row">
+                                                <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="دسته بندی: activate to sort column descending" style="width: 222px;">دسته بندی</th>
+                                                <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="پدر: activate to sort column descending" style="width: 222px;">پدر</th>
+                                                <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label=": activate to sort column descending" style="width: 222px;"></th>
+
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            @foreach (var item in Model.Result.Data._categories)
+                                            {
+                                                <tr role="row" class="odd">
+                                                    <td class="sorting_1">@item.Name</td>
+                                                    <td>
+                                                        @{
+                                                            string parent = !string.IsNullOrWhiteSpace(item.ParentName) ? item.ParentName : "-";
+                                                        }
+
+                                                        <text> @parent </text>
+                                                    </td>
+                                                    <td>
+                                                        @if (item.Type == KalaMarketConstants.CategoryType.Category)
+                                                        {
+                                                            <a asp-page="AddCategory" asp-route-parentCategoryId="@item.Id" class="btn btn-success">افزودن فرزند</a>
+                                                        }
+
+                                                        @if (item.HasChild == true)
+                                                        {
+                                                            <a asp-page="SubCategories" asp-route-id="@item.Id" class="btn btn-info">مشاهده لیست فرزند ها </a>
+                                                        }
+
+                                                    </td>
+                                                </tr>
+                                            }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="  text-center">
+                                    <paging total-records="@Model.Result.Data.RowCount"
+                                            page-no="@Model.Result.Data.RowCount"
+                                            page-size="@Model.Result.Data.PageSize"
+                                            show-prev-next="true"
+                                            show-total-pages="false"
+                                            show-total-records="false"
+                                            show-page-size-nav="true"
+                                            show-first-numbered-page="true"
+                                            show-last-numbered-page="true"
+                                            query-string-key-page-no="page"
+                                            query-string-key-page-size="pageSize"
+                                            gap-size="2">
+                                    </paging>
+
+                                </div>
+                            </div>
+                         
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+        </section>
+    </div>
+</div>
+ 
