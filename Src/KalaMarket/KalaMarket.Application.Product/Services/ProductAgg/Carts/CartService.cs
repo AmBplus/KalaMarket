@@ -20,7 +20,7 @@ public class CartService : ICartService
     private IKalaMarketContext Context { get; }
     private ILoggerManger Logger { get; }
     public ResultDto Add(long productId, Guid deviceId)
-    {
+     {
         var cart = Context.Carts.Where(x => x.DeviceId == deviceId && !x.Finished).FirstOrDefault();
         if (cart == null)
         {
@@ -38,6 +38,7 @@ public class CartService : ICartService
         else
         {
             cartItem = new CartItem(productId, product.Price, 1, cart.Id);
+            Context.CartItems.Add(cartItem);
         }
 
         Context.SaveChanges();
@@ -48,6 +49,65 @@ public class CartService : ICartService
         };
         return Result;
     }
+
+    public ResultDto IncreaseCartItemCount(long cartItemId , Guid deviceId)
+    {
+        var cartItem = Context.CartItems.Include(x=>x.Cart)
+            .Where(x=>x.Cart.DeviceId == deviceId )
+            .Where(x=>x.Id == cartItemId).FirstOrDefault();
+        if (cartItem == null)
+        {
+            Result = new ResultDto()
+            {
+                Message = "همچین کارت آیتمی پیدا نشد",
+                IsSuccess = false,
+            };
+            return Result;
+        }
+        cartItem.IncreaseCount();
+        Context.SaveChanges();
+        Result = new ResultDto()
+        {
+            Message = "تعداد محصول در سبد افزایش یافت",
+            IsSuccess = true,
+        };
+        return Result;
+    }
+
+    public ResultDto DecreaseCartItemCount(long cartItemId , Guid deviceId)
+    {
+        var cartItem = Context.CartItems.Include(x => x.Cart)
+            .Where(x => x.Cart.DeviceId == deviceId)
+            .Where(x => x.Id == cartItemId).FirstOrDefault();
+        if (cartItem == null)
+        {
+            Result = new ResultDto()
+            {
+                Message = "همچین کارت آیتمی پیدا نشد",
+                IsSuccess = false,
+            };
+            return Result;
+        }
+        if (cartItem.IncreaseCount())
+        {
+            Context.SaveChanges();
+            Result = new ResultDto()
+            {
+                Message = "تعداد محصول در سبد افزایش یافت",
+                IsSuccess = true,
+            };
+        }
+        else
+        {
+            Result = new ResultDto()
+            {
+                Message = "نمیتوان از صفر کمتر کرد",
+                IsSuccess = false,
+            };
+        }
+        return Result;
+    }
+
     public ResultDto<CartDto> GetMyCart(Guid deviceUserId)
     {
         var result =new ResultDto<CartDto>(new CartDto()
@@ -55,7 +115,7 @@ public class CartService : ICartService
             cartItemDtos = new List<CartItemDto>()
         });
          var listCartItemDto
-             = Context.Carts.Include(x => x.CartItems).ThenInclude(x => x.Product).Where(x => x.DeviceId == deviceUserId)?.Select(x
+             = Context.Carts.Include(x => x.CartItems).ThenInclude(x => x.Product).ThenInclude(x=>x.Images).Where(x => x.DeviceId == deviceUserId)?.Select(x
             =>
             x.CartItems.Select(c =>
                 new CartItemDto
@@ -63,6 +123,8 @@ public class CartService : ICartService
                     Count = c.Count,
                     Price = c.Price,
                     ProductName = c.Product.Name,
+                    ProductImage = c.Product.Images.Select(x=>x.Src).FirstOrDefault() ?? "",
+                    Id = c.Id,
                 })
             ).FirstOrDefault();
          result.Data.cartItemDtos =listCartItemDto;
@@ -70,9 +132,11 @@ public class CartService : ICartService
          result.Message = Messages.OperationDoneSuccessfully;
          return result;
     }
-    public ResultDto RemoveFromCart(long productId, Guid deviceId)
+    public ResultDto RemoveFromCart(long cartItemId, Guid deviceId)
     {
-        var cart = Context.CartItems.Where(x => x.Cart.DeviceId == deviceId).FirstOrDefault();
+        var cart = Context.CartItems
+            .Include(x=>x.Cart)
+            .Where(x =>x.Id == cartItemId && x.Cart.DeviceId == deviceId).FirstOrDefault();
         if (cart != null)
         {
             cart.ChangeRemoveStatus();
@@ -88,10 +152,31 @@ public class CartService : ICartService
             Result = new ResultDto()
             {
                 IsSuccess = false,
-                Message = "محصول یافت نشد",
+                Message = "محصول در سبد شما یافت نشد",
             };
         }
 
         return Result;
+    }
+
+    public ResultDto RemoveCart(Guid deviceId)
+    {
+        var cart = Context.Carts.Where(x => x.DeviceId == deviceId).FirstOrDefault();
+        if (cart == null)
+        {
+            return new ResultDto()
+            {
+                Message = "سبدی برای حذف وجود نداشت",
+                IsSuccess = false,
+            };
+        }
+
+        cart.ChangeRemoveStatus();
+        Context.SaveChanges();
+        return new ResultDto()
+        {
+            Message = "سبد حذف شد",
+            IsSuccess = true,
+        };
     }
 }
