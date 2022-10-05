@@ -327,6 +327,9 @@
         }
       },
       "KalaMarket.Shared/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Resourses": "1.0.0"
+        },
         "runtime": {
           "KalaMarket.Shared.dll": {}
         }

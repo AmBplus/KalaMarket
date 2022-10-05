@@ -1,5 +1,5 @@
-﻿using KalaMarket.Application.Product.Services.Products.Common.Query.GetMenuItemService;
-using KalaMarket.Application.Product.Services.Products.ProductAggFacade;
+﻿using KalaMarket.Application.Product.Services.ProductAgg.Common.Query.GetMenuItemService;
+using KalaMarket.Application.Product.Services.ProductAgg.ProductAggFacade;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KalaMarket.EndPoint.Models.ViewComponents;

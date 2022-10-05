@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using KalaMarket.Application.Product.Services.Products.BrandService.Facade.Interface;
-using KalaMarket.Application.Product.Services.Products.BrandService.Query.GetAll;
-using KalaMarket.Application.Product.Services.Products.CategoryServices.FacadePattern.Facade;
-using KalaMarket.Application.Product.Services.Products.CategoryServices.Queries.GetCategories;
-using KalaMarket.Application.Product.Services.Products.ProductService.Commands.AddProduct;
-using KalaMarket.Application.Product.Services.Products.ProductService.FacadePattern.Interfaces;
+using KalaMarket.Application.Product.Services.ProductAgg.BrandService.Facade.Interface;
+using KalaMarket.Application.Product.Services.ProductAgg.BrandService.Query.GetAll;
+using KalaMarket.Application.Product.Services.ProductAgg.CategoryServices.FacadePattern.Facade;
+using KalaMarket.Application.Product.Services.ProductAgg.CategoryServices.Queries.GetCategories;
+using KalaMarket.Application.Product.Services.ProductAgg.ProductService.Commands.AddProduct;
+using KalaMarket.Application.Product.Services.ProductAgg.ProductService.FacadePattern.Interfaces;
 using KalaMarket.EndPoint.Infrastructure;
 using KalaMarket.Resourses;
 using KalaMarket.Shared;

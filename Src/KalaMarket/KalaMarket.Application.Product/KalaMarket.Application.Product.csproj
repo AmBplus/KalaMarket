@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Services\Products\ProductService\Queries\**" />
-    <EmbeddedResource Remove="Services\Products\ProductService\Queries\**" />
-    <None Remove="Services\Products\ProductService\Queries\**" />
+    <Compile Remove="Services\ProductAgg\ProductService\Queries\**" />
+    <EmbeddedResource Remove="Services\ProductAgg\ProductService\Queries\**" />
+    <None Remove="Services\ProductAgg\ProductService\Queries\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <Folder Include="MapConfig\Mapster\" />
+    <Folder Include="Services\ProductAgg\Carts\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,5 +1,5 @@
-using KalaMarket.Application.Product.Services.Products.ProductAggFacade;
-using KalaMarket.Application.Product.Services.Products.ProductService.Query.GetProductsForAdmin;
+using KalaMarket.Application.Product.Services.ProductAgg.ProductAggFacade;
+using KalaMarket.Application.Product.Services.ProductAgg.ProductService.Query.GetProductsForAdmin;
 using KalaMarket.EndPoint.Infrastructure;
 using KalaMarket.Shared;
 

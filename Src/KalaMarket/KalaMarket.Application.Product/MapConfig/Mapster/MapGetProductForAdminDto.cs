@@ -1,4 +1,4 @@
-﻿using KalaMarket.Application.Product.Services.Products.ProductService.Query.GetProductForAdmin;
+﻿using KalaMarket.Application.Product.Services.ProductAgg.ProductService.Query.GetProductForAdmin;
 using Mapster;
 
 namespace KalaMarket.Application.Product.MapConfig.Mapster;

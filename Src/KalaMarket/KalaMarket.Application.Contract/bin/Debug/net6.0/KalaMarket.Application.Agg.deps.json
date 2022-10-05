@@ -9,7 +9,7 @@
       "KalaMarket.Application.Agg/1.0.0": {
         "dependencies": {
           "KalaMarket.Application.HomePage": "1.0.0",
-          "KalaMarket.Application.ShopManagement": "1.0.0",
+          "KalaMarket.Application.Product": "1.0.0",
           "KalaMarket.Application.User": "1.0.0"
         },
         "runtime": {
@@ -315,7 +315,7 @@
           "KalaMarket.Application.HomePage.dll": {}
         }
       },
-      "KalaMarket.Application.ShopManagement/1.0.0": {
+      "KalaMarket.Application.Product/1.0.0": {
         "dependencies": {
           "AutoMapper": "11.0.1",
           "KalaMarket.Application": "1.0.0",
@@ -325,7 +325,7 @@
           "KalaMarket.Shared": "1.0.0"
         },
         "runtime": {
-          "KalaMarket.Application.ShopManagement.dll": {}
+          "KalaMarket.Application.Product.dll": {}
         }
       },
       "KalaMarket.Application.User/1.0.0": {
@@ -378,6 +378,9 @@
         }
       },
       "KalaMarket.Shared/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Resourses": "1.0.0"
+        },
         "runtime": {
           "KalaMarket.Shared.dll": {}
         }
@@ -631,7 +634,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "KalaMarket.Application.ShopManagement/1.0.0": {
+    "KalaMarket.Application.Product/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -16,6 +16,8 @@ public interface IKalaMarketContext
     DbSet<ProductFeatures> ProductFeatures { get; set; }
     DbSet<ProductImages> ProductImages { get; set; }
     DbSet<Slider> Sliders { get; set; }
+    DbSet<Cart> Carts { get; set; }
+    DbSet<CartItem> CartItems { get; set; }
     int SaveChanges(bool acceptAllChangesOnSuccess);
     int SaveChanges();
     Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = new CancellationToken());

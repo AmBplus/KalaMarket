@@ -1,6 +1,6 @@
-using KalaMarket.Application.Product.Services.Products.CategoryServices.FacadePattern.Facade;
-using KalaMarket.Application.Product.Services.Products.CategoryServices.Queries.GetCategory;
-using KalaMarket.Application.Product.Services.Products.CategoryServices.Queries.GetCategoryWithChild;
+using KalaMarket.Application.Product.Services.ProductAgg.CategoryServices.FacadePattern.Facade;
+using KalaMarket.Application.Product.Services.ProductAgg.CategoryServices.Queries.GetCategory;
+using KalaMarket.Application.Product.Services.ProductAgg.CategoryServices.Queries.GetCategoryWithChild;
 using KalaMarket.EndPoint.Infrastructure;
 
 namespace KalaMarket.EndPoint.Areas.Admin.Pages.Categories

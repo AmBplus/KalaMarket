@@ -713,7 +713,15 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "KalaMarket.Resourses/1.0.0": {
+        "runtime": {
+          "KalaMarket.Resourses.dll": {}
+        }
+      },
       "KalaMarket.Shared/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Resourses": "1.0.0"
+        },
         "runtime": {
           "KalaMarket.Shared.dll": {}
         }
@@ -1271,6 +1279,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "KalaMarket.Resourses/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "KalaMarket.Shared/1.0.0": {
       "type": "project",

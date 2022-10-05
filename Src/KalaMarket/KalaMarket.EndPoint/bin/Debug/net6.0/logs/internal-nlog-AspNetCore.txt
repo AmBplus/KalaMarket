@@ -2683,3 +2683,604 @@
 2022-10-05 05:04:06.1233 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
 2022-10-05 05:04:06.1394 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
 2022-10-05 05:04:06.1581 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 09:23:59.2006 Info Message Template Auto Format enabled
+2022-10-05 09:23:59.2158 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 09:23:59.2520 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 09:23:59.2781 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:23:59.2781 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:23:59.2926 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:23:59.3085 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:23:59.3256 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:23:59.3547 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 09:23:59.3547 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 09:23:59.3862 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 09:23:59.3862 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 09:23:59.4493 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\NLog.config
+2022-10-05 09:23:59.6775 Info Shutdown() called. Logger closing...
+2022-10-05 09:23:59.6775 Info Closing old configuration.
+2022-10-05 09:23:59.7034 Info Logger has been closed down.
+2022-10-05 09:23:59.7449 Info Loading NLog config from XML file: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 09:23:59.7449 Info Message Template Auto Format enabled
+2022-10-05 09:23:59.7701 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 09:23:59.7872 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 09:23:59.8023 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:23:59.8172 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:23:59.8334 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:23:59.8493 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:23:59.8642 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:23:59.8804 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 09:23:59.8951 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 09:23:59.9101 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 09:23:59.9262 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 09:23:59.9428 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 09:24:20.9103 Info Message Template Auto Format enabled
+2022-10-05 09:24:20.9439 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 09:24:21.0225 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 09:24:21.0760 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:24:21.0760 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:24:21.1001 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:24:21.1150 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:24:21.1313 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:24:21.1554 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 09:24:21.1554 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 09:24:21.1954 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 09:24:21.1954 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 09:24:21.2504 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\NLog.config
+2022-10-05 09:24:21.4885 Info Shutdown() called. Logger closing...
+2022-10-05 09:24:21.4885 Info Closing old configuration.
+2022-10-05 09:24:21.5325 Info Logger has been closed down.
+2022-10-05 09:24:21.5906 Info Loading NLog config from XML file: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 09:24:21.5906 Info Message Template Auto Format enabled
+2022-10-05 09:24:21.6165 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 09:24:21.6312 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 09:24:21.6453 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:24:21.6608 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:24:21.6754 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:24:21.6914 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:24:21.7075 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 09:24:21.7247 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 09:24:21.7387 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 09:24:21.7549 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 09:24:21.7702 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 09:24:21.7859 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 09:24:24.3547 Info FileTarget(Name=jsonFile_wrapped): Archiving C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.log to C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.0.log
+2022-10-05 14:46:32.7638 Info Message Template Auto Format enabled
+2022-10-05 14:46:32.8166 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 14:46:33.1970 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 14:46:33.6505 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:46:33.6530 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:46:33.6852 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:46:33.7123 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:46:33.7270 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:46:34.1290 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 14:46:34.1470 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 14:46:34.3751 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 14:46:34.3906 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 14:46:34.7262 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\NLog.config
+2022-10-05 14:46:40.6808 Info Shutdown() called. Logger closing...
+2022-10-05 14:46:40.6823 Info Closing old configuration.
+2022-10-05 14:46:40.8921 Info Logger has been closed down.
+2022-10-05 14:46:42.1985 Info Loading NLog config from XML file: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 14:46:42.1985 Info Message Template Auto Format enabled
+2022-10-05 14:46:42.2233 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 14:46:42.2405 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 14:46:42.2554 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:46:42.2715 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:46:42.2876 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:46:42.3038 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:46:42.3196 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:46:42.3349 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 14:46:42.3506 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 14:46:42.3655 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 14:46:42.3810 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 14:46:42.3983 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 14:47:03.3863 Info FileTarget(Name=jsonFile_wrapped): Archiving C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.log to C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.1.log
+2022-10-05 14:53:16.3226 Info Message Template Auto Format enabled
+2022-10-05 14:53:16.3599 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 14:53:16.9632 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 14:53:17.1749 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:53:17.1749 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:53:17.1990 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:53:17.1990 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:53:17.2366 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:53:17.5181 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 14:53:17.5282 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 14:53:17.5946 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 14:53:17.5946 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 14:53:17.7414 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\NLog.config
+2022-10-05 14:53:20.5653 Info Shutdown() called. Logger closing...
+2022-10-05 14:53:20.5653 Info Closing old configuration.
+2022-10-05 14:53:20.8269 Info Logger has been closed down.
+2022-10-05 14:53:22.4378 Info Loading NLog config from XML file: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 14:53:22.4378 Info Message Template Auto Format enabled
+2022-10-05 14:53:22.4548 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 14:53:22.4715 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 14:53:22.4867 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:53:22.5174 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:53:22.5338 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:53:22.5488 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:53:22.5645 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:53:22.5799 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 14:53:22.6095 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 14:53:22.6269 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 14:53:22.6413 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 14:53:22.6623 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 14:58:30.3764 Info FileTarget(Name=jsonFile_wrapped): Archiving C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.log to C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.2.log
+2022-10-05 14:59:38.7787 Info Message Template Auto Format enabled
+2022-10-05 14:59:38.8036 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 14:59:38.9607 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 14:59:39.2980 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:59:39.3202 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:59:39.3328 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:59:39.3442 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:59:39.3767 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:59:40.7646 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 14:59:40.8245 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 14:59:40.8979 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 14:59:40.9008 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 14:59:41.1026 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\NLog.config
+2022-10-05 14:59:44.1298 Info Shutdown() called. Logger closing...
+2022-10-05 14:59:44.1298 Info Closing old configuration.
+2022-10-05 14:59:44.2303 Info Logger has been closed down.
+2022-10-05 14:59:44.9203 Info Loading NLog config from XML file: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 14:59:44.9203 Info Message Template Auto Format enabled
+2022-10-05 14:59:44.9438 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 14:59:44.9641 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 14:59:44.9919 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:59:45.0088 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:59:45.0102 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:59:45.0102 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:59:45.0388 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 14:59:45.0541 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 14:59:45.0691 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 14:59:45.0849 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 14:59:45.1005 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 14:59:45.1185 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 15:00:11.5935 Info FileTarget(Name=jsonFile_wrapped): Archiving C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.log to C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.3.log
+2022-10-05 16:41:09.7306 Info Message Template Auto Format enabled
+2022-10-05 16:41:09.8055 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 16:41:10.4346 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:41:11.3959 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:41:11.4294 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:41:11.5360 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:41:11.6092 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:41:11.7357 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:41:12.1359 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 16:41:12.1359 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:41:12.2360 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 16:41:12.2360 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 16:41:12.4564 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\NLog.config
+2022-10-05 16:41:16.2058 Info Shutdown() called. Logger closing...
+2022-10-05 16:41:16.2058 Info Closing old configuration.
+2022-10-05 16:41:16.5242 Info Logger has been closed down.
+2022-10-05 16:41:17.3759 Info Loading NLog config from XML file: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 16:41:17.3759 Info Message Template Auto Format enabled
+2022-10-05 16:41:17.4037 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 16:41:17.4199 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:41:17.4348 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:41:17.4500 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:41:17.4666 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:41:17.4812 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:41:17.4988 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:41:17.5142 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 16:41:17.5263 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:41:17.5420 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 16:41:17.5600 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 16:41:17.5768 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 16:41:32.4596 Info FileTarget(Name=jsonFile_wrapped): Archiving C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.log to C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.4.log
+2022-10-05 16:43:44.4548 Info Message Template Auto Format enabled
+2022-10-05 16:43:44.4662 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 16:43:44.4904 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:43:44.5126 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:43:44.5126 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:43:44.5126 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:43:44.5404 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:43:44.5560 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:43:44.5836 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 16:43:44.5836 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:43:44.6036 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 16:43:44.6036 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 16:43:44.6674 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\NLog.config
+2022-10-05 16:43:44.8556 Info Shutdown() called. Logger closing...
+2022-10-05 16:43:44.8556 Info Closing old configuration.
+2022-10-05 16:43:44.8907 Info Logger has been closed down.
+2022-10-05 16:43:44.9535 Info Loading NLog config from XML file: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 16:43:44.9535 Info Message Template Auto Format enabled
+2022-10-05 16:43:44.9689 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 16:43:44.9863 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:43:45.0010 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:43:45.0159 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:43:45.0319 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:43:45.0478 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:43:45.0633 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:43:45.0801 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 16:43:45.0951 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:43:45.1099 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 16:43:45.1263 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 16:43:45.1568 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 16:44:06.8205 Info Message Template Auto Format enabled
+2022-10-05 16:44:06.8563 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 16:44:06.9540 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:44:07.0210 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:07.0210 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:07.0455 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:07.0455 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:07.0756 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:07.1048 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 16:44:07.1048 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:44:07.1377 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 16:44:07.1377 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 16:44:07.1922 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\NLog.config
+2022-10-05 16:44:07.3541 Info Shutdown() called. Logger closing...
+2022-10-05 16:44:07.3541 Info Closing old configuration.
+2022-10-05 16:44:07.3844 Info Logger has been closed down.
+2022-10-05 16:44:07.4246 Info Loading NLog config from XML file: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 16:44:07.4246 Info Message Template Auto Format enabled
+2022-10-05 16:44:07.4513 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 16:44:07.4673 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:44:07.4814 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:07.4977 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:07.5121 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:07.5281 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:07.5441 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:07.5593 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 16:44:07.5751 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:44:07.5910 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 16:44:07.6068 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 16:44:07.6236 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 16:44:08.5244 Info FileTarget(Name=jsonFile_wrapped): Archiving C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.log to C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.5.log
+2022-10-05 16:44:16.0955 Info Message Template Auto Format enabled
+2022-10-05 16:44:16.1397 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 16:44:16.3645 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:44:16.6310 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:16.6515 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:16.7225 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:16.7550 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:16.7888 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:17.1438 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 16:44:17.1511 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:44:17.2317 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 16:44:17.2317 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 16:44:17.4151 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\NLog.config
+2022-10-05 16:44:20.1755 Info Shutdown() called. Logger closing...
+2022-10-05 16:44:20.1755 Info Closing old configuration.
+2022-10-05 16:44:20.3363 Info Logger has been closed down.
+2022-10-05 16:44:21.4057 Info Loading NLog config from XML file: C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 16:44:21.4057 Info Message Template Auto Format enabled
+2022-10-05 16:44:21.4249 Info Loading assembly: NLog.Web.AspNetCore
+2022-10-05 16:44:21.4413 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:44:21.4552 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'includeEventProperties'='Boolean'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:21.4705 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeProperties'='Comma-separated list (string)'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:21.4857 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'renderEmptyObject'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:21.5011 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'excludeEmptyProperties'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:21.5155 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'FileTarget' cannot assign unknown property 'IncludeEmptyValue'='false'
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object targetObject, String propertyName, String stringValue, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.SetPropertyValueFromString(Object targetObject, String propertyName, String propertyValue, ValidatedConfigurationElement element)
+2022-10-05 16:44:21.5318 Info Adding target AsyncTargetWrapper(Name=jsonFile)
+2022-10-05 16:44:21.5463 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to parse layout containing type: ####
+ ---> System.ArgumentException: LayoutRenderer type-alias is unknown: '####'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+   --- End of inner exception stack trace ---
+2022-10-05 16:44:21.5621 Info Adding target AsyncTargetWrapper(Name=ownFile-web)
+2022-10-05 16:44:21.5774 Info Adding target AsyncTargetWrapper(Name=lifetimeConsole)
+2022-10-05 16:44:21.5953 Info Validating config: TargetNames=jsonFile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\NLog.config
+2022-10-05 16:44:50.8600 Info FileTarget(Name=jsonFile_wrapped): Archiving C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.log to C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\logs\Detail__2022-10-05__.6.log

@@ -1,11 +1,11 @@
 ﻿#region using
 
-using KalaMarket.Application.Product.Services.Products.BrandService.Facade.Implement;
-using KalaMarket.Application.Product.Services.Products.BrandService.Facade.Interface;
-using KalaMarket.Application.Product.Services.Products.CategoryServices.FacadePattern.Facade;
-using KalaMarket.Application.Product.Services.Products.ProductAggFacade;
-using KalaMarket.Application.Product.Services.Products.ProductService.FacadePattern.Implement;
-using KalaMarket.Application.Product.Services.Products.ProductService.FacadePattern.Interfaces;
+using KalaMarket.Application.Product.Services.ProductAgg.BrandService.Facade.Implement;
+using KalaMarket.Application.Product.Services.ProductAgg.BrandService.Facade.Interface;
+using KalaMarket.Application.Product.Services.ProductAgg.CategoryServices.FacadePattern.Facade;
+using KalaMarket.Application.Product.Services.ProductAgg.ProductAggFacade;
+using KalaMarket.Application.Product.Services.ProductAgg.ProductService.FacadePattern.Implement;
+using KalaMarket.Application.Product.Services.ProductAgg.ProductService.FacadePattern.Interfaces;
 using Mapster;
 using Microsoft.Extensions.DependencyInjection;
 #endregion /using

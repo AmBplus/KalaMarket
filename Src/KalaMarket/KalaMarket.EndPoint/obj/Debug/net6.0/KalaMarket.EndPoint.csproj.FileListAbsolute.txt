@@ -433,5 +433,5 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\obj\Debu
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\Shared.AspNetCore.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\Shared.AspNetCore.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\obj\Debug\net6.0\KalaMarket.EndPoint.MvcApplicationPartsAssemblyInfo.cs
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\KalaMarket.Application.ShopManagement.dll
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\KalaMarket.Application.ShopManagement.pdb
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\KalaMarket.Application.Product.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.EndPoint\bin\Debug\net6.0\KalaMarket.Application.Product.pdb

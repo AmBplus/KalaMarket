@@ -1,5 +1,5 @@
-using KalaMarket.Application.Product.Services.Products.CategoryServices.FacadePattern.Facade;
-using KalaMarket.Application.Product.Services.Products.CategoryServices.Queries.GetCategories;
+using KalaMarket.Application.Product.Services.ProductAgg.CategoryServices.FacadePattern.Facade;
+using KalaMarket.Application.Product.Services.ProductAgg.CategoryServices.Queries.GetCategories;
 using KalaMarket.EndPoint.Infrastructure;
 using KalaMarket.Shared;
 using KalaMarket.Shared.Dto;

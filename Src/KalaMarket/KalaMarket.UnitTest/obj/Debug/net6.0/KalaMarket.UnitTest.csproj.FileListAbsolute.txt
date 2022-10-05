@@ -512,5 +512,5 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debu
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\ref\KalaMarket.UnitTest.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\Shared.AspNetCore.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\Shared.AspNetCore.pdb
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.ShopManagement.dll
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.ShopManagement.pdb
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.Product.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.Product.pdb

@@ -1,7 +1,7 @@
-using KalaMarket.Application.Product.Services.Products.BrandService.Command.Active;
-using KalaMarket.Application.Product.Services.Products.BrandService.Facade.Interface;
-using KalaMarket.Application.Product.Services.Products.BrandService.Query.Get;
-using KalaMarket.Application.Product.Services.Products.BrandService.Query.GetAll;
+using KalaMarket.Application.Product.Services.ProductAgg.BrandService.Command.Active;
+using KalaMarket.Application.Product.Services.ProductAgg.BrandService.Facade.Interface;
+using KalaMarket.Application.Product.Services.ProductAgg.BrandService.Query.Get;
+using KalaMarket.Application.Product.Services.ProductAgg.BrandService.Query.GetAll;
 using KalaMarket.EndPoint.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,5 +1,5 @@
-﻿using KalaMarket.Application.Product.Services.Products.Common.Query.GetCategorySite;
-using KalaMarket.Application.Product.Services.Products.ProductAggFacade;
+﻿using KalaMarket.Application.Product.Services.ProductAgg.Common.Query.GetCategorySite;
+using KalaMarket.Application.Product.Services.ProductAgg.ProductAggFacade;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KalaMarket.EndPoint.Models.ViewComponents;

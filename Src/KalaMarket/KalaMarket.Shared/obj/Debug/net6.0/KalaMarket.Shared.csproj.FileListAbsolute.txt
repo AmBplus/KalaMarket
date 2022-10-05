@@ -10,3 +10,6 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Shared\obj\Debug\
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Shared\obj\Debug\net6.0\refint\KalaMarket.Shared.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Shared\obj\Debug\net6.0\KalaMarket.Shared.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Shared\obj\Debug\net6.0\ref\KalaMarket.Shared.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Shared\bin\Debug\net6.0\KalaMarket.Resourses.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Shared\bin\Debug\net6.0\KalaMarket.Resourses.pdb
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Shared\obj\Debug\net6.0\KalaMarket.Shared.csproj.CopyComplete

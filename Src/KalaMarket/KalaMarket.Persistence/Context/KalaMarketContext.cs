@@ -10,6 +10,7 @@ using System.Reflection;
 namespace KalaMarket.Persistence.Context;
 public class KalaMarketContext : DbContext, IKalaMarketContext
 {
+
     #region Ctor
     public KalaMarketContext(DbContextOptions<KalaMarketContext> options) : base(options)
     {
@@ -27,6 +28,10 @@ public class KalaMarketContext : DbContext, IKalaMarketContext
     public DbSet<ProductFeatures> ProductFeatures { get; set; }
     public DbSet<ProductImages> ProductImages { get; set; }
     public DbSet<Slider> Sliders { get; set; }
+
+    public DbSet<Cart> Carts { get ; set ; }
+
+    public DbSet<CartItem> CartItems { get ; set ; }
 
     #endregion Properties
 

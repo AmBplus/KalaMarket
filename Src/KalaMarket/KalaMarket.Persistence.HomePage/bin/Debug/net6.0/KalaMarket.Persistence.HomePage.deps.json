@@ -160,7 +160,15 @@
           "KalaMarket.Domain.HomePage.dll": {}
         }
       },
+      "KalaMarket.Resourses/1.0.0": {
+        "runtime": {
+          "KalaMarket.Resourses.dll": {}
+        }
+      },
       "KalaMarket.Shared/1.0.0": {
+        "dependencies": {
+          "KalaMarket.Resourses": "1.0.0"
+        },
         "runtime": {
           "KalaMarket.Shared.dll": {}
         }
@@ -277,6 +285,11 @@
       "sha512": ""
     },
     "KalaMarket.Domain.HomePage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KalaMarket.Resourses/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,5 +1,5 @@
 ﻿using KalaMarket.Application.HomePage.HomePage.Facade;
-using KalaMarket.Application.Product.Services.Products.ProductAggFacade;
+using KalaMarket.Application.Product.Services.ProductAgg.ProductAggFacade;
 using KalaMarket.Application.User.Services.Users.FacadePattern;
 
 namespace KalaMarket.Application.Agg.Services;

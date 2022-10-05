@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using KalaMarket.Application.Product.Services.Products.BrandService.Command.Add;
+using KalaMarket.Application.Product.Services.ProductAgg.BrandService.Command.Add;
 using KalaMarket.Resourses;
 using KalaMarket.Shared;
 

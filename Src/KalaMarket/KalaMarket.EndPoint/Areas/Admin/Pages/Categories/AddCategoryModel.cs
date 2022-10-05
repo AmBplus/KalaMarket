@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-using KalaMarket.Application.Product.Services.Products.CategoryServices.FacadePattern.Facade;
+using KalaMarket.Application.Product.Services.ProductAgg.CategoryServices.FacadePattern.Facade;
 using KalaMarket.EndPoint.Infrastructure;
 using KalaMarket.Resourses;
 using KalaMarket.Shared;
