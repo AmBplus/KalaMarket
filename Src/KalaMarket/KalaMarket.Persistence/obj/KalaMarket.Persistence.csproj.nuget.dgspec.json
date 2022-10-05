@@ -777,7 +777,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Resourses\\KalaMarket.Resourses.csproj": {
+                "projectPath": "C:\\WorkSpace\\Asp\\Projects\\KalaMarket\\Src\\KalaMarket\\KalaMarket.Resourses\\KalaMarket.Resourses.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

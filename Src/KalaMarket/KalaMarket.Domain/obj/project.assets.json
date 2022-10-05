@@ -2,9 +2,22 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "KalaMarket.Resourses/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/KalaMarket.Resourses.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Resourses.dll": {}
+        }
+      },
       "KalaMarket.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Resourses": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/KalaMarket.Shared.dll": {}
         },
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "KalaMarket.Resourses/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Resourses/KalaMarket.Resourses.csproj",
+      "msbuildProject": "../KalaMarket.Resourses/KalaMarket.Resourses.csproj"
+    },
     "KalaMarket.Shared/1.0.0": {
       "type": "project",
       "path": "../KalaMarket.Shared/KalaMarket.Shared.csproj",

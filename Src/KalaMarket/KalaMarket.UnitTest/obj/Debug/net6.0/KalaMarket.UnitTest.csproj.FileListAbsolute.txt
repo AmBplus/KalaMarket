@@ -464,7 +464,6 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debu
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.Agg.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.HomePage.dll
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.Product.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.User.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Domain.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Domain.HomePage.dll
@@ -485,7 +484,6 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debu
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.Agg.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.HomePage.pdb
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.Product.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.User.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Domain.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Domain.HomePage.pdb
@@ -514,3 +512,5 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debu
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\obj\Debug\net6.0\ref\KalaMarket.UnitTest.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\Shared.AspNetCore.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\Shared.AspNetCore.pdb
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.ShopManagement.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.UnitTest\bin\Debug\net6.0\KalaMarket.Application.ShopManagement.pdb

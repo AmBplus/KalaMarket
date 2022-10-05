@@ -9,5 +9,9 @@
   <ItemGroup>
     <Folder Include="Security\VerifyFiles\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KalaMarket.Resourses\KalaMarket.Resourses.csproj" />
+  </ItemGroup>
 	
 </Project>

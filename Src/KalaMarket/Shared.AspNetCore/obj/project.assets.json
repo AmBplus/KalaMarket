@@ -1352,9 +1352,22 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "KalaMarket.Resourses/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/KalaMarket.Resourses.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KalaMarket.Resourses.dll": {}
+        }
+      },
       "KalaMarket.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KalaMarket.Resourses": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/KalaMarket.Shared.dll": {}
         },
@@ -4727,6 +4740,11 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "KalaMarket.Resourses/1.0.0": {
+      "type": "project",
+      "path": "../KalaMarket.Resourses/KalaMarket.Resourses.csproj",
+      "msbuildProject": "../KalaMarket.Resourses/KalaMarket.Resourses.csproj"
     },
     "KalaMarket.Shared/1.0.0": {
       "type": "project",

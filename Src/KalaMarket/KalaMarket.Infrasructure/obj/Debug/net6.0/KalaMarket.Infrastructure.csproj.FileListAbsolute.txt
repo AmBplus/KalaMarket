@@ -5,7 +5,6 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Application.Agg.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Application.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Application.HomePage.dll
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Application.Product.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Application.User.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Domain.dll
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Domain.HomePage.dll
@@ -22,7 +21,6 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Application.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Persistence.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Application.HomePage.pdb
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Application.Product.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Domain.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Domain.HomePage.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Domain.Products.pdb
@@ -43,3 +41,5 @@ C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.pdb
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\KalaMarket.Infrastructure.genruntimeconfig.cache
 C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\obj\Debug\net6.0\ref\KalaMarket.Infrastructure.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Application.ShopManagement.dll
+C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Infrasructure\bin\Debug\net6.0\KalaMarket.Application.ShopManagement.pdb
