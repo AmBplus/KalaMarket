@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Site\Controllers\" />
+    <Folder Include="Pages\Shared\Components\CartInLayoutComponent\" />
     <Folder Include="Pages\Shared\_Partials\SideScript\" />
     <Folder Include="wwwroot\images\Products\" />
     <Folder Include="wwwroot\SiteTemplate\assets\images\menu-main\card\" />

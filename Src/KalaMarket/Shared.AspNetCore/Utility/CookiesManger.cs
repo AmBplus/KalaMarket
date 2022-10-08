@@ -2,19 +2,19 @@
 
 namespace Shared.AspNetCore.Utility
 {
-    public class CookiesManeger
+    public static class CookiesManger
     {
-        public void Add(HttpContext context, string token, string value)
+        public static void AddCookie(HttpContext context, string token, string value)
         {
-            context.Response.Cookies.Append(token, value, getCookieOptions(context));
+            context.Response.Cookies.Append(token, value, GetCookieOptions(context));
         }
 
-        public bool Contains(HttpContext context, string token)
+        public static bool CookieIsExist(HttpContext context, string token)
         {
             return context.Request.Cookies.ContainsKey(token);
         }
 
-        public string GetValue(HttpContext context, string token)
+        public static string GetCookie(HttpContext context, string token)
         {
             string cookieValue;
             if (!context.Request.Cookies.TryGetValue(token, out cookieValue))
@@ -24,7 +24,7 @@ namespace Shared.AspNetCore.Utility
             return  cookieValue ;
         }
 
-        public void Remove(HttpContext context, string token)
+        public  static void RemoveCookie(HttpContext context, string token)
         {
             if (context.Request.Cookies.ContainsKey(token))
             {
@@ -33,20 +33,20 @@ namespace Shared.AspNetCore.Utility
         }
 
  
-        public Guid GetDeviceId(HttpContext context)
+        public static Guid GetDeviceIdFromCookie(HttpContext context)
         {
-          string browserId=   GetValue(context, "DeviceId");
+          string browserId=   GetCookie(context, "DeviceId");
             if(browserId== null)
             {
                 string value = Guid.NewGuid().ToString();
-                Add(context, "DeviceId", value);
+                AddCookie(context, "DeviceId", value);
                 browserId = value;
             }
             Guid guidBowser;
             Guid.TryParse(browserId, out guidBowser);
             return guidBowser ;
         }
-        private CookieOptions getCookieOptions(HttpContext context)
+        private static CookieOptions GetCookieOptions(HttpContext context)
         {
             return new CookieOptions
             {

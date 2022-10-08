@@ -19,9 +19,8 @@ namespace KalaMarket.EndPoint.Pages.Site.Carts
 
         public void OnGet()
         {
-            CookiesManeger cookiesManeger = new CookiesManeger();
-
-            var result = ProductAggFacadeService.CartService.GetMyCart(cookiesManeger.GetDeviceId(HttpContext));
+            
+            var result = ProductAggFacadeService.CartService.GetMyCart(CookiesManger.GetDeviceIdFromCookie(HttpContext),HttpContext.User.GetUserId() );
             if (result.IsSuccess != true)
             {
                 AddToastError(result.Message);
@@ -31,7 +30,38 @@ namespace KalaMarket.EndPoint.Pages.Site.Carts
 
         public IActionResult OnGetRemoveCartItem(long cartItemId)
         {
-            ProductAggFacadeService.CartService.RemoveFromCart()
+            var result = ProductAggFacadeService.CartService.RemoveFromCart(cartItemId,
+                CookiesManger.GetDeviceIdFromCookie(HttpContext), User.GetUserId());
+            if (!result.IsSuccess)
+            {
+                AddToastError(result.Message);
+            }
+
+            return RedirectToPage();
+        }
+
+        public IActionResult OnGetIncreaseCount(long cartItemId)
+        {
+            var result = ProductAggFacadeService.CartService.IncreaseCartItemCount(cartItemId,
+                CookiesManger.GetDeviceIdFromCookie(HttpContext), User.GetUserId());
+            if (!result.IsSuccess)
+            {
+                AddToastError(result.Message);
+            }
+
+            return RedirectToPage();
+        }
+
+        public IActionResult OnGetDecreaseCount(long cartItemId)
+        {
+            var result = ProductAggFacadeService.CartService.DecreaseCartItemCount(cartItemId,
+                CookiesManger.GetDeviceIdFromCookie(HttpContext),User.GetUserId());
+            if (!result.IsSuccess)
+            {
+                AddToastError(result.Message);
+            }
+
+            return RedirectToPage();
         }
     }
 }

@@ -19,7 +19,7 @@ public class UserController : ControllerBase
     private IChangeRemoveUserService ChangeRemoveUserService { get; }
     private IEditUserService EditUserService { get; }
     [HttpDelete("{id}")]
-    public IActionResult Delete(long id)
+    public IActionResult Delete( long id)
     {
         var result = ChangeRemoveUserService.Execute(id);
         if (!result.IsSuccess)

@@ -4,7 +4,7 @@ namespace Shared.AspNetCore.Utility
 {
     public static class ClaimUtility
     {
-        public static long? GetUserId(ClaimsPrincipal User)
+        public static long? GetUserId(this ClaimsPrincipal User)
         {
             try
             {

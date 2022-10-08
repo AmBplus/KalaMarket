@@ -19,9 +19,11 @@ public class CartService : ICartService
     private ResultDto Result { get; set; }
     private IKalaMarketContext Context { get; }
     private ILoggerManger Logger { get; }
-    public ResultDto Add(long productId, Guid deviceId)
+    public ResultDto Add(long productId, Guid deviceId , long? userId = null)
      {
-        var cart = Context.Carts.Where(x => x.DeviceId == deviceId && !x.Finished).FirstOrDefault();
+        var cart = Context.Carts.Where
+            (x => ( x.DeviceId == deviceId || (x.UserId == userId && userId!=null )) 
+                  && !x.Finished && !x.IsRemoved).FirstOrDefault();
         if (cart == null)
         {
             cart = new Cart(deviceId);
@@ -30,7 +32,7 @@ public class CartService : ICartService
         }
 
         var product = Context.Products.Where(x => x.Id == productId).FirstOrDefault();
-        var cartItem = Context.CartItems.Where(x => x.ProductId == productId && x.CartId == cart.Id).FirstOrDefault();
+        var cartItem = Context.CartItems.Where(x => x.ProductId == productId && x.CartId == cart.Id && !x.IsRemoved).FirstOrDefault();
         if (cartItem != null)
         {
             cartItem.IncreaseCount();
@@ -50,10 +52,10 @@ public class CartService : ICartService
         return Result;
     }
 
-    public ResultDto IncreaseCartItemCount(long cartItemId , Guid deviceId)
+    public ResultDto IncreaseCartItemCount(long cartItemId , Guid deviceId , long? userId = null)
     {
         var cartItem = Context.CartItems.Include(x=>x.Cart)
-            .Where(x=>x.Cart.DeviceId == deviceId )
+            .Where(x=>x.Cart.DeviceId == deviceId || (x.Cart.UserId == userId && userId != null) )
             .Where(x=>x.Id == cartItemId).FirstOrDefault();
         if (cartItem == null)
         {
@@ -74,10 +76,10 @@ public class CartService : ICartService
         return Result;
     }
 
-    public ResultDto DecreaseCartItemCount(long cartItemId , Guid deviceId)
+    public ResultDto DecreaseCartItemCount(long cartItemId , Guid deviceId , long? userId = null)
     {
         var cartItem = Context.CartItems.Include(x => x.Cart)
-            .Where(x => x.Cart.DeviceId == deviceId)
+            .Where(x =>( x.Cart.DeviceId == deviceId || (x.Cart.UserId == userId&& userId != null)))
             .Where(x => x.Id == cartItemId).FirstOrDefault();
         if (cartItem == null)
         {
@@ -88,7 +90,7 @@ public class CartService : ICartService
             };
             return Result;
         }
-        if (cartItem.IncreaseCount())
+        if (cartItem.DecreaseCount())
         {
             Context.SaveChanges();
             Result = new ResultDto()
@@ -108,35 +110,41 @@ public class CartService : ICartService
         return Result;
     }
 
-    public ResultDto<CartDto> GetMyCart(Guid deviceUserId)
+    public ResultDto<CartDto> GetMyCart(Guid deviceUserId , long? userId = null)
     {
         var result =new ResultDto<CartDto>(new CartDto()
         {
-            cartItemDtos = new List<CartItemDto>()
+            CartItemDtos = new List<CartItemDto>()
         });
-         var listCartItemDto
-             = Context.Carts.Include(x => x.CartItems).ThenInclude(x => x.Product).ThenInclude(x=>x.Images).Where(x => x.DeviceId == deviceUserId)?.Select(x
-            =>
-            x.CartItems.Select(c =>
-                new CartItemDto
-                {
-                    Count = c.Count,
-                    Price = c.Price,
-                    ProductName = c.Product.Name,
-                    ProductImage = c.Product.Images.Select(x=>x.Src).FirstOrDefault() ?? "",
-                    Id = c.Id,
-                })
-            ).FirstOrDefault();
-         result.Data.cartItemDtos =listCartItemDto;
+        var listCartItemDto
+            = Context.Carts.Include(x => x.CartItems).ThenInclude(x => x.Product).ThenInclude(x => x.Images)
+                .Where(x => x.DeviceId == deviceUserId  || (x.UserId == userId && userId!=null)).Where(x => !x.IsRemoved)
+                ?.Select(x
+                    =>
+                    new CartDto
+                    {
+                        TotalPrice = x.CartItems.Where(x=>!x.IsRemoved).Sum(x => x.Price),
+                        Count = x.CartItems.Where(x=>!x.IsRemoved).Count(),
+                        CartItemDtos = x.CartItems.Where(x=>!x.IsRemoved).Select(c => new CartItemDto()
+                        {
+                            Count = c.Count,
+                            Price = c.Price,
+                            ProductName = c.Product.Name,
+                            ProductImage = c.Product.Images.Select(x => x.Src).FirstOrDefault() ?? "",
+                            Id = c.Id,
+                        })
+                    }).FirstOrDefault();
+         result.Data = listCartItemDto;
+         
          result.IsSuccess = true;
          result.Message = Messages.OperationDoneSuccessfully;
          return result;
     }
-    public ResultDto RemoveFromCart(long cartItemId, Guid deviceId)
+    public ResultDto RemoveFromCart(long cartItemId, Guid deviceId, long? userId = null)
     {
         var cart = Context.CartItems
             .Include(x=>x.Cart)
-            .Where(x =>x.Id == cartItemId && x.Cart.DeviceId == deviceId).FirstOrDefault();
+            .Where(x =>x.Id == cartItemId && ( x.Cart.DeviceId == deviceId || (x.Cart.UserId == userId && userId != null))).FirstOrDefault();
         if (cart != null)
         {
             cart.ChangeRemoveStatus();
@@ -159,9 +167,9 @@ public class CartService : ICartService
         return Result;
     }
 
-    public ResultDto RemoveCart(Guid deviceId)
+    public ResultDto RemoveCart(Guid deviceId, long? userId = null)
     {
-        var cart = Context.Carts.Where(x => x.DeviceId == deviceId).FirstOrDefault();
+        var cart = Context.Carts.Where(x => x.DeviceId == deviceId || (x.UserId == userId && userId != null)).FirstOrDefault();
         if (cart == null)
         {
             return new ResultDto()

@@ -4,6 +4,7 @@ namespace KalaMarket.Domain.Products.ProductAgg;
 
 public class CartItem : BaseEntity<long>
 {
+    #region Ctor
     public CartItem(long productId, decimal price, int count, long cartId)
     {
         ProductId = productId;
@@ -12,12 +13,18 @@ public class CartItem : BaseEntity<long>
         CartId = cartId;
     }
 
-    public Product Product { get; private set; } 
+    #endregion /Ctor
+
+    #region Properties
+    public virtual Product Product { get; private set; }
     public long ProductId { get; private set; }
     public decimal Price { get; private set; }
     public int Count { get; private set; }
     public long CartId { get; private set; }
-    public Cart Cart { get;private set; }
+    public virtual Cart Cart { get; private set; }
+    #endregion /Properties
+    
+    #region Methods
     public bool IncreaseCount()
     {
         Count++;
@@ -32,4 +39,5 @@ public class CartItem : BaseEntity<long>
         }
         return false;
     }
+    #endregion /Methods
 }

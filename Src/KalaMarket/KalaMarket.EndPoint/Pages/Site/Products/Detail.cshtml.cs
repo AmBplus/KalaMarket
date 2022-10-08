@@ -35,9 +35,9 @@ namespace KalaMarket.EndPoint.Pages.Site.Products
 
         public RedirectToPageResult OnGetAddToCart(long productId)
         {
-            CookiesManeger cookiesManeger = new CookiesManeger();
-            var deviceId = cookiesManeger.GetDeviceId(HttpContext);
-            ProductAggFacadeService.CartService.Add(productId, deviceId);
+     
+            var deviceId = CookiesManger.GetDeviceIdFromCookie(HttpContext);
+            ProductAggFacadeService.CartService.Add(productId, deviceId,User.GetUserId());
             return RedirectToPage("Site/Index");
 
         }

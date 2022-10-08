@@ -6,6 +6,7 @@ using KalaMarket.Resourses;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using KalaMarket.Shared.Security;
 using Task = System.Threading.Tasks.Task;
 using Utility = KalaMarket.EndPoint.Infrastructure.Security.Utility;
 
@@ -36,9 +37,9 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
         {
         }
 
-        public async Task OnPost()
+        public async Task<IActionResult> OnPost()
         {
-            if (!ModelState.IsValid) return;
+            if (!ModelState.IsValid) return Page();
             // Get UserResult
             var userResult = UserAggService.UserQuery.GetUserWithRolesService.Execute(new RequestGetUserWithRolesDto()
             {
@@ -50,18 +51,20 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
             {
                 ModelState.AddModelError("", userResult.Message);
                 AddToastError(userResult.Message);
-                return;
+                return Page();
             }
+
+            var hashPassword = LoginViewModel.Password.GetSha256();
             // Check Password
-            var isSamePassword = string.Compare(LoginViewModel.Password, userResult.Data.Password, ignoreCase: false);
-            if (isSamePassword == 0)
+            var isSamePassword = string.Compare(hashPassword, userResult.Data.Password, ignoreCase: false);
+            if (isSamePassword < 0)
             {
                 ModelState.AddModelError("", errorMessage: ErrorMessages.WrongEmailOrPassword);
                 AddToastError(ErrorMessages.WrongEmailOrPassword);
-                return;
+                return Page();
             }
             // LoginUser
-            await LoginCustomerViewModel(userResult.Data);
+        return    await LoginCustomerViewModel(userResult.Data);
 
         }
         private async Task<IActionResult> LoginCustomerViewModel(GetUserWithRoleDto loginDto)
@@ -70,6 +73,7 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
             var claims = new List<Claim>
             {
                 new(ClaimTypes.Email, loginDto.Email),
+                new(ClaimTypes.NameIdentifier, loginDto.Id.ToString()),
                 new(ClaimTypes.Name, (!string.IsNullOrWhiteSpace(loginDto.FullName) ? loginDto.FullName : loginDto.Email)),
             };
             foreach (var role in loginDto.Role)
@@ -89,7 +93,7 @@ namespace KalaMarket.EndPoint.Areas.Account.Pages
             // Try Signin
             await HttpContext.SignInAsync(Utility.AuthenticationScheme,
                 new ClaimsPrincipal(claimIdentity), authProperties);
-            return RedirectToPage("/");
+            return Redirect("/Site");
         }
 
         #endregion /Methods

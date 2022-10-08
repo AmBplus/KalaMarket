@@ -19,6 +19,13 @@ public class ProductFeatures : BaseEntity<long>
 
     #endregion /Constructors
 
+    #region Properties
+    public virtual Product Product { get; private set; }
+    public long ProductId { get; private set; }
+    public string KeyName { get; private set; }
+    public string KeyValue { get; private set; }
+    #endregion /Properties
+ 
     #region Method
 
     public bool Edit(long productId, string keyName, string keyValue)
@@ -30,11 +37,4 @@ public class ProductFeatures : BaseEntity<long>
     }
 
     #endregion /Method
-
-    #region Properties
-    public virtual Product Product { get; private set; }
-    public long ProductId { get; private set; }
-    public string KeyName { get; private set; }
-    public string KeyValue { get; private set; }
-    #endregion /Properties
 }

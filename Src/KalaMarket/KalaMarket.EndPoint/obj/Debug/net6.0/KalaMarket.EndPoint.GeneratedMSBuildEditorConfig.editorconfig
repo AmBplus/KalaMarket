@@ -171,6 +171,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Shared/Components/CartInLayoutComponent/CartInLayoutComponent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcQ2FydEluTGF5b3V0Q29tcG9uZW50XENhcnRJbkxheW91dENvbXBvbmVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/WorkSpace/Asp/Projects/KalaMarket/Src/KalaMarket/KalaMarket.EndPoint/Pages/Shared/Components/GetMainSliderForSiteHomePageComponent/GetMainSliderForSiteHomePageComponent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcR2V0TWFpblNsaWRlckZvclNpdGVIb21lUGFnZUNvbXBvbmVudFxHZXRNYWluU2xpZGVyRm9yU2l0ZUhvbWVQYWdlQ29tcG9uZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

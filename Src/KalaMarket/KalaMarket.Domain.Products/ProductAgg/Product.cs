@@ -29,6 +29,22 @@ public class Product : BaseEntity<long>
 
     #endregion /Constructors
 
+    #region Properties
+    public string Name { get; private set; }
+    public string Slug { get; private set; }
+    public string Description { get; private set; }
+    public int Inventory { get; private set; }
+    public bool Displayed { get; private set; }
+    public Brand Brand { get; set; }
+    public decimal Price { get; private set; }
+    public ulong ViewCount { get; private set; } = 0;
+    public ushort? BrandId { get; private set; }
+    public virtual Category Category { get; set; }
+    public long CategoryId { get; private set; }
+    public virtual ICollection<ProductFeatures> Features { get; private set; }
+    public virtual ICollection<ProductImages> Images { get; private set; }
+    #endregion
+  
     #region Methods
 
     public bool Edit(string name, string description,
@@ -41,9 +57,7 @@ public class Product : BaseEntity<long>
         Slug = slug;
         return true;
     }
-
     #region Inventory Methods
-
     public bool IncreaseInventoryBy(int number)
     {
         Inventory += number;
@@ -63,7 +77,6 @@ public class Product : BaseEntity<long>
         Inventory = number;
         return true;
     }
-
     public bool SetFeature(ICollection<ProductFeatures> productFeatures)
     {
         Features = productFeatures;
@@ -140,23 +153,4 @@ public class Product : BaseEntity<long>
     }
 
     #endregion /Methods
-
-    #region Properties
-
-
-    public string Name { get; private set; }
-    public string Slug { get; private set; }
-    public string Description { get; private set; }
-    public int Inventory { get; private set; }
-    public bool Displayed { get; private set; }
-    public Brand Brand { get; set; }
-    public decimal Price { get; private set; }
-    public ulong ViewCount { get; private set; } = 0;
-    public ushort? BrandId { get; private set; }
-    public virtual Category Category { get; set; }
-    public long CategoryId { get; private set; }
-    public virtual ICollection<ProductFeatures> Features { get; private set; }
-    public virtual ICollection<ProductImages> Images { get; private set; }
-
-    #endregion
 }

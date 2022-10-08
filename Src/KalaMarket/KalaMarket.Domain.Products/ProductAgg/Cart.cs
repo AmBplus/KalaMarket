@@ -4,7 +4,8 @@ namespace KalaMarket.Domain.Products.ProductAgg;
 
 public class Cart : BaseEntity<long>
 {
-    public Cart( Guid deviceId , long? userId = null)
+    #region Ctor
+    public Cart(Guid deviceId, long? userId = null)
     {
         UserId = userId;
         DeviceId = deviceId;
@@ -12,12 +13,16 @@ public class Cart : BaseEntity<long>
         TotalPrice = 0;
         CartItems = new List<CartItem>();
     }
-    
-    public long? UserId { get;private set; }
-    public decimal TotalPrice { get; private set; }
-    public ICollection<CartItem> CartItems { get;  }
-    public Guid DeviceId { get; set; }
+    #endregion /Ctor
 
+    #region Properties
+    public long? UserId { get; private set; }
+    public decimal TotalPrice { get; private set; }
+    public virtual ICollection<CartItem> CartItems { get; }
+    public Guid DeviceId { get; set; }
+    #endregion /Properties
+
+    #region Methods
     public bool SetUserId(long id)
     {
         UserId = id;
@@ -48,4 +53,5 @@ public class Cart : BaseEntity<long>
         Finished = true;
         return true;
     }
+    #endregion /Methods
 }

@@ -16,7 +16,7 @@ public class Brand : BaseEntityWithActive<ushort>
 
     #region Properties
     public string Name { get; private set; }
-    public ICollection<Product> Products { get; private set; }
+    public virtual ICollection<Product> Products { get; private set; }
     #endregion /Properties
 
     #region Method

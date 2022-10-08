@@ -31,6 +31,7 @@ public class Category : BaseEntity<long>
         ParentName = parentName;
     }
     #endregion
+   
     #region Methods
     public bool UpdateCategory(string name)
     {
