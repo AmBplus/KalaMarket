@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="HomePage\Facade\" />
+    <Folder Include="HomePage\Sliders\Validation\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared.Core\Core\KalaMarket.Application\KalaMarket.Application.csproj" />
+    <ProjectReference Include="..\..\..\Shared\KalaMarket.Resourses\KalaMarket.Resourses.csproj" />
+    <ProjectReference Include="..\..\..\Shared\KalaMarket.Shared\KalaMarket.Shared.csproj" />
+    <ProjectReference Include="..\KalaMarket.Domain.HomePage\KalaMarket.Domain.HomePage.csproj" />
+  </ItemGroup>
+
+</Project>

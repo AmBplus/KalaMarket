@@ -1,5 +1,0 @@
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Application.Product\obj\Release\net6.0\KalaMarket.Application.Product.csproj.AssemblyReference.cache
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Application.Product\obj\Release\net6.0\KalaMarket.Application.Product.GeneratedMSBuildEditorConfig.editorconfig
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Application.Product\obj\Release\net6.0\KalaMarket.Application.Product.AssemblyInfoInputs.cache
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Application.Product\obj\Release\net6.0\KalaMarket.Application.Product.AssemblyInfo.cs
-C:\WorkSpace\Asp\Projects\KalaMarket\Src\KalaMarket\KalaMarket.Application.Product\obj\Release\net6.0\KalaMarket.Application.Product.csproj.CoreCompileInputs.cache

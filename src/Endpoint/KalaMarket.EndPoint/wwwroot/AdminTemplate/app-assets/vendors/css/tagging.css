@@ -1,0 +1,55 @@
+/* Tagging Basic Style */
+.tagging {
+    border: 1px solid #CCCCCC;
+    cursor: text;
+    font-size: 1em;
+    height: auto;
+    padding: 0px 5px 5px;
+}
+
+.tagging .tag {
+    background: none repeat scroll 0 0 #0CC27E;
+    border-radius: 2px;
+    color: white;
+    cursor: default;
+    display: inline-block;
+    margin: 5px 10px 0 0;
+    padding: 7px 20px 7px 0;
+    position: relative;
+    white-space: nowrap;
+}
+
+.tagging .tag span {
+    background: none repeat scroll 0 0 #0A9E67;
+    border-radius: 2px 0 0 2px;
+    margin-left: 5px;
+    padding: 4px 10px 5px;
+}
+
+.tagging .tag .tag-i {
+    color: white;
+    cursor: pointer;
+    font-size: 1.3em;
+    height: 0;
+    left: 5px;
+    line-height: 0.1em;
+    position: absolute;
+    text-align: center;
+    top: 1.1rem;
+    width: 10px;
+}
+
+.tagging .tag .tag-i:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.tagging .type-zone {
+    border: 0 none;
+    display: inline-block;
+    height: auto;
+    min-width: 20px;
+    width: auto;
+}
+
+.tagging .type-zone:focus { outline: none; }

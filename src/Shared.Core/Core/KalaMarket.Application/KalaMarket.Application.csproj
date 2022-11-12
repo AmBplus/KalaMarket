@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\**" />
+    <Compile Remove="Validations\Product\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <EmbeddedResource Remove="Validations\Product\**" />
+    <None Remove="Services\**" />
+    <None Remove="Validations\Product\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\Context\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.3.0" />
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\HomePageContext\Core\KalaMarket.Domain.HomePage\KalaMarket.Domain.HomePage.csproj" />
+    <ProjectReference Include="..\..\..\Shared\KalaMarket.Resourses\KalaMarket.Resourses.csproj" />
+    <ProjectReference Include="..\..\..\ShopManagementContext\Core\KalaMarket.Domain.Products\KalaMarket.Domain.Products.csproj" />
+    <ProjectReference Include="..\..\..\UserContext\Core\KalaMarket.Domain.Users\KalaMarket.Domain.Users.csproj" />
+    <ProjectReference Include="..\KalaMarket.Domain\KalaMarket.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

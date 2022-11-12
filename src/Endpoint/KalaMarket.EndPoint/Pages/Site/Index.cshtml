@@ -1,0 +1,770 @@
+﻿@page
+@model IndexModel
+<!-- header-------------------------------->
+<!-- slider-main--------------------------->
+<div class="container-main">
+    <div class="d-block">
+        <div class="col-lg-8 col-xs-12 pr">
+            @await Component.InvokeAsync("GetMainSliderForSiteHomePageComponent")
+        </div>
+        <!-- adplacement--------------------------->
+        <div class="col-lg-4 col-md-4 col-xs-12 pl mt-1">
+            <div class="adplacement-container-column">
+                @foreach (var slider in Model.AdPlacement)
+                {
+                    <a href="#" class="adplacement-item">
+                        <div class="adplacement-sponsored-box">
+                            <img src="~/@slider.Src" alt="@slider.Link">
+                        </div>
+                    </a>
+                }
+            </div>
+        
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-12 pr">
+            <div class="adplacement-container-column mt-4">
+                <a href="#" class="adplacement-item img-banner">
+                    <div class="adplacement-sponsored-box">
+                        <img src="~/@(Model.HorizontalSponsored?.Src ?? "")">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- adplacement--------------------------->
+        <!-- slider-amazing------------------------>
+        <partial name="Partials/_HomePage_Amazing_Product"/>
+        <!-- slider-amazing------------------------>
+    </div>
+</div>
+<!-- adplacement--------------------------->
+<div class="container-main">
+    <div class="d-block">
+        <div class="adplacement-container-row">
+            <div class="col-12">
+                <a href="#" class="adplacement-item mb-4">
+                    <div class="adplacement-sponsored_box">
+                        <img src="~/@Model.SingleVerticalSponsored?.Src">
+                    </div>
+                </a>
+            </div>
+            @foreach (var slider in Model.MultipleVerticalSponsored)
+            {
+                <div class="col-6 col-lg-3 pr">
+                    <a href="#" class="adplacement-item">
+                        <div class="adplacement-sponsored_box">
+                            <img src="~/@slider.Src">
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- adplacement--------------------------->
+<!-- slidre-product------------------------>
+<div class="container-main">
+<div class="d-block">
+<div class="col-lg-9 col-md-9 col-xs-12 pr order-1 d-block">
+    <div class="slider-widget-products">
+        <div class="widget widget-product card">
+            <header class="card-header">
+                <span class="title-one">دوربین</span>
+                <h3 class="card-title"></h3>
+            </header>
+            <div class="product-carousel owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2234px;">
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/camera-canon-4000D.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        دوربین دیجیتال کانن مدل EOS 4000D به همراه لنز 18-55 میلی متر IS II
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۱۲,۰۰۰,۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۱۰,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/camera-samsung.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        دوربین دیجیتال سامسونگ مدل ST150F
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۳,۲۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۲,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/camera-nikon-3500D.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        دوربین دیجیتال نیکون مدل D3500 به همراه لنز 18-55 میلی متر VR AF-P
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۳,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۲,۰۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/camera-instax-mini-70.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        دوربین عکاسی چاپ سریع فوجی فیلم مدل Instax mini 70
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۶,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۴,۲۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/camera-nikon.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        دوربین دیجیتال بدون آینه نیکون مدل Z6 به همراه لنز 24-70 میلی متر f/4 S
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۷,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۶,۰۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-nav">
+                    <button type="button" role="presentation" class="owl-prev disabled">
+                        <i class="fa fa-angle-right"></i>
+                    </button>
+                    <button type="button" role="presentation" class="owl-next">
+                        <i class="fa fa-angle-left"></i>
+                    </button>
+                </div>
+                <div class="owl-dots disabled"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider-moment------------------------->
+<div class="col-lg-3 col-md-3 col-xs-12 pl order-1 d-block">
+    <div class="slider-moments">
+        <div class="widget-suggestion widget card">
+            <header class="card-header promo-single-headline">
+                <h3 class="card-title">پیشنهاد لحظه‌ای</h3>
+            </header>
+            <div id="suggestion-slider" class="owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage" style="transform: translate3d(1369px, 0px, 0px); transition: all 0.25s ease 0s; width: 2190px;">
+                        <div class="owl-item cloned" style="width: 273.75px;">
+                            <div class="item">
+                                <a href="#">
+                                    <img src="~/SiteTemplate/assets/images/slider-moment/sm-1.jpg" class="w-100" alt="">
+                                </a>
+                                <h3 class="product-title">
+                                    <a href="#"> تیشرت آستین کوتاه مردانه مدل T41 </a>
+                                </h3>
+                                <div class="price">
+                                    <span class="amount">
+                                        ۲۳,۰۰۰
+                                        <span>تومان</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 273.75px;">
+                            <div class="item">
+                                <a href="#">
+                                    <img src="~/SiteTemplate/assets/images/slider-moment/sm-2.jpg" class="w-100" alt="">
+                                </a>
+                                <h3 class="product-title">
+                                    <a href="#">تی شرت آستین کوتاه تارکان کد btt 152-1</a>
+                                </h3>
+                                <div class="price">
+                                    <span class="amount">
+                                        ۵۹,۰۰۰
+                                        <span>تومان</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 273.75px;">
+                            <div class="item">
+                                <a href="#">
+                                    <img src="~/SiteTemplate/assets/images/slider-moment/sm-3.jpg" class="w-100" alt="">
+                                </a>
+                                <h3 class="product-title">
+                                    <a href="#"> لپ تاپ 17 اینچی ایسوس مدل VivoBook A712FB-P </a>
+                                </h3>
+                                <div class="price">
+                                    <span class="amount">
+                                        ۱۳,۰۰۰,۰۰۰
+                                        <span>تومان</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 273.75px;">
+                            <div class="item">
+                                <a href="#">
+                                    <img src="~/SiteTemplate/assets/images/slider-moment/sm-4.jpg" class="w-100" alt="">
+                                </a>
+                                <h3 class="product-title">
+                                    <a href="#">
+                                        لپ تاپ 16 اینچی اپل مدل MacBook Pro MVVK2 2019 همراه با تاچ بار
+                                    </a>
+                                </h3>
+                                <div class="price">
+                                    <span class="amount">
+                                        ۴۷,۰۰۰,۰۰۰
+                                        <span>تومان</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 273.75px;">
+                            <div class="item">
+                                <a href="#">
+                                    <img src="~/SiteTemplate/assets/images/slider-moment/sm-5.jpg" class="w-100" alt="">
+                                </a>
+                                <h3 class="product-title">
+                                    <a href="#">
+                                        گوشی موبایل سامسونگ مدل Galaxy S10 SM-G973F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                                    </a>
+                                </h3>
+                                <div class="price">
+                                    <span class="amount">
+                                        ۱۱,۰۰۰,۰۰۰
+                                        <span>تومان</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="progressBar">
+                <div class="slide-progress" style="transition: width 5000ms ease 0s; width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider-moment------------------------->
+<div class="col-lg-12 col-md-12 col-xs-12 pr order-1 d-block">
+    <div class="slider-widget-products">
+        <div class="widget widget-product card">
+            <header class="card-header">
+                <span class="title-one">گوشی موبایل</span>
+                <h3 class="card-title"></h3>
+            </header>
+            <div class="product-carousel owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2234px;">
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/Samsung-S10Plus.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        سامسونگ گلکسی اس 10 پلاس – 128 گیگابایت – دو سیم کارت
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۱۲,۰۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۱۰,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/huawei-p-smart.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        هوآوی مدل P Smart 2019 دو سیم کارت ظرفیت 64 گیگابایت
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۳,۲۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۲,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/iphone-xs-max-space.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        اپل آیفون ایکس اس مکس – 256 گیگابایت – دو سیم کارت
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۳,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۲,۰۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/honer.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        هواوی هانر ویوو 20 – 256 گیگابایت – دو سیم کارت
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۶,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۴,۲۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/huawei.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        هواوی پی 20 پرو 128 گیگابایت – دو سیم کارت
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۷,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۶,۰۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-nav">
+                    <button type="button" role="presentation" class="owl-prev disabled">
+                        <i class="fa fa-angle-right"></i>
+                    </button>
+                    <button type="button" role="presentation" class="owl-next">
+                        <i class="fa fa-angle-left"></i>
+                    </button>
+                </div>
+                <div class="owl-dots disabled"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- adplacement--------------------------->
+<div class="container-fluid">
+    <div class="row pr">
+        <div class="adplacement-container-row">
+            @foreach (var slider in Model.MultipleVerticalSponsored)
+            {
+                <div class="col-6 col-lg-3 pr">
+                    <a href="#" class="adplacement-item">
+                        <div class="adplacement-sponsored_box">
+                            <img src="~/@slider.Src">
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- adplacement--------------------------->
+<div class="col-lg-12 col-md-12 col-xs-12 pr order-1 d-block">
+    <div class="slider-widget-products">
+        <div class="widget widget-product card">
+            <header class="card-header">
+                <span class="title-one">لوازم خانگی</span>
+                <h3 class="card-title"></h3>
+            </header>
+            <div class="product-carousel owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2234px;">
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/Stove-lopez.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        اجاق گاز طرح فر لوپز مدل 10000S
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۱۲,۰۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۱۰,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/SWF-40R.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        آون توستر سان ورد مدل SWF-40R
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۳,۲۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۲,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/ECM2013.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        اسپرسوساز مباشی مدل ECM2013
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۳,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۲,۰۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/DNR 290T-366T.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        یخچال و فریزر دو قلوی دونار مدل DNR 290T-366T
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۶,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۴,۲۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/Avocado.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        آب میوه گیری پارس خزر مدل Avocado
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۷,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۶,۰۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-nav">
+                    <button type="button" role="presentation" class="owl-prev disabled">
+                        <i class="fa fa-angle-right"></i>
+                    </button>
+                    <button type="button" role="presentation" class="owl-next">
+                        <i class="fa fa-angle-left"></i>
+                    </button>
+                </div>
+                <div class="owl-dots disabled"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12 col-md-12 col-xs-12 pr order-1 d-block">
+    <div class="slider-widget-products">
+        <div class="widget widget-product card">
+            <header class="card-header">
+                <span class="title-one">کامپیوتر و لپ تاپ</span>
+                <h3 class="card-title"></h3>
+            </header>
+            <div class="product-carousel owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2234px;">
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/mitbook.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        هواوای میت بوک X پرو 13.9 اینچ
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۱۲,۰۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۱۰,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/SL1200_-300x300.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        لپ تاپ چووی الترابوک 14 اینچ پرو
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۳,۲۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۲,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/zenbook.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        لپ تاپ 13 اینچی ایسوس مدل ZenBook S13 UX392FN - A
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۷,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۶,۰۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/computer-appel.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        کامپیوتر همه کاره 27 اینچی اپل مدل iMac CTO - A 2019 با صفحه نمایش رتینا 5K
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۳,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۲,۰۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 309.083px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/slider-product/asus-laptop.jpg" class="img-fluid" alt="">
+                                </a>
+                                <h2 class="post-title">
+                                    <a href="#">
+                                        لپ تاپ ایسوس زِنبوک 14
+                                    </a>
+                                </h2>
+                                <div class="price">
+                                    <del>
+                                        <span>۶,۵۰۰,۰۰۰<span>تومان</span></span>
+                                    </del>
+                                    <ins>
+                                        <span>۴,۲۰۰,۰۰۰<span>تومان</span></span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-nav">
+                    <button type="button" role="presentation" class="owl-prev disabled">
+                        <i class="fa fa-angle-right"></i>
+                    </button>
+                    <button type="button" role="presentation" class="owl-next">
+                        <i class="fa fa-angle-left"></i>
+                    </button>
+                </div>
+                <div class="owl-dots disabled"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- brand--------------------------------------->
+<div class="col-lg-12 col-md-12 col-xs-12 pr order-1 d-block">
+    <div class="slider-widget-products">
+        <div class="widget widget-product card mb-0">
+            <div class="product-carousel-brand owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2234px;">
+                        <div class="owl-item active" style="margin-left: 10px; width: 190.75px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link">
+                                    <img src="~/SiteTemplate/assets/images/brand/shahab.png" class="img-fluid img-brand" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 190.75px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link mt-0">
+                                    <img src="~/SiteTemplate/assets/images/brand/adata.png" class="img-fluid img-brand" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 190.75px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link mt-0">
+                                    <img src="~/SiteTemplate/assets/images/brand/huawei.png" class="img-fluid img-brand" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 190.75px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link mt-0">
+                                    <img src="~/SiteTemplate/assets/images/brand/nokia.png" class="img-fluid img-brand" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 190.75px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link mt-0">
+                                    <img src="~/SiteTemplate/assets/images/brand/panasonic.png" class="img-fluid img-brand" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 190.75px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link mt-0">
+                                    <img src="~/SiteTemplate/assets/images/brand/parskhazar.png" class="img-fluid img-brand" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 190.75px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link mt-0">
+                                    <img src="~/SiteTemplate/assets/images/brand/samsung.png" class="img-fluid img-brand" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="margin-left: 10px; width: 190.75px;">
+                            <div class="item">
+                                <a href="#" class="d-block hover-img-link mt-0">
+                                    <img src="~/SiteTemplate/assets/images/brand/xvison.png" class="img-fluid img-brand" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-nav">
+                    <button type="button" role="presentation" class="owl-prev disabled">
+                        <i class="fa fa-angle-right"></i>
+                    </button>
+                    <button type="button" role="presentation" class="owl-next">
+                        <i class="fa fa-angle-left"></i>
+                    </button>
+                </div>
+                <div class="owl-dots disabled"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- brand----------------------------------------->
+</div>
+</div>
