@@ -21,3 +21,4 @@ html , css , bootstrap4 , jquery , sweetalert , ...
 
 در نوشتن صفحات از نکات حرفه ای کمک گرفته شده و هر صفحه از بیس پیجی ارث بری میکند و از جمله فواید آن داینامیک کردن پیام ها در صفحه است
 
+![Architecture view for KalaMarket](https://user-images.githubusercontent.com/96792239/206051533-4601b41b-6edc-42d0-9743-155bdf316684.png)
