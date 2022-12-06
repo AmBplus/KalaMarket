@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Update="Pages\Shared\_Layout.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Shared\_ValidationScriptsPartial.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Site\Carts\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Site\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Site\Partials\_HomePage_Amazing_Product.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Site\Products\Detail.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Site\Products\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\_ViewImports.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\_ViewStart.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <PackageReference Include="LazZiya.TagHelpers" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NLog" Version="5.1.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\HomePage\Core\KalaMarket.Application.HomePage\KalaMarket.Application.HomePage.csproj" />
+    <ProjectReference Include="..\..\HomePage\Core\KalaMarket.Domain.HomePage\KalaMarket.Domain.HomePage.csproj" />
+    <ProjectReference Include="..\..\HomePage\Infrastructure\KalaMarket.Infrastructure.HomePage\KalaMarket.Infrastructure.HomePage.csproj" />
+    <ProjectReference Include="..\..\Identity\Core\KalaMarket.Application.Identity\KalaMarket.Application.Identity.csproj" />
+    <ProjectReference Include="..\..\Identity\Infrastructure\KalaMarket.Infrastructure.Identity\KalaMarket.Infrastructure.Identity.csproj" />
+    <ProjectReference Include="..\..\Shared.Core\Infrastructure\KalaMarket.Infrasructure\KalaMarket.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Shared\KalaMarket.Resourses\KalaMarket.Resourses.csproj" />
+    <ProjectReference Include="..\..\Shared\KalaMarket.Shared\KalaMarket.Shared.csproj" />
+    <ProjectReference Include="..\..\Shared\Shared.AspNetCore\Shared.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\ShopManagement\Core\KalaMarket.Application.ShopManagement\KalaMarket.Application.ShopManagement.csproj" />
+    <ProjectReference Include="..\..\ShopManagement\Infrastructure\KalaMarket.Infrastructure.ShopManagement\KalaMarket.Infrastructure.ShopManagement.csproj" />
+  </ItemGroup>
+
+</Project>

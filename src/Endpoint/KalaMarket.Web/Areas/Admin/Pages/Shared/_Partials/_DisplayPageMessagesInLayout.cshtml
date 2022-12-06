@@ -1,0 +1,28 @@
+﻿@using global::Shared.AspNetCore.Infrastructure.Messages
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    var pageErrors =
+        TempData[MessageType.PageError.ToString()] as
+            List<string>;
+
+    var pageWarnings =
+        TempData[MessageType.PageWarning.ToString()] as
+            List<string>;
+
+    var pageSuccesses =
+        TempData[MessageType.PageSuccess.ToString()] as
+            List<string>;
+
+    if ((pageErrors == null || pageErrors.Count == 0) &&
+        (pageWarnings == null || pageWarnings.Count == 0) &&
+        (pageSuccesses == null || pageSuccesses.Count == 0))
+    {
+        return;
+    }
+}
+
+<div class="row">
+    <div class="col-12 p-3 col-md-8 offset-md-2 p-md-5 bg-light border border-2 rounded-3 shadow-lg">
+        <partial name="_DisplayPageMessages"/>
+    </div>
+</div>

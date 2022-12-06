@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -28,11 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\HomePageContext\Core\KalaMarket.Domain.HomePage\KalaMarket.Domain.HomePage.csproj" />
+    <ProjectReference Include="..\..\..\HomePage\Core\KalaMarket.Domain.HomePage\KalaMarket.Domain.HomePage.csproj" />
+    <ProjectReference Include="..\..\..\Identity\Core\KalaMarket.Domain.Identity\KalaMarket.Domain.Identity.csproj" />
     <ProjectReference Include="..\..\..\Shared\KalaMarket.Resourses\KalaMarket.Resourses.csproj" />
-    <ProjectReference Include="..\..\..\ShopManagementContext\Core\KalaMarket.Domain.Products\KalaMarket.Domain.Products.csproj" />
-    <ProjectReference Include="..\..\..\UserContext\Core\KalaMarket.Domain.Users\KalaMarket.Domain.Users.csproj" />
-    <ProjectReference Include="..\KalaMarket.Domain\KalaMarket.Domain.csproj" />
+    <ProjectReference Include="..\..\..\ShopManagement\Core\KalaMarket.Domain.ShopManagement\KalaMarket.Domain.ShopManagement.csproj" />
   </ItemGroup>
 
 </Project>

@@ -17,10 +17,7 @@ public static class ServiceBootstrapper
     {
         #region DbService
 
-        services.AddDbContext<IKalaMarketContext, KalaMarketContext>(option =>
-        {
-            SqlServerDbContextOptionsExtensions.UseSqlServer(option, connection);
-        });
+        services.AddDbContext<IKalaMarketContext, KalaMarketContext>(option => { option.UseSqlServer(connection); });
 
         #endregion /DbService
 

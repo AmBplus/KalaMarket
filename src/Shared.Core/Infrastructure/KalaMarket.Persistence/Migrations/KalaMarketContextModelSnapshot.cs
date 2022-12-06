@@ -141,7 +141,7 @@ namespace KalaMarket.Persistence.Migrations
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
 
-                    b.Property<long>("ProductId1")
+                    b.Property<long>("ProductId")
                         .HasColumnType("bigint");
 
                     b.Property<DateTime?>("RemoveTime")
@@ -154,7 +154,7 @@ namespace KalaMarket.Persistence.Migrations
 
                     b.HasIndex("CartId");
 
-                    b.HasIndex("ProductId1");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("CartItems");
                 });
@@ -366,21 +366,21 @@ namespace KalaMarket.Persistence.Migrations
                             Id = 1L,
                             IsRemoved = false,
                             Name = "Admin",
-                            UpdateTime = new DateTime(2022, 11, 12, 17, 9, 36, 886, DateTimeKind.Local).AddTicks(5775)
+                            UpdateTime = new DateTime(2022, 12, 6, 22, 6, 55, 283, DateTimeKind.Local).AddTicks(3079)
                         },
                         new
                         {
                             Id = 2L,
                             IsRemoved = false,
                             Name = "Operator",
-                            UpdateTime = new DateTime(2022, 11, 12, 17, 9, 36, 886, DateTimeKind.Local).AddTicks(6082)
+                            UpdateTime = new DateTime(2022, 12, 6, 22, 6, 55, 283, DateTimeKind.Local).AddTicks(3175)
                         },
                         new
                         {
                             Id = 3L,
                             IsRemoved = false,
                             Name = "Customer",
-                            UpdateTime = new DateTime(2022, 11, 12, 17, 9, 36, 886, DateTimeKind.Local).AddTicks(6104)
+                            UpdateTime = new DateTime(2022, 12, 6, 22, 6, 55, 283, DateTimeKind.Local).AddTicks(3192)
                         });
                 });
 
@@ -464,8 +464,8 @@ namespace KalaMarket.Persistence.Migrations
                         .IsRequired();
 
                     b.HasOne("KalaMarket.Domain.Products.ProductAgg.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId1")
+                        .WithMany("CartItems")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -562,6 +562,8 @@ namespace KalaMarket.Persistence.Migrations
 
             modelBuilder.Entity("KalaMarket.Domain.Products.ProductAgg.Product", b =>
                 {
+                    b.Navigation("CartItems");
+
                     b.Navigation("Features");
 
                     b.Navigation("Images");

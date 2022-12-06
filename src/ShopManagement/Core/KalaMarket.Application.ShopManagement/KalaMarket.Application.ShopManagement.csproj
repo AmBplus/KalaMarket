@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Shared.Core\Core\KalaMarket.Application\KalaMarket.Application.csproj" />
+		<ProjectReference Include="..\KalaMarket.Domain.ShopManagement\KalaMarket.Domain.ShopManagement.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="MapConfig\Mapster\" />
+		<Folder Include="Services\ProductAgg\Carts\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.0" />
+	</ItemGroup>
+
+
+</Project>

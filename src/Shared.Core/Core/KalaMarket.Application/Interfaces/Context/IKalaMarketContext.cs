@@ -1,6 +1,6 @@
 ﻿using KalaMarket.Domain.HomePage.HomePages;
-using KalaMarket.Domain.Products.ProductAgg;
-using KalaMarket.Domain.Users.UserAgg;
+using KalaMarket.Domain.Identity.UserAgg;
+using KalaMarket.Domain.ShopManagement.ProductAgg;
 using Microsoft.EntityFrameworkCore;
 
 namespace KalaMarket.Application.Interfaces.Context;

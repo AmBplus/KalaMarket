@@ -12,6 +12,7 @@
     <Folder Include="Areas\Site\Controllers\" />
     <Folder Include="Pages\Shared\Components\CartInLayoutComponent\" />
     <Folder Include="Pages\Shared\_Partials\SideScript\" />
+    <Folder Include="wwwroot\AdminTemplate\app-assets\js\Sitejs\" />
     <Folder Include="wwwroot\images\Products\" />
     <Folder Include="wwwroot\SiteTemplate\assets\images\menu-main\card\" />
   </ItemGroup>
@@ -164,7 +165,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="NLog.Web.AspNetCore" Version="5.1.4" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.2.0" />
   </ItemGroup>
 	<ItemGroup>
     <ProjectReference Include="..\..\HomePageContext\Infrastructure\KalaMarket.Infrastructure.HomePage\KalaMarket.Infrastructure.HomePage.csproj" />

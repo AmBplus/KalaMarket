@@ -1,11 +1,11 @@
 ﻿using System.Reflection;
 using KalaMarket.Application.Interfaces.Context;
 using KalaMarket.Domain.HomePage.HomePages;
-using KalaMarket.Domain.Products.ProductAgg;
-using KalaMarket.Domain.Users.UserAgg;
+using KalaMarket.Domain.Identity.UserAgg;
+using KalaMarket.Domain.ShopManagement.ProductAgg;
 using KalaMarket.Persistence.HomePage.Configuration;
-using KalaMarket.Persistence.Products.Configuration;
-using KalaMarket.Persistence.Users.Configuration;
+using KalaMarket.Persistence.Identity.Configuration;
+using KalaMarket.Persistence.ShopManagement.Configuration;
 using Microsoft.EntityFrameworkCore;
 
 namespace KalaMarket.Persistence.Context;

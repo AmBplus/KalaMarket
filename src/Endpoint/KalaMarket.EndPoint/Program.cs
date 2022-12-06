@@ -3,6 +3,7 @@ using KalaMarket.Infrastructure.HomePage;
 using KalaMarket.Infrastructure.Product;
 using KalaMarket.Infrastructure.User;
 using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Options;
 using NLog;
 using NLog.Web;
@@ -12,6 +13,12 @@ using Shared.AspNetCore.Infrastructure.Settings;
 var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 logger.Debug("init main");
 var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.ConfigureKestrel(options =>
+{
+    // Setup a HTTP/2 endpoint without TLS.
+    options.ListenLocalhost( 5287 , o => o.Protocols =
+        HttpProtocols.Http2);
+});
 
 // Add services to the container.
 //string myCorsPolicy = "MyCors";

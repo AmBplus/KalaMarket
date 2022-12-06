@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Application.ShopManagement.Services.ProductAgg.Common.Query.GetCategorySite.GetCategorySiteServiceDto>
+
+<form class="form-search" asp-page="/Site/Products/Index" method="get">
+    <input type="search" class="header-search-input" name="searchKey" placeholder="نام کالا، برند و یا دسته مورد نظر خود را جستجو کنید…">
+    <div class="action-btns">
+        @*formaction="/Site/Products"*@
+        <button class="btn btn-search" type="submit">
+            <i class="fa fa-search"></i>
+        </button>
+        <div class="search-filter">
+            <div class="form-ui">
+                <div class="custom-select-ui ">
+                    <select class="right form-select overflow-x-scroll overflow-auto" name="categoryId" asp-items="@(new SelectList(Model, "Id", "Name"))">
+                        <option class="selected form-select" value="0">همه دسته ها</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

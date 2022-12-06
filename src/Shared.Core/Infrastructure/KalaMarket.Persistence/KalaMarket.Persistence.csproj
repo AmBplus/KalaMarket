@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -17,12 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\HomePageContext\Core\KalaMarket.Domain.HomePage\KalaMarket.Domain.HomePage.csproj" />
-    <ProjectReference Include="..\..\..\HomePageContext\Infrastructure\KalaMarket.Persistence.HomePage\KalaMarket.Persistence.HomePage.csproj" />
-    <ProjectReference Include="..\..\..\ShopManagementContext\Core\KalaMarket.Domain.Products\KalaMarket.Domain.Products.csproj" />
-    <ProjectReference Include="..\..\..\ShopManagementContext\Infrastructure\KalaMarket.Persistence.Products\KalaMarket.Persistence.Products.csproj" />
-    <ProjectReference Include="..\..\..\UserContext\Core\KalaMarket.Domain.Users\KalaMarket.Domain.Users.csproj" />
-    <ProjectReference Include="..\..\..\UserContext\Infrastructure\KalaMarket.Persistence.Users\KalaMarket.Persistence.Users.csproj" />
+    <ProjectReference Include="..\..\..\HomePage\Core\KalaMarket.Domain.HomePage\KalaMarket.Domain.HomePage.csproj" />
+    <ProjectReference Include="..\..\..\HomePage\Infrastructure\KalaMarket.Persistence.HomePage\KalaMarket.Persistence.HomePage.csproj" />
+    <ProjectReference Include="..\..\..\Identity\Infrastructure\KalaMarket.Persistence.Identity\KalaMarket.Persistence.Identity.csproj" />
+    <ProjectReference Include="..\..\..\ShopManagement\Infrastructure\KalaMarket.Persistence.ShopManagement\KalaMarket.Persistence.ShopManagement.csproj" />
     <ProjectReference Include="..\..\Core\KalaMarket.Application\KalaMarket.Application.csproj" />
   </ItemGroup>
 
