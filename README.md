@@ -1,5 +1,16 @@
 # KalaMarket
-پیاده سازی فروشگاه خرید کالا مشابه دیجی کالا ، با تکنولوژی سرورو ساید
+پیاده سازی فروشگاه خرید کالا مشابه دیجی کالا 
+
+موارد کلیدی پروژه
+- [x] Asp.net Core
+- [x] Clean Architecture
+- [x] Facade Pattern
+- [x] Razor Pages
+- [x] EF Core
+- [x] Microservice Concept
+- [x] DDD Concept
+- [x] Modular Design
+
 
 در این پروژه از پترن فساد برای سازماندهی سرویس ها استفاده شده 
 
@@ -25,4 +36,7 @@ html , css , bootstrap4 , jquery , sweetalert , ...
 
 
 ![Architecture view for KalaMarket](https://user-images.githubusercontent.com/96792239/206051811-a2c8268a-def6-44c2-9f39-fff816bfcc36.png)
+
+
+
 
